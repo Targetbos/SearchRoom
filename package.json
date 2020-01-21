@@ -1,10 +1,10 @@
 {
   "name": "hotel",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "parcel src/index.pug --open",
+    "build": "parcel build src/index.pug -d build --public-url ./"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,9 @@
   "keywords": [],
   "description": "",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "pug": "^2.0.4"
   },
   "dependencies": {
     "autoprefixer": "^9.7.4",

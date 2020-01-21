@@ -1,0 +1,18 @@
+@import '../header/__logo/logo';
+@import '../header/__menu/menu';
+@import '../header/__btn-sign-in/btn-sign-in';
+
+.header{
+    display:inline-flex;
+    box-sizing: border-box;
+    height: $height-header;
+    margin:0 auto;
+    background-color:$dark-25;
+    width:100%;
+    border:1px solid #666;
+    &__clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+  }
+}

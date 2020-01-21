@@ -1,0 +1,22 @@
+.menu{
+    float:right;
+    padding:0px;
+    border:1px solid #666;
+    &__list{
+        margin: 0px;
+        padding:inherit;
+        display:inline-flex;
+        align-items: center;
+        height: 100%;
+
+    }
+    &__item{
+        list-style-type: none;
+        padding:20px 20px;
+        font-size:12px;
+        a{
+            text-decoration:none;
+
+        }
+    }
+}

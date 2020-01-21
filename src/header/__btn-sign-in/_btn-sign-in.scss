@@ -1,0 +1,14 @@
+.header__btn-sign-in{
+    float: right;
+    height: 100%;
+    display:inline-flex;
+    align-items: center;
+    border:1px solid #666;
+    a{
+        border:2px solid $dark-50;
+        border-radius:22px;
+        padding:7px 20px;
+        text-decoration:none;
+        font-size: 10px;
+    }
+}
