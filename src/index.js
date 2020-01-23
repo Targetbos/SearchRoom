@@ -1,3 +1,2 @@
 import '/index.scss';
-
-console.log('Hello,world');
+import '../src/header/__menu/menu.js';

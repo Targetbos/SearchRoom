@@ -1,18 +1,33 @@
 @import '../header/__logo/logo';
 @import '../header/__menu/menu';
 @import '../header/__btn-sign-in/btn-sign-in';
+@import '../header/__btn-sign-up/btn-sign-up';
+
 
 .header{
     display:inline-flex;
-    box-sizing: border-box;
+    box-sizing:border-box;
     height: $height-header;
-    margin:0 auto;
-    background-color:$dark-25;
+    margin:0;
+    background-color:white;
     width:100%;
-    border:1px solid #666;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     &__clearfix::after {
         content: "";
         display: table;
         clear: both;
-  }
+    }
+    &__menuBlock{
+        float:right;
+        display:flex;
+        align-items: center;
+        justify-content:flex-end;
+        width:100%;
+        margin-right:120px;
+    }
+    &__userBlock{
+        float:right;
+        align-items: center;
+        display:flex;
+    }
 }

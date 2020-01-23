@@ -8,9 +8,9 @@ $dark-50: rgba(31, 32, 65,0.50);
 $dark-25: rgba(31, 32, 65,0.25);
 $dark-5: rgba(31, 32, 65,0.05);
 $btn-bg: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); // цвет фона кнопок
-$max-width:1920px;  // Максимальная ширина страницы
+$max-width:1431px;  // Максимальная ширина страницы
 $min-width:320px;   // Минимальная ширина страницы
-$height-header:64px; //высота шапки с меню
+$height-header:70px; //высота шапки с меню
 
 //
 @import "../src/header/header";
@@ -23,11 +23,12 @@ body{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
+    font-size:14px;
 }
 .wrapper{
     max-width:$max-width;
     min-width:$min-width;
     padding:0px;
-    margin:0 auto;
+    margin:0;
     background-color: white;
 }

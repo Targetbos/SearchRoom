@@ -1,5 +1,12 @@
+- var  name = {desc: 'Services'}
 nav.menu
     ul.menu__list
-        each name in (['Home', 'About Us', 'Services','Careers','News','Documentation'])
-            li.menu__item 
-                a(href="#")= name
+        each name, val in (['Home', 'About Us', 'Services','Careers','News','Documentation'])
+            li.menu__item
+                if val == 0 
+                    a.menu__link.menu__link--active(href="#")=name
+                else if val == 2
+                    a.menu__link(href="#")=name
+                        img.menu__img(src="/header/__menu/expand_more.svg")
+                else 
+                    a.menu__link(href="#")=name
