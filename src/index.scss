@@ -11,10 +11,13 @@ $btn-bg: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); // цвет фона
 $max-width:1431px;  // Максимальная ширина страницы
 $min-width:320px;   // Минимальная ширина страницы
 $height-header:70px; //высота шапки с меню
+$width-content: ($max-width - 280px)/$max-width*100%; // ширина блока с контентом с учётом отступов по 140px по краям
+$br: 1px solid #666; // граница для тестов
 
-//
-@import "../src/header/header";
+// Подключение основных scss блоков
 @import "../src/fonts/font";
+@import "../src/header/header";
+@import "../src/footer/footer";
 
 
 body{
