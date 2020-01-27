@@ -2,6 +2,8 @@
 @import '../header/__menu/menu';
 @import '../header/__btn-sign-in/btn-sign-in';
 @import '../header/__btn-sign-up/btn-sign-up';
+@import '../header/__userLink/userLink';
+
 
 
 .header{
@@ -27,7 +29,10 @@
     }
     &__userBlock{
         float:right;
-        align-items: center;
+        align-items:center;
         display:flex;
+    }
+    &__tooBlock{
+        margin-top:39px;
     }
 }

@@ -1,5 +1,7 @@
-.header__userlink{
-    &--borderLeft{
-        
-    }
+.header__userLink{
+    border-left:1px solid #666;
+    text-decoration: none;
+    padding: 5px 20px;
+    padding-left: 28px;
+    margin-left:4px;
 }
