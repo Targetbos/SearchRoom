@@ -25,6 +25,13 @@
         color: $dark-50;
         & a{
             text-decoration:none;
+            color:$dark-50;
+            &:hover{
+                color:$dark-25;
+            }
+            &:active{
+                color:$dark-25;
+            }
         }
     }
     &__title{
@@ -61,10 +68,13 @@
         width:258px;
         border-radius:5px;
         border:1px solid $dark-25;
-        color: $dark-25;
+        color: $dark-75;
         padding:15px;
         font-family: Montserrat;
         font-size: 14px;
+        &::-webkit-input-placeholder { 
+            color: $dark-25; 
+        }
     }
     &__button{
         display:flex;
@@ -72,8 +82,9 @@
         height: 38px;
         position:absolute;
         right:0px;
-        top:2px;
+        top:3px;
         border:0px;
         background-color:white;
+     
     }
 }

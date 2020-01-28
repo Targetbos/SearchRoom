@@ -1,0 +1,22 @@
+.footer{
+    &__iconBox{
+    display:flex;
+    width:110px;
+    justify-content: space-between;
+    align-items:center;
+    padding:0px;
+    }
+    &__icon{
+        width: 24px;
+        height: 24px;
+    }
+    &__icon-fb{
+        background:url(../src/footer/__footerCopy/__iconBox/fb.svg) no-repeat;
+    }
+    &__icon-tw{
+        background:url(../src/footer/__footerCopy/__iconBox/tw.svg) no-repeat;
+    }
+    &__icon-ig{
+        background:url(../src/footer/__footerCopy/__iconBox/ig.svg) no-repeat;
+    }
+}

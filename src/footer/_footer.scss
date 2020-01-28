@@ -1,5 +1,9 @@
 @import '../footer/__footerMain/footerMain';
 @import '../footer/__footerCopy/footerCopy';
+@import '../footer/__footerCenter/footerCenter';
+@import '../footer/__footerCopy/__iconBox/icon';
+
+
 
 .footer{
     max-width:$max-width;
@@ -17,10 +21,18 @@
         width: $width-content;
         display:flex;
         box-sizing: border-box;
+        &-copy{
+            justify-content: space-between;
+        }
     }
     &__copyright{
         width:100%;
         border-top:1px solid $dark-25;
         height: 70px;
+    }
+    &__footerCenter{
+        width:100%;
+        background:white;
+        margin-top:38px;
     }
 }
