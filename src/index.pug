@@ -3,10 +3,11 @@ html
     title Hotel
   body
     .wrapper
-      .header.header__clearfix
-        include header/header.pug
-      .header.header__clearfix.header__tooBlock
-        include header/__userLink/userlink.pug
-      //-footer
+      .header
+        .header__content
+          include header/header.pug
+      .header.header__tooBlock
+        .header__content
+          include header/__userLink/userlink.pug
       include /footer/footer.pug
   script(src='index.js')

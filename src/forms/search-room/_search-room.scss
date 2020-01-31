@@ -1,0 +1,90 @@
+.search-room{
+    width: 377px;
+    background-color: #fff;
+    border-radius:7px;
+    box-shadow:0 0 20px $dark-25;
+    padding:28px;
+    box-sizing: border-box;
+    &__title{
+        font-family: Quicksand, 'Open sans',sans-serif;
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: bold;
+        margin: 10px 0px;
+    }
+    &__subtitle{
+        display: block;
+        font-family: Quicksand, 'Open sans',sans-serif;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin:10px 1px 0px;
+    }
+    &__wrap-date-picker{
+        display:flex;
+        width:104%;
+        box-sizing: border-box;
+        flex-wrap:nowrap;
+    
+    }
+    &__clearfix{
+        content:'';
+        display:table;
+        clear:both;
+    }
+    &__date-picker-in{
+        position:relative;
+        width:49%;
+        float:left;
+    }
+    &__date-picker-out{
+        position:relative;
+        width:48%;
+        float:left;
+        padding-left:6px;
+    }
+    &__date-in{
+        width: 93%;
+        padding:13px;
+        border-radius:3px;
+        border: 1px solid $dark-25;
+        outline: none;       
+        cursor: pointer;
+
+    }
+    &__date-out{
+        width: 93%;
+        padding:13px;
+        border-radius:3px;
+        border: 1px solid $dark-25;
+        outline: none;
+        cursor: pointer;
+    }
+    &__date-icon{
+        display:flex;
+        justify-content:center;
+        color:$dark-25;
+        width: 44px;
+        height: 48px;
+        background:url('../src/img/expand_more.svg') no-repeat 50% 50%;
+        position:absolute;
+        top:30px;
+        right:11px;
+    }
+    &__quests{
+
+    }
+    &__count-guests{
+
+    }
+    &__option{
+
+    }
+    &__button{
+
+    }
+    &__submit{
+
+    }
+}

@@ -7,17 +7,22 @@
 
 
 .header{
-    display:inline-flex;
+    display:flex;
+    justify-content: center;
     box-sizing:border-box;
-    height: $height-header;
     margin:0;
     background-color:white;
     width:100%;
+    height: $height-header;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     &__clearfix::after {
         content: "";
         display: table;
         clear: both;
+    }
+    &__content{
+        display:flex;
+        width: $width-content;
     }
     &__menuBlock{
         float:right;
@@ -25,12 +30,10 @@
         align-items: center;
         justify-content:flex-end;
         width:100%;
-        margin-right:120px;
     }
     &__userBlock{
-        float:right;
-        align-items:center;
         display:flex;
+        justify-content: flex-end;
     }
     &__tooBlock{
         margin-top:39px;
