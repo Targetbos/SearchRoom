@@ -4,20 +4,17 @@
         .search-room__wrap-date-picker.search-room__clearfix
             .search-room__date-picker-in
                 label.search-room__subtitle(for='date-in') прибытие
-                    input.search-room__date-in(type='text' value='' id='date-in' plaseholder='ДД.ММ.ГГГГ')
+                    input.search-room__date-input(type='text' value='' id='date-in' placeholder='ДД.ММ.ГГГГ')
                     i.search-room__date-icon
             .search-room__date-picker-out
                 label.search-room__subtitle(for='date-out') выезд
-                    input.search-room__date-out(type='text' value='' id='date-out' plaseholder='ДД.ММ.ГГГГ')
+                    input.search-room__date-input(type='text' value='' id='date-out' placeholder='ДД.ММ.ГГГГ')
                     i.search-room__date-icon 
-
-        .search-room__guests
+        .search-room__guests-wrap
             label.search-room__subtitle гости
-            select.search-room__count-guests
-                each count in (['1','2','3','4','5','6','7','8','9','10','более 10'])
-                    option.search-room__option(value=count)=count
-        .search-room__button
-            button.search-room__submit(type='submit' value='Подобрать номер')
-
-
+                input.search-room__guests-input(placeholder='Сколько гостей')
+                i.search-room__guests-icon
+        .search-room__button-wrap
+            button.search-room__submit(type='submit' value='') Подобрать номер
+                i.search-room__submit-icon
 

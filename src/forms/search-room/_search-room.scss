@@ -1,3 +1,4 @@
+/* ---- Форма поиска комнаты ------- */
 .search-room{
     width: 377px;
     background-color: #fff;
@@ -5,6 +6,7 @@
     box-shadow:0 0 20px $dark-25;
     padding:28px;
     box-sizing: border-box;
+    height: 370px;
     &__title{
         font-family: Quicksand, 'Open sans',sans-serif;
         font-size: 24px;
@@ -44,22 +46,17 @@
         float:left;
         padding-left:6px;
     }
-    &__date-in{
+    &__date-input{
+        font-family: Montserrat,'Open Sans', sans-serif;
+        font-size: 14px;
         width: 93%;
-        padding:13px;
+        padding:12px 13px;
         border-radius:3px;
         border: 1px solid $dark-25;
         outline: none;       
         cursor: pointer;
+        margin-top:0px;
 
-    }
-    &__date-out{
-        width: 93%;
-        padding:13px;
-        border-radius:3px;
-        border: 1px solid $dark-25;
-        outline: none;
-        cursor: pointer;
     }
     &__date-icon{
         display:flex;
@@ -71,20 +68,69 @@
         position:absolute;
         top:30px;
         right:11px;
+        cursor:pointer;
     }
-    &__quests{
+    &__guests-wrap{
+        display:flexbox;
+        padding:13px 0px;
+        position:relative;
+    }
+    &__guests-input{
+        width:100%;
+        padding: 12px 14px;
+        font-family: Montserrat,'Open Sans', sans-serif;
+        font-size: 14px;
+        border-radius:3px;
+        border: 1px solid $dark-25;
+        outline: none;       
+        cursor: pointer;
 
     }
-    &__count-guests{
-
+    &__guests-icon{
+        display:flex;
+        justify-content:center;
+        color:$dark-25;
+        width: 44px;
+        height: 44px;
+        background:url('../src/img/expand_more.svg') no-repeat 50% 50%;
+        position:absolute;
+        top:42px;
+        right:2px;
+        cursor:pointer;
+        
     }
-    &__option{
-
-    }
-    &__button{
+    &__button-wrap{
+        display:flexbox;
+        width: 100%;
+        margin:0px;
+        margin-top:19px;
+        position:relative;
 
     }
     &__submit{
-
+        width:99%;
+        border-radius:22px;
+        font-family: Montserrat,'Open Sans', sans-serif;
+        padding:14px;
+        font-size: 12px;
+        line-height:15px;
+        background: $btn-bg;
+        font-weight: bold;
+        color:white;
+        cursor:pointer;
+        text-transform:uppercase;
+        border:none;
+    }
+    &__submit-icon{
+        display:inline-block;
+        justify-content:center;
+        width: 44px;
+        height: 44px;
+        background:url('../src/img/arrow_forward-24px.svg') no-repeat 50% 50%;
+        position:absolute;
+        top:0px;
+        right:2px;
+        cursor:pointer;
     }
 }
+/* ---- Конец формы поиска комнаты ------- */
