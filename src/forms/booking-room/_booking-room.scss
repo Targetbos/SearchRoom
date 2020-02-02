@@ -1,18 +1,60 @@
-/* ---- Форма поиска комнаты ------- */
-.search-room{
+.booking-room{
     width: 377px;
     background-color: #fff;
     border-radius:7px;
     box-shadow:0 0 20px $dark-25;
     padding:28px;
     box-sizing: border-box;
-    height:370px;
-    &__title{
-        font-family: Quicksand, 'Open sans',sans-serif;
-        font-size: 24px;
-        line-height: 30px;
+    height: 370px;
+    &__wrap-number-price{
+        display:flex;
+        align-items: center;
+        flex-direction:row;
+        width:100%;
+        box-sizing: border-box;
+        margin-top:7px;
+       
+    }
+    &__clearfix{
+        content:'';
+        display:table;
+        clear:both;
+    }
+    &__wrap-number{
+        width:49%;
+        float:left;
+        line-height: 9px;
+    }
+    &__n{
         font-weight: bold;
-        margin: 10px 0px;
+        font-family: Quicksand, 'Open Sans', sans-serif;
+    }
+    &__number{
+        font-size: 24px;
+        margin-top:0px;
+        
+    }
+    &__class-number{
+        margin-left:7px;
+        color:  $purple;
+    }
+    &__wrap-price{
+        width:49%;
+        float:right;
+        text-align:right;
+    }
+    &__price{
+        color:$dark-50;
+        font-weight: bold;
+    }
+    &__icon-ruble{
+        font-family: "rouble";
+        font-weight: bold;
+    }
+    &__sutki{
+        font-weight: 400;
+        font-size: 12px;
+        margin-left:4px;
     }
     &__subtitle{
         display: block;
@@ -21,7 +63,7 @@
         line-height: 20px;
         font-weight: bold;
         text-transform: uppercase;
-        margin:10px 1px 0px;
+        margin:9px 1px 0px;
     }
     &__wrap-date-picker{
         display:flex;
@@ -42,7 +84,7 @@
     }
     &__date-picker-out{
         position:relative;
-        width:48%;
+        width:49%;
         float:left;
         padding-left:6px;
     }
@@ -66,8 +108,8 @@
         height: 48px;
         background:url('../src/img/expand_more.svg') no-repeat 50% 50%;
         position:absolute;
-        top:30px;
-        right:11px;
+        top:28px;
+        right:13px;
         cursor:pointer;
     }
     &__guests-wrap{
@@ -133,4 +175,3 @@
         cursor:pointer;
     }
 }
-/* ---- Конец формы поиска комнаты ------- */

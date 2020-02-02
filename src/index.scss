@@ -20,19 +20,15 @@ $br           : 1px solid #666; // граница для тестов
 @import "../src/footer/footer";
 @import "../src/forms/form";
 
-
-
 body {
     margin          : 0 auto;
     padding         : 0px;
-    font-family     : 'Montserrat';
+    font-family     : Montserrat, 'Open Sans', sans-serif;
     font-style      : normal;
     font-weight     : 400;
     font-size       : 14px;
     background-color: #e5e5e5;
-
 }
-
 .wrapper {
     max-width       : $max-width;
     min-width       : $min-width;

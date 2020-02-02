@@ -1,0 +1,27 @@
+.booking-room   
+    form(action='')
+        .booking-room__wrap-number-price.booking-room__clearfix
+            .booking-room__wrap-number
+                p.booking-room__n № 
+                    span.booking-room__number 888
+                    span.booking-room__class-number люкс
+            .booking-room__wrap-price 
+                p.booking-room__price 9 990
+                    span.booking-room__icon-ruble g
+                    span.booking-room__sutki в сутки
+        .booking-room__wrap-date-picker.booking-room__clearfix
+            .booking-room__date-picker-in
+                label.booking-room__subtitle(for='date-in') прибытие
+                    input.booking-room__date-input(type='text' value='' id='date-in' placeholder='19.08.2019')
+                    i.booking-room__date-icon
+            .booking-room__date-picker-out
+                label.booking-room__subtitle(for='date-out') выезд
+                    input.booking-room__date-input(type='text' value='' id='date-out' placeholder='23.08.2019')
+                    i.booking-room__date-icon 
+        .booking-room__guests-wrap
+            label.booking-room__subtitle гости
+                input.booking-room__guests-input(placeholder='3 гостя')
+                i.booking-room__guests-icon
+        .booking-room__button-wrap
+            button.booking-room__submit(type='submit' value='') Забронировать
+                i.booking-room__submit-icon

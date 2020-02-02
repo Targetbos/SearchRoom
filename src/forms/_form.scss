@@ -1,4 +1,8 @@
 @import "../forms/search-room/search-room";
+@import "../forms/booking-room/booking-room";
+@import "../forms/calendar/calendar";
+
+
 
 .pages-forms{
     width:100%;
@@ -8,10 +12,9 @@
     justify-content:center;
     &__wrapper{
         width:$width-content;
-        height: 500px;
         display:flex;
         box-sizing:border-box;
-        justify-content:left;
+        justify-content:space-between;
         margin-top:150px;
     }
 }
