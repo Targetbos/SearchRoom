@@ -1,4 +1,7 @@
 @import '../forms-elements/__text-field/text-field';
+@import '../forms-elements/__dropdowns/dropdowns';
+@import '../forms-elements/__date-dropdown/date-dropdown';
+
 $width-column : ($max-width - 141*2)/$max-width*100%;
 .wrapper{
     &__elements{
@@ -10,6 +13,16 @@ $width-column : ($max-width - 141*2)/$max-width*100%;
     &-left{
         width: $width-column;
         box-sizing: border-box;
+        &__text-field{
+            padding-right: 66px;
+        }
+        &__dropdowns{
+            padding-right: 66px;
+        }
+        &__date-dropdown{
+            padding-right: 66px;
+            margin-top: 21px;
+        }
     }
     &-center{
         width: $width-column;
