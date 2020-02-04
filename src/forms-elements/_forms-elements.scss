@@ -1,0 +1,22 @@
+@import '../forms-elements/__text-field/text-field';
+$width-column : ($max-width - 141*2)/$max-width*100%;
+.wrapper{
+    &__elements{
+    padding:140px;
+    display:flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    }
+    &-left{
+        width: $width-column;
+        box-sizing: border-box;
+    }
+    &-center{
+        width: $width-column;
+        box-sizing: border-box;
+    }
+    &-right{
+        width: $width-column;
+        box-sizing: border-box;
+    }
+}

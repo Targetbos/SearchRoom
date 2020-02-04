@@ -1,0 +1,50 @@
+.wrap-text-field{
+    padding-right: 66px;
+    margin-bottom:13px;
+
+}
+.text-field{
+    &__title{
+        font-family: Montserrat, 'Open sans', sans-serif;
+        font-weight: 700;  
+        font-size: 12px;
+        line-height: 15px;
+        float: left;
+        text-transform: uppercase;
+        padding-top: 3px;
+      
+    }
+    &__subtitle{
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        color: $dark-50;
+    }
+    &__form{
+        
+    }
+    &__input{
+        width:100%;
+        font-family: Montserrat, 'Open sans', sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+        padding: 9px 15px;
+        border-radius: 4px;
+        border: 1px solid $dark-25;
+        margin: 5px 0px; 
+        &::-webkit-input-placeholder{
+            color:$dark-25;
+        }
+        &:hover, &:focus{
+            color: $dark-75;
+            border-color: $dark-75;
+        }
+        &--hover{
+            color:$dark-75;
+            border-color: $dark-75;
+        }
+
+      
+    }
+    
+}
