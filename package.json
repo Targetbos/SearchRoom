@@ -25,6 +25,7 @@
     "air-datepicker": "^2.2.3",
     "autoprefixer": "^9.7.4",
     "postcss-modules": "^1.5.0",
-    "sass": "^1.24.5"
+    "sass": "^1.24.5",
+    "src": "^1.1.2"
   }
 }

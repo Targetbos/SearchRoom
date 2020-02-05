@@ -1,5 +1,3 @@
-
-console.log("menu.js");
 var link = document.querySelectorAll(".menu__link");
 link.forEach(function(el){
     el.onclick = function(){

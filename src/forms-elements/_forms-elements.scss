@@ -4,6 +4,8 @@
 @import '../forms-elements/__filter-date-dropdown/filter-date-dropdown';
 @import '../forms-elements/__subscription-text-field/subscription-text-field';
 @import '../forms-elements/__checkbox-buttons/checkbox-buttons';
+@import '../forms-elements/__radio-buttons/_radio-buttons';
+
 
 
 $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колонок 
@@ -40,7 +42,11 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
         width: $width-column;
         box-sizing: border-box;
         &__checkbox-buttons{
-            padding-left:59px;
+            padding-left:60px;
+        }
+        &__radio-buttons{
+            padding-left:60px;
+            margin-top:36px;
         }
     }
     &-right{
