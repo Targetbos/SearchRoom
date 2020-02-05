@@ -35,6 +35,11 @@
         outline: none;       
         cursor: pointer;
         margin-top:5px;
+        &:hover, &:focus{
+            color: $dark-75;
+            border-color: $dark-75;
+            outline: none;
+        }
     }
     &__date-icon{
         display:flex;

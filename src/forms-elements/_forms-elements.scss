@@ -1,8 +1,12 @@
 @import '../forms-elements/__text-field/text-field';
 @import '../forms-elements/__dropdowns/dropdowns';
 @import '../forms-elements/__date-dropdown/date-dropdown';
+@import '../forms-elements/__filter-date-dropdown/filter-date-dropdown';
+@import '../forms-elements/__subscription-text-field/subscription-text-field';
+@import '../forms-elements/__checkbox-buttons/checkbox-buttons';
 
-$width-column : ($max-width - 141*2)/$max-width*100%;
+
+$width-column : ($max-width - 141*2)/$max-width*100%; // ширина колонок 
 .wrapper{
     &__elements{
     padding:140px;
@@ -13,7 +17,7 @@ $width-column : ($max-width - 141*2)/$max-width*100%;
     &-left{
         width: $width-column;
         box-sizing: border-box;
-        &__text-field{
+        &__text-field{              
             padding-right: 66px;
         }
         &__dropdowns{
@@ -23,13 +27,25 @@ $width-column : ($max-width - 141*2)/$max-width*100%;
             padding-right: 66px;
             margin-top: 21px;
         }
+        &__filter-date-dropdown{
+            padding-right: 119px;
+            margin-top: 39px;
+        }
+        &__subscription-text-field{
+            padding-right: 119px;
+            margin-top: 34px;
+        }
     }
     &-center{
         width: $width-column;
         box-sizing: border-box;
+        &__checkbox-buttons{
+            padding-left:59px;
+        }
     }
     &-right{
         width: $width-column;
         box-sizing: border-box;
     }
+    
 }
