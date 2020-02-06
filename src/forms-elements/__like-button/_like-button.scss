@@ -1,0 +1,41 @@
+.like-button{
+  &__title{
+    font-family: Montserrat, 'Open sans', sans-serif;
+    font-weight: 700;  
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    padding: 7px 0px 16px;
+    letter-spacing  : 0px;
+  }
+  &__wrap-btn{
+    display: inline-flex;
+    align-items:center;
+    font-size: 10px;
+    line-height: 14px;
+    width: 38px;
+    height: 18px;
+    border: 1px solid $dark-25;
+    border-radius: 9px;
+    cursor:pointer;
+    margin-right:12px;
+    padding-left:3px;
+  }
+  &__input{
+    display:none;
+  }
+  &__label{
+
+  }
+  &__input + &__label:before{
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='12' viewBox='0 -2 24 24' width='12'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z' fill='rgba(31, 32, 65, 0.25)'/%3E%3C/svg%3E");
+    width:15px;
+    height: 15px;
+    float: left;
+    margin-right: 5px;
+    cursor:pointer;
+  }
+  &__input:checked + &__label:before{
+    content: url("data:image/svg+xml,%0A%3Csvg width='25' height='25' viewBox='0 -2 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.93026 7.88672L4.3248 7.33984C3.63469 6.71484 3.13339 6.2526 2.82089 5.95312C2.50839 5.65365 2.15683 5.28255 1.7662 4.83984C1.3886 4.39714 1.12818 4 0.984952 3.64844C0.841723 3.28385 0.770108 2.91276 0.770108 2.53516C0.770108 1.89714 0.984952 1.35677 1.41464 0.914062C1.85735 0.471354 2.40422 0.25 3.05526 0.25C3.81047 0.25 4.43547 0.542969 4.93026 1.12891C5.42506 0.542969 6.05006 0.25 6.80526 0.25C7.45631 0.25 7.99667 0.471354 8.42636 0.914062C8.86907 1.35677 9.09042 1.89714 9.09042 2.53516C9.09042 3.04297 8.92115 3.57031 8.58261 4.11719C8.24407 4.66406 7.87297 5.13932 7.46933 5.54297C7.0787 5.94661 6.43417 6.55208 5.53573 7.35938L4.93026 7.88672Z' fill='%23BC9CFF'/%3E%3C/svg%3E");
+  }
+}

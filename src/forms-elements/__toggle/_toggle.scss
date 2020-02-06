@@ -59,11 +59,6 @@
   &__input:checked + &__label:after {
     left: 24px;
     background: $purple;
-
-   
-  }
-  &__input:focus + &__label:before {
-
   }
 }
 /* End CSS toggle */

@@ -6,6 +6,8 @@
 @import '../forms-elements/__checkbox-buttons/checkbox-buttons';
 @import '../forms-elements/__radio-buttons/_radio-buttons';
 @import '../forms-elements/__toggle/_toggle';
+@import '../forms-elements/__like-button/_like-button';
+
 
 
 
@@ -51,6 +53,10 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
             margin-top:36px;
         }
         &__toggle{
+            padding-left:59px;
+            margin-top:37px;
+        }
+        &__like-button{
             padding-left:59px;
             margin-top:37px;
         }
