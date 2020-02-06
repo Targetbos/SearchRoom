@@ -5,6 +5,8 @@
 @import '../forms-elements/__subscription-text-field/subscription-text-field';
 @import '../forms-elements/__checkbox-buttons/checkbox-buttons';
 @import '../forms-elements/__radio-buttons/_radio-buttons';
+@import '../forms-elements/__toggle/_toggle';
+
 
 
 
@@ -47,6 +49,10 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
         &__radio-buttons{
             padding-left:60px;
             margin-top:36px;
+        }
+        &__toggle{
+            padding-left:59px;
+            margin-top:37px;
         }
     }
     &-right{
