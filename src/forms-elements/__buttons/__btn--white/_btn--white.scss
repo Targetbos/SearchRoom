@@ -1,0 +1,20 @@
+.buttons__btn--white{
+  min-width:99px;
+  height: 45px;
+  text-transform: uppercase;
+  font-family: Montserrat, "Open sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  background:#ffffff;
+  color:$purple;
+  border:2px solid $purple;
+  border-radius: 22px;
+  cursor:pointer;
+  letter-spacing: 0px;
+  outline:none;
+  &:hover{
+border:2px solid rgba(188, 156, 255, 0.5);  }
+  &--hover{
+    border:2px solid rgba(188, 156, 255, 0.5);  
+  }
+}

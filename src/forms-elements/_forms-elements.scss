@@ -9,11 +9,7 @@
 @import '../forms-elements/__like-button/_like-button';
 @import '../forms-elements/__rate-button/_rate-button';
 @import '../forms-elements/__range-slider/_range-slider';
-
-
-
-
-
+@import '../forms-elements/__buttons/_buttons';
 
 
 $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колонок 
@@ -76,6 +72,9 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
             padding: 3px 0px 0px 65px;
             width:264px;
         }
+        &__buttons{
+            padding: 43px 0px 0px 65px;
+       }
     }
     
 }

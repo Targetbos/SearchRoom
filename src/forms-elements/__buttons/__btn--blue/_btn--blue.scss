@@ -1,0 +1,22 @@
+.buttons__btn--blue{
+  min-width:99px;
+  height: 45px;
+  background: $btn-bg;
+  text-transform: uppercase;
+  font-family: Montserrat, "Open sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color:#fff;
+  line-height: 15px;
+  border-radius: 22px;
+  cursor:pointer;
+  letter-spacing: -0.2px;
+  border:none;  
+  outline:none;
+  &:hover{
+    opacity:0.5;
+  }
+  &--hover{
+    opacity:0.5;
+  }
+}
