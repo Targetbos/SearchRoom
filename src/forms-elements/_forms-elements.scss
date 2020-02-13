@@ -8,6 +8,8 @@
 @import '../forms-elements/__toggle/_toggle';
 @import '../forms-elements/__like-button/_like-button';
 @import '../forms-elements/__rate-button/_rate-button';
+@import '../forms-elements/__range-slider/_range-slider';
+
 
 
 
@@ -70,6 +72,10 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
     &-right{
         width: $width-column;
         box-sizing: border-box;
+        &__range-slider{
+            padding: 3px 0px 0px 65px;
+            width:264px;
+        }
     }
     
 }
