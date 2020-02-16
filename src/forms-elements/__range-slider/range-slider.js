@@ -32,10 +32,10 @@
 
 
 
-rangeBlock.onmousemove = function(el){
-  let pozBlock = el.layerX;
-  let maxWidthBlock = el.offsetWidth;
-}
+// rangeBlock.onmousemove = function(el){
+//   let pozBlock = el.layerX;
+//   let maxWidthBlock = el.offsetWidth;
+// }
   
   
 
