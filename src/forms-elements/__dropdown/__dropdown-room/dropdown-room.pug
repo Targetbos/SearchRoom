@@ -8,25 +8,27 @@
 .dropdown-room
   .dropdown-room__title dropdown
   .dropdown-room__subtitle.dropdown-room__subtitle--small-margin expanded
-  .dropdown-room__form(tabindex='2')
+  .dropdown-room__form(tabindex='1')
     input.dropdown-room__input(type='text' value='2 спальни, 2 кровати' data-bedroom='2' data-bed='' data-bathroom='' disabled)
     i.dropdown-room__input-icon
-    .dropdown-room__form-expanded.dropdown-room__form-expanded--hide(tabindex='3')
-        .dropdown-room__inner
-          .dropdown-room__item-room спальни
-          .dropdown-room__item-control
-            button.dropdown-room__btn(name='minus' data-room='bedroom') -
-            .dropdown-room__number(data-number='bedroom') 2
-            button.dropdown-room__btn(name='plus' data-room='bedroom') +
-        .dropdown-room__inner
-          .dropdown-room__item-room кровати
-          .dropdown-room__item-control
-            button.dropdown-room__btn(name='minus' data-room='bed') -
-            .dropdown-room__number(data-number='bed') 2
-            button.dropdown-room__btn(name='plus' data-room='bed') +
-        .dropdown-room__inner
-          .dropdown-room__item-room ванные комнаты
-          .dropdown-room__item-control
-            button.dropdown-room__btn(name='minus' data-room='bathroom') -
-            .dropdown-room__number(data-number='bathroom') 0
-            button.dropdown-room__btn(name='plus' data-room='bathroom') +
+    .dropdown-room__overlay
+    .dropdown-room__form-expanded(tabindex='2')
+      .dropdown-room__inner
+        .dropdown-room__item-room спальни
+        .dropdown-room__item-control
+          button.dropdown-room__btn(name='minus' data-room='bedroom') -
+          .dropdown-room__number(data-number='bedroom') 2
+          button.dropdown-room__btn(name='plus' data-room='bedroom') +
+      .dropdown-room__inner
+        .dropdown-room__item-room кровати
+        .dropdown-room__item-control
+          button.dropdown-room__btn(name='minus' data-room='bed') -
+          .dropdown-room__number(data-number='bed') 2
+          button.dropdown-room__btn(name='plus' data-room='bed') +
+      .dropdown-room__inner
+        .dropdown-room__item-room ванные комнаты
+        .dropdown-room__item-control
+          button.dropdown-room__btn(name='minus' data-room='bathroom') -
+          .dropdown-room__number(data-number='bathroom') 0
+          button.dropdown-room__btn(name='plus' data-room='bathroom') +
+<!-- Конец блока Выбора комнаты -->

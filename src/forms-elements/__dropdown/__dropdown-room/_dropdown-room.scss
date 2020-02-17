@@ -54,13 +54,27 @@
     border-bottom-right-radius: 0px;
     border: 1px solid $dark-25;
     position:relative;
+    transition: border 0.2s;
     &:hover, &:focus{
       color: $dark-75;
       border-color: $dark-50;
       outline: none;
     }
   }
+  &__overlay{
+    visibility: hidden; 
+    position:fixed; 
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
+    z-index: 110; 
+    &--open{
+      visibility: visible; 
+    }
+  }
   &__form-expanded{
+    opacity:1;
     width:265px;
     border: 1px solid $dark-50;
     position:absolute;
@@ -68,10 +82,13 @@
     right: -1px;
     padding-bottom: 6px;
     box-sizing: border-box;
-    z-index:888;
+    z-index:111;
     color:$dark-100;
+    background: #ffffff;
+    outline: none;
+    transition: opacity 0.3s;
     &--hide{
-      display:none;
+      opacity:0;
     }
   }
   &__inner{
@@ -106,6 +123,10 @@
     margin-top:2px;
     margin-bottom: 1px;
     outline:none;
+    transition: background 0.2s;
+    &:hover{
+      background: $dark-5; 
+    }
   }
   &__btn--deactivate{
     border-color:$dark-25;

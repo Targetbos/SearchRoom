@@ -13,7 +13,7 @@ document.querySelectorAll('.dropdown-room__btn').forEach(function(el){
       this.previousSibling.innerHTML == '0' && this.parentElement.firstChild.classList.remove('dropdown-room__btn--deactivate'); // меняем цвет кнопки, если был 0
       this.previousSibling.innerHTML ++; // увеличиваем значение на 1
     }
-    //Заполнение Data и Value данными
+    //Заполнение input Data и Value данными
     var itemNumber = document.querySelectorAll('.dropdown-room__number');
     var bedroom = itemNumber[0].innerHTML;
     var bed = itemNumber[1].innerHTML;
@@ -29,18 +29,19 @@ document.querySelectorAll('.dropdown-room__btn').forEach(function(el){
     }); 
   }
 });
+// Управление появлением и скрытием списка при клике
 var formExpanded = document.querySelector('.dropdown-room__form-expanded');
+var overlay = document.querySelector('.dropdown-room__overlay');
 document.querySelectorAll('.dropdown-room__form').forEach(function(event){
-  console.log(event);
-  event.addEventListener('focus', function(){
-    console.log('onfocus');
+  event.addEventListener('click', function(){
     formExpanded.classList.remove('dropdown-room__form-expanded--hide');
+    overlay.classList.add('dropdown-room__overlay--open');
   });
-  formExpanded.addEventListener('blur', function(){
+  overlay.addEventListener('click',function(el){
     formExpanded.classList.add('dropdown-room__form-expanded--hide');
-    console.log('blur');
+    overlay.classList.remove('dropdown-room__overlay--open');
+    el.stopPropagation();
   });
-  console.log(formExpanded.lastChild.lastChild);
 });
 // Конец Управления кнопками + и -, выбора номера гостиницы  
 
