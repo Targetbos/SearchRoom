@@ -1,15 +1,62 @@
-/* css checkbox-buttons */
-.checkbox{
-  &-buttons{
+/* start CSS- checkbox-list */
+.checkbox {
+  width:74%;
+  margin-bottom:10px;
+  &-list{  
+    padding-bottom:40px;
+    margin-left:-1px;
+    &__wrap{
+      display:flex;
+      justify-content: space-between;
+      padding-right: 11px;
+      cursor: pointer;
+      position:relative;
+    }
     &__title{
+      width:100%;
       font-family: Montserrat, 'Open sans', sans-serif;
       font-weight: 700;  
       font-size: 12px;
       line-height: 15px;
       text-transform: uppercase;
-      padding: 3px 0px 6px;
+      padding: 3px 0px;
       letter-spacing: 0px;
-      margin-bottom: 10px;
+    }
+    &__icon{
+      background: url("data:image/svg+xml,%0A%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z' fill='%231F2041' fill-opacity='0.5'/%3E%3C/svg%3E%0A") no-repeat 50% 50%;
+      width: 24px;
+      height: 24px;
+      transform: rotate(0deg);
+      transition: transform 0.5s;
+      &--rotate{
+      transform: rotate(-180deg);
+      }
+    }
+    &__overlay{
+      visibility: hidden;
+      position:fixed; 
+      left: 0; 
+      right: 0; 
+      top: 0; 
+      bottom: 0; 
+      z-index: 110; 
+      &--open{
+        visibility: visible; 
+      }
+    }
+    &__item{
+      width:100%;
+      margin-top:10px;
+      height: 0px;
+      overflow: hidden;
+      transition: height 0.5s;
+      position:absolute;
+      top: 25px;
+      right:0px;
+      z-index: 111; 
+      &--visible{
+        height:240px;
+      }
     }
   }
   &__input{
@@ -39,6 +86,6 @@
     border: 1px solid $purple;
   }
 }
-/* css checkbox-buttons */
+/* End CSS checkbox-list */
 
 

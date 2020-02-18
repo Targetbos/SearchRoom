@@ -12,6 +12,8 @@
 @import '../forms-elements/__range-slider/_range-slider';
 @import '../forms-elements/__buttons/_buttons';
 @import '../forms-elements/__pagination/_pagination';
+@import '../forms-elements/__expandable-checkbox-list/_expandable-checkbox-list';
+
 
 $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колонок 
 .wrap{
@@ -51,7 +53,12 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
         }
         &__dropdown-room{
             padding-right: 121px;
+            margin-bottom: 150px;
             margin-left:-1px;
+        }
+        &__expandable-checkbox-list{
+            padding-right: 121px;
+            margin-left: 0px;
         }
     }
     &-center{
@@ -91,5 +98,4 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
             padding: 18px 0px 0px 66px;
         }
     }
-    
 }
