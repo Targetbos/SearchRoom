@@ -1,5 +1,5 @@
 .text-field{
-    padding-bottom: 13px;
+    padding-bottom: 11px;
     &__title{
         font-family: Montserrat, 'Open sans', sans-serif;
         font-weight: 700;  
@@ -7,8 +7,8 @@
         line-height: 15px;
         float: left;
         text-transform: uppercase;
-        padding-top: 3px;
-        letter-spacing  : 0px;
+        padding-top: 4px;
+        letter-spacing: 0px;
     }
     &__subtitle{
         font-size: 12px;
@@ -17,21 +17,21 @@
         color: $dark-50;
         letter-spacing: -0.2px;
         &--small-margin{
-            padding-top:3px;
+            padding-top: 4px;
         }
     }
     &__form{
-        
+        margin-bottom: 1px;
     }
     &__input{
         width:100%;
         font-family: Montserrat, 'Open sans', sans-serif;
         font-size: 14px;
-        line-height: 24px;
+        line-height: 25px;
         padding: 9px 14px;
         border-radius: 4px;
         border: 1px solid $dark-25;
-        margin: 5px 0px; 
+        margin: 4px 0px; 
         letter-spacing: -0.2px;
         &::-webkit-input-placeholder{
             color:$dark-25;

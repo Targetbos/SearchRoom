@@ -1,5 +1,5 @@
 @import '../forms-elements/__text-field/text-field';
-@import '../forms-elements/__dropdown/dropdown';
+@import '../forms-elements/__dropdown/__dropdown-guest/dropdown-guest';
 @import '../forms-elements/__date-dropdown/date-dropdown';
 @import '../forms-elements/__masked-text-field/masked-text-field';
 @import '../forms-elements/__filter-date-dropdown/filter-date-dropdown';
@@ -12,14 +12,13 @@
 @import '../forms-elements/__range-slider/_range-slider';
 @import '../forms-elements/__buttons/_buttons';
 @import '../forms-elements/__pagination/_pagination';
+@import '../forms-elements/__dropdown/__dropdown-room/dropdown-room';
 @import '../forms-elements/__expandable-checkbox-list/_expandable-checkbox-list';
 @import '../forms-elements/__advantages/_advantages';
 
-
-
 $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колонок 
 .wrap{
-    padding:140px;
+  padding:140px;
 }
 .wrapper{
     &__elements{
@@ -27,16 +26,17 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
     justify-content: space-between;
     box-sizing: border-box;
     align-items:flex-start;
-    padding-bottom: 93px;
+    padding-bottom: 90px;
     }
     &-left{
         width: $width-column;
         box-sizing: border-box;
-        &__text-field{              
+        &__text-field{
             padding-right: 66px;
         }
         &__dropdown{
             padding-right: 66px;
+            margin-bottom: 15px;
         }
         &__masked-text-field{
             padding-right: 66px;
@@ -54,6 +54,7 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
             margin-top: 34px;
         }
         &__dropdown-room{
+            margin-top:3px;
             padding-right: 121px;
             margin-bottom: 150px;
             margin-left:-1px;
@@ -89,6 +90,10 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
             padding-left:60px;
             margin-top:33px;
         }
+        &__dropdown-guest{
+            padding-left:58px;
+            padding-right: 7px;
+        }
     }
     &-right{
         width: $width-column;
@@ -102,6 +107,9 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
         }
         &__pagination{
             padding: 18px 0px 0px 66px;
+        }
+        &__dropdown-guest{
+            padding-left: 65px;
         }
     }
 }

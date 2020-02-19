@@ -14,6 +14,8 @@ $min-width    : 320px; // Минимальная ширина страницы
 $height-header: 70px; //высота шапки с меню
 $width-content: ($max-width - 280px)/$max-width*100%; // ширина блока с контентом с учётом отступов по 140px по краям
 $br           : 1px solid #666; // граница для тестов
+$fontM        : Montserrat, 'Open Sans', sans-serif;
+$fontO        : Quicksand, 'Open Sans', sans-serif;
 
 // Подключение основных scss блоков
 @import "../src/fonts/font";    //scss шрифтов
@@ -32,7 +34,6 @@ body {
     font-size       : 14px;
     background-color: #E5E5E5;
     letter-spacing  : -0.2px;
-
 }
 .wrapper {
     max-width       : $max-width;
