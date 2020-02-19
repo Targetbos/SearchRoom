@@ -1,0 +1,32 @@
+.advantages{
+  &__wrap{
+    display:flex;
+    align-items:center;
+    padding: 21px 0px 20px;
+    border-bottom:1px solid $dark-10;
+  }
+  &__icon{
+    display:flex; 
+    justify-content:center;
+    align-items:center;
+    width: 47px;
+    height: 47px;  
+  }
+  &__img{
+    
+  }
+  &__wrap-text{
+    padding-left:9px;
+    margin-top:4px;
+  }
+  &__title{
+    font-weight: bold;
+    padding-bottom:3px;
+    margin-left: 1px;
+  }
+  &__subtitle{
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0px;
+  }
+}
