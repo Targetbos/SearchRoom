@@ -75,14 +75,16 @@
   }
   &__form-expanded{
     visibility: 1;
+    overflow: hidden;
     width:265px;
+    height: 250px;
     border: 1px solid $dark-50;
     position:absolute;
     top: 41px;
     right: -1px;
     padding-bottom: 6px;
     box-sizing: border-box;
-    z-index:111;
+    z-index: 111;
     color:$dark-100;
     background: #ffffff;
     outline: none;
