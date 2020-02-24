@@ -1,0 +1,48 @@
+.feedback{
+  &__wrapper{
+    display:flex;
+    justify-content: flex-start;
+    max-width:100%;
+  }
+  &__wrap-img{
+    display:flex;
+    flex-direction: column;
+    padding:0px 2px;
+    width: 103px;
+    box-sizing: border-box;
+  }
+  &__img{
+    background: $dark-25;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 10px 20px $dark-10;
+    border-radius: 32px;
+    width: 48px;
+    height: 48px;
+  }
+  &__like{
+    display:flex;
+    justify-content:center;
+    margin-top:9px;
+  }
+  &__wrap-content{
+    padding-left:6px;
+    margin-top:2px;
+  }
+  &__user{
+    font-weight: bold;
+    color: $dark-75;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+  }
+  &__date{
+    color: $dark-75;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+  }
+  &__text{
+    color: $dark-75;
+    line-height: 24px;
+    margin-top: 11px;
+    letter-spacing: -0.04px;
+  }
+}

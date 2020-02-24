@@ -20,11 +20,12 @@
     font-weight: normal;
     font-size: 12px;
     background: #ffffff;
-    overflow: hidden;
-    border:none;
+    outline: none;
+    border: none;
     border-radius: 22px;
     color: $dark-50;
-    float:left;
+    float: left;
+    cursor: pointer;
   }
   &__btn--active{
     background: $btn-bg;

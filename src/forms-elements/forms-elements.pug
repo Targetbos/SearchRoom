@@ -1,3 +1,6 @@
+include \__title-element\title-element.pug
+include \__like-button\like-button.pug
+
 .wrap
     .wrapper__elements
         .wrapper-left 
@@ -21,7 +24,10 @@
             .wrapper-center__toggle
                 include \__toggle\toggle.pug
             .wrapper-center__like-button
-                include \__like-button\like-button.pug
+                +title-element({title: "like button"})
+                .wrapper-center__wrap-like-button
+                    +like-button({span:"2"})  
+                    +like-button({span:"12", check: true})
             .wrapper-center__rate-button
                 include \__rate-button\rate-button.pug
         .wrapper-right
@@ -37,8 +43,6 @@
                 include __dropdown/__dropdown-room/dropdown-room.pug
             .wrapper-left__expandable-checkbox-list
                 include __expandable-checkbox-list/expandable-checkbox-list.pug
-            .wrapper-left__advantages
-                include __advantages/advantages.pug
         .wrapper-center 
             .wrapper-center__dropdown-guest
                 include __dropdown/__dropdown-guest/dropdown-guest.pug
@@ -47,3 +51,11 @@
         .wrapper-right
             .wrapper-right__dropdown-guest
                 include __dropdown/__dropdown-guest/dropdown-guest.pug
+            .wrapper-right__bullet-list
+                include __bullet-list/bullet-list.pug
+    .wrapper__elements
+        .wrapper-left
+            .wrapper-left__advantages
+                include __advantages/advantages.pug
+        .wrapper__feedback
+            include __feedback/feedback.pug

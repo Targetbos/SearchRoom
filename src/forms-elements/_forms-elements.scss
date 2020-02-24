@@ -1,4 +1,6 @@
 @import '../forms-elements/__text-field/text-field';
+@import '../forms-elements/__title-element/title-element';
+@import '../forms-elements/__text-field/text-field';
 @import '../forms-elements/__dropdown/__dropdown-guest/dropdown-guest';
 @import '../forms-elements/__date-dropdown/date-dropdown';
 @import '../forms-elements/__masked-text-field/masked-text-field';
@@ -16,18 +18,20 @@
 @import '../forms-elements/__expandable-checkbox-list/_expandable-checkbox-list';
 @import '../forms-elements/__advantages/_advantages';
 @import '../forms-elements/__rich-checkbox-btn/_rich-checkbox-btn';
+@import '../forms-elements/__bullet-list/_bullet-list';
+@import '../forms-elements/__feedback/_feedback';
 
 
 $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колонок 
 .wrap{
-  padding:140px;
+  padding:140px 140px 40px 140px;
 }
 .wrapper{
     &__elements{
     display:flex;
     justify-content: space-between;
     box-sizing: border-box;
-    align-items:flex-start;
+    align-items: flex-start;
     padding-bottom: 90px;
     }
     &-left{
@@ -66,9 +70,10 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
             margin-left: 0px;
         }
         &__advantages{
-            padding-right: 107px;
-            margin-top: 218px;
+            padding-right: 79px;
+            margin-top: 98px;
         }
+       
     }
     &-center{
         width: $width-column;
@@ -86,7 +91,13 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
         }
         &__like-button{
             padding-left: 59px;
-            margin-top: 37px;
+            margin-top: 44px;
+        }
+        &__wrap-like-button{
+            width: 91px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
         }
         &__rate-button{
             padding-left: 60px;
@@ -119,5 +130,17 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
         &__dropdown-guest{
             padding-left: 65px;
         }
+        &__bullet-list{
+            padding-left: 65px;
+            margin-top: 253px;
+            width:260px;
+        }
+    }
+    &__feedback{
+        margin-top: 127px;
+        margin-left: 82px;
+        box-sizing: border-box;
+        width: $width-column*2;
+        
     }
 }

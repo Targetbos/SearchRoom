@@ -1,10 +1,10 @@
-.like-button
-    .like-button__title like button
-    .like-button__wrap-btn 
-      input.like-button__input(type='checkbox' id='like-button')
-      label.like-button__label(for='like-button')
-        .like-button__span 2
-    .like-button__wrap-btn 
-      input.like-button__input(type='checkbox' id='like-button1' checked)
-      label.like-button__label(for='like-button1')
-        .like-button__span 12
+mixin like-button( data )
+  .like-button
+    label.like-button__label
+      if data.check
+        input.like-button__input(type="checkbox" name=data.name checked=true)
+      else
+        input.like-button__input(type="checkbox" name=data.name checked=false)
+      .like-button__wrap-btn
+        span.like-button__icon 
+        .like-button__span= data.span

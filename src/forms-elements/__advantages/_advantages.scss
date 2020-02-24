@@ -1,16 +1,17 @@
 .advantages{
   &__wrap{
     display:flex;
-    align-items:center;
-    padding: 21px 0px 20px;
+    align-items:flex-start;
+    padding: 21px 0px 16px;
     border-bottom:1px solid $dark-10;
   }
   &__icon{
     display:flex; 
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
     width: 47px;
     height: 47px;  
+    margin-top:4px;
   }
   &__img{
     
