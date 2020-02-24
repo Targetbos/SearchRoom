@@ -53,7 +53,7 @@
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border: 1px solid $dark-25;
-    position:relative;
+    position: relative;
     transition: border 0.2s;
     &:hover, &:focus{
       color: $dark-75;
@@ -74,23 +74,24 @@
     }
   }
   &__form-expanded{
-    visibility: 1;
     overflow: hidden;
+    opacity:1;
     width:265px;
-    height: 250px;
+    height: 119px;
     border: 1px solid $dark-50;
+    border-radius: 0px 0px 4px 4px;
     position:absolute;
     top: 41px;
     right: -1px;
-    padding-bottom: 6px;
     box-sizing: border-box;
     z-index: 111;
     color:$dark-100;
     background: #ffffff;
     outline: none;
-    transition: opacity 0.3s;
+    transition: height 0.5s, opacity 0.3s;
     &--hide{
-      visibility:hidden;
+      height:0px;
+      opacity:0;
     }
   }
   &__inner{

@@ -4,14 +4,15 @@ document.querySelectorAll('.dropdown-room__btn').forEach(function(el){
     el.nextSibling.innerHTML == '0' && el.classList.add('dropdown-room__btn--deactivate'); // Если ноль, то декативируем кнопку(меняем цвет кнопки)
   }
   el.onclick = function(){ //вешаем событие клика на каждую кнопку
-    if(this.name == 'minus') { // при нажатии на минус
-      if(this.nextSibling.innerHTML != '0'){ // если количество ноль, то перестаём отнимать и меняем цвет кнокпи
-        this.nextSibling.innerHTML -= 1;
-        this.nextSibling.innerHTML == '0' && this.classList.add('dropdown-room__btn--deactivate')
+    let btn = this;
+    if(btn.name == 'minus') { // при нажатии на минус
+      if(btn.nextSibling.innerHTML != '0'){ // если количество ноль, то перестаём отнимать и меняем цвет кнокпи
+        btn.nextSibling.innerHTML -= 1;
+        btn.nextSibling.innerHTML == '0' && btn.classList.add('dropdown-room__btn--deactivate')
       } 
-    } else if(this.name == 'plus'){ // при нажатии на плюс
-      this.previousSibling.innerHTML == '0' && this.parentElement.firstChild.classList.remove('dropdown-room__btn--deactivate'); // меняем цвет кнопки, если был 0
-      this.previousSibling.innerHTML ++; // увеличиваем значение на 1
+    } else if(btn.name == 'plus'){ // при нажатии на плюс
+      btn.previousSibling.innerHTML == '0' && btn.parentElement.firstChild.classList.remove('dropdown-room__btn--deactivate'); // меняем цвет кнопки, если был 0
+      btn.previousSibling.innerHTML ++; // увеличиваем значение на 1
     }
     //Заполнение input Data и Value данными
     var itemNumber = document.querySelectorAll('.dropdown-room__number');

@@ -4,7 +4,6 @@ var checkboxItem = document.querySelector('.checkbox-list__item');
 
 document.querySelectorAll('.checkbox-list__wrap').forEach(function(event){
   event.addEventListener('click', function(el){
-    console.log(event)
     checkboxItem.classList.add('checkbox-list__item--visible');
     checkboxIcon[1].classList.add('checkbox-list__icon--rotate');
     checkboxOverlay.classList.add('checkbox-list__overlay--open');
