@@ -6,6 +6,7 @@ include \__masked-text-field\masked-text-field.pug
 include \__date-dropdown\date-dropdown.pug
 include \__filter-date-dropdown\filter-date-dropdown.pug
 include \__subscription-text-field\subscription-text-field.pug
+include \__checkbox-buttons\checkbox-buttons.pug
 
 .wrap
   .wrapper__elements
@@ -33,7 +34,11 @@ include \__subscription-text-field\subscription-text-field.pug
         +subscription-text-field({placeholder: "Email",name: ""})
     .wrapper-center 
       .wrapper-center__checkbox-buttons
-        include \__checkbox-buttons\checkbox-buttons.pug
+        +title-element({title: "checkbox buttons"})
+        .wrapper-center__checkbox-buttons-wrap
+          +checkbox-item({name: "checkbox", checked:false, text: "Можно курить"})
+          +checkbox-item({name: "checkbox", checked:true, text: "Можно с питомцами"})
+          +checkbox-item({name: "checkbox", checked:true, text: "Можно пригласить гостей (до 10 человек)"})
       .wrapper-center__radio-buttons
         include \__radio-buttons\radio-buttons.pug
       .wrapper-center__toggle

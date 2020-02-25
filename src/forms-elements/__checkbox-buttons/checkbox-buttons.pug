@@ -1,11 +1,9 @@
-.checkbox-buttons
-  .checkbox-buttons__title checkbox buttons
-  .checkbox
-    input.checkbox__input(type='checkbox' id='checkbox-one')
-    label.checkbox__label(for='checkbox-one') Можно курить
-  .checkbox
-    input.checkbox__input(type='checkbox' id='checkbox-two' checked)
-    label.checkbox__label(for='checkbox-two') Можно с питомцами
-  .checkbox
-    input.checkbox__input(type='checkbox' id='checkbox-three' checked)
-    label.checkbox__label(for='checkbox-three') Можно пригласить гостей (до 10 человек)
+mixin checkbox-item( data )
+  .checkbox-item
+    label.checkbox-item__label
+      if data.checked
+        input.checkbox-item__input(type="checkbox" name= data.name checked=true)
+      else
+        input.checkbox-item__input(type="checkbox" name= data.name checked=false)
+      .checkbox-item__icon
+      span.checkbox-item__text= data.text

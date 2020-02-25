@@ -84,7 +84,11 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
     width: $width-column;
     box-sizing: border-box;
     &__checkbox-buttons{
-      padding-left:60px;
+      padding-left: 59px;
+      &-wrap{
+        margin-left: 1px;
+        margin-top: 15px;
+      }
     }
     &__radio-buttons{
       padding-left:60px;
