@@ -7,6 +7,7 @@ include \__date-dropdown\date-dropdown.pug
 include \__filter-date-dropdown\filter-date-dropdown.pug
 include \__subscription-text-field\subscription-text-field.pug
 include \__checkbox-buttons\checkbox-buttons.pug
+include \__radio-buttons\radio-buttons.pug
 
 .wrap
   .wrapper__elements
@@ -40,7 +41,10 @@ include \__checkbox-buttons\checkbox-buttons.pug
           +checkbox-item({name: "checkbox", checked:true, text: "Можно с питомцами"})
           +checkbox-item({name: "checkbox", checked:true, text: "Можно пригласить гостей (до 10 человек)"})
       .wrapper-center__radio-buttons
-        include \__radio-buttons\radio-buttons.pug
+        +title-element({title: "radio buttons"})
+        .wrapper-center__radio-buttons-wrap
+          +radio-buttons({name: "female", checked: true, text: "Мужчина"})
+          +radio-buttons({name: "female", checked: false, text: "Женщина"})
       .wrapper-center__toggle
         include \__toggle\toggle.pug
       .wrapper-center__like-button

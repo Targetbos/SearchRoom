@@ -92,7 +92,13 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
     }
     &__radio-buttons{
       padding-left:60px;
-      margin-top:36px;
+      margin-top:37px;
+      &-wrap{
+        margin-top:14px;
+        display:flex;
+        justify-content: space-between;
+        width: 217px;
+      }
     }
     &__toggle{
       padding-left:59px;

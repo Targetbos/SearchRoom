@@ -1,8 +1,10 @@
-.radio-buttons.radio-buttons__clearfix
-  .radio-buttons__title radio buttons
-  .radio-buttons__wrap-radio 
-    input.radio-buttons__input.radio-buttons__label--color-75(type='radio' id='radio-one' name='sex' checked)
-    label.radio-buttons__label(for='radio-one' data-sex='men') Мужчина
-  .radio-buttons__wrap-radio 
-    input.radio-buttons__input(type='radio' id='radio-two' name='sex')
-    label.radio-buttons__label(for='radio-two' data-sex='women') Женщина
+mixin radio-buttons( data )
+  .radio-buttons
+    .radio-buttons__wrap 
+      label.radio-buttons__label 
+        if data.checked
+          input.radio-buttons__input(type="radio" name=data.name checked=true)
+        else
+          input.radio-buttons__input(type="radio" name=data.name checked=false)
+        .radio-buttons__icon
+        span.radio-buttons__text= data.text
