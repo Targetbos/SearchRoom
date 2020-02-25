@@ -21,7 +21,6 @@
 @import '../forms-elements/__bullet-list/_bullet-list';
 @import '../forms-elements/__feedback/_feedback';
 
-
 $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колонок 
 .wrap{
   padding:140px 140px 40px 140px;
@@ -60,11 +59,11 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
     }
     &__filter-date-dropdown{
       padding-right: 119px;
-      margin-top: 39px;
+      margin-top: 38px;
     }
     &__subscription-text-field{
       padding-right: 119px;
-      margin-top: 34px;
+      margin-top: 37px;
     }
     &__dropdown-room{
       margin-top:3px;

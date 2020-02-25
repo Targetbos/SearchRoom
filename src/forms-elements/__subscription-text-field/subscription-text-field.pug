@@ -1,4 +1,4 @@
-.subscription-text-field
-  .subscription-text-field__title subscription text field
-    input.subscription-text-field__input(type='text' placeholder='Email')
+mixin subscription-text-field( data )
+  .subscription-text-field
+    input.subscription-text-field__input(type='text' placeholder=data.placeholder name=data.name)
     i.subscription-text-field__input-icon

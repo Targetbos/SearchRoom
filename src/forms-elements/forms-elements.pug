@@ -4,6 +4,8 @@ include \__dropdown\__dropdown-guest\dropdown-guest.pug
 include \__text-field\text-field.pug
 include \__masked-text-field\masked-text-field.pug
 include \__date-dropdown\date-dropdown.pug
+include \__filter-date-dropdown\filter-date-dropdown.pug
+include \__subscription-text-field\subscription-text-field.pug
 
 .wrap
   .wrapper__elements
@@ -24,9 +26,11 @@ include \__date-dropdown\date-dropdown.pug
       .wrapper-left__date-dropdown
         +date-dropdown({titleIn: "date dropdown", titleOut: "date dropdown", placeholderIn: "ДД.ММ.ГГГГ",placeholderOut: "19.08.2019"})
       .wrapper-left__filter-date-dropdown
-        include \__filter-date-dropdown\filter-date-dropdown.pug
+        +title-element({title: "filter date dropdown"})
+        +filter-date-dropdown({name: "date-in-out"})
       .wrapper-left__subscription-text-field
-        include \__subscription-text-field\subscription-text-field.pug
+        +title-element({title: "subscription text field"})
+        +subscription-text-field({placeholder: "Email",name: ""})
     .wrapper-center 
       .wrapper-center__checkbox-buttons
         include \__checkbox-buttons\checkbox-buttons.pug
