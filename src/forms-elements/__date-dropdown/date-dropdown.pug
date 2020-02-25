@@ -1,11 +1,13 @@
 <!-- 2 текстовых поля выбора даты заезда и выезда -->
-.date-dropdown__wrap-date-picker.date-dropdown__clearfix
-    .date-dropdown__date-picker-in
-        label.date-dropdown__subtitle(for='date-in') date dropdown
-            input.date-dropdown__date-input(type='text' value='' id='date-in' placeholder='ДД.ММ.ГГГГ')
-            i.date-dropdown__date-icon
-    .date-dropdown__date-picker-out
-        label.date-dropdown__subtitle(for='date-out') date dropdown
-            input.date-dropdown__date-input(type='text' value='' id='date-out' placeholder='19.08.2019')
-            i.date-dropdown__date-icon 
+mixin date-dropdown( data )
+  .date-dropdown
+    .date-dropdown__wrap-date-picker
+      .date-dropdown__date-in
+        label.date-dropdown__subtitle=data.titleIn
+          input.date-dropdown__date-input(type="text" name="date-in" value="" placeholder= data.placeholderIn disabled)
+          i.date-dropdown__date-icon
+      .date-dropdown__date-out
+        label.date-dropdown__subtitle=data.titleOut
+          input.date-dropdown__date-input(type="text" value="" name="date-out" placeholder= data.placeholderOut disabled)
+          i.date-dropdown__date-icon 
 <!-- Конец 2 текстовых поля выбора даты заезда и выезда -->

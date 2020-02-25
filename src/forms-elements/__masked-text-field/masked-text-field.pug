@@ -1,6 +1,4 @@
 <!-- Текстовое поле с маской даты  -->
-.masked-text-field    
-    .masked-text-field__title Masked text field
-    .masked-text-field__subtitle DEFAULT
-    .masked-text-field__form
-        input.masked-text-field__input(type='text' value='' placeholder='ДД.ММ.ГГГГ')
+mixin masked-text-field( data )
+  .masked-text-field
+    input.masked-text-field__input(type='text' value=data.value placeholder=data.placeholder name=data.name)

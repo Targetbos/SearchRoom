@@ -1,40 +1,42 @@
 .date-dropdown{
+    &__wrap-date-picker{
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        min-width: 91%;
+        box-sizing: border-box;
+        flex-wrap: nowrap;
+    }
     &__subtitle{
-        display: block;
+        display: flexbox;
         font-size: 12px;
         line-height: 15px;
         font-weight: bold;
         text-transform: uppercase;
-        letter-spacing  : 0px;
+        letter-spacing: 0px;
+        flex-wrap: nowrap;
     }
-    &__wrap-date-picker{
-        display:flex;
-        width:104%;
-        box-sizing: border-box;
-        flex-wrap:nowrap;
-    }
-    &__date-picker-in{
+    &__date-in{
         position:relative;
-        width:52%;
-        float:left;
+        min-width:25%;
+        margin-right:39px;
     }
-    &__date-picker-out{
+    &__date-out{
         position:relative;
-        width:52%;
-        float:left;
-        padding-left:6px;
+        min-width:25%;
     }
     &__date-input{
         font-family: Montserrat,'Open Sans', sans-serif;
         font-size: 14px;
         line-height: 15px;
         width: 92%;
-        padding:12px 14px;
-        border-radius:3px;
+        padding: 12px 14px 13px;
+        border-radius: 3px;
         border: 1px solid $dark-25;
-        outline: none;       
+        outline: none;
         cursor: pointer;
         margin-top:5px;
+        background: #ffffff;
         &:hover, &:focus{
             color: $dark-75;
             border-color: $dark-75;
@@ -42,15 +44,15 @@
         }
     }
     &__date-icon{
-        display:flex;
-        justify-content:center;
-        color:$dark-25;
-        width: 44px;
-        height: 48px;
-        background:url('../src/img/expand_more.svg') no-repeat 50% 50%;
-        position:absolute;
-        top:18px;
-        right:11px;
+        display: flex;
+        justify-content: center;
+        color: $dark-25;
+        width: 10px;
+        height: 10px;
+        background: url('../src/forms-elements/__date-dropdown/expand_more.svg') no-repeat 50% 50%;
+        position: absolute;
+        top: 39px;
+        right: -2px;
         cursor:pointer;
     }
 }

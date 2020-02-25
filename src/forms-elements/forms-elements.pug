@@ -2,6 +2,9 @@ include \__title-element\title-element.pug
 include \__like-button\like-button.pug
 include \__dropdown\__dropdown-guest\dropdown-guest.pug
 include \__text-field\text-field.pug
+include \__masked-text-field\masked-text-field.pug
+include \__date-dropdown\date-dropdown.pug
+
 .wrap
   .wrapper__elements
     .wrapper-left 
@@ -16,9 +19,10 @@ include \__text-field\text-field.pug
         .wrapper-left__dropdown-wrap
           +dropdown-guest({name: "guest-form"})
       .wrapper-left__masked-text-field
-        include \__masked-text-field\masked-text-field.pug
+        +title-element({title: "masked text field", subtitle: "default", marginTop: false})
+        +masked-text-field({placeholder: "ДД.ММ.ГГГГ"})
       .wrapper-left__date-dropdown
-        include \__date-dropdown\date-dropdown.pug
+        +date-dropdown({titleIn: "date dropdown", titleOut: "date dropdown", placeholderIn: "ДД.ММ.ГГГГ",placeholderOut: "19.08.2019"})
       .wrapper-left__filter-date-dropdown
         include \__filter-date-dropdown\filter-date-dropdown.pug
       .wrapper-left__subscription-text-field
