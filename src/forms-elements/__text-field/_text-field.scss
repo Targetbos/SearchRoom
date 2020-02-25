@@ -1,49 +1,28 @@
+/* start css text-field */
 .text-field{
-    padding-bottom: 11px;
-    &__title{
-        font-family: Montserrat, 'Open sans', sans-serif;
-        font-weight: 700;  
-        font-size: 12px;
-        line-height: 15px;
-        float: left;
-        text-transform: uppercase;
-        padding-top: 4px;
-        letter-spacing: 0px;
+  &__input{
+    max-width: 100%;
+    min-width: 91%;
+    font-family: Montserrat, 'Open sans', sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    padding: 9px 14px 8px;
+    border-radius: 4px;
+    border: 1px solid $dark-25;
+    margin: 4px 0px; 
+    letter-spacing: -0.2px;
+    &::-webkit-input-placeholder{
+      color: $dark-25;
     }
-    &__subtitle{
-        font-size: 12px;
-        line-height: 15px;
-        text-align: right;
-        color: $dark-50;
-        letter-spacing: -0.2px;
-        &--small-margin{
-            padding-top: 4px;
-        }
+    &:hover, &:focus{
+      color: $dark-75;
+      border-color: $dark-75;
+      outline: none;
     }
-    &__form{
-        margin-bottom: 1px;
+    &--hover{
+      color: $dark-75;
+      border-color: $dark-75;
     }
-    &__input{
-        width:100%;
-        font-family: Montserrat, 'Open sans', sans-serif;
-        font-size: 14px;
-        line-height: 25px;
-        padding: 9px 14px;
-        border-radius: 4px;
-        border: 1px solid $dark-25;
-        margin: 4px 0px; 
-        letter-spacing: -0.2px;
-        &::-webkit-input-placeholder{
-            color:$dark-25;
-        }
-        &:hover, &:focus{
-            color: $dark-75;
-            border-color: $dark-75;
-            outline: none;
-        }
-        &--hover{
-            color:$dark-75;
-            border-color: $dark-75;
-        }
-    }
+  }
 }
+/* End css text-field */

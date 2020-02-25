@@ -1,2 +1,7 @@
 mixin title-element( text )
-  h3.title-element= text.title
+  .title-element
+    h3.title-element__h3= text.title
+    if text.marginTop
+      .title-element__subtitle.title-element__subtitle--margin-top=text.subtitle
+    else
+      .title-element__subtitle=text.subtitle

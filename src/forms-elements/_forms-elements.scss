@@ -27,120 +27,125 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
   padding:140px 140px 40px 140px;
 }
 .wrapper{
-    &__elements{
+  &__elements{
+    width:100%;
     display:flex;
     justify-content: space-between;
     box-sizing: border-box;
     align-items: flex-start;
     padding-bottom: 90px;
+  }
+  &-left{
+    display:flexbox;
+    width: $width-column;
+    box-sizing: border-box;
+    &__text-field{
+      padding-right: 66px;
+      margin-bottom: 13px;
     }
-    &-left{
-        width: $width-column;
-        box-sizing: border-box;
-        &__text-field{
-            padding-right: 66px;
-        }
-        &__dropdown{
-            padding-right: 66px;
-            margin-bottom: 15px;
-        }
-        &__masked-text-field{
-            padding-right: 66px;
-        }
-        &__date-dropdown{
-            padding-right: 66px;
-            margin-top: 21px;
-        }
-        &__filter-date-dropdown{
-            padding-right: 119px;
-            margin-top: 39px;
-        }
-        &__subscription-text-field{
-            padding-right: 119px;
-            margin-top: 34px;
-        }
-        &__dropdown-room{
-            margin-top:3px;
-            padding-right: 121px;
-            margin-bottom: 150px;
-            margin-left:-1px;
-        }
-        &__expandable-checkbox-list{
-            padding-right: 121px;
-            margin-left: 0px;
-        }
-        &__advantages{
-            padding-right: 79px;
-            margin-top: 98px;
-        }
-       
+    &__dropdown{
+      margin-top: 14px;
+      padding-right: 66px;
+      margin-bottom: 15px;
+      &-wrap{
+        margin-top:4px;
+      }
     }
-    &-center{
-        width: $width-column;
-        box-sizing: border-box;
-        &__checkbox-buttons{
-            padding-left:60px;
-        }
-        &__radio-buttons{
-            padding-left:60px;
-            margin-top:36px;
-        }
-        &__toggle{
-            padding-left:59px;
-            margin-top:37px;
-        }
-        &__like-button{
-            padding-left: 59px;
-            margin-top: 44px;
-        }
-        &__wrap-like-button{
-            width: 91px;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 16px;
-        }
-        &__rate-button{
-            padding-left: 60px;
-            margin-top: 33px;
-        }
-        &__dropdown-guest{
-            padding-left: 58px;
-            padding-right: 7px;
-        }
-        &__rich-checkbox-btn{
-            max-width: 280px;
-            margin-left: 58px;
-            margin-right: 7px;
-            margin-top:253px;
-        }
+    &__masked-text-field{
+      padding-right: 66px;
     }
-    &-right{
-        width: $width-column;
-        box-sizing: border-box;
-        &__range-slider{
-            padding: 3px 0px 0px 65px;
-            width:264px;
-        }
-        &__buttons{
-            padding: 43px 0px 0px 65px;
-        }
-        &__pagination{
-            padding: 18px 0px 0px 66px;
-        }
-        &__dropdown-guest{
-            padding-left: 65px;
-        }
-        &__bullet-list{
-            padding-left: 65px;
-            margin-top: 253px;
-            width:260px;
-        }
+    &__date-dropdown{
+      padding-right: 66px;
+      margin-top: 21px;
     }
-    &__feedback{
-        margin-top: 127px;
-        margin-left: 82px;
-        box-sizing: border-box;
-        width: $width-column*2;
-        
+    &__filter-date-dropdown{
+      padding-right: 119px;
+      margin-top: 39px;
     }
+    &__subscription-text-field{
+      padding-right: 119px;
+      margin-top: 34px;
+    }
+    &__dropdown-room{
+      margin-top:3px;
+      padding-right: 121px;
+      margin-bottom: 150px;
+      margin-left:-1px;
+    }
+    &__expandable-checkbox-list{
+      padding-right: 121px;
+      margin-left: 0px;
+    }
+    &__advantages{
+      padding-right: 79px;
+      margin-top: 98px;
+    }
+  }
+  &-center{
+    width: $width-column;
+    box-sizing: border-box;
+    &__checkbox-buttons{
+      padding-left:60px;
+    }
+    &__radio-buttons{
+      padding-left:60px;
+      margin-top:36px;
+    }
+    &__toggle{
+      padding-left:59px;
+      margin-top:37px;
+    }
+    &__like-button{
+      padding-left: 59px;
+      margin-top: 44px;
+    }
+    &__wrap-like-button{
+      width: 91px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+    &__rate-button{
+      padding-left: 60px;
+      margin-top: 33px;
+    }
+    &__dropdown-guest{
+      padding-left: 58px;
+      padding-right: 7px;
+    }
+    &__rich-checkbox-btn{
+      max-width: 280px;
+      margin-left: 58px;
+      margin-right: 7px;
+      margin-top:253px;
+    }
+  }
+  &-right{
+    width: $width-column;
+    box-sizing: border-box;
+    &__range-slider{
+      padding: 3px 0px 0px 65px;
+      width:264px;
+    }
+    &__buttons{
+      padding: 43px 0px 0px 65px;
+    }
+    &__pagination{
+      padding: 18px 0px 0px 66px;
+    }
+    &__dropdown-guest{
+      padding-left: 65px;
+    }
+    &__bullet-list{
+      padding-left: 65px;
+      margin-top: 253px;
+      width:260px;
+    }
+  }
+  &__feedback{
+    margin-top: 127px;
+    margin-left: 82px;
+    box-sizing: border-box;
+    width: $width-column*2;
+  }
 }

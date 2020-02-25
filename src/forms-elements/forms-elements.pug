@@ -1,61 +1,68 @@
 include \__title-element\title-element.pug
 include \__like-button\like-button.pug
-
+include \__dropdown\__dropdown-guest\dropdown-guest.pug
+include \__text-field\text-field.pug
 .wrap
-    .wrapper__elements
-        .wrapper-left 
-            .wrapper-left__text-field
-                include \__text-field\text-field.pug
-            .wrapper-left__dropdown
-                include \__dropdown\__dropdown-guest/dropdown-guest.pug
-            .wrapper-left__masked-text-field
-                include \__masked-text-field\masked-text-field.pug
-            .wrapper-left__date-dropdown
-                include \__date-dropdown\date-dropdown.pug
-            .wrapper-left__filter-date-dropdown
-                include \__filter-date-dropdown\filter-date-dropdown.pug
-            .wrapper-left__subscription-text-field
-                include \__subscription-text-field\subscription-text-field.pug
-        .wrapper-center 
-            .wrapper-center__checkbox-buttons
-                include \__checkbox-buttons\checkbox-buttons.pug
-            .wrapper-center__radio-buttons
-                include \__radio-buttons\radio-buttons.pug
-            .wrapper-center__toggle
-                include \__toggle\toggle.pug
-            .wrapper-center__like-button
-                +title-element({title: "like button"})
-                .wrapper-center__wrap-like-button
-                    +like-button({span:"2"})  
-                    +like-button({span:"12", check: true})
-            .wrapper-center__rate-button
-                include \__rate-button\rate-button.pug
-        .wrapper-right
-            .wrapper-right__range-slider
-                include \__range-slider\range-slider.pug 
-            .wrapper-right__buttons
-                include \__buttons\buttons.pug 
-            .wrapper-right__pagination
-                include \__pagination\pagination.pug 
-    .wrapper__elements
-        .wrapper-left
-            .wrapper-left__dropdown-room
-                include __dropdown/__dropdown-room/dropdown-room.pug
-            .wrapper-left__expandable-checkbox-list
-                include __expandable-checkbox-list/expandable-checkbox-list.pug
-        .wrapper-center 
-            .wrapper-center__dropdown-guest
-                include __dropdown/__dropdown-guest/dropdown-guest.pug
-            .wrapper-center__rich-checkbox-btn
-                include __rich-checkbox-btn/rich-checkbox-btn.pug
-        .wrapper-right
-            .wrapper-right__dropdown-guest
-                include __dropdown/__dropdown-guest/dropdown-guest.pug
-            .wrapper-right__bullet-list
-                include __bullet-list/bullet-list.pug
-    .wrapper__elements
-        .wrapper-left
-            .wrapper-left__advantages
-                include __advantages/advantages.pug
-        .wrapper__feedback
-            include __feedback/feedback.pug
+  .wrapper__elements
+    .wrapper-left 
+      .wrapper-left__text-field
+        +title-element({title: "text field", subtitle: " default"})
+        +text-field({placeholder: "Email"})
+      .wrapper-left__text-field
+        +title-element({title: "text field", subtitle: "hover /focus", marginTop: true})
+        +text-field({value: "This is pretty awesome", hover: true})
+      .wrapper-left__dropdown
+        +title-element({title: "dropdown", subtitle: "default", marginTop: true})
+        .wrapper-left__dropdown-wrap
+          +dropdown-guest({name: "guest-form"})
+      .wrapper-left__masked-text-field
+        include \__masked-text-field\masked-text-field.pug
+      .wrapper-left__date-dropdown
+        include \__date-dropdown\date-dropdown.pug
+      .wrapper-left__filter-date-dropdown
+        include \__filter-date-dropdown\filter-date-dropdown.pug
+      .wrapper-left__subscription-text-field
+        include \__subscription-text-field\subscription-text-field.pug
+    .wrapper-center 
+      .wrapper-center__checkbox-buttons
+        include \__checkbox-buttons\checkbox-buttons.pug
+      .wrapper-center__radio-buttons
+        include \__radio-buttons\radio-buttons.pug
+      .wrapper-center__toggle
+        include \__toggle\toggle.pug
+      .wrapper-center__like-button
+        +title-element({title: "like button"})
+        .wrapper-center__wrap-like-button
+          +like-button({span:"2"})  
+          +like-button({span:"12", check: true})
+      .wrapper-center__rate-button
+        include \__rate-button\rate-button.pug
+    .wrapper-right
+      .wrapper-right__range-slider
+        include \__range-slider\range-slider.pug 
+      .wrapper-right__buttons
+        include \__buttons\buttons.pug 
+      .wrapper-right__pagination
+        include \__pagination\pagination.pug 
+  .wrapper__elements
+    .wrapper-left
+      .wrapper-left__dropdown-room
+        include __dropdown/__dropdown-room/dropdown-room.pug
+      .wrapper-left__expandable-checkbox-list
+        include __expandable-checkbox-list/expandable-checkbox-list.pug
+    .wrapper-center 
+      .wrapper-center__dropdown-guest
+        include __dropdown/__dropdown-guest/dropdown-guest.pug
+      .wrapper-center__rich-checkbox-btn
+        include __rich-checkbox-btn/rich-checkbox-btn.pug
+    .wrapper-right
+      .wrapper-right__dropdown-guest
+        include __dropdown/__dropdown-guest/dropdown-guest.pug
+      .wrapper-right__bullet-list
+        include __bullet-list/bullet-list.pug
+  .wrapper__elements
+    .wrapper-left
+      .wrapper-left__advantages
+        include __advantages/advantages.pug
+    .wrapper__feedback
+      include __feedback/feedback.pug

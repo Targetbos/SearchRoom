@@ -1,4 +1,5 @@
-//Управления блоком выбора колличества гостей  
+//Блок управления выбора колличества гостей  
+
 var btnClearSt; // Статус кнопки "очистить"
 var inputGuest; // поле вывода и передачи данных о гостях
 var stringGuest;// Строка данных о гостях передаваемая в input value
@@ -123,7 +124,7 @@ function deactivateBtn(btn){
   if(btn.name == 'minus'){ //При нажатии на кнопку "-"
     if(btn.nextSibling.innerHTML == '0') { //если гостей 0
       btn.classList.add('dropdown-guest__btn--deactivate'); // то декативируем кнопку(меняем цвет кнопки)
-    }    
+    }
   }
 };
 
