@@ -8,6 +8,9 @@ include \__filter-date-dropdown\filter-date-dropdown.pug
 include \__subscription-text-field\subscription-text-field.pug
 include \__checkbox-buttons\checkbox-buttons.pug
 include \__radio-buttons\radio-buttons.pug
+include \__toggle\toggle.pug
+include \__rate-button\rate-button.pug
+
 
 .wrap
   .wrapper__elements
@@ -46,14 +49,21 @@ include \__radio-buttons\radio-buttons.pug
           +radio-buttons({name: "female", checked: true, text: "Мужчина"})
           +radio-buttons({name: "female", checked: false, text: "Женщина"})
       .wrapper-center__toggle
-        include \__toggle\toggle.pug
+        +title-element({title: "toggle"})
+        .wrapper-center__toggle-wrap
+          +toggle({name: "toggle", checked: true, text: "Получать спецпредложения"})
+          +toggle({name: "toggle", checked: false, text: "Получать спецпредложения"})
       .wrapper-center__like-button
         +title-element({title: "like button"})
         .wrapper-center__wrap-like-button
           +like-button({span:"2"})  
           +like-button({span:"12", check: true})
       .wrapper-center__rate-button
-        include \__rate-button\rate-button.pug
+        +title-element({title: "rate button"})
+        .wrapper-center__rate-button-wrap
+          +rate-button({name: "rating"})
+          +rate-button({name: "rating 1"})
+
     .wrapper-right
       .wrapper-right__range-slider
         include \__range-slider\range-slider.pug 

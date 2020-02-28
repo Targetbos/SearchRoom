@@ -101,22 +101,28 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
       }
     }
     &__toggle{
-      padding-left:59px;
-      margin-top:37px;
+      padding-left: 59px;
+      margin-top: 28px;
+      &-wrap{
+        margin-top: 13px;
+      }
     }
     &__like-button{
       padding-left: 59px;
-      margin-top: 44px;
+      margin-top: 32px;
     }
     &__wrap-like-button{
       width: 91px;
       display: flex;
       justify-content: space-between;
-      margin-top: 16px;
+      margin-top: 15px;
     }
     &__rate-button{
-      padding-left: 60px;
-      margin-top: 33px;
+      padding-left: 59px;
+      margin-top: 37px;
+      &-wrap{
+        margin: 16px 0px 0px 43px;
+      }
     }
     &__dropdown-guest{
       padding-left: 58px;
