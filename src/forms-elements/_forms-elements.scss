@@ -66,10 +66,11 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
       margin-top: 37px;
     }
     &__dropdown-room{
-      margin-top:3px;
+      margin: 5px 0px 150px -1px;
       padding-right: 121px;
-      margin-bottom: 150px;
-      margin-left:-1px;
+    }
+    &__wrap-dropdown-room{
+      margin-bottom:18px;
     }
     &__expandable-checkbox-list{
       padding-right: 121px;
@@ -81,6 +82,7 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
     }
   }
   &-center{
+    display:flexbox;
     width: $width-column;
     box-sizing: border-box;
     &__checkbox-buttons{
@@ -136,17 +138,38 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
     }
   }
   &-right{
+    display:flexbox;
     width: $width-column;
     box-sizing: border-box;
     &__range-slider{
-      padding: 3px 0px 0px 65px;
+      padding: 0px 0px 0px 65px;
       width:264px;
     }
     &__buttons{
-      padding: 43px 0px 0px 65px;
+      padding: 41px 0px 0px 65px;
+    }
+    &__wrap-btn{
+      width:216px;
+      padding: 14px 0px 15px 1px;
+      display:flex;
+      justify-content: space-between;
+    }
+    &__wrap-icon-link{
+      width:152px;
+      padding: 14px 0px 15px 0px;
+      margin-left:-4px;
+      display:flex;
+      justify-content: space-between;
+    }
+    &__wrap-btn-with-icon{
+      width:318px;
+      padding: 13px 0px 15px 0px;
     }
     &__pagination{
-      padding: 18px 0px 0px 66px;
+      padding: 22px 0px 0px 66px;
+    }
+    &__wrap-pagination{
+      margin-top: 14px;
     }
     &__dropdown-guest{
       padding-left: 65px;

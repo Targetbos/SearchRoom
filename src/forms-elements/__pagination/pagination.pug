@@ -1,14 +1,14 @@
-.pagination
-  .pagination__title pagination
-  .pagination__wrap-block.pagination__clearfix
-    button.pagination__btn.pagination__btn--active 1 
-    button.pagination__btn 2 
-    button.pagination__btn 3
-    button.pagination__btn ...
-    button.pagination__btn 15
-    button.pagination__btn.pagination__btn--icon-next
-      i.pagination__icon-next
-  .pagination__desc 1 &ndash; 12 из 100+ вариантов аренды
+mixin pagination( data )
+  .pagination
+    .pagination__wrap-block.pagination__clearfix
+      button.pagination__btn.pagination__btn--active(name=data.name value=data.value) 1 
+      button.pagination__btn(name=data.name value=data.value) 2 
+      button.pagination__btn(name=data.name value=data.value) 3
+      button.pagination__btn(name=data.name value=data.value) ...
+      button.pagination__btn(name=data.name value=data.value) 15
+      button.pagination__btn.pagination__btn--icon-next(name=data.name value=data.value)
+        i.pagination__icon-next
+    .pagination__desc 1 &ndash; 12 из 100+ вариантов аренды
 
 
 

@@ -1,2 +1,5 @@
-button.buttons__btn--white(value='') click me
-button.buttons__btn--white.buttons__btn--white--hover(value='') click me
+mixin button-white( data )
+  if data.hover
+    button.buttons__btn--white.buttons__btn--white--hover(value=data.value name=data.name)= data.text
+  else  
+    button.buttons__btn--white(value=data.value name=data.name)= data.text

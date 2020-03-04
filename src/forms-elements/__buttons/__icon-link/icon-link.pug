@@ -1,2 +1,5 @@
-button.buttons__icon-link(value='') click me
-button.buttons__icon-link.buttons__icon-link--hover(value='') click me
+mixin button-link( data )
+  if data.hover
+    button.buttons__icon-link.buttons__icon-link--hover(value=data.value name=data.name)= data.text
+  else  
+    button.buttons__icon-link(value=data.value name=data.name)= data.text

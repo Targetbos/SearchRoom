@@ -1,2 +1,7 @@
-button.buttons__btn-with-icon(value='') перейти к оплате
-  i.buttons__icon
+mixin button-with-icon( data )
+  if data.hover
+    button.buttons__btn-with-icon.buttons__btn-with-icon--hover(value=data.value name=data.name)= data.text
+      i.buttons__icon
+  else  
+    button.buttons__btn-with-icon(value=data.value name=data.name)= data.text
+      i.buttons__icon

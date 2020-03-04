@@ -10,6 +10,11 @@ include \__checkbox-buttons\checkbox-buttons.pug
 include \__radio-buttons\radio-buttons.pug
 include \__toggle\toggle.pug
 include \__rate-button\rate-button.pug
+include \__range-slider\range-slider.pug 
+include \__buttons\buttons.pug 
+include \__pagination\pagination.pug 
+include __dropdown/__dropdown-room/dropdown-room.pug
+
 
 
 .wrap
@@ -66,15 +71,36 @@ include \__rate-button\rate-button.pug
 
     .wrapper-right
       .wrapper-right__range-slider
-        include \__range-slider\range-slider.pug 
+        +title-element({title: "range slider", subtitle: " 5 000Р - 10 000Р", marginTop: true})
+        .wrapper-right__range-slider-wrap
+          +range-slider()
       .wrapper-right__buttons
-        include \__buttons\buttons.pug 
+        +title-element({title: "buttons"})
+        .wrapper-right__wrap-btn
+          +button-blue({name: "btn", value: "btn", text: "Click Me"})
+          +button-blue({name: "btn", value: "btn", text: "Click Me", hover:true})
+        .wrapper-right__wrap-btn
+          +button-white({name: "btn", value: "btn", text: "Click Me"})
+          +button-white({name: "btn", value: "btn", text: "Click Me", hover:true})
+        .wrapper-right__wrap-icon-link
+          +button-link({name: "btn", value: "btn", text: "Click Me"})
+          +button-link({name: "btn", value: "btn", text: "Click Me", hover:true})
+        .wrapper-right__wrap-btn-with-icon
+          +button-with-icon({name:"btn", value: "btn", text: "Перейти к оплате"})
       .wrapper-right__pagination
-        include \__pagination\pagination.pug 
+        +title-element({title: "pagination"})
+        .wrapper-right__wrap-pagination
+          +pagination({name: "btn"})
   .wrapper__elements
     .wrapper-left
       .wrapper-left__dropdown-room
-        include __dropdown/__dropdown-room/dropdown-room.pug
+        +title-element({title: "dropdown", subtitle: "DEFAULT", marginTop:true})
+        .wrapper-left__wrap-dropdown-room
+          +dropdown-room({name:"select-room", open: false})
+        +title-element({title: "dropdown", subtitle: "EXPANDED", marginTop:true})
+        .wrapper-left__wrap-dropdown-room
+          +dropdown-room({name:"select-room", open: true})
+
       .wrapper-left__expandable-checkbox-list
         include __expandable-checkbox-list/expandable-checkbox-list.pug
     .wrapper-center 
