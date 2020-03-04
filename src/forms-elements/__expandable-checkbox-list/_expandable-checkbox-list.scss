@@ -1,10 +1,6 @@
 /* start CSS- checkbox-list */
 .checkbox {
-  width:74%;
-  margin-bottom:10px;
-  &-list{  
-    padding-bottom:40px;
-    margin-left:-1px;
+  &-list{
     &__wrap{
       display:flex;
       justify-content: space-between;
@@ -12,24 +8,15 @@
       cursor: pointer;
       position:relative;
     }
-    &__title{
-      width:100%;
-      font-family: Montserrat, 'Open sans', sans-serif;
-      font-weight: 700;  
-      font-size: 12px;
-      line-height: 15px;
-      text-transform: uppercase;
-      padding: 3px 0px;
-      letter-spacing: 0px;
-    }
     &__icon{
       background: url("data:image/svg+xml,%0A%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z' fill='%231F2041' fill-opacity='0.5'/%3E%3C/svg%3E%0A") no-repeat 50% 50%;
-      width: 24px;
-      height: 24px;
+      width: 19px;
+      height: 22px;
       transform: rotate(0deg);
       transition: transform 0.5s;
       &--rotate{
       transform: rotate(-180deg);
+      width:20px;
       }
     }
     &__overlay{
@@ -39,51 +26,27 @@
       right: 0; 
       top: 0; 
       bottom: 0; 
-      z-index: 110; 
+      z-index: 119; 
       &--open{
         visibility: visible; 
       }
     }
-    &__item{
+    &__list{
       width:100%;
       margin-top:10px;
+      padding-top: 12px;
       height: 0px;
       overflow: hidden;
       transition: height 0.5s;
       position:absolute;
-      top: 25px;
+      top: 13px;
       right:0px;
-      z-index: 111; 
+      z-index: 123; 
+      background: #ffffff;
       &--visible{
         height:240px;
       }
     }
-  }
-  &__input{
-    display:none;
-  }
-  &__label{
-    display:flex;
-    letter-spacing: 0px;
-    color:$dark-50;
-    line-height: 21px;
-    cursor:pointer;
-  }
-  &__label:before {
-    content: "";
-    display: inline-flex;
-    align-items: flex-start;
-    flex:none;
-    border: 1px solid $dark-25;
-    border-radius:4px;
-    width: 18px;
-    height: 18px;
-    margin-right: 9px;
-    letter-spacing: 0.2px;
-  }
-  &__input:checked + &__label:before {
-    content: url("data:image/svg+xml,%0A%3Csvg width='18' height='18' viewBox='0 -3 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.46439 4.40768L5.70703 8.65032L4.29282 10.0645L0.0501771 5.82189L1.46439 4.40768Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M8.53546 2.99347L9.94967 4.40768L4.29282 10.0645L2.8786 8.65032L8.53546 2.99347Z' fill='url(%23paint1_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='7.82835' y1='2.28636' x2='2.1715' y2='7.94321' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='7.82835' y1='2.28636' x2='2.1715' y2='7.94321' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
-    border: 1px solid $purple;
   }
 }
 /* End CSS checkbox-list */

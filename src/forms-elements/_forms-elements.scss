@@ -75,6 +75,10 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
     &__expandable-checkbox-list{
       padding-right: 121px;
       margin-left: 0px;
+      margin-top: 170px;
+    }
+    &__wrap-checkbox-list{
+      margin-bottom: 41px;
     }
     &__advantages{
       padding-right: 79px;
@@ -127,14 +131,21 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
       }
     }
     &__dropdown-guest{
-      padding-left: 58px;
+      padding-left: 59px;
       padding-right: 7px;
+      margin-top: 5px;
+    }
+    &__wrap-dropdown-guest{
+      margin-top: 3px;
     }
     &__rich-checkbox-btn{
       max-width: 280px;
-      margin-left: 58px;
+      margin-left: 59px;
       margin-right: 7px;
       margin-top:253px;
+    }
+    &__wrap-checkbox{
+      margin-top: 14px;
     }
   }
   &-right{
@@ -173,11 +184,16 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
     }
     &__dropdown-guest{
       padding-left: 65px;
+      margin-top: 5px;
     }
     &__bullet-list{
       padding-left: 65px;
       margin-top: 253px;
       width:260px;
+    }
+    &__wrap-bullet-list{
+      margin-top: 12px;
+      margin-left: 1px;
     }
   }
   &__feedback{

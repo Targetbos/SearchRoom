@@ -14,8 +14,11 @@ include \__range-slider\range-slider.pug
 include \__buttons\buttons.pug 
 include \__pagination\pagination.pug 
 include __dropdown/__dropdown-room/dropdown-room.pug
-
-
+include __expandable-checkbox-list/expandable-checkbox-list.pug
+include __advantages/advantages.pug
+include __rich-checkbox-btn/rich-checkbox-btn.pug
+include __bullet-list/bullet-list.pug
+include __feedback/feedback.pug
 
 .wrap
   .wrapper__elements
@@ -100,22 +103,35 @@ include __dropdown/__dropdown-room/dropdown-room.pug
         +title-element({title: "dropdown", subtitle: "EXPANDED", marginTop:true})
         .wrapper-left__wrap-dropdown-room
           +dropdown-room({name:"select-room", open: true})
-
       .wrapper-left__expandable-checkbox-list
-        include __expandable-checkbox-list/expandable-checkbox-list.pug
+        .wrapper-left__wrap-checkbox-list
+          +checkbox-list({title: "expandable checkbox list"})
+        .wrapper-left__wrap-checkbox-list
+          +checkbox-list({title: "expandable checkbox list"})
     .wrapper-center 
       .wrapper-center__dropdown-guest
-        include __dropdown/__dropdown-guest/dropdown-guest.pug
+        +title-element({ title: "dropdown"})
+        .wrapper-center__wrap-dropdown-guest
+          +dropdown-guest({name: "dpguest"})
       .wrapper-center__rich-checkbox-btn
-        include __rich-checkbox-btn/rich-checkbox-btn.pug
+        +title-element({title: "rich checkbox buttons"})
+        .wrapper-center__wrap-checkbox
+          +rich-checkbox-buttons({name: "wide-corridor", head: "Широкий коридор", desc: "Ширина коридоров в номере не менее 91 см"})
+          +rich-checkbox-buttons({name: "assistent", head: "Помощник для инвалидов", desc: "На этаже Вас встретит специалист и проводит до номера"})
+    
     .wrapper-right
       .wrapper-right__dropdown-guest
-        include __dropdown/__dropdown-guest/dropdown-guest.pug
+        +title-element({ title: "dropdown"})
+        .wrapper-center__wrap-dropdown-guest
+          +dropdown-guest({name: "dpguest"})
       .wrapper-right__bullet-list
-        include __bullet-list/bullet-list.pug
+        +title-element({title: "bullet list"})
+        .wrapper-right__wrap-bullet-list
+          +bullet-list({text:["Нельзя с питомцами","Без вечеринок и мероприятий", "Время прибытия — после 13:00, в выезд до 12:00"]})
   .wrapper__elements
     .wrapper-left
       .wrapper-left__advantages
-        include __advantages/advantages.pug
+        +advantages({img: "/forms-elements/__advantages/img/emoticon.svg", head: "Комфорт", desc: "Шумопоглащающие стены"})
+        +advantages({img: "/forms-elements/__advantages/img/city.svg", head: "Удобство", desc: "Окно в каждой из спален"})
     .wrapper__feedback
-      include __feedback/feedback.pug
+      +feedback()

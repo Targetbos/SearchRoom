@@ -1,18 +1,22 @@
-var checkboxOverlay = document.querySelector('.checkbox-list__overlay');
-var checkboxIcon = document.querySelectorAll('.checkbox-list__icon');
-var checkboxItem = document.querySelector('.checkbox-list__item');
-
-document.querySelectorAll('.checkbox-list__wrap').forEach(function(event){
-  event.addEventListener('click', function(el){
-    checkboxItem.classList.add('checkbox-list__item--visible');
-    checkboxIcon[1].classList.add('checkbox-list__icon--rotate');
-    checkboxOverlay.classList.add('checkbox-list__overlay--open');
+(function(){
+  document.querySelectorAll('.checkbox-list__wrap').forEach(function(event){
+    let checkboxList = event.lastElementChild;
+    let checkboxIcon = event.firstElementChild.nextElementSibling; 
+    let checkboxOverlay = checkboxList.previousElementSibling;
+    event.addEventListener('click', function(){
+      // let checkboxList = event.lastElementChild;
+      // let checkboxIcon = event.firstElementChild.nextElementSibling; 
+      // let checkboxOverlay = checkboxList.previousElementSibling;
+      checkboxList.classList.add('checkbox-list__list--visible');
+      checkboxIcon.classList.add('checkbox-list__icon--rotate');
+      checkboxOverlay.classList.add('checkbox-list__overlay--open');
+    });
+    
+    checkboxOverlay.addEventListener('click', function(elem){
+      checkboxList.classList.remove('checkbox-list__list--visible');
+      checkboxIcon.classList.remove('checkbox-list__icon--rotate');
+      checkboxOverlay.classList.remove('checkbox-list__overlay--open');
+      elem.stopPropagation();
+    });
   });
-  
-  checkboxOverlay.addEventListener('click', function(elem){
-    checkboxItem.classList.remove('checkbox-list__item--visible');
-    checkboxIcon[1].classList.remove('checkbox-list__icon--rotate');
-    checkboxOverlay.classList.remove('checkbox-list__overlay--open');
-    elem.stopPropagation();
-  });
-});
+}) ();

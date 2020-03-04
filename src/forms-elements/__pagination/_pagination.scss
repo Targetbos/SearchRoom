@@ -26,6 +26,9 @@
     color: $dark-50;
     float: left;
     cursor: pointer;
+    &:hover{
+      background:$dark-10;
+    }
   }
   &__btn--active{
     background: $btn-bg;

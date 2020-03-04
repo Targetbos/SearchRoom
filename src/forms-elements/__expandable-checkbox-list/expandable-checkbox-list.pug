@@ -1,35 +1,31 @@
-.checkbox-list
-  .checkbox-list__wrap
-    .checkbox-list__title expandable checkbox list
-    i.checkbox-list__icon
-  
-.checkbox-list
-  .checkbox-list__wrap
-    .checkbox-list__title expandable checkbox list
-    i.checkbox-list__icon.checkbox-list__icon--rotate
-    .checkbox-list__overlay
-    .checkbox-list__item.checkbox-list__item--visible
-      .checkbox
-        input.checkbox__input(type='checkbox' id='checkbox-breakfast')
-        label.checkbox__label(for='checkbox-breakfast') Завтрак
-      .checkbox
-        input.checkbox__input(type='checkbox' id='checkbox-table' checked)
-        label.checkbox__label(for='checkbox-table') Письменный стол
-      .checkbox
-        input.checkbox__input(type='checkbox' id='checkbox-fchair' checked)
-        label.checkbox__label(for='checkbox-fchair') Стул для кормления
-      .checkbox
-        input.checkbox__input(type='checkbox' id='checkbox-cot' checked)
-        label.checkbox__label(for='checkbox-cot') Кроватка
-      .checkbox
-        input.checkbox__input(type='checkbox' id='checkbox-tv')
-        label.checkbox__label(for='checkbox-tv') Телевизор
-      .checkbox
-        input.checkbox__input(type='checkbox' id='checkbox-shampoo')
-        label.checkbox__label(for='checkbox-shampoo') Шампунь
-      .checkbox
-        input.checkbox__input(type='checkbox' id='checkbox-tv2')
-        label.checkbox__label(for='checkbox-tv2') Телевизор
-      .checkbox
-        input.checkbox__input(type='checkbox' id='checkbox-shampoo2')
-        label.checkbox__label(for='checkbox-shampoo2') Шампунь
+mixin checkbox-list( data )
+  if data.visible
+    .checkbox-list
+      .checkbox-list__wrap
+        +title-element({title: data.title})
+        i.checkbox-list__icon.checkbox-list__icon--rotate
+        .checkbox-list__overlay
+        .checkbox-list__list.checkbox-list__list--visible
+          +checkbox-item({name: "breakfast", text: "Завтрак", checked: false})
+          +checkbox-item({name: "desk", text: "Письменный стол", checked: true})
+          +checkbox-item({name: "chair", text: "Стул для кормления", checked: true})
+          +checkbox-item({name: "cot", text: "Кроватка", checked: true})
+          +checkbox-item({name: "tv", text: "Телевизор", checked: false})
+          +checkbox-item({name: "shampoo", text: "Шампунь", checked: false})
+          +checkbox-item({name: "tv2", text: "Телевизор", checked: false})
+          +checkbox-item({name: "shampoo2", text: "Шампунь", checked: false})
+  else
+    .checkbox-list
+      .checkbox-list__wrap
+        +title-element({title: data.title})
+        i.checkbox-list__icon
+        .checkbox-list__overlay
+        .checkbox-list__list
+          +checkbox-item({name: "breakfast", text: "Завтрак", checked: false})
+          +checkbox-item({name: "desk", text: "Письменный стол", checked: true})
+          +checkbox-item({name: "chair", text: "Стул для кормления", checked: true})
+          +checkbox-item({name: "cot", text: "Кроватка", checked: true})
+          +checkbox-item({name: "tv", text: "Телевизор", checked: false})
+          +checkbox-item({name: "shampoo", text: "Шампунь", checked: false})
+          +checkbox-item({name: "tv2", text: "Телевизор", checked: false})
+          +checkbox-item({name: "shampoo2", text: "Шампунь", checked: false})

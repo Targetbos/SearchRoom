@@ -1,14 +1,8 @@
-.advantages
-  .advantages__wrap
-    .advantages__icon
-      img.advantages__img(src="forms-elements/__advantages/img/emoticon.svg")
-    .advantages__wrap-text
-      .advantages__title Комфорт
-      .advantages__subtitle Шумопоглащающие стены
-.advantages
-  .advantages__wrap
-    .advantages__icon
-      img.advantages__img(src="forms-elements/__advantages/img/city.svg")
-    .advantages__wrap-text
-      .advantages__title Удобство
-      .advantages__subtitle Окно в каждой из спален
+mixin advantages ( data ) 
+  .advantages
+    .advantages__wrap
+      .advantages__icon
+        img.advantages__img(src=data.img)
+      .advantages__wrap-text
+        .advantages__head= data.head
+        .advantages__desc= data.desc
