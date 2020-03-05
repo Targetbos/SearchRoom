@@ -2,8 +2,8 @@ mixin checkbox-item( data )
   .checkbox-item
     label.checkbox-item__label
       if data.checked
-        input.checkbox-item__input(type="checkbox" name= data.name checked=true)
+        input.checkbox-item__input(type="checkbox" name= data.name value=data.value checked=true)
       else
-        input.checkbox-item__input(type="checkbox" name= data.name checked=false)
+        input.checkbox-item__input(type="checkbox" name= data.name value=data.value checked=false)
       .checkbox-item__icon
       span.checkbox-item__text= data.text

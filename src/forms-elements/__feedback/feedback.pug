@@ -2,12 +2,10 @@ mixin feedback( data )
   .feedback
     .feedback__wrapper
       .feedback__wrap-img
-        img.feedback__img(src="../src/forms-elements/__feedback/img/murad.jpg" alt="Отзыв")
+        img.feedback__img(src=data.img alt="Отзыв")
         .feedback__like
           +like-button({name: "murat", span:"12", check: true})
       .feedback__wrap-content
-        .feedback__user Мурад Сарафанов
-        .feedback__date 5 дней назад
-        .feedback__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. 
-                        |  И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару 
-                        | — никто не жаловался из соседей
+        .feedback__user= data.user
+        .feedback__date= data.date
+        .feedback__text= data.text

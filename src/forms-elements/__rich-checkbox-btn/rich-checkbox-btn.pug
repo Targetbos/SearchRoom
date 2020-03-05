@@ -2,7 +2,10 @@ mixin rich-checkbox-buttons( data )
   .rich-checkbox-btn
     .rich-checkbox-btn__wrap-checkbox
       label.rich-checkbox-btn__label 
-        input.rich-checkbox-btn__input(type="checkbox" name=data.name)
+        if data.checked
+          input.rich-checkbox-btn__input(type="checkbox" name=data.name value=data.value checked=true)
+        else
+          input.rich-checkbox-btn__input(type="checkbox" name=data.name value=data.value checked=false)
         .rich-checkbox-btn__icon 
         .rich-checkbox-btn__head=data.head
           .rich-checkbox-btn__desc=data.desc

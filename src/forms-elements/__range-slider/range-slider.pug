@@ -1,7 +1,7 @@
-mixin range-slider()
+mixin range-slider( data )
   .range-slider
     .range-slider__wrap-slider
       .range-slider__block
-        .range-slider__min
+        input.range-slider__min(type="text" name=data.name value=data.valueMin)
         .range-slider__body
-        .range-slider__max
+        input.range-slider__max(type="text" name=data.name value=data.valueMax)

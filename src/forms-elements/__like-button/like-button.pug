@@ -1,7 +1,7 @@
 mixin like-button( data )
   .like-button
     label.like-button__label
-      if data.check
+      if data.checked
         input.like-button__input(type="checkbox" name=data.name checked=true)
       else
         input.like-button__input(type="checkbox" name=data.name checked=false)
