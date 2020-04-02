@@ -1,0 +1,22 @@
+.datepicker{
+  font-family: $fontM;
+  font-size: 12px;
+  &--cell{
+    &.-selected-{
+      border-radius: 18px;
+    }
+    &.-in-range-{
+
+    }
+    &.-range-from-{
+
+    }
+  }
+  &--nav-title{
+    font-family: $fontO;
+    font-size: 19px;
+    font-weight: bold;
+    color:$dark-100;
+    line-height: 24px;
+  }
+}

@@ -2,7 +2,10 @@
 .filter-date-dropdown{
   position: relative;
   display: flex;
+  z-index: 6;
+  background:none;
   &__input{
+    position:relative;
     width: 100%;
     font-family: Montserrat, 'Open sans', sans-serif;
     font-size: 14px;
@@ -13,17 +16,19 @@
     margin: 3px 0px; 
     color: $dark-75;
     cursor: pointer;
+    z-index: 4;
     &-icon{
       display: flex;
       justify-content: center;
       position: absolute;
       color: $dark-25;
-      width: 32px;
-      height: 32px;
+      width: 14px;
+      height: 14px;
       background:url('../src/forms-elements/__filter-date-dropdown/expand_more.svg') no-repeat 50% 50%;
-      top: 10px;
-      right: 6px;
+      top: 19px;
+      right: 15px;
       cursor:pointer;
+      z-index:5;
     }
     &:-webkit-input-placeholder{
       color: $dark-25;

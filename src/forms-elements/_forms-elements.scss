@@ -1,25 +1,25 @@
-@import '../forms-elements/__text-field/text-field';
-@import '../forms-elements/__title-element/title-element';
-@import '../forms-elements/__text-field/text-field';
-@import '../forms-elements/__dropdown/__dropdown-guest/dropdown-guest';
-@import '../forms-elements/__date-dropdown/date-dropdown';
-@import '../forms-elements/__masked-text-field/masked-text-field';
-@import '../forms-elements/__filter-date-dropdown/filter-date-dropdown';
-@import '../forms-elements/__subscription-text-field/subscription-text-field';
-@import '../forms-elements/__checkbox-buttons/checkbox-buttons';
-@import '../forms-elements/__radio-buttons/_radio-buttons';
-@import '../forms-elements/__toggle/_toggle';
-@import '../forms-elements/__like-button/_like-button';
-@import '../forms-elements/__rate-button/_rate-button';
-@import '../forms-elements/__range-slider/_range-slider';
-@import '../forms-elements/__buttons/_buttons';
-@import '../forms-elements/__pagination/_pagination';
-@import '../forms-elements/__dropdown/__dropdown-room/dropdown-room';
-@import '../forms-elements/__expandable-checkbox-list/_expandable-checkbox-list';
-@import '../forms-elements/__advantages/_advantages';
-@import '../forms-elements/__rich-checkbox-btn/_rich-checkbox-btn';
-@import '../forms-elements/__bullet-list/_bullet-list';
-@import '../forms-elements/__feedback/_feedback';
+@import "../forms-elements/__text-field/text-field";
+@import "../forms-elements/__title-element/title-element";
+@import "../forms-elements/__text-field/text-field";
+@import "../forms-elements/__dropdown/__dropdown-guest/dropdown-guest";
+@import "../forms-elements/__date-dropdown/date-dropdown";
+@import "../forms-elements/__masked-text-field/masked-text-field";
+@import "../forms-elements/__filter-date-dropdown/filter-date-dropdown";
+@import "../forms-elements/__subscription-text-field/subscription-text-field";
+@import "../forms-elements/__checkbox-buttons/checkbox-buttons";
+@import "../forms-elements/__radio-buttons/_radio-buttons";
+@import "../forms-elements/__toggle/_toggle";
+@import "../forms-elements/__like-button/_like-button";
+@import "../forms-elements/__rate-button/_rate-button";
+@import "../forms-elements/__range-slider/_range-slider";
+@import "../forms-elements/__buttons/_buttons";
+@import "../forms-elements/__pagination/_pagination";
+@import "../forms-elements/__dropdown/__dropdown-room/dropdown-room";
+@import "../forms-elements/__expandable-checkbox-list/_expandable-checkbox-list";
+@import "../forms-elements/__advantages/_advantages";
+@import "../forms-elements/__rich-checkbox-btn/_rich-checkbox-btn";
+@import "../forms-elements/__bullet-list/_bullet-list";
+@import "../forms-elements/__feedback/_feedback";
 
 $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колонок 
 .wrap{

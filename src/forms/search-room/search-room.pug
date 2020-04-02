@@ -1,22 +1,21 @@
 <!-- --- Форма поиска комнаты --- -->
 .search-room
-    form(action='')
-        h3.search-room__title Найдём номера под ваши пожелания
-        .search-room__wrap-date-picker.search-room__clearfix
-            .search-room__date-picker-in
-                label.search-room__subtitle(for='date-in') прибытие
-                    input.search-room__date-input(type='text' value='' id='date-in' placeholder='ДД.ММ.ГГГГ')
-                    i.search-room__date-icon
-            .search-room__date-picker-out
-                label.search-room__subtitle(for='date-out') выезд
-                    input.search-room__date-input(type='text' value='' id='date-out' placeholder='ДД.ММ.ГГГГ')
-                    i.search-room__date-icon 
-        .search-room__guests-wrap
-            label.search-room__subtitle гости
-                input.search-room__guests-input(placeholder='Сколько гостей')
-                i.search-room__guests-icon
-        .search-room__button-wrap
-            button.search-room__submit(type='submit' value='') Подобрать номер
-                i.search-room__submit-icon
+  form(action='')
+    h3.search-room__title Найдём номера под ваши пожелания
+    .search-room__wrap-date-picker.search-room__clearfix
+      .search-room__date-picker-in
+        label.search-room__subtitle(for='date-in') прибытие
+          input.search-room__date-input(type='text' value='' id='date-in' placeholder='ДД.ММ.ГГГГ')
+          i.search-room__date-icon
+      .search-room__date-picker-out
+        label.search-room__subtitle(for='date-out') выезд
+          input.search-room__date-input(type='text' value='' id='date-out' placeholder='ДД.ММ.ГГГГ')
+          i.search-room__date-icon 
+    .search-room__guests-wrap
+      label.search-room__subtitle гости
+        input.search-room__guests-input(placeholder='Сколько гостей')
+        i.search-room__guests-icon
+    .search-room__button-wrap
+      button.search-room__submit(type='submit' value='') Подобрать номер
+        i.search-room__submit-icon
 <!-- --- Конец формы поиска комнаты --- -->
-

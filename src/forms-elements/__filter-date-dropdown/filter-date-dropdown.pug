@@ -1,6 +1,6 @@
 <!-- Текстовое поле filter-date-dropdown -->
 mixin filter-date-dropdown( data )
   .filter-date-dropdown
-    input.filter-date-dropdown__input(type="text" value="19 авг - 23 авг" name=data.name)
+    input.filter-date-dropdown__input.datepicker-here(type="text" value="19 авг - 23 авг" name=data.name data-range="true" data-multiple-dates-separator=" - " data-date-format="dd M")
     i.filter-date-dropdown__input-icon
 <!-- Конец Текстовое поле filter-date-dropdown -->
