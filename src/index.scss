@@ -18,12 +18,13 @@ $fontM        : Montserrat, 'Open Sans', sans-serif;
 $fontO        : Quicksand, 'Open Sans', sans-serif;
 
 // Подключение основных scss блоков
-@import "../src/fonts/font";    //scss шрифтов
-@import "../src/header/header"; //scss хедера 
-@import "../src/footer/footer"; //scss футера
-@import "../src/forms/form";    //scss страницы Cards с формами
-@import "../src/forms-elements/forms-elements";    //scss страницы forms-elements с элементами форм
-
+@import "./src/fonts/font";    //scss шрифтов
+@import "./src/header/header"; //scss хедера 
+@import "./src/footer/footer"; //scss футера
+@import "./src/forms-elements/forms-elements";    //scss страницы forms-elements с элементами форм
+html{
+    font-size: 16px;
+}
 
 body {
     margin          : 0 auto;

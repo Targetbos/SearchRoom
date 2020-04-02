@@ -1,0 +1,18 @@
+include ./forms/__search-room/search-room.pug
+doctype html
+html
+  head
+    title Hotel
+    script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
+    link(rel="stylesheet" type="text/css" href="../node_modules/air-datepicker/dist/css/datepicker.css")
+    script(src="../node_modules/air-datepicker/dist/js/datepicker.js")
+    
+  body
+    .wrapper
+      .container
+        .left-column
+          +search-room({nameForm: "search-room"})
+        .center-column
+        .right-column
+  script(src='./forms.js')
+

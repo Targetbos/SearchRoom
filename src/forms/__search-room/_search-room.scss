@@ -1,0 +1,32 @@
+@import "../../forms-elements/__date-dropdown/date-dropdown";
+
+.search-room{
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        max-width: 23.42rem;
+        min-height: 23.07rem;
+        border-radius:4px;
+        background:#ffffff;
+    }
+    &__title{
+        margin:0px;
+        font-family: $fontO;
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        padding: 2.37rem 1.73rem 0rem;
+        letter-spacing: -0.06px;
+        
+    }
+    &__wrap-date{
+        margin: 1.35rem 1.76rem 0rem 1.75rem;
+
+    }
+    &__wrap-guest{
+        margin: 1.191rem 1.8125rem 0rem 1.74rem;
+
+    }
+    &__wrap-btn{
+        margin: 0.68rem 1.8125rem 0rem 1.75rem;
+    }
+}
