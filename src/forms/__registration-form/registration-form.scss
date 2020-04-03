@@ -1,0 +1,58 @@
+.registration-form{
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+    max-width: 23.42rem;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 0.94rem 1.75rem 1.81rem;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1.56rem $dark-25;
+    &-name{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 6.56rem;
+    }
+    &-select-gender{
+      width: 68.34%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.3125rem;
+    }
+    &-birthday{
+      margin-top: 0.7rem;
+    }
+    &-authform{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 7.73rem;
+      margin-top: 0.86rem;
+    }
+    &-toggle{
+      margin-top: 0.3125rem;
+    }
+    &-btn-pay{
+      margin-top:0.81rem;
+    }
+    &-input-btn{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.92rem;
+
+    }
+  }
+  &__title{
+    margin: 0px;
+    font-family: $fontO;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    padding: 1.37rem 0rem 1rem;
+    letter-spacing: -0.06px;
+  }
+  &__text-input{
+    margin-top: 0.75rem;
+    letter-spacing: 0px;
+  }
+}

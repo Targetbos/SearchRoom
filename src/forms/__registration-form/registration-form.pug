@@ -1,0 +1,29 @@
+include ../../forms-elements/__text-field/text-field.pug
+include ../../forms-elements/__radio-buttons/radio-buttons.pug
+include ../../forms-elements/__masked-text-field/masked-text-field.pug
+include ../../forms-elements/__toggle/toggle.pug
+include ../../forms-elements/__buttons/__btn--white/btn--white.pug
+
+mixin registration-form( data )
+  .registration-form
+    .registration-form__wrap
+      H3.registration-form__title Регистрация аккаунта
+      .registration-form__wrap-name
+        +text-field({name:"username", placeholder: "Имя"})
+        +text-field({name:"surname", placeholder: "Фамилия"})
+      .registration-form__wrap-select-gender
+        +radio-buttons({name: "female", text: "Мужчина", value: "men"})
+        +radio-buttons({name: "female", text: "Женщина", value: "women",  checked: true})
+      .registration-form__wrap-birthday
+        +masked-text-field({placeholder: "ДД.ММ.ГГГГ", name: "birthday", title: "Дата рождения"})
+      .registration-form__wrap-authform
+        +title-element({title: "данные для входа в сервис"})
+        +text-field({name:"email", placeholder: "Email"})
+        +text-field({name:"password", placeholder: "Пароль"})
+      .registration-form__wrap-toggle
+        +toggle({name: "toggle", text: "Получать спецпредложения"})
+      .registration-form__wrap-btn-pay
+        +btn-with-icon({text: "Перейти к оплате"})
+      .registration-form__wrap-input-btn
+        p.registration-form__text-input Уже есть аккаунт на Toxin
+        +btn-white({name: "btn-input", value: "auth", text: "Войти"})

@@ -8,6 +8,7 @@
         min-height: 23.07rem;
         border-radius:4px;
         background:#ffffff;
+        box-shadow: 0px 0px 1.56rem $dark-25;
     }
     &__title{
         margin:0px;
@@ -16,7 +17,6 @@
         line-height: 1.875rem;
         padding: 2.37rem 1.73rem 0rem;
         letter-spacing: -0.06px;
-        
     }
     &__wrap-date{
         margin: 1.35rem 1.76rem 0rem 1.75rem;
@@ -24,7 +24,6 @@
     }
     &__wrap-guest{
         margin: 1.191rem 1.8125rem 0rem 1.74rem;
-
     }
     &__wrap-btn{
         margin: 0.68rem 1.8125rem 0rem 1.75rem;

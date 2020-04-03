@@ -1,4 +1,6 @@
 include ./forms/__search-room/search-room.pug
+include ./forms/__registration-form/registration-form.pug
+
 doctype html
 html
   head
@@ -12,6 +14,8 @@ html
       .container
         .left-column
           +search-room({nameForm: "search-room"})
+          .left-column__wrap-registration-form
+            +registration-form({})
         .center-column
         .right-column
   script(src='./forms.js')
