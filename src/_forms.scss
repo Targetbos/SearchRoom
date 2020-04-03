@@ -1,6 +1,8 @@
 @import "./index.scss";
 @import "./forms/__search-room/search-room";
 @import "./forms/__registration-form/registration-form.scss";
+@import "./forms/__booking-room/booking-room.scss";
+
 .wrapper{
   display: block;
   max-width: 1150px;
@@ -8,12 +10,15 @@
   border: $br;
 }
 .container{
-
+  display:flex;
+  min-width:100%;
 }
 .left-column{
   &__wrap-registration-form{
     margin-top: 2.75rem;
   }
 }
-.center-column{}
+.center-column{
+  padding: 0rem 2.6875rem;
+}
 .right-column{}

@@ -1,5 +1,6 @@
 include ./forms/__search-room/search-room.pug
 include ./forms/__registration-form/registration-form.pug
+include ./forms/__booking-room/booking-room.pug
 
 doctype html
 html
@@ -17,6 +18,8 @@ html
           .left-column__wrap-registration-form
             +registration-form({})
         .center-column
+          .center-column__wrap-booking-room
+            +booking-room({})
         .right-column
   script(src='./forms.js')
 
