@@ -1,0 +1,15 @@
+
+mixin login-form ( data )
+  .login-form
+    .login-form__wrap
+      .login-form__title Войти
+      .login-form__email-field
+        +text-field({name: "email", placeholder: "Email"})
+      .login-form__password-field
+        +text-field({name: "password", placeholder: "Пароль", type: "password"})
+      .login-form__wrap-btn-input
+        +btn-with-icon({name:"input-btn", text: "Войти"})
+      .login-form__wrap-registration-btn
+        p.login-form__text-input Нет аккаунта на Toxin?
+        +btn-white({name: "btn-registration", value: "register", text: "Создать"})
+      

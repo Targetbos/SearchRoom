@@ -1,6 +1,14 @@
 .datepicker{
   font-family: $fontM;
   font-size: 12px;
+  &--nav{
+    min-height: 50px;
+    border:none;
+    padding: 4px 10px;
+    &-title{
+      padding: 0 46px;
+    }
+  }
   &--cell{
     &.-selected-{
       border-radius: 18px;

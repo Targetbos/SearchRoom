@@ -1,6 +1,8 @@
 include ./forms/__search-room/search-room.pug
 include ./forms/__registration-form/registration-form.pug
 include ./forms/__booking-room/booking-room.pug
+include ./forms/__login-form/login-form.pug
+
 
 doctype html
 html
@@ -20,6 +22,12 @@ html
         .center-column
           .center-column__wrap-booking-room
             +booking-room({})
+          .center-column__wrap-login-form
+            +login-form({})
         .right-column
+          .right-column__wrap-datepicker
+            .datepicker-form
+              .datepicker-form__wrap
+                .datepicker-here.datepicker-form__calendar
   script(src='./forms.js')
 
