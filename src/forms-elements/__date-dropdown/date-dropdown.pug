@@ -3,11 +3,11 @@ mixin date-dropdown( data )
   .date-dropdown
     .date-dropdown__wrap-date-picker
       .date-dropdown__date-in
-        label.date-dropdown__subtitle=data.titleIn
-          input.date-dropdown__date-input.datepicker-here(type="text" value="" name=data.nameIn placeholder= data.placeholderIn  data-position="bottom left")
-          i.date-dropdown__date-icon
+        .date-dropdown__subtitle=data.titleIn 
+        input.date-dropdown__date-input.datepicker-here(type="text" value="" name=data.nameIn placeholder= data.placeholderIn  data-position="bottom left")
+        i.date-dropdown__date-icon
       .date-dropdown__date-out
-        label.date-dropdown__subtitle=data.titleOut
-          input.date-dropdown__date-input.datepicker-here(type="text" value="" name=data.nameOut placeholder= data.placeholderOut data-position="bottom right")
-          i.date-dropdown__date-icon 
+        .date-dropdown__subtitle=data.titleOut
+        input.date-dropdown__date-input.datepicker-here(type="text" value="" name=data.nameOut placeholder= data.placeholderOut data-position="bottom right")
+        i.date-dropdown__date-icon 
 <!-- Конец 2 текстовых поля выбора даты заезда и выезда -->

@@ -1,4 +1,5 @@
 <!-- Текстовое поле с маской даты  -->
 mixin masked-text-field( data )
   .masked-text-field
+    +title-element({title: data.title})
     input.masked-text-field__input(type='text' value=data.value placeholder=data.placeholder name=data.name)

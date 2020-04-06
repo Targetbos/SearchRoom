@@ -1,43 +1,50 @@
 @import "air-datepicker.scss";
 .date-dropdown{
     &__wrap-date-picker{
+        width:100%;
         display: flex;
-        justify-content: space-between;
-        max-width: 100%;
-        min-width: 91%;
-        box-sizing: border-box;
-        flex-wrap: nowrap;
     }
     &__subtitle{
-        display: flexbox;
-        font-size: 12px;
-        line-height: 15px;
+        display: flex;
+        font-size: 0.75rem;
+        line-height: 0.9rem;
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 0px;
-        flex-wrap: nowrap;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
     }
     &__date-in{
+        display:flex;
+        flex-direction:column;
         position:relative;
-        min-width:25%;
-        margin-right:39px;
+        width:47%;
+        
     }
     &__date-out{
+        display:flex;
+        flex-direction:column;
         position:relative;
-        min-width:25%;
+        width:47%;
+        margin-left:20px;
     }
     &__date-input{
+        display:block;
+        box-sizing: border-box;
+        width:100%;
         font-family: Montserrat,'Open Sans', sans-serif;
-        font-size: 14px;
-        line-height: 15px;
-        width: 92%;
-        padding: 12px 14px 13px;
+        font-size: 0.85rem;
+        line-height: 1rem;
+        padding: 0.71rem 0.1rem 0.85rem 0.91rem;
         border-radius: 3px;
         border: 1px solid $dark-25;
         outline: none;
         cursor: pointer;
-        margin-top:5px;
+        margin-top:6px;
         background: #ffffff;
+        letter-spacing: 0.1px;
+        color: $dark-75;
         &:hover, &:focus{
             color: $dark-75;
             border-color: $dark-75;
@@ -48,12 +55,14 @@
         display: flex;
         justify-content: center;
         color: $dark-25;
-        width: 10px;
-        height: 10px;
-        background: url('../src/forms-elements/__date-dropdown/expand_more.svg') no-repeat 50% 50%;
+        width: 7px;
+        height: 7px;
+        border:2px solid $dark-50;
+        border-width: 0 0 2px 2px;
+        transform: rotate(-45deg);
         position: absolute;
-        top: 39px;
-        right: -2px;
+        top: 2.1875rem;
+        right: 1.125rem;
         cursor:pointer;
     }
 }

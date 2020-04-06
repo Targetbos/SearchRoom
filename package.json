@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "fe": "parcel src/fe.pug --open",
-    "form": "parcel src/form.pug --open",
+    "forms": "parcel src/forms.pug --open",
     "dev": "parcel src/index.pug --open",
     "build": "parcel build src/index.pug -d build --public-url ./"
   },
@@ -22,6 +22,7 @@
     "pug": "^2.0.4"
   },
   "dependencies": {
+    "@material-ui/icons": "^4.9.1",
     "air-datepicker": "^2.2.3",
     "autoprefixer": "^9.7.4",
     "postcss-modules": "^1.5.0",

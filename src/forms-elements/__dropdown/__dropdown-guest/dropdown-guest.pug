@@ -1,11 +1,13 @@
 <!-- Input выбора колличества гостей -->
+include ../../__title-element/title-element.pug
 mixin dropdown-guest( data )
   .dropdown-guest
-    .dropdown-guest__form.dropdown-guest__form--border-bottom-90deg
+    +title-element({title: data.title, subtitle: data.subtitle, marginTop: data.marginTop})
+    .dropdown-guest__form
       input.dropdown-guest__input(type='text' name= data.name value='Сколько гостей' data-adults='' data-children='' data-babies='' disabled)
       i.dropdown-guest__input-icon
     .dropdown-guest__overlay
-    .dropdown-guest__form-expanded
+    .dropdown-guest__form-expanded.dropdown-guest__form-expanded--hide
       .dropdown-guest__inner
         .dropdown-guest__item-guest взрослые
         .dropdown-guest__item-control

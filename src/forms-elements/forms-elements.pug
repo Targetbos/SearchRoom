@@ -44,8 +44,6 @@ include __feedback/feedback.pug
         +text-field({value: "This is pretty awesome", hover: true})
 
       .wrapper-left__dropdown
-        +title-element({title: "dropdown", subtitle: "default", marginTop: true})
-        .wrapper-left__dropdown-wrap
           //- +dropdown-guest
           //- Имена передаваемого объекта:
           //-  name - имя поля данных
@@ -53,7 +51,7 @@ include __feedback/feedback.pug
           //-  adults - количество взрослых
           //-  children - количество детей
           //-  babies - количество младенцев
-          +dropdown-guest({name: "guest-form"})
+          +dropdown-guest({name: "guest-form", title: "dropdown", subtitle: "default", marginTop: true})
 
       .wrapper-left__masked-text-field
         +title-element({title: "masked text field", subtitle: "default", marginTop: false})
@@ -183,16 +181,16 @@ include __feedback/feedback.pug
           //-  value - value
           //-  text - Текст, отображаемый на кнопке
           //-  hover:true - добавляет стиль, имитирующий выделение кнопки
-          +button-blue({name: "btn", value: "btn", text: "Click Me"})
-          +button-blue({name: "btn", value: "btn", text: "Click Me", hover:true})
+          +btn-blue({name: "btn", value: "btn", text: "Click Me"})
+          +btn-blue({name: "btn", value: "btn", text: "Click Me", hover:true})
         .wrapper-right__wrap-btn
-          +button-white({name: "btn", value: "btn", text: "Click Me"})
-          +button-white({name: "btn", value: "btn", text: "Click Me", hover:true})
+          +btn-white({name: "btn", value: "btn", text: "Click Me"})
+          +btn-white({name: "btn", value: "btn", text: "Click Me", hover:true})
         .wrapper-right__wrap-icon-link
-          +button-link({name: "btn", value: "btn", text: "Click Me"})
-          +button-link({name: "btn", value: "btn", text: "Click Me", hover:true})
+          +btn-link({name: "btn", value: "btn", text: "Click Me"})
+          +btn-link({name: "btn", value: "btn", text: "Click Me", hover:true})
         .wrapper-right__wrap-btn-with-icon
-          +button-with-icon({name:"btn", value: "btn", text: "Перейти к оплате"})
+          +btn-with-icon({name:"btn", value: "btn", text: "Перейти к оплате"})
 
       .wrapper-right__pagination
         +title-element({title: "pagination"})

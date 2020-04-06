@@ -1,0 +1,49 @@
+@import "./index.scss";
+@import "./forms/__search-room/search-room";
+@import "./forms/__registration-form/registration-form.scss";
+@import "./forms/__booking-room/booking-room.scss";
+@import "./forms/__login-form/login-form";
+
+
+.wrapper{
+  display: block;
+  max-width: 1150px;
+  padding: 9.34rem 8.72rem;
+  border: $br;
+}
+.container{
+  display:flex;
+  min-width:100%;
+}
+.left-column{
+  &__wrap-registration-form{
+    margin-top: 2.75rem;
+  }
+}
+.center-column{
+  padding: 0rem 2.6rem 0rem 2.6875rem;
+  &__wrap-login-form{
+    margin-top: 2.6rem;
+  }
+}
+.right-column{
+  display:block;
+  &__wrap-datepicker{
+    width:19.4rem;
+  }
+}
+.datepicker-form{
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+    max-width: 23.42rem;
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 0.94rem 1.75rem 1.81rem;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1.56rem $dark-25;
+  }
+  &__calendar{
+
+  }
+}

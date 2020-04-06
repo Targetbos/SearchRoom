@@ -7,5 +7,8 @@ mixin text-field( data )
   .text-field
     if data.hover
       input.text-field__input.text-field__input--hover(type='text' placeholder=data.placeholder value=data.value name=data.name)
+    else if data.type
+      input.text-field__input(type=data.type placeholder=data.placeholder value=data.value name=data.name)
     else
       input.text-field__input(type='text' placeholder=data.placeholder value=data.value name=data.name)
+      
