@@ -1,4 +1,4 @@
-console.log("work");
+import './js/air-datepicker';
 $(".date-dropdown__subtitle").click(function(){
   
   $(".datepicker-here").datepicker({
