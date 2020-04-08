@@ -43,7 +43,7 @@
 
             multipleDates: false, // Boolean or Number
             multipleDatesSeparator: ',',
-            range: true,
+            range: false,
 
             todayButton: false,
             clearButton: true,

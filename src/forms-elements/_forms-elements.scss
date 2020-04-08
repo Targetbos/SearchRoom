@@ -127,7 +127,12 @@ $width-column : ($max-width - 141*2)/$max-width*100%; // ширина колон
       padding-left: 59px;
       margin-top: 37px;
       &-wrap{
-        margin: 16px 0px 0px 43px;
+        display: flex;
+        justify-content: space-between;
+        width:257px;
+        margin-top:14px;
+        margin-left:4px;
+        // margin: 16px 0px 0px 43px;
       }
     }
     &__dropdown-guest{

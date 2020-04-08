@@ -1,18 +1,16 @@
 /* start css rate-button */
 .rate-button{
   &__wrap-star{
-    width:100px;
+    width: 7.35rem;
     display: flex;
-    float: left;
-    margin-right: 38px;
+    justify-content: space-between;
     direction:rtl;
+    height: 1.69rem;
+    
   }
   &__input-star{
-    float: right;
-    position: relative;
-    width: 0;
+    list-style: none;
     height: 0;
-    margin: 0 24px 20px 0;
     cursor: pointer;
   }
   &__input-star:before{
