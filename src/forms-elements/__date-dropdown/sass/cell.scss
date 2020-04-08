@@ -1,0 +1,208 @@
+@import "./datepicker-config";
+
+/* -------------------------------------------------
+    Datepicker cells
+   ------------------------------------------------- */
+
+.datepicker--cells {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1px;
+  margin-top:12px;
+}
+
+.datepicker--cell {
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: $datepickerDayCellSize;
+  z-index: 1;
+  color: $dark-50;
+
+  &.-focus- {
+    background: map_get($datepickerBG, hover);
+  }
+
+  &.-current- {
+    color: map_get($datepickerTextColor, currentDate);
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); 
+    border-radius: 50%;
+
+    &.-focus- {
+      color: map_get($datepickerTextColor, common);
+    }
+
+    &.-in-range- {
+      color: map_get($datepickerTextColor, currentDate);
+    }
+  }
+
+  &.-in-range- {
+    background: rgba(219, 156, 255,0.25);
+    border-radius: 0;
+  
+    &.-focus- {
+      background-color: rgba(map_get($datepickerBG, inRange), .2);
+    }
+  }
+
+  &.-disabled- {
+    cursor: default;
+    color: map_get($datepickerTextColor, disabled);
+
+    &.-focus- {
+      color: map_get($datepickerTextColor, disabled);
+    }
+
+    &.-in-range- {
+      color: darken(map_get($datepickerTextColor, disabled), 5);
+    }
+
+    &.-current- {
+      &.-focus- {
+        color: map_get($datepickerTextColor, disabled);
+      }
+    }
+  }
+
+  &.-range-from- {
+    background-color: rgba(219, 156, 255,0.25);
+    border-radius: 50% 0 0 50%;
+    &.-selected-{
+      background-color: rgba(219, 156, 255,0.25);
+      border-radius: 50% 0 0 50%;
+      & > .span-selected{
+        text-align: center;
+        line-height: 2.5rem;
+        width:100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: #ffffff; 
+      }
+      &.-focus-{
+        background: rgba(219, 156, 255,0.25);
+      }
+    }
+  }
+  &.-range-to- {
+    background-color: rgba(219, 156, 255,0.25);
+    border-radius:  0 50% 50% 0;
+
+    &.-selected-{
+      background-color: rgba(219, 156, 255,0.25);
+      border-radius:  0 50% 50% 0;
+      & > .span-selected{
+        text-align: center;
+        line-height: 2.5rem;
+        width:100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: #ffffff; 
+      }
+      &.-focus-{
+        background: rgba(219, 156, 255,0.25);
+      }
+    }
+    
+  }
+
+  &.-range-from-.-range-to- {
+    border-radius: $datepickerBorderRadius;
+  }
+
+  &.-selected- {
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background: map_get($datepickerBG, selected);
+
+    &.-current- {
+      color: #fff;
+      background: map_get($datepickerBG, selected);
+    }
+
+    &.-focus- {
+      background: map_get($datepickerBG, selectedHover);
+    }
+  }
+
+  &:empty {
+    cursor: default;
+  }
+}
+
+//  Day names
+// -------------------------------------------------
+
+.datepicker--days-names {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px 0 3px;
+}
+
+.datepicker--day-name {
+  color: map_get($datepickerTextColor, dayNames);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+//  Day cell
+// -------------------------------------------------
+
+.datepicker--cell-day {
+  width: 14.286%;
+  &.-other-month- {
+    @extend %otherMonth;
+  }
+}
+
+
+//  Months
+// -------------------------------------------------
+
+.datepicker--months {}
+
+.datepicker--cells-months {
+  height: $datepickerMinBodyHeight;
+}
+
+//  Month cell
+// -------------------------
+
+.datepicker--cell-month {
+  width: 33.33%;
+  height: 25%;
+}
+
+//  Years
+// -------------------------------------------------
+
+.datepicker--years {
+  height: $datepickerMinBodyHeight;
+}
+
+.datepicker--cells-years {
+  height: $datepickerMinBodyHeight;
+}
+//  Year cell
+// -------------------------
+
+.datepicker--cell-year {
+  width: 100% / $datepickerYearsPerRow;
+  height: 33.33%;
+
+  &.-other-decade- {
+    @extend %otherMonth;
+  }
+}

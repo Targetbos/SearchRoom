@@ -1,4 +1,6 @@
 import '/index.scss';
-import '../src/header/__menu/menu.js';
-import '../src/forms-elements/forms-elements';
+import './header/__menu/menu.js';
+import './forms-elements/forms-elements';
+import './forms.js';
+
 

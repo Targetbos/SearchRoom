@@ -3,6 +3,9 @@
 @import "./forms/__registration-form/registration-form.scss";
 @import "./forms/__booking-room/booking-room.scss";
 @import "./forms/__login-form/login-form";
+@import "./forms-elements/__date-dropdown/date-dropdown";
+@import "./forms/__desc-room/desc-room";
+
 
 
 .wrapper{
@@ -31,19 +34,20 @@
   &__wrap-datepicker{
     width:19.4rem;
   }
+  &__wrap-desc-room{
+    width: 16.7rem;
+    margin-top: 2.5rem;
+  }
+  &__wrap-desc-room2{
+    width: 16.7rem;
+    margin-top: 2.44rem;
+  }
 }
 .datepicker-form{
   &__wrap{
     display: flex;
-    flex-direction: column;
-    max-width: 23.42rem;
+    max-width: 100%;
     border-radius: 4px;
     background: #ffffff;
-    padding: 0.94rem 1.75rem 1.81rem;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 1.56rem $dark-25;
-  }
-  &__calendar{
-
   }
 }

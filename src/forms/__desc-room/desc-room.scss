@@ -1,0 +1,141 @@
+.desc-room{
+  &__wrap{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 16.7rem;
+    border-radius: 0.25rem;
+    background: #ffffff;
+  }
+  &__slider{
+    overflow: hidden;
+    display: flex;
+    min-width: 100%;
+    border-radius: 0.25rem;
+    position: relative;
+  }
+  &__container{
+    display:flex;
+    height: 9.4375rem;
+    list-style: none;
+    margin: 0;
+  }
+  &__item{
+    display: flex;
+    min-width: 100%;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s;
+    &--show{
+      opacity: 1;
+    }
+  }
+  &__img{
+  }
+  &__dots-wrap{
+    display: flex;
+    position: absolute;
+    bottom: 0.875rem;
+    right: 0.875rem;
+  }
+  &__dot{
+    width: 6px;
+    height: 6px;
+    border:1px solid #ffffff;
+    border-radius: 50%;
+    margin-left:0.18rem;
+    background: transparent; 
+    cursor: pointer;
+    transition: background 0.3s;
+    &--active{
+      background:#ffffff;
+    }
+  }
+  &__wrap-desc{
+    min-width:100%;
+    padding: 0.9375rem;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  &__wrap-number-price{
+    width:100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; 
+    height: 2.31rem;
+    box-sizing: border-box;
+    padding: 0 0 0.5625rem 0.25rem;
+  }
+  &__number-room{
+    font-family: $fontO;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    &:before{
+      content: "№";
+      margin-right: 0.2rem;
+      font-size: 0.9rem;
+      font-weight:bold;
+    }
+  }
+  &__type{
+    font-family: $fontM;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-left: 0.3125rem;
+    letter-spacing: 0px;
+    color: $purple;
+  }
+  &__wrap-price{
+      margin-bottom:0.125rem;
+  }
+  &__cost-per-day{
+    color: $dark-50;
+    font-weight: bold;
+    font-size: 0.875rem;
+    &:after{
+      content: "c";
+      font-family: "rouble";
+      margin-left: 0.125rem;
+      margin-right: 0.25rem;
+    }
+  }
+  &__cost-day{
+    color: $dark-50;
+    font-size: 0.75rem;
+    margin-right: 0.125rem;
+  }
+  &__rating-wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-sizing: border-box;
+    width: 97%;
+    height: 2.31rem;
+    border-top: 1px solid $dark-25;
+    margin:0.06rem 0.33rem 0.06rem 0;
+    padding:0.37rem 0 0 0.37rem;
+  }
+  &__wrap-feedback{
+    display: flex;
+    align-items: center;
+    height: 38px;
+    color:  $dark-50;
+    cursor: pointer;
+    &:hover{
+      color: $purple;
+
+    }
+  }
+  &__feedback{
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+  &__feedback-text{
+  }
+}
