@@ -1,0 +1,15 @@
+@import './index.scss';
+@import './header/__header/header.scss';
+html{
+  font-size:16px;
+}
+.wrapper{
+  width:$max-width;
+  height: 150px;
+  &__header{
+    margin-top: 149px;
+  }
+  &__header-user-block{
+    margin-top:39px;
+  }
+}

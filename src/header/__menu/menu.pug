@@ -1,11 +1,13 @@
-nav.menu
-    ul.menu__list
+mixin menu(data)
+  nav.menu
+    .menu__wrap
+      ul.menu__list
         each name, val in (['Home', 'About Us', 'Services','Careers','News','Documentation'])
-            li.menu__item
-                if val == 0 
-                    a.menu__link.menu__link--active(href="#")=name
-                else if val == 2
-                    a.menu__link(href="#")=name
-                        img.menu__img(src="../src/img/expand_more.svg")
-                else 
-                    a.menu__link(href="#")=name
+          li.menu__item
+            if val == 0 
+              a.menu__link.menu__link--active(href=name)=name
+            else if val == 2
+              a.menu__link(href=name)=name
+                span.menu__icon
+            else 
+              a.menu__link(href=name)=name

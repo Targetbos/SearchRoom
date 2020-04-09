@@ -1,0 +1,21 @@
+include ../../forms-elements/__buttons/__btn--white/btn--white.pug
+include ../../forms-elements/__buttons/__btn--blue/btn--blue.pug
+include ../../forms-elements/__logo/logo.pug
+include ../__menu/menu.pug
+
+mixin header (data)
+  .header
+    .header__wrap
+      .header__logo
+        +logo({})
+      .header__menu
+        +menu({})
+      if (data.auth)
+        .header__login-box
+          .header__inner-login-btn
+            +btn-white({name: "login-btn", value: "login", text: "LOGIN"})
+          .header__inner-register-btn
+            +btn-blue({name: "register-btn", value: "register", text: "REGISTER"})
+      else
+        .header__user-box
+          a.header__user-link Cosmin Negoita

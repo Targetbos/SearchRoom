@@ -1,0 +1,17 @@
+
+include header/__header/header.pug
+
+doctype html
+html
+  head
+    title Header and Foother
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    link(rel="stylesheet" href="./hf.scss")
+  body
+    .wrapper
+      .wrapper__header
+        +header({auth: true})
+      .wrapper__header-user-block
+        +header({auth: false})
+
+  script(src='index.js')

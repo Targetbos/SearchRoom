@@ -19,8 +19,8 @@ $fontO        : Quicksand, 'Open Sans', sans-serif;
 
 // Подключение основных scss блоков
 @import "./src/fonts/font";    //scss шрифтов
-@import "./src/header/header"; //scss хедера 
-@import "./src/footer/footer"; //scss футера
+// @import "./src/header/header"; //scss хедера 
+// @import "./src/footer/footer"; //scss футера
 @import "./src/forms-elements/forms-elements";    //scss страницы forms-elements с элементами форм
 html{
     font-size: 16px;

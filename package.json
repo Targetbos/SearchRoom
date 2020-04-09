@@ -6,7 +6,8 @@
     "fe": "parcel src/fe.pug --open",
     "forms": "parcel src/forms.pug --open",
     "dev": "parcel src/index.pug --open",
-    "build": "parcel build src/index.pug -d build --public-url ./"
+    "build": "parcel build src/index.pug -d build --public-url ./",
+    "hf": "parcel src/hf.pug --open"
   },
   "repository": {
     "type": "git",

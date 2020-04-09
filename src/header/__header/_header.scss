@@ -1,0 +1,48 @@
+@import '../__menu/menu.scss';
+.header{
+  display:flex;
+  justify-content: center;
+  min-width:100%;
+  background: #ffffff;
+  height: 70px;
+
+  &__wrap{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 81%;
+    padding:0 3px;
+  }
+  &__logo{
+    padding-top:1px;
+  }
+  &__menu{
+    width:73%;
+    flex-grow: 1;
+  }
+  &__login-box{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 34px;
+    width:199px;
+  }
+  &__inner-login-btn{
+    height: 34px;
+    width: 39%;
+  }
+  &__inner-register-btn{
+    height: 34px;
+    width: 51%;
+  }
+  &__user-box{
+    border-left: 1px solid $dark-50; 
+    line-height: 1.8rem;
+    padding-left: 30px;
+    margin-left:2px;
+  }
+  &__user-link{
+    letter-spacing: -0.3px;
+    
+  }
+}
