@@ -12,11 +12,14 @@
   }
   &__icon-fb{
     background:url("./forms-elements/__social-btn/fb.svg") no-repeat;
+    background-size: contain;
   }
   &__icon-tw{
     background:url("./forms-elements/__social-btn/tw.svg") no-repeat;
+    background-size: contain;
   }
   &__icon-ig{
     background:url("./forms-elements/__social-btn/ig.svg") no-repeat;
+    background-size: contain;
   }
 }

@@ -1,19 +1,19 @@
 @import "../../forms-elements/__social-btn/social-btn";
 .footer{
-    box-shadow: 0px 10px 20px $dark-5;
+    box-shadow: 0 0.62rem 1.25rem $dark-5;
     background: #ffffff;
   &__wrap{
     width: 100%;
     display:flex;
-    padding: 97px 139px 78px;
+    padding: 6.06rem 8.68rem 4.87rem;
     box-sizing: border-box;
     align-items: flex-start;
   }
   &__company{
-    width: 300px / $width-content * 100%;
+    width: 18.75rem / $width-content * 100%;
   }
   &__logo{
-    margin-top:2px;
+    margin-top: 0.12rem;
   }
   &__desc{
     line-height: 1.5rem;
@@ -23,15 +23,15 @@
     letter-spacing: -0.13px;
   }
   &__navigation{
-    width: 206px / $width-content * 100%;
+    width: 12.87rem / $width-content * 100%;
   }
   &__list{
-    margin-top:5px;
-    padding-left:8px;
+    margin-top: 0.31rem;
+    padding-left: 0.5rem;
   }
   &__item{
     list-style: none;
-    margin:20px 0px;
+    margin: 1.25rem 0;
     color: $dark-50;
     & a{
       text-decoration:none;
@@ -51,33 +51,33 @@
     letter-spacing: -0.4px;
   }
   &__aboutAs{
-    width: 206px / $width-content * 100%;
+    width: 12.87rem / $width-content * 100%;
   }
   &__support{
-    width: 210px / $width-content * 100%;
+    width: 12.87rem / $width-content * 100%;
   }
   &__subscribe{
-    width: 270px / $width-content * 100%;
+    width: 16.87rem / $width-content * 100%;
     box-sizing: border-box;
-    padding-left:3px;
-    padding-top:5px;
+    padding-left: 0.19rem;
+    padding-top: 0.31rem;
     & p{
-      margin-top: 16px;
-      line-height: 24px;
+      margin-top: 1rem;
+      line-height: 1.5rem;
       letter-spacing: -0.18px;
     }
   }
   &__wrap-subscribe-form{
-    position:relative;
-    width:259px;
-    margin-top:19px;
+    position: relative;
+    width: 16.18rem;
+    margin-top: 1.18rem;
   }
   &__wrap-copyright{
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 139px 11px;
-    border-top:1px solid $dark-25;
+    padding: 0.75rem 8.68rem 0.68rem;
+    border-top: 1px solid $dark-25;
     letter-spacing: -0.15px;
   }
 }
