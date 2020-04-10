@@ -1,0 +1,38 @@
+include ../../forms-elements/__logo/logo.pug
+include ../../forms-elements/__subscription-text-field/subscription-text-field.pug
+include ../../forms-elements/__social-btn/social-btn.pug
+mixin footer( data )
+  .footer
+    .footer__wrap
+      .footer__company
+        .footer__logo 
+          +logo({})
+        .footer__desc Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+      .footer__navigation
+        ul.footer__list
+          span.footer__title NAVIGATION
+          each name in (['About Us', 'News', 'Support', 'Products'])
+            li.footer__item
+              a(href=name)=name
+      .footer__aboutAs
+        ul.footer__list 
+          span.footer__title ABOUT US
+          each name in (['Who we are', 'Our team', 'Careers', 'Investors'])
+            li.footer__item
+              a(href=name)=name  
+      .footer__support
+        ul.footer__list
+          span.footer__title SUPPORT
+          each name in (['Documentation', 'Community', 'Get in Touch'])
+            li.footer__item
+              a(href=name)=name  
+      .footer__subscribe
+        span.footer__title SUBSCRIBE TO OUR NEWSLETTER
+        p Receive our latest news and promotions in your inbox!
+        .footer__wrap-subscribe-form
+          +subscription-text-field({placeholder: "Your email address", name: "subscription"})
+    .footer__wrap-copyright
+      .footer__copyrightText
+        p Copyright © 2018 Toxin UI Kit. All rights reserved.
+      .footer__social-btn
+        +social-btn({})

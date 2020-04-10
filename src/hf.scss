@@ -1,15 +1,26 @@
 @import './index.scss';
 @import './header/__header/header.scss';
+@import './footer/__footer/_footer.scss';
+@import './footer/__footer-mobile/_footer-mobile.scss';
+
+
 html{
   font-size:16px;
+
 }
 .wrapper{
+  background: #e5e5e5;
   width:$max-width;
-  height: 150px;
   &__header{
     margin-top: 149px;
   }
   &__header-user-block{
     margin-top:39px;
+  }
+  &__footer{
+    margin-top:40px;
+  }
+  &__footer-mobile{
+    margin-top:40px;
   }
 }

@@ -1,0 +1,22 @@
+.social-btn{
+  &__box{
+  display:flex;
+  width:6.94rem;
+  justify-content: space-between;
+  align-items:center;
+  padding:1px 0 0 0;
+  }
+  &__icon{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  &__icon-fb{
+    background:url("./forms-elements/__social-btn/fb.svg") no-repeat;
+  }
+  &__icon-tw{
+    background:url("./forms-elements/__social-btn/tw.svg") no-repeat;
+  }
+  &__icon-ig{
+    background:url("./forms-elements/__social-btn/ig.svg") no-repeat;
+  }
+}

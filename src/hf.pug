@@ -1,5 +1,8 @@
 
 include header/__header/header.pug
+include footer/__footer/footer.pug
+include footer/__footer-mobile/footer-mobile.pug
+
 
 doctype html
 html
@@ -13,5 +16,8 @@ html
         +header({auth: true})
       .wrapper__header-user-block
         +header({auth: false})
-
+      .wrapper__footer
+        +footer({})
+      .wrapper__footer-mobile 
+        +footer-mobile({})
   script(src='index.js')
