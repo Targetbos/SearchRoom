@@ -5,7 +5,7 @@
   "scripts": {
     "fe": "parcel src/fe.pug --open",
     "forms": "parcel src/forms.pug --open",
-    "dev": "parcel src/index.pug --open",
+    "ct": "parcel src/colors-types.pug --open",
     "build": "parcel build src/index.pug -d build --public-url ./",
     "hf": "parcel src/hf.pug --open"
   },

@@ -1,13 +1,15 @@
 include ./forms-elements/__color-item/color-item.pug
+include ./forms-elements/__logo-no-text/logo-no-text.pug
+
 doctype html
 html
   head
     title Hotel
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
     meta(name = "viewport" content = "width=device-width, initial-scale = 1")
-    link(rel="stylesheet" href="./index.scss")
+    link(rel="stylesheet" href="./colors-types.scss")
   body
     .wrapper
+      +logo-no-text({})
       .container-content
         .content-left
           .content-left__box-color
@@ -24,6 +26,7 @@ html
             +color-item({title: "Purple", colorName: "\#BC9CFF", color: "#BC9CFF"})
           .content-left__box-color
             +color-item({title: "Green", colorName: "\#6FCF97", color: "#6FCF97"})
+        
         .content-right
           .content-right__wrap-text
             .content-right__title-box
@@ -49,5 +52,3 @@ html
             .content-right__text-box  
               .content-right__box-p  
                 p This is the body text which is used for most of the design, like paragraphs, lists, etc.
-
-  script(src='index.js')
