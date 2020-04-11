@@ -1,0 +1,7 @@
+mixin color-item( data )
+  .color-item 
+    .color-item__wrap
+      .color-item__color-block(style="background:"+ data.color)
+      .color-item__desc-box 
+        .color-item__title=data.title
+        .color-item__desc=data.colorName
