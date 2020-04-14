@@ -5,25 +5,25 @@
     align-items: flex-start;
     min-width: 36.3%;
     color: $dark-50;
-    padding-top: 1px;
-    padding-bottom: 10px;
+    padding-top: 0.0625rem;
+    padding-bottom: 0.63rem;
   }
   &__input{
     display:none;
   }
   &__label{
     display: flex;
-    line-height: 18px;
+    line-height: 1.125rem;
     cursor:pointer;
   }
   &__icon:before{
     content: "";
     display:flex;
     border: 1px solid $dark-25;
-    border-radius:9px;
-    width: 18px;
-    height: 18px;
-    margin-right: 9px;
+    border-radius:0.57rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-right: 0.66rem;
     letter-spacing: 0.2px;
   }
   &__label > &__input:checked + &__icon:before{

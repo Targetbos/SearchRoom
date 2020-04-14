@@ -2,14 +2,16 @@
   display:flex;
   position: relative;
  &__input{
-    width:100%;
-    font-family: Montserrat, 'Open sans', sans-serif;
+    display: block;
+    box-sizing: border-box;
+    min-width:100%;
+    font-family: $fontM;
     font-size: 0.86rem;
-    line-height: 1.5rem;
+    line-height: 1.45rem;
     padding: 0.56rem 2.12rem 0.56rem 0.85rem;
     border-radius: 4px;
     border: 1px solid $dark-25;
-    margin: 0.19rem 0; 
+    margin: 0.2rem 0; 
     letter-spacing: 0.15px;
     &::-webkit-input-placeholder{
       color:$dark-25;
@@ -26,7 +28,7 @@
       background-size: contain;
       position:absolute;
       top: 1.06rem;
-      right: 0.85rem;
+      right: 0.75rem;
       cursor:pointer;
     }
   }

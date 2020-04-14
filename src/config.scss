@@ -2,17 +2,17 @@
 $color        : #1F2041;
 $purple       : #BC9CFF;
 $green        : #6fcf97;
-$dark-100     :$color;
+$dark-100     : $color;
 $dark-75      : rgba(31, 32, 65, 0.75);
 $dark-50      : rgba(31, 32, 65, 0.50);
 $dark-25      : rgba(31, 32, 65, 0.25);
 $dark-10      : rgba(31, 32, 65, 0.10);
 $dark-5       : rgba(31, 32, 65, 0.05);
 $btn-bg       : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); // цвет фона кнопок
-$max-width    : 89.43rem; // Максимальная ширина страницы
+$max-width    : 1431px; // Максимальная ширина страницы
 $min-width    : 20rem; // Минимальная ширина страницы
 $height-header: 4.37rem; //высота шапки с меню
-$width-content: ($max-width - 17.5rem)/$max-width*100%; // ширина блока с контентом с учётом отступов по 140px по краям
+$width-content: ($max-width - 140px)/$max-width*100%; // ширина блока с контентом с учётом отступов по 140px по краям
 $br           : 1px solid #666; // граница для тестов
 $fontM        : Montserrat, 'Open Sans', sans-serif;
 $fontO        : Quicksand, 'Open Sans', sans-serif;
@@ -21,7 +21,7 @@ html{
   font-size: 16px;
 }
 body {
-  margin          : 0 auto;
+  margin          : 0;
   padding         : 0;
   font-family     : $fontM;
   font-style      : normal;

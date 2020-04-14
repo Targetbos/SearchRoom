@@ -48,7 +48,7 @@
         var stringRoom = '';
 
         if(bedroom > 0) {stringRoom += bedroom + ((bedroom<2)?' спальня, ':(bedroom<5)?' спальни, ': ' спален, ');} 
-        if(bed > 0) {stringRoom += bed + ((bed < 2) ? ' кровать': (bed<5) ? ' кровати' : ' кроватей');}
+        if(bed > 0) {stringRoom += bed + ((bed < 2) ? ' кровать...': (bed<5) ? ' кровати...' : ' кроватей...');}
         if(bedroom == 0 && bed == 0){stringRoom = "Выберите комнату";}
         
         let dataInputRoom = formEx.parentNode.firstChild;

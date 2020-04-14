@@ -3,13 +3,13 @@
   &__input{
     max-width: 100%;
     min-width: 90.5%;
-    font-family: Montserrat, 'Open sans', sans-serif;
-    font-size: 14px;
-    line-height: 25px;
-    padding: 9px 14px 8px;
+    font-family: $fontM;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    padding: 0.56rem 0.875rem 0.5rem;
     border-radius: 4px;
     border: 1px solid $dark-25;
-    margin: 4px 0px; 
+    margin: 0.25rem 0; 
     letter-spacing: -0.2px;
     &::-webkit-input-placeholder{
       color: $dark-25;

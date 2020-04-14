@@ -1,3 +1,4 @@
+include ./__logo-no-text/logo-no-text.pug
 include \__title-element\title-element.pug
 include \__like-button\like-button.pug
 include \__dropdown\__dropdown-guest\dropdown-guest.pug
@@ -21,6 +22,7 @@ include __bullet-list/bullet-list.pug
 include __feedback/feedback.pug
 
 .wrap
+  +logo-no-text()
   .wrapper__elements
     .wrapper-left 
       .wrapper-left__text-field
@@ -51,7 +53,7 @@ include __feedback/feedback.pug
           //-  adults - количество взрослых
           //-  children - количество детей
           //-  babies - количество младенцев
-          +dropdown-guest({name: "guest-form", title: "dropdown", subtitle: "default", marginTop: true})
+          +dropdown-guest({name: "guest-form", title: "dropdown", subtitle: "default"})
 
       .wrapper-left__masked-text-field
         +title-element({title: "masked text field", subtitle: "default", marginTop: false})
@@ -60,7 +62,8 @@ include __feedback/feedback.pug
         //-  placeholder - placeholder, 
         //-  value - value
         //-  name - имя текстового поля
-        +masked-text-field({placeholder: "ДД.ММ.ГГГГ"})
+        .wrapper-left__inner-masked
+          +masked-text-field({placeholder: "ДД.ММ.ГГГГ"})
 
       .wrapper-left__date-dropdown
         //- +date-dropdown
@@ -130,6 +133,7 @@ include __feedback/feedback.pug
           //-  checked: true - состояние тумблера
           //-  text - текст тумблера
           +toggle({name: "toggle", checked: true, text: "Получать спецпредложения"})
+        .wrapper-center__toggle-wrap
           +toggle({name: "toggle", checked: false, text: "Получать спецпредложения"})
 
       .wrapper-center__like-button
@@ -159,7 +163,7 @@ include __feedback/feedback.pug
     .wrapper-right
 
       .wrapper-right__range-slider
-        +title-element({title: "range slider", subtitle: " 5 000Р - 10 000Р", marginTop: true})
+        +title-element({title: "range slider", subtitle: " 5 000Р - 10 000Р"})
         .wrapper-right__range-slider-wrap
           //- +range-slider
           //- бегунок диаппозона
@@ -181,11 +185,15 @@ include __feedback/feedback.pug
           //-  value - value
           //-  text - Текст, отображаемый на кнопке
           //-  hover:true - добавляет стиль, имитирующий выделение кнопки
-          +btn-blue({name: "btn", value: "btn", text: "Click Me"})
-          +btn-blue({name: "btn", value: "btn", text: "Click Me", hover:true})
-        .wrapper-right__wrap-btn
-          +btn-white({name: "btn", value: "btn", text: "Click Me"})
-          +btn-white({name: "btn", value: "btn", text: "Click Me", hover:true})
+          .wrapper-right__inner-btn
+            +btn-blue({name: "btn", value: "btn", text: "Click Me"})
+          .wrapper-right__inner-btn
+            +btn-blue({name: "btn", value: "btn", text: "Click Me", hover:true})
+        .wrapper-right__wrap-btn-white
+          .wrapper-right__inner-btn
+            +btn-white({name: "btn", value: "btn", text: "Click Me"})
+          .wrapper-right__inner-btn
+            +btn-white({name: "btn", value: "btn", text: "Click Me", hover:true})
         .wrapper-right__wrap-icon-link
           +btn-link({name: "btn", value: "btn", text: "Click Me"})
           +btn-link({name: "btn", value: "btn", text: "Click Me", hover:true})
@@ -236,9 +244,7 @@ include __feedback/feedback.pug
 
     .wrapper-center 
       .wrapper-center__dropdown-guest
-        +title-element({ title: "dropdown"})
-        .wrapper-center__wrap-dropdown-guest
-          +dropdown-guest({name: "dpguest"})
+        +dropdown-guest({name: "dpguest", title: "dropdown"})
 
       .wrapper-center__rich-checkbox-btn
         +title-element({title: "rich checkbox buttons"})
@@ -252,14 +258,12 @@ include __feedback/feedback.pug
           //-  desc - описание
           //-  checked:true - выделенный флажок
           +rich-checkbox-buttons({name: "wide-corridor", head: "Широкий коридор", desc: "Ширина коридоров в номере не менее 91 см"})
-          +rich-checkbox-buttons({name: "assistent", head: "Помощник для инвалидов", desc: "На этаже Вас встретит специалист и проводит до номера"})
+          +rich-checkbox-buttons({name: "assistent", head: "Помощник для инвалидов", desc: "На 1 этаже Вас встретит специалист и проводит до номера"})
     
     .wrapper-right
 
       .wrapper-right__dropdown-guest
-        +title-element({ title: "dropdown"})
-        .wrapper-center__wrap-dropdown-guest
-          +dropdown-guest({name: "dpguest"})
+        +dropdown-guest({name: "dpguest", title: "dropdown"})
 
       .wrapper-right__bullet-list
         +title-element({title: "bullet list"})
@@ -272,7 +276,6 @@ include __feedback/feedback.pug
 
   .wrapper__elements
     .wrapper-left
-
       .wrapper-left__advantages
         //- +advantages
         //- Преимущества
@@ -290,4 +293,4 @@ include __feedback/feedback.pug
       //-  user - имя пользователя
       //-  date - сколько дней прошло с момента отзыва
       //-  text - текст отзыва
-      +feedback({img: "../src/forms-elements/__feedback/img/murad.jpg", user: "Мурад Сарафанов", date: "5 дней", text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"})
+      +feedback({img: "../src/forms-elements/__feedback/img/murad.jpg", user: "Мурад Сарафанов", date: "5 дней назад", text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"})

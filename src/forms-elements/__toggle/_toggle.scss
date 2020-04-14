@@ -1,13 +1,5 @@
 /* CSS toggle */
 .toggle{
-  &__wrap{
-    display: flex;
-    align-items: flex-start;
-    padding-top: 1px;
-    min-width: 36.3%;
-    color: $dark-50;
-    padding-bottom: 10px;
-  }
   &__input{
     display: none;
   }
@@ -16,36 +8,39 @@
     cursor: pointer;
     display:flex;
     align-items: center;
-    line-height: 14px;
-    letter-spacing: -0.07px;
+    line-height: 0.87rem;
+    color: $dark-50;
+    min-width: 36.3%;
+    letter-spacing: -0.06px;
   }
   &__icon:before {
     content: '';
     display:inline-flex;
-    width: 39px;
-    height: 18px;
-    border-radius: 9px;
+    width: 2.4rem;
+    height: 1.125rem;
+    border-radius: 0.57rem;
     transition: .2s;
-    border:1px solid $dark-25;
-    margin-right:9px;
+    border:1px solid;
+    border-color:  $dark-25;
+    margin-right: 0.64rem;
     transition: border 0.3s;
   }
   &__icon:after {
     content: '';
     position:absolute;
-    top: 4px;
-    left: 4px;
-    width: 12px;
-    height: 12px;
-    border-radius: 6px;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 0.38rem;
     background: $dark-25;
     transition: left .2s;
   }
   &__label > &__input:checked + &__icon:before {
-   border:1px solid $purple;
+   border-color: $purple;
   }
   &__label > &__input:checked + &__icon:after {
-    left: 24px;
+    left: 1.5rem;
     background: $purple;
   }
 }

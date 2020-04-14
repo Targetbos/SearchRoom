@@ -1,10 +1,9 @@
 mixin toggle( data )
   .toggle
-    .toggle__wrap
-      label.toggle__label 
-        if data.checked
-          input.toggle__input(type="checkbox" name=data.name checked=true)
-        else
-          input.toggle__input(type="checkbox" name=data.name checked=false)
-        .toggle__icon
-        span.toggle__text= data.text
+    label.toggle__label 
+      if data.checked
+        input.toggle__input(type="checkbox" name=data.name checked=true)
+      else
+        input.toggle__input(type="checkbox" name=data.name checked=false)
+      .toggle__icon
+      span.toggle__text= data.text

@@ -1,10 +1,12 @@
 .dropdown-guest{
   position:relative;
   &__input{
-    width: 100%;
-    font-family: Montserrat, 'Open sans', sans-serif;
+    display:flex;
+    box-sizing: border-box;
+    min-width: 100%;
+    font-family: $fontM;
     font-size: 0.875rem;
-    line-height: 1.5rem;
+    line-height: 1.48rem;
     padding: 0.5rem 0.875rem 0.625rem;
     border-radius: 4px;
     border: none;
@@ -12,6 +14,7 @@
     cursor: pointer;
     outline:none;
     background:none;
+    letter-spacing: -0.02px;
     &-icon{
       display: flex;
       justify-content: center;
@@ -20,10 +23,10 @@
       border: 2px solid $dark-50;
       transform: rotate(-45deg);
       border-width:0 0 2px 2px;
-      width: 0.4375rem;
-      height: 0.4375rem;
-      top: 0.875rem;
-      right: 1rem;
+      width: 0.41rem;
+      height: 0.41rem;
+      top: 0.84rem;
+      right: 1.1rem;
       cursor: pointer;
     }
   }
@@ -35,8 +38,8 @@
     transition: border 0.2s;
     position: relative;
     &--border-bottom-90deg{
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
       color: $dark-75;
       border-color: $dark-50;
       outline: none;
@@ -65,10 +68,10 @@
     width:100%;
     height: 9.875rem;
     border: 1px solid $dark-50;
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 0 0 4px 4px;
     position:absolute;
-    top: 4.0625rem;
-    left: 0rem;
+    top: 4rem;
+    left: 0;
     padding-bottom: 0.375rem;
     box-sizing: border-box;
     z-index: 111;
@@ -77,13 +80,13 @@
     outline: none;
     transition: height 0.5s, opacity 0.3s;
     &--hide{
-      height: 0px;
-      padding:0px;
+      height: 0;
+      padding:0;
       opacity:0;
     }
   }
   &__inner{
-    padding:0.0625rem 0.25rem 0rem 0.25rem;
+    padding:0.0625rem 0.25rem 0 0.25rem;
     &:after{
       content:'';
       display:table;
@@ -99,35 +102,35 @@
     font-size: 0.75rem;
   }
   &__item-control{
-    display:flex;
-    align-items:center;
-    float:right;
+    display: flex;
+    align-items: center;
+    float: right;
     padding-top: 0.1875rem;
     margin-right: 0.09375rem;
   }
   &__btn{
     height: 1.875rem;
     width: 1.875rem;
-    border:1px solid $dark-50;
+    border: 1px solid $dark-50;
     border-radius: 1rem;
-    background:none;
-    cursor:pointer;
+    background: none;
+    cursor: pointer;
     color:$dark-50;
     margin-top: 0.125rem;
     margin-bottom: 0.0625rem;
-    outline:none;
+    outline: none;
     transition: background 0.2s;
     &:hover{
       background: $dark-5; 
     }
     &--deactivate{
-      border-color:$dark-25;
+      border-color: $dark-25;
     }
   }
   &__number{
-    display:inline-flex;
+    display: inline-flex;
     justify-content: center;
-    width:2.0625rem;
+    width: 2.0625rem;
     font-size: 0.75rem;
     font-weight: bold;
     line-height: 0.9375rem;
@@ -135,7 +138,7 @@
   &__wrap-btn-link{
     display:flex;
     justify-content: space-between;
-    padding: 1.125rem 0rem 0.25rem 0.4375rem;
+    padding: 1.125rem 0 0.25rem 0.4375rem;
   }
   &__btn-clear, &__btn-apply{
     display: block;
