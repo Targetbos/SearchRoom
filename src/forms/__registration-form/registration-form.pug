@@ -19,7 +19,7 @@ mixin registration-form( data )
       .registration-form__wrap-authform
         +title-element({title: "данные для входа в сервис"})
         +text-field({name:"email", placeholder: "Email"})
-        +text-field({name:"password", placeholder: "Пароль"})
+        +text-field({name:"password", placeholder: "Пароль", type: "password"})
       .registration-form__wrap-toggle
         +toggle({name: "toggle", text: "Получать спецпредложения"})
       .registration-form__wrap-btn-pay

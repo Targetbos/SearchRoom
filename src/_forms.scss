@@ -1,4 +1,4 @@
-@import "./index.scss";
+@import "./config.scss";
 @import "./forms/__search-room/search-room";
 @import "./forms/__registration-form/registration-form.scss";
 @import "./forms/__booking-room/booking-room.scss";
@@ -6,13 +6,10 @@
 @import "./forms-elements/__date-dropdown/date-dropdown";
 @import "./forms/__desc-room/desc-room";
 
-
-
 .wrapper{
   display: block;
   max-width: 1150px;
-  padding: 9.34rem 8.72rem;
-  border: $br;
+  padding: 9.36rem 8.72rem;
 }
 .container{
   display:flex;
@@ -20,11 +17,11 @@
 }
 .left-column{
   &__wrap-registration-form{
-    margin-top: 2.75rem;
+    margin-top: 2.65rem;
   }
 }
 .center-column{
-  padding: 0rem 2.6rem 0rem 2.6875rem;
+  padding: 0rem 2.5rem 0rem 2.62rem;
   &__wrap-login-form{
     margin-top: 2.6rem;
   }

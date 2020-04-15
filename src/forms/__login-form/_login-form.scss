@@ -5,7 +5,7 @@
     max-width: 23.42rem;
     border-radius: 4px;
     background: #ffffff;
-    padding: 2rem 1.76rem 1.95rem;
+    padding: 1.88rem 1.77rem 1.95rem;
     box-sizing: border-box;
     box-shadow: 0px 0px 1.56rem $dark-25;
   }
@@ -30,10 +30,12 @@
   &__wrap-registration-btn{
     display: flex;
     justify-content: space-between;
-    margin-top: 1.94rem;
+    margin-top: 1.85rem;
+    height: 2.75rem;
   }
   &__text-input{
-    margin-top: 0.75rem;
+    width: 50rem;
+    margin-top: 0.8rem;
     letter-spacing: 0px;
   }
 }
