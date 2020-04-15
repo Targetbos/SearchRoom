@@ -1,4 +1,6 @@
 @import "../../forms-elements/__social-btn/social-btn";
+@import "../../forms-elements/__subscription-text-field/subscription-text-field";
+
 .footer{
     box-shadow: 0 0.62rem 1.25rem $dark-5;
     background: #ffffff;
@@ -23,7 +25,7 @@
     letter-spacing: -0.13px;
   }
   &__navigation{
-    width: 12.87rem / $width-content * 100%;
+    width: 12.65rem / $width-content * 100%;
   }
   &__list{
     margin-top: 0.31rem;
@@ -49,9 +51,12 @@
     font-weight: bolder;
     color:$dark-100;
     letter-spacing: -0.4px;
+    &>p{
+      color: $dark-75;
+    }
   }
   &__aboutAs{
-    width: 12.87rem / $width-content * 100%;
+    width: 12.8rem / $width-content * 100%;
   }
   &__support{
     width: 12.87rem / $width-content * 100%;
@@ -59,7 +64,7 @@
   &__subscribe{
     width: 16.87rem / $width-content * 100%;
     box-sizing: border-box;
-    padding-left: 0.19rem;
+    padding-left: 0.25rem;
     padding-top: 0.31rem;
     & p{
       margin-top: 1rem;
@@ -70,7 +75,7 @@
   &__wrap-subscribe-form{
     position: relative;
     width: 16.18rem;
-    margin-top: 1.18rem;
+    margin-top: 1.25rem;
   }
   &__wrap-copyright{
     display: flex;
