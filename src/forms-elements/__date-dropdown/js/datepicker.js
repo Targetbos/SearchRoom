@@ -6,7 +6,6 @@
         containerBuilt = false,
         baseTemplate = '' +
             '<div class="datepicker">' +
-            '<i class="datepicker--pointer"></i>' +
             '<nav class="datepicker--nav"></nav>' +
             '<div class="datepicker--content"></div>' +
             '</div>',
@@ -778,7 +777,7 @@
                     left = dims.left + dims.width + offset;
                     break;
                 case 'bottom':
-                    top = dims.top + dims.height + offset;
+                    top = dims.top + dims.height + offset - 8;
                     break;
                 case 'left':
                     left = dims.left - selfDims.width - offset;
