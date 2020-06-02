@@ -1,53 +1,66 @@
+@import "../../config.scss";
 @import "../__menu/menu.scss";
 @import "../../forms-elements/__buttons/buttons";
-
-.header{
-  display:flex;
-  justify-content: center;
-  min-width:100%;
-  background: #ffffff;
-  height: 70px;
-  box-shadow: 0px 10px 20px $dark-5;
-
-  &__wrap{
+@import "../../forms-elements/__logo/logo";
+.header {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    background: #ffffff;
+    height: 4.375rem;
+    box-shadow: 0 0.625rem 1.25rem $dark-5;
+    padding: 0 8.75rem;
     box-sizing: border-box;
-    min-width: 81%;
-    padding:0 3px;
-  }
-  &__logo{
-    padding-top:3px;
-  }
-  &__menu{
-    width:73%;
-    flex-grow: 1;
-  }
-  &__login-box{
-    display:flex;
-    justify-content: space-between;
-    align-items:center;
-    height: 34px;
-    width:199px;
-  }
-  &__inner-login-btn{
-    height: 34px;
-    width: 39%;
-  }
-  &__inner-register-btn{
-    height: 34px;
-    width: 51%;
-  }
-  &__user-box{
-    border-left: 1px solid $dark-50; 
-    line-height: 1.8rem;
-    padding-left: 30px;
-    margin-left:2px;
-  }
-  &__user-link{
-    letter-spacing: 0.01px;
-    &:hover{
-      font-weight: bold;
+    &__inner {
+        width: 72.16rem; 
+        min-width: 46%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    &__menu {
+        flex-grow: 1;
+    }
+    &__login-box {
+        display: flex;
+        float:left;
+        justify-content: space-between;
+        align-items: center;
+        height: 1.95rem;
+    }
+    &__inner-register-btn {
+        margin-left:20px;
+   }
+    &__user-box {
+        border-left: 1px solid $dark-50;
+        line-height: 1.8rem;
+        padding-left: 1.88rem;
+        margin-left: 0.125rem;
+    }
+    &__user-link {
+        letter-spacing: 0.01px;
+        &:hover {
+            font-weight: bold;
+        }
+    }
+}
+@media (max-width: 829px) {
+    .header{
+        min-width: 25rem;
+        padding:0 1rem;
+        &__inner{
+            width:100%;
+            padding:0 1rem;
+        }
+        &__menu{
+            order: 1;       
+        }
+        &__login-box{
+            width:100%;
+            justify-content: center;
+            margin-left: 1rem;
+        }
     }
   }
-}
+  
+  

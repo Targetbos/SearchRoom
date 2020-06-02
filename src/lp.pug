@@ -1,0 +1,22 @@
+include ./header/__header/header.pug
+include ./footer/__footer/footer.pug
+include ./forms/__search-room/search-room.pug
+doctype html
+html
+  head
+    title First Page
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    meta(name = "viewport" content = "width=device-width, initial-scale = 1")
+    link(rel="stylesheet" href="./lp.scss")
+  body
+    .wrapper
+      header
+        .header__wrap
+          +header({auth: true})
+      content.content__wrap
+        .content__wrap-search-room
+          +search-room({})
+        .content__wrap-text
+          p.content__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+      +footer({})
+    script(src="lp.js")

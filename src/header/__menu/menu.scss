@@ -2,41 +2,41 @@
   &__wrap{
     display:flex;
     justify-content: flex-end;
-    &:after{
-      content: "";
-      display: table;
-      clear: both;
-    }
+    flex-wrap: nowrap;
   }
+  &__wrap-mobile-icon{
+    display:none;
+  }
+  &__checkbox{display:none;}
   &__list{
     float: right;
-    margin-right: 30px;
+    margin-right: 1.75rem;
     padding: 0;
   }
   &__item{
-    display:inline-block;
+    display:inline-flex;
   }
   &__icon{
     display:inline-block;
-    width: 7px;
-    height: 7px;
+    width: 0.44rem;
+    height: 0.44rem;
     border: solid $dark-50;
-    border-width:0 2px 2px 0px;
+    border-width:0 2px 2px 0;
     transform: rotate(45deg);
-    margin-left:8px;
-    margin-bottom: 1px;
+    margin-left: 0.5rem;
+    margin-bottom: 0.0625rem;
   }
   &__link{
     display:block;
     list-style: none;
     text-decoration:none;
-    font-size:14px;
-    height:1rem;
+    font-size: 0.875rem;
+    height: 1rem;
     font-weight:500;
     color: $dark-50;
     text-decoration: none;
     position: relative;
-    padding-left: 28px;
+    padding-left: 1.3rem;
     white-space: nowrap;
     letter-spacing: -0.11px;
     &--active{
@@ -44,6 +44,64 @@
     }
     &:hover{
     font-weight: bold;
+    }
+  }
+  &__mobile-icon{display:none;}
+}
+@media (max-width: 830px) {
+  .menu{
+    float: right;
+    &__wrap{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 3.5rem;
+    }
+    &__mobile-icon{
+      display: flex;
+      background: url("data:image/svg+xml,%3Csvg height='1.5rem' viewBox='0 -21 384 384' width='1.5rem' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m362.667969 0h-341.335938c-11.753906 0-21.332031 9.578125-21.332031 21.332031v42.667969c0 11.753906 9.578125 21.332031 21.332031 21.332031h341.335938c11.753906 0 21.332031-9.578125 21.332031-21.332031v-42.667969c0-11.753906-9.578125-21.332031-21.332031-21.332031zm0 0'/%3E%3Cpath d='m362.667969 128h-341.335938c-11.753906 0-21.332031 9.578125-21.332031 21.332031v42.667969c0 11.753906 9.578125 21.332031 21.332031 21.332031h341.335938c11.753906 0 21.332031-9.578125 21.332031-21.332031v-42.667969c0-11.753906-9.578125-21.332031-21.332031-21.332031zm0 0'/%3E%3Cpath d='m362.667969 256h-341.335938c-11.753906 0-21.332031 9.578125-21.332031 21.332031v42.667969c0 11.753906 9.578125 21.332031 21.332031 21.332031h341.335938c11.753906 0 21.332031-9.578125 21.332031-21.332031v-42.667969c0-11.753906-9.578125-21.332031-21.332031-21.332031zm0 0'/%3E%3C/svg%3E") no-repeat 50% 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      opacity: 0.35; 
+    }
+    &__checkbox{
+      display:none;
+      &:checked ~ .menu__list{
+        display:flex;
+        opacity: 1;
+        right: -1rem;
+      }
+    }
+    &__list{
+      display:none;
+      flex-direction: column;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      height: 0;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    &__item{
+      display: flex;
+      width: 10rem;
+      border-bottom:1px solid $dark-25;
+    }
+    &__icon{
+      display:none;
+    }
+    &__link{
+      width: 100%;
+      display:flex;
+      justify-content: center;
+      padding: 0.5rem 0.3rem;
+      background: #fff;
+      &:hover{
+      font-weight: bold;
+      }
+      &:focus{
+      font-weight: bold;
+      }
     }
   }
 }

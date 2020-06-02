@@ -1,34 +1,36 @@
 {
-  "name": "hotel",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "fe": "parcel src/fe.pug --open",
-    "forms": "parcel src/forms.pug --open",
-    "ct": "parcel src/colors-types.pug --open",
-    "build": "parcel build src/index.pug -d build --public-url ./",
-    "hf": "parcel src/hf.pug --open"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Targetbos/fsd.git"
-  },
-  "author": "targetbos@yandex.ru",
-  "license": "ISC",
-  "keywords": [],
-  "description": "",
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-clean-dist": "0.0.6",
-    "pug": "^2.0.4"
-  },
-  "dependencies": {
-    "@material-ui/icons": "^4.9.1",
-    "air-datepicker": "^2.2.3",
-    "autoprefixer": "^9.7.4",
-    "jquery": "^3.4.1",
-    "postcss-modules": "^1.5.0",
-    "sass": "^1.24.5",
-    "src": "^1.1.2"
-  }
+    "name": "hotel",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "fe": "parcel src/fe.pug --open",
+        "forms": "parcel src/forms.pug --open",
+        "ct": "parcel src/colors-types.pug --open",
+        "hf": "parcel src/hf.pug --open",
+        "lp": "parcel src/lp.pug --open",
+        "lp-build": "parcel build src/lp.pug -d build --public-url ./"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Targetbos/fsd.git"
+    },
+    "author": "targetbos@yandex.ru",
+    "license": "ISC",
+    "keywords": [],
+    "description": "",
+    "devDependencies": {
+        "parcel-bundler": "^1.12.4",
+        "parcel-plugin-clean-dist": "0.0.6",
+        "pug": "^2.0.4"
+    },
+    "dependencies": {
+        "@material-ui/icons": "^4.9.1",
+        "air-datepicker": "^2.2.3",
+        "autoprefixer": "^9.8.0",
+        "caniuse-lite": "^1.0.30001066",
+        "jquery": "^3.5.1",
+        "postcss-modules": "^1.5.0",
+        "sass": "^1.26.7",
+        "src": "^1.1.2"
+    }
 }

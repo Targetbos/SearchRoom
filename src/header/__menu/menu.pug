@@ -1,13 +1,16 @@
 mixin menu(data)
   nav.menu
     .menu__wrap
+      input.menu__checkbox(type="checkbox" id="menu__checkbox")
       ul.menu__list
-        each name, val in (['Home', 'About Us', 'Services','Careers','News','Documentation'])
+        each name, val in (['О нас', 'Услуги', 'Вакансии','Новости','Соглашения'])
           li.menu__item
-            if val == 0 
-              a.menu__link.menu__link--active(href=name)=name
-            else if val == 2
+            //- if val == 0 
+            //-   a.menu__link.menu__link--active(href=name)=name
+            //- else 
+            if val == 1 || val == 4 
               a.menu__link(href=name)=name
                 span.menu__icon
             else 
               a.menu__link(href=name)=name
+      label.menu__mobile-icon(for="menu__checkbox")

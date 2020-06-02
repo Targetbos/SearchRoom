@@ -7,32 +7,39 @@ mixin footer( data )
       .footer__company
         .footer__logo 
           +logo({})
-        .footer__desc Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        .footer__desc Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
       .footer__navigation
         ul.footer__list
-          span.footer__title NAVIGATION
-          each name in (['About Us', 'News', 'Support', 'Products'])
+          span.footer__title НАВИГАЦИЯ
+          each name in (['О нас', 'Новости', 'Служба поддержки', 'Услуги'])
             li.footer__item
               a(href=name)=name
       .footer__aboutAs
         ul.footer__list 
-          span.footer__title ABOUT US
-          each name in (['Who we are', 'Our team', 'Careers', 'Investors'])
+          span.footer__title О НАС
+          each name in (['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы'])
             li.footer__item
               a(href=name)=name  
       .footer__support
         ul.footer__list
-          span.footer__title SUPPORT
-          each name in (['Documentation', 'Community', 'Get in Touch'])
+          span.footer__title СЛУЖБА ПОДДЕРЖКИ
+          each name in (['Соглашения', 'Сообщества', 'Связь с нами'])
             li.footer__item
               a(href=name)=name  
       .footer__subscribe
-        span.footer__title SUBSCRIBE TO OUR NEWSLETTER
-        p Receive our latest news and promotions in your inbox!
+        span.footer__title ПОДПИСКА
+        p Получайте специальные предложения и новости сервиса
         .footer__wrap-subscribe-form
           +subscription-text-field({placeholder: "Your email address", name: "subscription"})
     .footer__wrap-copyright
-      .footer__copyrightText
-        p Copyright © 2018 Toxin UI Kit. All rights reserved.
-      .footer__social-btn
+      .footer__copyright
+        .footer__copyrightText
+          p Copyright © 2018 Toxin отель. Все права защищены.
+        .footer__social-btn
+          +social-btn({})
+    .footer-mobile__wrap
+      .footer-mobile__wrap-logo
+        +logo({})
+      p.footer-mobile__desc Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+      .footer-mobile__wrap-social-btn  
         +social-btn({})

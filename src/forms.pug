@@ -18,7 +18,8 @@ html
     .wrapper
       .container
         .left-column
-          +search-room({nameForm: "search-room"})
+          .left-column__wrap-search-room
+            +search-room({nameForm: "search-room"})
           .left-column__wrap-registration-form
             +registration-form({})
         .center-column

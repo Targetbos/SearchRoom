@@ -1,0 +1,55 @@
+@import "./config.scss";
+@import "./header/__header/header";
+@import "./footer/__footer/footer";
+@import "./forms/__search-room/search-room";
+
+.wrapper{
+  margin:0 auto;
+  width:100%;
+  background: #fff;
+}
+.content__wrap{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 89.5rem;
+  padding: 4.34rem 8.4rem 0.54rem 8.7rem;
+  background: url("./img/bg.png") no-repeat 50% 99%;
+  background-size: cover;
+  box-sizing: border-box;
+  min-height: auto;
+}
+.content__wrap-search-room{
+  width: 23.62rem;
+  min-width: 25%;
+  height: auto; 
+}
+.content__wrap-text{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items:  flex-end;
+  height: 26.9em;
+}
+.content__text{
+  width: 17rem;
+  color: $dark-75;
+  text-align: right;
+  line-height: 1.43rem;
+  letter-spacing: -0.06px;
+}
+.footer__wrap{
+  padding-bottom:5.29rem;
+}
+@media (max-width: 829px) {
+  .content__wrap{
+    padding: 4.34rem 8.4rem 0 8.7em
+  }
+}
+@media (max-width: 506px){
+  .content__wrap{
+    margin: 0 auto;
+    padding: 4.34rem 1.5rem 0 1.5rem;
+    border:$br;
+  }
+}
