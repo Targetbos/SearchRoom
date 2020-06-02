@@ -19,7 +19,8 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  height: $datepickerDayCellSize;
+  height: auto;
+  padding: 0.8rem 0;
   z-index: 1;
   color: $dark-50;
 

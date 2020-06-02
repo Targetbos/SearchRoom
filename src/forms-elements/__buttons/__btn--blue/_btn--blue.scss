@@ -1,20 +1,17 @@
 .buttons__btn--blue{
-  width:100%;
-  height: 100%;
-  min-width: 4rem;
-  min-height: 1.5rem;
+  padding: 0.6rem 1.44rem;
   background: $btn-bg;
   text-transform: uppercase;
   font-family: $fontM;
   font-size: 0.75rem;
   font-weight: bold;
   color:#fff;
-  line-height: 0.93rem;
   border-radius: 1.375rem;
   cursor:pointer;
   letter-spacing: -0.4px;
   border:none;
   outline:none;
+  height: 100%;
   &:hover{
     opacity:0.5;
   }

@@ -16,6 +16,10 @@
   min-width:100%;
 }
 .left-column{
+  &__wrap-search-room{
+    width: 23.5rem;
+    height: 23.12rem;
+  }
   &__wrap-registration-form{
     margin-top: 2.65rem;
   }

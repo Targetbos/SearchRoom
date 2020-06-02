@@ -5,7 +5,7 @@ include ../__menu/menu.pug
 
 mixin header (data)
   .header
-    .header__wrap
+    .header__inner
       .header__logo
         +logo({})
       .header__menu
@@ -13,9 +13,9 @@ mixin header (data)
       if (data.auth)
         .header__login-box
           .header__inner-login-btn
-            +btn-white({name: "login-btn", value: "login", text: "LOGIN"})
+            +btn-white({name: "login-btn", value: "input", text: "ВОЙТИ"})
           .header__inner-register-btn
-            +btn-blue({name: "register-btn", value: "register", text: "REGISTER"})
+            +btn-blue({name: "register-btn", value: "register", text: "ЗАРЕГИСТРИРОВАТЬСЯ"})
       else
         .header__user-box
           a.header__user-link Cosmin Negoita
