@@ -57,7 +57,6 @@
     btnApple = btnClear.nextSibling // Кнопка "Применить"
     formExpanded = formEx;
     overlay = formExpanded.previousSibling;
-    // let formDiv = overlay.previousSibling;
 
     btnApple.onclick = function(){
       formExpanded.classList.add('dropdown-guest__form-expanded--hide');
@@ -80,10 +79,11 @@
         itemNumber = formEx.querySelectorAll('.dropdown-guest__number');
         var adults = itemNumber[0].innerHTML;
         var children = itemNumber[1].innerHTML;
-        var babies = itemNumber[2].innerHTML;
-        let sumGuest = Number.parseInt(adults) +  Number.parseInt(children) + Number.parseInt(babies); // всего гостей 
-        stringGuest = sumGuest + ((sumGuest == 0)? 'Сколько гостей' : (sumGuest<2)? ' гость' : (sumGuest<5)? ' гостя': ' гостей')// Строка вывода данных в INPUT
-        
+        var babies = Number.parseInt(itemNumber[2].innerHTML);
+        let sumGuest = Number.parseInt(adults) +  Number.parseInt(children); // всего гостей 
+        let babiesSum = ((babies !== 0) ? (babies < 2) ? babies + ' младенец' : (babies < 5) ? babies + ' младенца' : babies + ' младенцев' : ""); 
+        let strGuest = sumGuest + ((sumGuest == 0)? 'Сколько гостей' : (sumGuest<2)? ' гость' : (sumGuest<5)? ' гостя': ' гостей');// Строка вывода данных в INPUT
+        stringGuest = (babiesSum == 0)? strGuest: strGuest + ', '+ babiesSum;
         // скрытие и отображение кнопки "Очистить"
         if(sumGuest == 0) {
           stringGuest = 'Сколько гостей'; 

@@ -1,0 +1,73 @@
+include ./header/__header/header.pug
+include ./footer/__footer/footer.pug
+include ./forms-elements/__filter-date-dropdown/filter-date-dropdown.pug
+include ./forms-elements/__title-element/title-element.pug
+include ./forms-elements/__dropdown/__dropdown-guest/dropdown-guest.pug
+include ./forms-elements/__range-slider/range-slider.pug
+include ./forms-elements/__checkbox-buttons/checkbox-buttons.pug
+include ./forms-elements/__rich-checkbox-btn/rich-checkbox-btn.pug
+include ./forms-elements/__dropdown/__dropdown-room/dropdown-room.pug
+include ./forms-elements/__expandable-checkbox-list/expandable-checkbox-list.pug
+include ./forms/__desc-room/desc-room.pug
+include ./forms-elements/__pagination/pagination.pug
+- 
+ datas = [{number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["./img/room1.png","./img/room2.png","./img/room3.png","./img/room4.png",]},
+          {number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["./img/room1.png","./img/room2.png","./img/room3.png","./img/room4.png",]},
+          {number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["./img/room1.png","./img/room2.png","./img/room3.png","./img/room4.png",]},
+          {number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["./img/room1.png","./img/room2.png","./img/room3.png","./img/room4.png",]},
+          {number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["./img/room1.png","./img/room2.png","./img/room3.png","./img/room4.png",]},
+          {number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["./img/room1.png","./img/room2.png","./img/room3.png","./img/room4.png",]},
+          {number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["./img/room1.png","./img/room2.png","./img/room3.png","./img/room4.png",]},
+          {number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["./img/room1.png","./img/room2.png","./img/room3.png","./img/room4.png",]},
+          {number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["./img/room1.png","./img/room2.png","./img/room3.png","./img/room4.png",]},
+          {number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["./img/room1.png","./img/room2.png","./img/room3.png","./img/room4.png",]},
+          {number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["./img/room1.png","./img/room2.png","./img/room3.png","./img/room4.png",]}]
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    title Search Room
+    link(rel="stylesheet" href="./sr.scss")
+  body
+    .wrapper
+      header.header__wrap
+        +header({auth: true})
+      .content__wrap
+        aside.left-aside
+          .left-aside__wrap-date-dropdown
+            +title-element({ title: "Даты пребывания в отеле"})
+            +filter-date-dropdown({name: dateFilter})
+          .left-aside__wrap-guest
+            +dropdown-guest({name: "guest", title: "Гости"})
+          .left-aside__wrap-range-slider
+            +title-element({ title: "Диапазон цены", subtitle: "5 000Р - 10 000Р", marginTop: true})
+            +range-slider({})
+            p Cтоимость за сутки пребывания в номере
+          .left-aside__wrap-checkbox
+            +title-element({title: "checkbox buttons"})
+            .left-aside__wrap-checkbox-item
+              +checkbox-item({name: "checkbox", checked:false, text: "Можно курить", value: "smoke"})
+              +checkbox-item({name: "checkbox", checked:true, text: "Можно с питомцами", value: "animal"})
+              +checkbox-item({name: "checkbox", checked:true, text: "Можно пригласить гостей (до 10 человек)", value: "guest"})
+          .left-aside__wrap-rich-checkbox
+            +title-element({title: "Доступность"})
+            .left-aside__wrap-rich-checkbox-item
+              +rich-checkbox-buttons({name: "wide-corridor", head: "Широкий коридор", desc: "Ширина коридоров в номере не менее 91 см"})
+              +rich-checkbox-buttons({name: "assistent", head: "Помощник для инвалидов", desc: "На 1 этаже вас встретит специалист и проводит до номера"})
+          .left-aside__wrap-comfort-room
+            +dropdown-room({title: "Удобства номера"})
+          .left-aside__wrap-dop-comfort-room
+            +checkbox-list({title: "Дополнительные удобства"})
+        content.content__inner
+          h2.content-title Номера, которые мы для вас подобрали 
+          .content__wrap-desc-room
+            each data in datas
+              .content__wrap-desc-room-item
+                +desc-room(data)
+          .content__wrap-pagination 
+            +pagination({})
+      hr
+      +footer({})
+    script(src="./sr.js")

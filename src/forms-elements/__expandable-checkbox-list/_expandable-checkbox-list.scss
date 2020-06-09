@@ -46,10 +46,10 @@
       position: absolute;
       top: 0.81rem;
       right: 0;
-      z-index: 123; 
       background: #ffffff;
       &--visible{
         height: 16rem;
+        z-index: 123;
       }
     }
   }

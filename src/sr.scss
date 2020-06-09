@@ -1,0 +1,97 @@
+@import "./config.scss";
+@import "./footer/__footer/footer";
+@import "./header/__header/header";
+@import "./forms-elements/__filter-date-dropdown/filter-date-dropdown";
+@import "./forms-elements/__title-element/title-element";
+@import "./forms-elements/__dropdown/__dropdown-guest/dropdown-guest";
+@import "./forms-elements/__range-slider/range-slider";
+@import "./forms-elements/__checkbox-buttons/checkbox-buttons";
+@import "./forms-elements/__rich-checkbox-btn/rich-checkbox-btn";
+@import "./forms-elements/__dropdown/__dropdown-room/dropdown-room";
+@import "./forms-elements/__expandable-checkbox-list/expandable-checkbox-list";
+@import "./forms/__desc-room/desc-room.scss";
+@import "./forms-elements/__pagination/pagination";
+.wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;  
+  background: #fff;
+}
+.header__wrap{
+}
+.content__wrap{
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width:100%;
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 1.7rem 0rem 3rem 0.89rem;
+}
+.left-aside{
+  display:block;
+  width: 18.8rem;
+  padding-right: 0.86rem;
+  box-sizing: border-box;
+  &__wrap{
+    &-date-dropdown{
+      margin-bottom:1rem;
+    }
+    &-guest{
+      margin-bottom:1.7rem;
+    }
+    &-range-slider{
+      & > p {
+        margin: 0.8rem 0 1.65rem;
+        font-size: 0.77rem;
+        color: $dark-50;
+      }
+    }
+    &-checkbox{
+      &-item{margin-top:0.995rem; margin-bottom: 1.78rem}
+    }
+    &-rich-checkbox{
+      &-item{margin-top: 0.89rem; margin-bottom:1.36rem;}
+    }
+    &-comfort-room{margin-bottom:1.7rem;}
+    &-dop-comfort-room{}
+  }
+}
+.rich-checkbox-btn__desc{font-size: 0.73rem; letter-spacing: -0.09px;}
+.content{
+  &__inner{
+    display: block; 
+    align-items:flex-start; 
+    padding: 0 0.9rem 0 2.78rem; 
+    box-sizing: content-box; 
+    width: 56rem; 
+  }
+  &-title{ 
+    margin:0.06rem 0 1.25rem; 
+    font-family: $fontO; 
+    font-size: 1.5rem; 
+    letter-spacing:-.07px; 
+  }
+  &__wrap-desc-room{
+    display: flex; 
+    justify-content: space-between; 
+    flex-flow: row wrap; 
+    box-sizing: border-box; 
+  }
+  &__wrap-desc-room-item{margin-bottom: 1.18rem;}
+  &__wrap-pagination{
+    width:100%;
+    display: flex; 
+    justify-content:center;
+    box-sizing: border-box; 
+    margin-top:1.45rem; 
+    padding-right: 1rem;
+  }
+}
+.footer{
+  border-top:1px solid $dark-10;
+  &__wrap{
+  padding-bottom: 5.18rem;
+  }
+}

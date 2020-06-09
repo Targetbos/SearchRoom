@@ -1,10 +1,11 @@
-$(".filter-date-dropdown").click(function(){
-  this.children().val("");
-  $(".filter-date-dropdown__input").datapicker({
+import "../__date-dropdown/js/air-datepicker";
+$(".filter-date-dropdown__input").click(function(){
+  $(".datepicker-here").datepicker({
     inline:true,
     autoClose:true,
-    prevHtml: '',
-
-  });
-  $(".datepicker--nav-action").attr("next").append("ghjdthrf");
-});
+    navTitles: {
+      days: "MM yyyy"
+    }
+  })
+  console.log("owrk")
+})

@@ -214,23 +214,17 @@ include __feedback/feedback.pug
     .wrapper-left
 
       .wrapper-left__dropdown-room
-        +title-element({title: "dropdown", subtitle: "DEFAULT", marginTop:true})
-        .wrapper-left__wrap-dropdown-room
-          //- +dropdown-room
-          //- форма выбора комнаты
-          //- Имена передаваемого объекта:
-          //-  name - имя поля данных
-          //-  open:true - разварачивает форму с кнопками
-          //- Значения data-: (не пердаются в mixin)
-          //-  bedroom - количество спален
-          //-  bed - количество кроватей
-          //-  bathroom - количество ванных комнат
-          +dropdown-room({name:"select-room", open: false})
-
-        +title-element({title: "dropdown", subtitle: "EXPANDED", marginTop:true})
-        .wrapper-left__wrap-dropdown-room
-          +dropdown-room({name:"select-room", open: true})
-
+        //- +dropdown-room
+        //- форма выбора комнаты
+        //- Имена передаваемого объекта:
+        //-  name - имя поля данных
+        //-  open:true - разварачивает форму с кнопками
+        //- Значения data-: (не пердаются в mixin)
+        //-  bedroom - количество спален
+        //-  bed - количество кроватей
+        //-  bathroom - количество ванных комнат
+        +dropdown-room({name:"select-room", open: false, title: "dropdown", subtitle: "DEFAULT", marginTop:true})
+        +dropdown-room({name:"select-room", open: true, title: "dropdown", subtitle: "DEFAULT", marginTop:true})
       .wrapper-left__expandable-checkbox-list
         .wrapper-left__wrap-checkbox-list
           //- +checkbox-list

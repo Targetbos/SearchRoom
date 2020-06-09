@@ -8,7 +8,9 @@
         "ct": "parcel src/colors-types.pug --open",
         "hf": "parcel src/hf.pug --open",
         "lp": "parcel src/lp.pug --open",
-        "lp-build": "parcel build src/lp.pug -d build --public-url ./"
+        "lp-build": "parcel build src/lp.pug -d build --public-url ./",
+        "sr": "parcel src/sr.pug --open",
+        "sr-build": "parcel build src/sr.pug -d build --public-url ./"
     },
     "repository": {
         "type": "git",

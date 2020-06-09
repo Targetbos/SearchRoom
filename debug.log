@@ -1,0 +1,7 @@
+[0607/113351.814:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0
+[0607/121356.637:ERROR:file_io.cc(134)] WriteFile: Идет закрытие канала. (0xE8)
+[0607/125617.543:ERROR:file_io.cc(134)] WriteFile: Идет закрытие канала. (0xE8)
+[0607/155251.812:ERROR:file_io.cc(134)] WriteFile: Идет закрытие канала. (0xE8)
+[0607/193015.346:ERROR:file_io.cc(134)] WriteFile: Идет закрытие канала. (0xE8)
+[0607/213548.719:ERROR:file_io.cc(134)] WriteFile: Идет закрытие канала. (0xE8)
+[0607/235203.103:ERROR:file_io.cc(134)] WriteFile: Идет закрытие канала. (0xE8)
