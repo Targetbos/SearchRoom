@@ -1,38 +1,46 @@
 {
-    "name": "hotel",
-    "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-        "fe": "parcel src/fe.pug --open",
-        "forms": "parcel src/forms.pug --open",
-        "ct": "parcel src/colors-types.pug --open",
-        "hf": "parcel src/hf.pug --open",
-        "lp": "parcel src/lp.pug --open",
-        "lp-build": "parcel build src/lp.pug -d build --public-url ./",
-        "sr": "parcel src/sr.pug --open",
-        "sr-build": "parcel build src/sr.pug -d build --public-url ./"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Targetbos/fsd.git"
-    },
-    "author": "targetbos@yandex.ru",
-    "license": "ISC",
-    "keywords": [],
-    "description": "",
-    "devDependencies": {
-        "parcel-bundler": "^1.12.4",
-        "parcel-plugin-clean-dist": "0.0.6",
-        "pug": "^2.0.4"
-    },
-    "dependencies": {
-        "@material-ui/icons": "^4.9.1",
-        "air-datepicker": "^2.2.3",
-        "autoprefixer": "^9.8.0",
-        "caniuse-lite": "^1.0.30001066",
-        "jquery": "^3.5.1",
-        "postcss-modules": "^1.5.0",
-        "sass": "^1.26.7",
-        "src": "^1.1.2"
-    }
+  "name": "initproject",
+  "version": "1.0.0",
+  "description": "InitProject webpack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config ./webpack-config/webpack.dev.conf.js",
+    "build": "webpack --config ./webpack-config/webpack.build.conf.js"
+  },
+  "author": "targetbos@yandex.ru",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "autoprefixer": "^9.8.5",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^3.6.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.0.0",
+    "fs": "0.0.1-security",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "pug": "^3.0.0",
+    "pug-html-loader": "^1.1.5",
+    "pug-loader": "^2.4.0",
+    "pug-smart-alias": "^1.0.0",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "vue": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
+  },
+  "browserslist": [
+    "last 3 version",
+    "> 1%"
+  ],
+  "dependencies": {
+  }
 }

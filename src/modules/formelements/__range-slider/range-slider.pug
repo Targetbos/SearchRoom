@@ -1,0 +1,11 @@
+include ../__title-element/title-element.pug
+mixin range-slider( data )
+  .range-slider
+    +title-element({title: data.title, subtitle: "5 000Р - 10 000Р"})
+    .range-slider__wrap-slider
+      .range-slider__block
+        .range-slider__btn
+          input.range-slider__min-input(type="text" name="rangeMin" value=data.valueMin)
+        .range-slider__body
+        .range-slider__btn
+          input.range-slider__max-input(type="text" name="rangeMax" value=data.valueMax)

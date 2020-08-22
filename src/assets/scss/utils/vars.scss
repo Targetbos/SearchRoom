@@ -1,0 +1,85 @@
+@import "./libs";
+@import "./mixins";
+@import "./fonts";
+@import "./reset";
+// Font
+$mainFont : 'Montserrat',
+Helvetica,
+Arial,
+sans-serif;
+
+// Size
+$mainFontColor : #101010;
+$mainFontSize : 16px;
+$mainFontWeight : 400;
+$mainLineHeight : 1.4;
+
+$fullHDWidth : 1920px;
+$colorsTypesWidth: 1440px;
+$desktopWidth : 1280px;
+$smDesktopWidth : 980px;
+$tableWidth : 768px;
+$phoneWidth : 480px;
+$smPhoneWidth : 320px;
+
+//color
+$color: #1F2041;
+$purple: #BC9CFF;
+$green: #6fcf97;
+$dark-100: $color;
+$dark-75: rgba(31, 32, 65, 0.75);
+$dark-50: rgba(31, 32, 65, 0.50);
+$dark-25: rgba(31, 32, 65, 0.25);
+$dark-10: rgba(31, 32, 65, 0.10);
+$dark-5: rgba(31, 32, 65, 0.05);
+$btn-bg: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); // цвет фона кнопок
+
+
+$height-header: 4.37rem; //высота шапки с меню
+// $width-content: ($fullHDWidth- 140px)/$fullHDWidth*100%; // ширина блока с контентом с учётом отступов по 140px по краям
+$br: 1px solid #666; // граница для тестов
+$fontM: Montserrat,
+'Open Sans',
+sans-serif;
+$fontO: Quicksand,
+'Open Sans',
+sans-serif;
+$fontOr: 'Quicksand-Regular',
+'Open Sans',
+sans-serif;
+
+h1 {
+  font-family: $fontO;
+  font-size: 1.5rem;
+  line-height: 1.87rem;
+  margin: 0;
+  padding: 0;
+  letter-spacing: rem(0.2);
+}
+
+h2 {
+  font-family: $fontO;
+  font-size: 1.18rem;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.015rem;
+}
+
+h3 {
+  font-family: $fontM;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.00187rem;
+}
+
+p {
+  font-family: $fontM;
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;
+}

@@ -1,0 +1,77 @@
+@import "~ConfigScss";
+.rate-button{
+  &__wrap-star{
+    width: 7.35rem;
+    display: flex;
+    justify-content: space-between;
+    direction:rtl;
+    height: 1.65rem;
+    
+  }
+  &__input-star{
+    list-style: none;
+    height: 0;
+    cursor: pointer;
+    
+  }
+  &__input-star:before{
+    content: "";
+    width:1.25rem;
+    height: 1.25rem;
+    display: flex;
+    background: url("./star.png") no-repeat 0 0;
+    background-size: 1.25rem auto;
+
+  }
+  &__input-star:hover:before,
+  &__input-star:hover ~ &__input-star:before {
+    content: "";
+    background: url("./star.png") no-repeat 0 -1.19rem;
+    background-size: 1.25rem auto;
+  }
+  &__input-star:checked:before,
+  &__input-star:checked ~ &__input-star:before{
+    content: "";
+    background: url("./star.png") no-repeat 0 -1.19rem;
+    background-size: 1.25rem auto;
+  }
+}
+@media (max-width: 968px){
+  .rate-button{
+    &__wrap-star{
+      width: 6rem;
+      height: 1rem;
+    }
+    
+    &__input-star{
+      list-style: none;
+      height: 0;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+    }
+    &__input-star:before{
+      content: "";
+      display: flex;
+      width: 1rem;
+      height: 1rem;
+      background: url("./star.png") no-repeat 0 0;
+      background-size: 1rem auto;
+
+    }
+    &__input-star:hover:before,
+    &__input-star:hover ~ &__input-star:before {
+      content: "";
+      background: url("./star.png") no-repeat 0 -1rem;
+      background-size: 1rem auto;
+
+    }
+    &__input-star:checked:before,
+    &__input-star:checked ~ &__input-star:before{
+      content: "";
+      background: url("./star.png") no-repeat 0 -1rem;
+      background-size: 1rem auto;
+
+    }
+  }
+}

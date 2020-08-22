@@ -1,0 +1,40 @@
+@import "~ConfigScss";
+
+.checkbox-item{
+  &__input{
+    display:none;
+  }
+  &__label{
+    display: flex;
+    cursor: pointer;
+    width: 15.31rem;
+  }
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $dark-25;
+    border-radius: 0.25rem;
+    width: 1.13rem;
+    height: 1.13rem;
+    margin-right: 0.65rem;
+  }
+  &__text{
+    max-width: 85%;
+    letter-spacing: -0.05px;
+    color: $dark-50;
+    line-height: 1.2rem;
+  }
+  &__label > &__input:checked + &__icon{
+    border: 1px solid $purple;
+  }
+  &__label > &__input:checked + &__icon:before{
+    content: " ";
+    width: 0.31rem;
+    height: 0.32rem;
+    border-bottom: 0.125rem solid $purple;
+    border-right: 0.125rem solid $purple;
+    transform: rotate(45deg); 
+    padding-bottom:0.1rem;
+  }
+}

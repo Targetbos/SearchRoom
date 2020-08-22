@@ -1,0 +1,48 @@
+@import "~ConfigScss";
+/* CSS toggle */
+.toggle{
+  &__input{
+    display: none;
+  }
+  &__label {
+    position:relative;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    line-height: 0.87rem;
+    color: $dark-50;
+    min-width: 36.3%;
+    letter-spacing: -0.06px;
+  }
+  &__icon:before {
+    content: '';
+    display:inline-flex;
+    width: 2.4rem;
+    height: 1.125rem;
+    border-radius: 0.57rem;
+    transition: .2s;
+    border:1px solid;
+    border-color:  $dark-25;
+    margin-right: 0.64rem;
+    transition: border 0.3s;
+  }
+  &__icon:after {
+    content: '';
+    position:absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 0.38rem;
+    background: $dark-25;
+    transition: left .2s;
+  }
+  &__label > &__input:checked + &__icon:before {
+   border-color: $purple;
+  }
+  &__label > &__input:checked + &__icon:after {
+    left: 1.5rem;
+    background: $purple;
+  }
+}
+/* End CSS toggle */

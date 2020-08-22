@@ -1,0 +1,32 @@
+.color-item {
+  &__wrap {
+    width: 20rem;
+    display: flex;
+    margin-bottom: 1.225rem;
+  }
+
+  &__color-block {
+    width: 4.37rem;
+    height: 4.37rem;
+    border-radius: 0.4rem;
+  }
+
+  &__desc-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2.47rem;
+  }
+
+  &__title {
+    font-family: $fontO;
+    font-size: rem(19);
+    font-weight: bold;
+    margin: rem(8) 0 rem(2);
+    letter-spacing: 0.012rem;
+  }
+
+  &__desc {
+    font-family: $fontOr;
+    font-size: rem(19);
+  }
+}

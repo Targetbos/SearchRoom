@@ -1,0 +1,53 @@
+include ../../modules/formelements/__color-item/color-item.pug
+include ../../modules/formelements/__logo-no-text/logo-no-text.pug
+
+doctype html
+html
+  head
+    title Hotel
+    meta(name = "viewport" content = "width=device-width, initial-scale = 1")
+  body
+    .wrapper
+      +logo-no-text({})
+      .container-content
+        .content-left
+          .content-left__box-color
+            +color-item({title: "Dark Shade 100%", colorName: "\#1F2041", color: "rgba(31, 32, 65, 1)"})
+          .content-left__box-color
+            +color-item({title: "Dark Shade 75%", colorName: "\#1F2041", color: "rgba(31, 32, 65, 0.75)"})
+          .content-left__box-color
+            +color-item({title: "Dark Shade 50%", colorName: "\#1F2041", color: "rgba(31, 32, 65, 0.5)"})
+          .content-left__box-color
+            +color-item({title: "Dark Shade 25%", colorName: "\#1F2041", color: "rgba(31, 32, 65, 0.25)"})
+          .content-left__box-color
+            +color-item({title: "Dark Shade 5%", colorName: "\#1F2041", color: "rgba(31, 32, 65, 0.05)"})
+          .content-left__box-color
+            +color-item({title: "Purple", colorName: "\#BC9CFF", color: "#BC9CFF"})
+          .content-left__box-color
+            +color-item({title: "Green", colorName: "\#6FCF97", color: "#6FCF97"})
+        
+        .content-right
+          .content-right__wrap-text
+            .content-right__title-box
+              span.content-right__h1  H1
+            .content-right__text-box 
+              h1 This one is the sub-section or widget title
+          
+          .content-right__wrap-text-h2
+            .content-right__title-box
+              span.content-right__h2 H2
+            .content-right__text-box 
+              h2 Next one is the item title inside widgets
+          
+          .content-right__wrap-text-h3
+            .content-right__title-box
+              span.content-right__h3 H3
+            .content-right__text-box
+              h3 This is a label or cta text
+          
+          .content-right__wrap-text-body
+            .content-right__title-box
+              p.content-right__body Body
+            .content-right__text-box  
+              .content-right__box-p  
+                p This is the body text which is used for most of the design, like paragraphs, lists, etc.

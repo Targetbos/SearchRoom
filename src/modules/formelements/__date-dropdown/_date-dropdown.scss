@@ -1,0 +1,75 @@
+@import "~ConfigScss";
+
+@import "./sass/datepicker-config";
+@import "./sass/cell.scss";
+@import "./sass/datepicker.scss";
+@import "./sass/navigation.scss";
+@import "./sass/timepicker.scss";
+
+.date-dropdown{
+    &__wrap-date-picker{
+        width:100%;
+        display: flex;
+    }
+    &__subtitle{
+        display: flex;
+        font-size: 0.75rem;
+        line-height: 0.9rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+    }
+    &__date-in{
+        display:flex;
+        flex-direction:column;
+        position:relative;
+        width:47%;
+        
+    }
+    &__date-out{
+        display:flex;
+        flex-direction:column;
+        position:relative;
+        width:47%;
+        margin-left:20px;
+    }
+    &__date-input{
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        font-family: Montserrat,'Open Sans', sans-serif;
+        font-size: 0.85rem;
+        line-height: 1.1rem;
+        padding: 0.76rem 0.1rem 0.85rem 0.86rem;
+        border-radius: 3px;
+        border: 1px solid $dark-25;
+        outline: none;
+        cursor: pointer;
+        margin-top: 0.31rem;
+        background: #ffffff;
+        letter-spacing: 0.1px;
+        color: $dark-75;
+        &:hover, &:focus{
+            color: $dark-75;
+            border-color: $dark-75;
+            outline: none;
+        }
+    }
+    &__date-icon{
+        display: flex;
+        justify-content: center;
+        color: $dark-25;
+        width: 0.44rem;
+        height: 0.44rem;
+        border:2px solid $dark-50;
+        border-width: 0 0 2px 2px;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 2.19rem;
+        right: 1.04rem;
+        cursor:pointer;
+    }
+}
