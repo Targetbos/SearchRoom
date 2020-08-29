@@ -1,20 +1,7 @@
-.buttons__btn--white{
-  padding: 0.45rem 1.2rem;
-  text-transform: uppercase;
-  font-family: $fontM;
-  font-size: 0.75rem;
-  font-weight: bold;
-  background:#ffffff;
+.--white {
+
   color: $purple;
   border: 2px solid $purple;
-  border-radius: 1.38rem;
-  cursor:pointer;
-  letter-spacing: -0.4px;
-  outline:none;
-  height: 100%;
-  &:hover{
-    border:2px solid rgba(188, 156, 255, 0.5);  }
-  &--hover{
-    border:2px solid rgba(188, 156, 255, 0.5);  
-  }
+  background: #ffffff;
+
 }

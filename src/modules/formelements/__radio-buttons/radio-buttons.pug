@@ -3,8 +3,8 @@ mixin radio-buttons( data )
     .radio-buttons__wrap 
       label.radio-buttons__label 
         if data.checked
-          input.radio-buttons__input(type="radio" name=data.name value=data.value checked=true)
+          input(type="radio" name=data.name value=data.value checked=true)
         else
-          input.radio-buttons__input(type="radio" name=data.name value=data.value checked=false)
+          input(type="radio" name=data.name value=data.value checked=false)
         .radio-buttons__icon
-        span.radio-buttons__text= data.text
+        span= data.text

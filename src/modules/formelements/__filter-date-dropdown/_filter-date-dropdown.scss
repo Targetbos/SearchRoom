@@ -1,50 +1,21 @@
-@import "~ConfigScss";
-
 @import "../__date-dropdown/sass/datepicker-config";
 @import "../__date-dropdown/sass/cell.scss";
 @import "../__date-dropdown/sass/datepicker.scss";
 @import "../__date-dropdown/sass/navigation.scss";
 @import "../__date-dropdown/sass/timepicker.scss";
-.filter-date-dropdown{
+
+.filter-date-dropdown {
   position: relative;
   display: flex;
-  background:none;
-  &__input{
-    display:block;
-    box-sizing: border-box;
-    min-width: 100%;
-    font-family: $fontM;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    padding: 0.56rem 0.875rem;
-    border-radius: 0.25rem;
-    border: 1px solid $dark-25;
-    margin: 0.19rem 0; 
-    color: $dark-75;
+  background: none;
+
+  input {
     cursor: pointer;
-    z-index: 4;
-    &-icon{
-      display: flex;
-      justify-content: center;
-      color: $dark-25;
-      width: 0.44rem;
-      height: 0.44rem;
-      border: 2px solid $dark-50;
-      border-width: 0 0 2px 2px;
-      transform: rotate(-45deg);
-      position: absolute;
-      top: 1.2rem;
-      right: 1.01rem;
-      cursor:pointer;
-      z-index: 6;
-    }
-    &:-webkit-input-placeholder{
-      color: $dark-25;
-    }
-    &:hover, &:focus{
-      color: $dark-75;
-      border-color: $dark-75;
-      outline: none;
-    }
   }
+
+  i {
+    top: 1.25rem;
+    right: 1.11rem;
+  }
+
 }

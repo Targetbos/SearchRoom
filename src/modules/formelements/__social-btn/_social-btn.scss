@@ -1,25 +1,29 @@
-.social-btn{
-  &__box{
-  display:flex;
-  width:6.94rem;
-  justify-content: space-between;
-  align-items:center;
-  padding:1px 0 0 0;
+.social-btn {
+  &__box {
+    display: flex;
+    width: 6.94rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 0 0 0;
   }
-  &__icon{
+
+  &__icon {
     width: 1.4rem;
     height: 1.4rem;
   }
-  &__icon-fb{
-    background:url("./fb.svg") no-repeat;
+
+  &__icon-fb {
+    background: url("fb.svg") no-repeat;
     background-size: contain;
   }
-  &__icon-tw{
-    background:url("./tw.svg") no-repeat;
+
+  &__icon-tw {
+    background: url("tw.svg") no-repeat;
     background-size: contain;
   }
-  &__icon-ig{
-    background:url("./ig.svg") no-repeat;
+
+  &__icon-ig {
+    background: url("ig.svg") no-repeat;
     background-size: contain;
   }
 }

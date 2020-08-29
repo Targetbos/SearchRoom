@@ -15,7 +15,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     },
     // // historyApiFallback: true, 
     // // index: `formelements.html`,
-    openPage: `colorstypes.html`,
+    openPage: `formelements.html`,
     open: true
 
   },

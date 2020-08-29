@@ -1,79 +1,60 @@
-@import "~ConfigScss";
+.dropdown-guest {
+  position: relative;
 
-@import "~Formelements/__title-element/_title-element";
-.dropdown-guest{
-  position:relative;
-  &__input{
-    display:flex;
-    box-sizing: border-box;
-    min-width: 100%;
-    font-family: $fontM;
-    font-size: 0.875rem;
-    line-height: 1.48rem;
-    padding: 0.5rem 0.875rem 0.625rem;
-    border-radius: 4px;
-    border: none;
+  &__input {
     color: $dark-75;
     cursor: pointer;
-    outline:none;
-    background:none;
-    letter-spacing: -0.02px;
-    &-icon{
-      display: flex;
-      justify-content: center;
-      position: absolute;
-      color: $dark-25;
-      border: 2px solid $dark-50;
-      transform: rotate(-45deg);
-      border-width:0 0 2px 2px;
-      width: 0.41rem;
-      height: 0.41rem;
-      top: 0.84rem;
-      right: 1.1rem;
-      cursor: pointer;
+    outline: none;
+    background: none;
+
+    &-icon {
+      top: 1.2rem;
+      right: 1.15rem;
     }
   }
-  &__form{
-    margin-top:0.25rem;
-    border-radius: 4px;
-    border: 1px solid $dark-25;
-    margin-bottom:1.25rem;
-    transition: border 0.2s;
+
+  &__form {
     position: relative;
-    &--border-bottom-90deg{
+
+    &--border-bottom-90deg {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       color: $dark-75;
       border-color: $dark-50;
       outline: none;
     }
-    &:hover, &:focus{
+
+    &:hover,
+    &:focus {
       color: $dark-75;
       border-color: $dark-50;
       outline: none;
     }
   }
-  &__overlay{
-    visibility: hidden; 
-    position:fixed; 
-    left: 0; 
-    right: 0; 
-    top: 0; 
-    bottom: 0; 
-    z-index: 109; 
-    &--open{
-      visibility: visible; 
+
+  &__overlay {
+    visibility: visible;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 109;
+
+    &--hide {
+      visibility: hidden;
     }
   }
-  &__form-expanded{
-    opacity:1;
+
+  &__form-expanded {
+    opacity: 1;
     overflow: hidden;
-    width:100%;
-    height: 9.875rem;
+    width: 100%;
+    height: 10rem;
     border: 1px solid $dark-50;
-    border-radius: 0 0 4px 4px;
-    position:absolute;
-    top: 4rem;
+    border-radius: 0 0 rem(4) rem(4);
+    position: absolute;
+    top: 3.9rem;
     left: 0;
     padding-bottom: 0.375rem;
     box-sizing: border-box;
@@ -82,21 +63,25 @@
     background: #ffffff;
     outline: none;
     transition: height 0.5s, opacity 0.3s;
-    &--hide{
+
+    &--hide {
       height: 0;
-      padding:0;
-      opacity:0;
+      padding: 0;
+      opacity: 0;
     }
   }
-  &__inner{
-    padding:0.0625rem 0.25rem 0 0.25rem;
-    &:after{
-      content:'';
-      display:table;
-      clear:both;
+
+  &__inner {
+    padding: 0.0625rem 0.25rem 0 0.25rem;
+
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
     }
   }
-  &__item-guest{
+
+  &__item-guest {
     float: left;
     padding-top: 0.75rem;
     margin-left: 0.625rem;
@@ -104,33 +89,38 @@
     font-weight: bold;
     font-size: 0.75rem;
   }
-  &__item-control{
+
+  &__item-control {
     display: flex;
     align-items: center;
     float: right;
     padding-top: 0.1875rem;
     margin-right: 0.09375rem;
   }
-  &__btn{
+
+  &__btn {
     height: 1.875rem;
     width: 1.875rem;
     border: 1px solid $dark-50;
     border-radius: 1rem;
     background: none;
     cursor: pointer;
-    color:$dark-50;
+    color: $dark-50;
     margin-top: 0.125rem;
     margin-bottom: 0.0625rem;
     outline: none;
     transition: background 0.2s;
-    &:hover{
-      background: $dark-5; 
+
+    &:hover {
+      background: $dark-5;
     }
-    &--deactivate{
+
+    &--deactivate {
       border-color: $dark-25;
     }
   }
-  &__number{
+
+  &__number {
     display: inline-flex;
     justify-content: center;
     width: 2.0625rem;
@@ -138,12 +128,15 @@
     font-weight: bold;
     line-height: 0.9375rem;
   }
-  &__wrap-btn-link{
-    display:flex;
+
+  &__wrap-btn-link {
+    display: flex;
     justify-content: space-between;
-    padding: 1.125rem 0 0.25rem 0.4375rem;
+    padding: 1.3rem 0 0.25rem 0.4375rem;
   }
-  &__btn-clear, &__btn-apply{
+
+  &__btn-clear,
+  &__btn-apply {
     display: block;
     font-family: $fontM;
     font-size: 0.75rem;
@@ -152,17 +145,20 @@
     background: none;
     border: none;
     outline: none;
-    cursor:pointer;
+    cursor: pointer;
     color: $dark-50;
-    &:hover{
-      color:$purple; 
+
+    &:hover {
+      color: $purple;
     }
   }
-  &__btn-clear{
-    opacity:1;
+
+  &__btn-clear {
+    opacity: 1;
     pointer-events: auto;
-    &--hide{
-      opacity:0;
+
+    &--hide {
+      opacity: 0;
       pointer-events: none;
     }
   }

@@ -2,9 +2,9 @@ mixin like-button( data )
   .like-button
     label.like-button__label
       if data.checked
-        input.like-button__input(type="checkbox" name=data.name checked=true)
+        input(type="checkbox" name=data.name checked=true)
       else
-        input.like-button__input(type="checkbox" name=data.name checked=false)
+        input(type="checkbox" name=data.name checked=false)
       .like-button__wrap-btn
         span.like-button__icon 
         .like-button__span= data.span

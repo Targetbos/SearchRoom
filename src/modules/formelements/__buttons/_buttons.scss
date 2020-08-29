@@ -1,5 +1,31 @@
-@import "~ConfigScss";
 @import '__btn--blue/btn--blue';
 @import '__btn--white/btn--white';
-@import '__icon-link/icon-link';
+@import '__btn-link/btn-link';
 @import '__btn-with-icon/btn-with-icon';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: rem(99);
+  width: 100%;
+  padding: 0.45rem;
+  border-radius: rem(22);
+  height: rem(44);
+  font-family: $fontM;
+  font-weight: bold;
+  font-size: rem(12);
+  line-height: rem(15);
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    opacity: 0.5
+  }
+}
+
+.--button-hover {
+  opacity: 0.5;
+}

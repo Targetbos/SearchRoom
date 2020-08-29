@@ -1,49 +1,55 @@
-@import "~ConfigScss";
-.feedback{
-  &__wrapper{
+.feedback {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+  min-width: 20rem;
+
+  &__wrap-avatar {
     display: flex;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-  &__wrap-img{
-    display:flex;
+    align-items: center;
+    min-width: 3.5rem;
     flex-direction: column;
     padding: 0 0.125rem;
-    width: 6.44rem;
-    box-sizing: border-box;
   }
-  &__img{
+
+  &__avatar {
+    display: inline-block;
+    box-sizing: border-box;
     background: $dark-25;
     border: 2px solid #FFFFFF;
     box-shadow: 0 0.625rem 1.25rem $dark-10;
     border-radius: 2rem;
-    width: 3rem;
-    height: 3rem;
+    width: rem(47.67);
+    height: rem(48);
   }
-  &__like{
+
+  &__like {
     display: flex;
     justify-content: center;
-    margin-top: 0.56rem;
+    margin-top: 0.75rem;
   }
-  &__wrap-content{
-    padding-left: 0.375rem;
-    margin-top: 0.125rem;
+
+  &__wrap-content {
+    padding-left: 0.34rem;
   }
-  &__user{
+
+  &__user {
     font-weight: bold;
     color: $dark-75;
     line-height: 1.5rem;
-    letter-spacing: -0.15px;
+    letter-spacing: 0;
   }
-  &__date{
+
+  &__date {
     color: $dark-75;
     line-height: 1.5rem;
-    letter-spacing: -0.15px;
+    letter-spacing: 0.06px;
   }
-  &__text{
+
+  &__text {
     color: $dark-75;
     line-height: 1.5rem;
     margin-top: 0.62rem;
-    letter-spacing: -0.04px;
+    letter-spacing: 0.06px;
   }
 }

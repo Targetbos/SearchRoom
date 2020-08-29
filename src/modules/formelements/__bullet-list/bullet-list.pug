@@ -1,7 +1,6 @@
 mixin bullet-list( data )
   .bullet-list  
-    .bullet-list__wrap
-      ul.bullet-list__list
-        each desc in data.text
-          li.bullet-list__item= desc
+    ul.bullet-list__list
+      each desc in data.text
+        li.bullet-list__item= desc
       

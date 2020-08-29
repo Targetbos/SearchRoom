@@ -1,7 +1,7 @@
 mixin btn-with-icon( data )
   if data.hover
-    button.buttons__btn-with-icon.buttons__btn-with-icon--hover(value=data.value name=data.name)= data.text
-      i.buttons__icon
+    button.button.--blue.--button-hover(value=data.value name=data.name)= data.text
+      i.button__icon
   else  
-    button.buttons__btn-with-icon(value=data.value name=data.name)= data.text
-      i.buttons__icon
+    button.button.--blue(value=data.value name=data.name)= data.text
+      i.button__icon

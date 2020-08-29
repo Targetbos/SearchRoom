@@ -1,8 +1,13 @@
 mixin rate-button( data )
   .rate-button
     .rate-button__wrap-star
-      input.rate-button__input-star(type="radio" name=data.name value="5" data-numroom=data.numroom)
-      input.rate-button__input-star(type="radio" name=data.name value="4" data-numroom=data.numroom)
-      input.rate-button__input-star(type="radio" name=data.name value="3" data-numroom=data.numroom)
-      input.rate-button__input-star(type="radio" name=data.name value="2" data-numroom=data.numroom)
-      input.rate-button__input-star(type="radio" name=data.name value="1" data-numroom=data.numroom)
+      input(type="radio" id=data.numroom+"-star-5" name=data.name value="5" data-numroom=data.numroom)
+      label(for=data.numroom+"-star-5" title="5")
+      input(type="radio" id=data.numroom+"-star-4" name=data.name value="4" data-numroom=data.numroom)
+      label(for=data.numroom+"-star-4" title="4")
+      input(type="radio" id=data.numroom+"-star-3" name=data.name value="3" data-numroom=data.numroom)
+      label(for=data.numroom+"-star-3" title="3")
+      input(type="radio" id=data.numroom+"-star-2" name=data.name value="2" data-numroom=data.numroom)
+      label(for=data.numroom+"-star-2" title="2")
+      input(type="radio" id=data.numroom+"-star-1" name=data.name value="1" data-numroom=data.numroom)
+      label(for=data.numroom+"-star-1" title="1")

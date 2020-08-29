@@ -4,28 +4,28 @@ mixin dropdown-guest( data )
   .dropdown-guest
     +title-element({title: data.title, subtitle: data.subtitle, marginTop: data.marginTop})
     .dropdown-guest__form
-      input.dropdown-guest__input(type='text' name= data.name value='Сколько гостей' data-adults='' data-children='' data-babies='' disabled)
-      i.dropdown-guest__input-icon
-    .dropdown-guest__overlay
+      input.dropdown-guest__input(type='text' name= data.name value='Сколько гостей' data-adults='' data-children='' data-babies='')
+      i.dropdown-guest__input-icon.icon-arrow
+    .dropdown-guest__overlay.dropdown-guest__overlay--hide
     .dropdown-guest__form-expanded.dropdown-guest__form-expanded--hide
       .dropdown-guest__inner
         .dropdown-guest__item-guest взрослые
         .dropdown-guest__item-control
           button.dropdown-guest__btn.dropdown-guest__btn--deactivate(name='minus' data-guest='adults') -
-          .dropdown-guest__number(data-number='adults') 0
+          .dropdown-guest__number.js__numGuests 0
           button.dropdown-guest__btn(name='plus' data-guest='adults') +
       .dropdown-guest__inner
         .dropdown-guest__item-guest дети
         .dropdown-guest__item-control
           button.dropdown-guest__btn.dropdown-guest__btn--deactivate(name='minus' data-guest='children') -
-          .dropdown-guest__number(data-number='children') 0
+          .dropdown-guest__number.js__numGuests 0
           button.dropdown-guest__btn(name='plus' data-guest='children') +
       .dropdown-guest__inner
         .dropdown-guest__item-guest младенцы
         .dropdown-guest__item-control
           button.dropdown-guest__btn.dropdown-guest__btn--deactivate(name='minus' data-guest='babies') -
-          .dropdown-guest__number(data-number='babies') 0
+          .dropdown-guest__number.js__numGuests 0
           button.dropdown-guest__btn(name='plus' data-guest='babies') +
       .dropdown-guest__wrap-btn-link
-        button.dropdown-guest__btn-clear.dropdown-guest__btn-clear--hide очистить
-        button.dropdown-guest__btn-apply применить
+        button.dropdown-guest__btn-clear.dropdown-guest__btn-clear--hide(name="clear") очистить
+        button.dropdown-guest__btn-apply(name='apply') применить

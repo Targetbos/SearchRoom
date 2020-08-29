@@ -1,130 +1,174 @@
-(function(){
-//Блок управления выбора колличества гостей  
+// 'use strict';
+(function () {
 
-  var btnClearSt; // Статус кнопки "очистить"
-  var inputGuest; // поле вывода и передачи данных о гостях
-  var stringGuest;// Строка данных о гостях передаваемая в input value
-  
-  // Управление появлением и скрытием списка при клике
-  document.querySelectorAll('.dropdown-guest__form').forEach(function(event){
-    overlay = event.parentElement.lastChild.previousSibling; // Поле, закрывающее документ, кроме выпадающей формы
-    // при клике по форме выбора гостей
-    event.addEventListener('click', function(el){
-      let form = el.target.parentElement;
-      formExpanded = form.parentElement.lastChild; // выпадающая форма выбора гостей
-      overlay = form.parentElement.lastChild.previousSibling; // Поле, закрывающее документ, кроме выпадающей формы
-      btnClear = formExpanded.lastElementChild.firstChild; // кнопка очистки
-
-      formExpanded.classList.remove('dropdown-guest__form-expanded--hide'); // Показываем всплывающую форму
-      overlay.classList.add('dropdown-guest__overlay--open');               // добавляем overlay форме, при клике по overlay форма закрывается
-      event.classList.add('dropdown-guest__form--border-bottom-90deg');     // делаем нижний угол у input 90 градусов
-      if(!btnClearSt) btnClear.classList.add('dropdown-guest__btn-clear--hide'); // если статус кнопки false, скрываем её
-      btnControl(formExpanded, form);                                             // запускаем функцию обработки нажатий на кнопки внутри всплывающей формы
-    });
-    
-    // При клике за пределами формы
-    overlay.addEventListener('click',function(el){
-      formExpanded.classList.add('dropdown-guest__form-expanded--hide');  // скрываем всплывающую форму с кнопками
-      overlay.classList.remove('dropdown-guest__overlay--open');          // Скрываем Overlay
-      event.classList.remove('dropdown-guest__form--border-bottom-90deg');// закругляем углы у input
-      el.stopPropagation();                                               // останавливаем всплытие события
-    });
-  });
-  //////////////////////////////////////////
-  //        Управление блоком кнопок      //
-  //////////////////////////////////////////
-  function btnControl(formEx,form){
-    // при клике по кнопке "Очистить"
-    btnClear = formEx.lastElementChild.firstChild // Кнопка "Очистить"
-    btnClear.onclick = function(){
-      inputGuest = form.firstChild;
-      var itemNumber = formEx.querySelectorAll('.dropdown-guest__number');
-      for(let i=0; i<itemNumber.length;i++){
-        itemNumber[i].innerHTML = '0'; //обнуляем значения количества гостей
-      }
-      //Обнуляем значения переменных, input.value и скрываем кнопку "Очистить"
-      inputGuest.dataset.adults = "0";
-      inputGuest.dataset.children = "0";
-      inputGuest.dataset.babies = "0";
-      inputGuest.value = 'Сколько гостей'; 
-      btnClear.classList.add('dropdown-guest__btn-clear--hide');
-      for(i=0;i<btnForm.length;i++){
-        deactivateBtn(btnForm[i]);  
-      }
+  class Guests {
+    constructor(inputGuests) {
+      this.inputGuests = inputGuests;
+      this.overlay = this.inputGuests.parentElement.nextElementSibling;
+      this.expandForm = this.overlay.nextElementSibling;
+      this.btnClear = this.expandForm.lastChild.firstChild;
+      this.btnApply = this.expandForm.lastChild.lastChild;
+      this.adults = 0;
+      this.children = 0;
+      this.babies = 0;
     }
 
-    // при клике по кнопке "Применить"
-    btnApple = btnClear.nextSibling // Кнопка "Применить"
-    formExpanded = formEx;
-    overlay = formExpanded.previousSibling;
-
-    btnApple.onclick = function(){
-      formExpanded.classList.add('dropdown-guest__form-expanded--hide');
-      overlay.classList.remove('dropdown-guest__overlay--open');
-      form.classList.remove('dropdown-guest__form--border-bottom-90deg');
-    }
-
-    //Обработка событий при клике по кнопкам "+" и "-"
-    var btnForm = formEx.querySelectorAll('.dropdown-guest__btn');
-    btnForm.forEach(function(el){
-      deactivateBtn(el); // Если ноль, то меняем цвет кнопки и отменяем уменьшение значения
-      
-      //Вешаем события на на все кнопки "+" и "-"
-      el.onclick = function(){
-        inputGuest = form.firstChild;
-        let btn = this; 
-        clickBtn(btn); // Увеличение или уменьшения значения при клике по кнопке "+" или "-"
-
-        //Заполнение input Data и Value данными
-        itemNumber = formEx.querySelectorAll('.dropdown-guest__number');
-        var adults = itemNumber[0].innerHTML;
-        var children = itemNumber[1].innerHTML;
-        var babies = Number.parseInt(itemNumber[2].innerHTML);
-        let sumGuest = Number.parseInt(adults) +  Number.parseInt(children); // всего гостей 
-        let babiesSum = ((babies !== 0) ? (babies < 2) ? babies + ' младенец' : (babies < 5) ? babies + ' младенца' : babies + ' младенцев' : ""); 
-        let strGuest = sumGuest + ((sumGuest == 0)? 'Сколько гостей' : (sumGuest<2)? ' гость' : (sumGuest<5)? ' гостя': ' гостей');// Строка вывода данных в INPUT
-        stringGuest = (babiesSum == 0)? strGuest: strGuest + ', '+ babiesSum;
-        // скрытие и отображение кнопки "Очистить"
-        if(sumGuest == 0) {
-          stringGuest = 'Сколько гостей'; 
-          btnClear.classList.add('dropdown-guest__btn-clear--hide');
-          btnClearSt = false;
-        } else { 
-          btnClear.classList.remove('dropdown-guest__btn-clear--hide');
-          btnClearSt = true;
+    clearForm() {
+      this.adults = 0;
+      this.children = 0;
+      this.babies = 0;
+      this.expandForm.querySelectorAll(".js__numGuests, button[name='minus']").forEach(function (el) {
+        if (el.name == 'minus') {
+          deactivateBtn(el);
+        } else {
+          el.innerText = 0;
         }
-        // Заполнение данных data в input 
-        inputGuest.dataset.adults = adults;
-        inputGuest.dataset.children = children;
-        inputGuest.dataset.babies = babies;
-        inputGuest.value = stringGuest;
+      })
+      this.hideBtnClear();
+    }
+    hideBtnClear() {
+      this.btnClear.classList.add("dropdown-guest__btn-clear--hide");
+    }
+    showBtnClear() {
+      this.btnClear.classList.remove("dropdown-guest__btn-clear--hide");
+    }
+    showBtnBlock() {
+      this.expandForm.classList.remove("dropdown-guest__form-expanded--hide");
+      this.overlay.classList.remove("dropdown-guest__overlay--hide");
+      this.inputGuests.classList.add("dropdown-guest__form--border-bottom-90deg");
+    }
+    hideBtnBlock() {
+      this.overlay.classList.add("dropdown-guest__overlay--hide");
+      this.expandForm.classList.add("dropdown-guest__form-expanded--hide");
+      this.inputGuests.classList.remove("dropdown-guest__form--border-bottom-90deg");
+    }
+    sumGuests() {
+      return this.adults + this.children + this.babies;
+    }
+    apply() {
+      this.inputGuests.dataset.adults = this.adults;
+      this.inputGuests.dataset.children = this.children;
+      this.inputGuests.dataset.babies = this.babies;
+      this.hideBtnBlock();
+    }
+    showInInput() {
+      let sum = this.sumGuests()
+      ''
+      if (sum == 0) {
+        str = "Сколько гостей";
+      } else {
+        str = sum == 1 ? sum + " гость" : sum > 1 && sum < 5 ? sum + " гостя" : sum > 4 ? sum + " гостей" : "Сколько гостей?";
       }
-    });
+
+      this.inputGuests.value = str;
+    }
+
+    get numberOfGuests() {
+      return {
+        adults: this.adults,
+        children: this.children,
+        babies: this.babies
+      }
+    }
+
+    set numberOfGuests(guests) {
+      this.adults = guests.adults;
+      this.children = guests.children;
+      this.babies = guests.babies;
+    }
+
   }
 
-  //////////////////////////////////////////
-  //          При клике на + или -        //
-  //////////////////////////////////////////
-  function clickBtn(btn){
-    if(btn.name == 'minus') { // при нажатии на минус
-      if(btn.nextSibling.innerHTML != '0'){ // если количество ноль, то перестаём отнимать и меняем цвет кнокпи
-        btn.nextSibling.innerHTML --;
-        btn.nextSibling.innerHTML == '0' && btn.classList.add('dropdown-guest__btn--deactivate')
-      } 
-    } else if(btn.name == 'plus'){ // при нажатии на плюс
-      btn.previousSibling.innerHTML == '0' && btn.parentElement.firstChild.classList.remove('dropdown-guest__btn--deactivate'); // меняем цвет кнопки, если был 0
-      btn.previousSibling.innerHTML ++; // увеличиваем значение на 1
+  document.querySelectorAll('.dropdown-guest__form').forEach(function (el) {
+    var inputGuest = el.firstChild;
+    let form = new Guests(inputGuest);
+    inputGuest.onclick = () => {
+      initGuestForm(form);
     }
+  });
+
+  function initGuestForm(form) {
+    form.showBtnBlock();
+
+    form.overlay.onclick = () => {
+      form.hideBtnBlock();
+    }
+
+    form.expandForm.querySelectorAll("button").forEach((btn) => {
+      btn.onclick = (event) => {
+        let btn = event.target;
+        processingClick(btn, form);
+      }
+    })
   }
 
- ///////////////////////////////////////////////////
- //          Деактивация кнопки - при нуле        //
- ///////////////////////////////////////////////////
-  function deactivateBtn(btn){
-    if(btn.name == 'minus'){ //При нажатии на кнопку "-"
-      if(btn.nextSibling.innerHTML == '0') { //если гостей 0
-        btn.classList.add('dropdown-guest__btn--deactivate'); // то декативируем кнопку(меняем цвет кнопки)
-      }
+  function processingClick(btn, form) {
+    let btnName = btn.name;
+    let typeGuest = btn.dataset.guest;
+    let guestsObj = {
+      adults: form.adults,
+      children: form.children,
+      babies: form.babies
     }
-  };
+
+    switch (btnName) {
+
+      case "minus":
+        if (guestsObj[typeGuest] == '0') {
+          break;
+        } else if (guestsObj[typeGuest] == '1') {
+          guestsObj[typeGuest]--;
+          form.numberOfGuests = guestsObj;
+          btn.nextElementSibling.innerText = guestsObj[typeGuest];
+          deactivateBtn(btn);
+        } else {
+          guestsObj[typeGuest]--;
+          form.numberOfGuests = guestsObj;
+          btn.nextElementSibling.innerText = guestsObj[typeGuest];
+        }
+        break;
+
+      case "plus":
+        if (guestsObj[typeGuest] == '0') {
+          activateBtn(btn);
+          guestsObj[typeGuest]++;
+          form.numberOfGuests = guestsObj;
+          btn.previousElementSibling.innerText = guestsObj[typeGuest];
+        } else {
+          activateBtn(btn);
+
+          guestsObj[typeGuest]++;
+          form.numberOfGuests = guestsObj;
+          btn.previousElementSibling.innerText = guestsObj[typeGuest];
+        }
+        break;
+
+      case "clear":
+        form.clearForm();
+        form.hideBtnClear();
+        break;
+
+      case "apply":
+        form.apply();
+        break;
+    }
+
+    form.showInInput();
+
+    if (form.sumGuests() == '0') {
+      form.hideBtnClear()
+    } else {
+      form.showBtnClear()
+    }
+
+  }
+
+  function deactivateBtn(btn) {
+    btn.classList.add("dropdown-guest__btn--deactivate");
+  }
+
+  function activateBtn(btn) {
+    let btnMinus = btn.parentElement.firstChild;
+    btnMinus.classList.remove("dropdown-guest__btn--deactivate");
+  }
 })();

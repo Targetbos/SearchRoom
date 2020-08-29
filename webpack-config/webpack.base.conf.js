@@ -22,13 +22,17 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    colorstypes: `${PATHS.src}/colorstypes.js`,
-    // formelements: `${PATHS.src}/formelements.js`
+    colorstypes: [`${PATHS.src}/colorstypes.js`, `${PATHS.src}/assets/scss/pages/colorstypes.scss`],
+    formelements: [`${PATHS.src}/formelements.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`]
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.build,
-    publicPath: ''
+  },
+  resolve: {
+    alias: {
+      images: path.resolve(__dirname, '../src/assets/images/'),
+    },
   },
   module: {
     rules: [{
@@ -41,18 +45,23 @@ module.exports = {
         loader: 'babel-loader',
         exclude: '/node_modules/'
       }, {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
+          outputPath: `${PATHS.assets}fonts/`,
+          publicPath: `../fonts/`
         }
       }, {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
+        loader: "file-loader",
+        exclude: `/assets/fonts/`,
         options: {
-          name: `../images/[name].[ext]`,
-          outputPath: `${PATHS.assets}/images/`
-        }
+          name: `[name].[ext]`,
+          outputPath: `${PATHS.assets}images/`,
+          publicPath: `../images/`
+
+        },
       }, {
         test: /\.scss$/,
         use: [
@@ -72,6 +81,9 @@ module.exports = {
                 path: 'postcss.config.js'
               }
             }
+          },
+          {
+            loader: 'resolve-url-loader',
           },
           {
             loader: "sass-loader",
@@ -105,15 +117,7 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    alias: {
-      Src: PATHS.src, //путь до папки src
-      Formelements: `${PATHS.src}/modules/formelements`, //путь до папки Forms-Elements
-      Fonts: `${PATHS.src}/assets/fonts`, // путь до шрифтов
-      Scss: `${PATHS.src}/assets/scss/pages`, // путь до папки стилей
-      ConfigScss$: `${PATHS.src}/assets/scss/pages/config.scss`
-    }
-  },
+
   plugins: [
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].css`,

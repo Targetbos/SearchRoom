@@ -1,22 +1,33 @@
-(function(){
-  document.querySelectorAll('.checkbox-list__wrap').forEach(function(event){
-    let checkboxList = event.lastElementChild;
-    let checkboxIcon = event.firstElementChild.nextElementSibling; 
-    let checkboxOverlay = checkboxList.previousElementSibling;
-    event.addEventListener('click', function(){
-      // let checkboxList = event.lastElementChild;
-      // let checkboxIcon = event.firstElementChild.nextElementSibling; 
-      // let checkboxOverlay = checkboxList.previousElementSibling;
-      checkboxList.classList.add('checkbox-list__list--visible');
-      checkboxIcon.classList.add('checkbox-list__icon--rotate');
-      checkboxOverlay.classList.add('checkbox-list__overlay--open');
-    });
-    
-    checkboxOverlay.addEventListener('click', function(elem){
-      checkboxList.classList.remove('checkbox-list__list--visible');
-      checkboxIcon.classList.remove('checkbox-list__icon--rotate');
-      checkboxOverlay.classList.remove('checkbox-list__overlay--open');
-      elem.stopPropagation();
-    });
+(function () {
+  class CheckboxList {
+    constructor(box) {
+      this.checkListBox = box;
+      this.list = this.checkListBox.lastElementChild;
+      this.overlay = this.list.previousElementSibling;
+      this.icon = this.overlay.previousElementSibling;
+    }
+    showList() {
+      this.icon.classList.add("checkbox-list__icon--rotate");
+      this.overlay.classList.add("checkbox-list__overlay--show");
+      this.list.classList.add("checkbox-list__list--show");
+    }
+    hideList() {
+      this.icon.classList.remove("checkbox-list__icon--rotate");
+      this.overlay.classList.remove("checkbox-list__overlay--show");
+      this.list.classList.remove("checkbox-list__list--show");
+    }
+
+  }
+  document.querySelectorAll('.checkbox-list').forEach((list) => {
+    checkboxListInit(list);
   });
-}) ();
+
+  function checkboxListInit(box) {
+    var list = new CheckboxList(box);
+    list.checkListBox.onclick = () => list.showList();
+    list.overlay.onclick = () => {
+      event.stopPropagation();
+      list.hideList();
+    }
+  }
+})();

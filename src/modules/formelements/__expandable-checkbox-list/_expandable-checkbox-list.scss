@@ -1,61 +1,55 @@
-@import "~ConfigScss";
-
 /* start CSS- checkbox-list */
-.checkbox {
-  &-list{
-    &__wrap{
-      display: flex;
-      cursor: pointer;
-      position: relative;
-    }
-    &__icon{
-      display: flex;
-      position: absolute;
-      color: $dark-25;
-      border: 2px solid $dark-50;
-      transform: rotate(-45deg);
-      border-width:0 0 2px 2px;
-      width: 0.41rem;
-      height: 0.41rem;
-      top: 0.2rem;
-      right: 0.95rem;
-      cursor: pointer;
-      transition: transform 0.5s, top 0.5s;
-      &--rotate{
+.checkbox-list {
+
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  min-width: 15rem;
+
+  &__icon {
+    position: absolute;
+    top: 0.2rem;
+    right: 1.1rem;
+    transition: transform 0.5s, top 0.5s;
+
+    &--rotate {
       transform: rotate(-225deg);
-      top: 0.6rem;
-      }
+      top: 0.4rem;
     }
-    &__overlay{
-      visibility: hidden;
-      position:fixed; 
-      left: 0; 
-      right: 0; 
-      top: 0; 
-      bottom: 0; 
-      z-index: 119; 
-      &--open{
-        visibility: visible; 
-      }
+  }
+
+  &__overlay {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 119;
+
+    &--show {
+      visibility: visible;
     }
-    &__list{
-      width: 100%;
-      margin-top: 0.625rem;
-      padding-top: 0.75rem;
-      height: 0;
-      overflow: hidden;
-      transition: height 0.5s;
-      position: absolute;
-      top: 0.81rem;
-      right: 0;
-      background: #ffffff;
-      &--visible{
-        height: 16rem;
-        z-index: 123;
-      }
+  }
+
+  &__list {
+    display: block;
+    width: 100%;
+    margin-top: 0.625rem;
+    padding-top: 0.75rem;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0.81rem;
+    right: 0;
+    background: #ffffff;
+    transition: height 0.5s;
+
+    &--show {
+      height: 16rem;
+      z-index: 123;
     }
   }
 }
+
 /* End CSS checkbox-list */
-
-

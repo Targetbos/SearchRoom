@@ -1,4 +1,5 @@
 mixin subscription-text-field( data )
+  +title-element({title: data.title})
   .subscription-text-field
-    input.subscription-text-field__input(type='text' placeholder=data.placeholder name=data.name value="")
-    i.subscription-text-field__input-icon
+    input(type='text' placeholder=data.placeholder name=data.name value="")
+    i.icon-arrow-right

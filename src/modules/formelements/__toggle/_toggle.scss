@@ -1,35 +1,43 @@
-@import "~ConfigScss";
 /* CSS toggle */
-.toggle{
-  &__input{
-    display: none;
-  }
+.toggle {
+
   &__label {
-    position:relative;
-    cursor: pointer;
-    display:flex;
+    display: flex;
     align-items: center;
-    line-height: 0.87rem;
-    color: $dark-50;
-    min-width: 36.3%;
-    letter-spacing: -0.06px;
+    position: relative;
+    min-width: 17rem;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+
+    span {
+      line-height: rem(24);
+      color: $dark-50;
+      letter-spacing: 0.06px;
+    }
   }
+
   &__icon:before {
     content: '';
-    display:inline-flex;
-    width: 2.4rem;
-    height: 1.125rem;
-    border-radius: 0.57rem;
+    display: flex;
+    align-content: center;
+    width: rem(40);
+    height: rem(20);
+    border-radius: rem(10);
     transition: .2s;
-    border:1px solid;
-    border-color:  $dark-25;
-    margin-right: 0.64rem;
+    border: 1px solid;
+    border-color: $dark-25;
+    margin-right: rem(10);
     transition: border 0.3s;
   }
+
   &__icon:after {
     content: '';
-    position:absolute;
-    top: 0.25rem;
+    display: flex;
+    position: absolute;
+    top: 0.4rem;
     left: 0.25rem;
     width: 0.75rem;
     height: 0.75rem;
@@ -37,12 +45,15 @@
     background: $dark-25;
     transition: left .2s;
   }
-  &__label > &__input:checked + &__icon:before {
-   border-color: $purple;
+
+  &__label>input:checked+&__icon:before {
+    border-color: $purple;
   }
-  &__label > &__input:checked + &__icon:after {
+
+  &__label>input:checked+&__icon:after {
     left: 1.5rem;
     background: $purple;
   }
 }
+
 /* End CSS toggle */

@@ -1,11 +1,10 @@
 mixin feedback( data )
   .feedback
-    .feedback__wrapper
-      .feedback__wrap-img
-        img.feedback__img(src=data.img alt="Отзыв")
-        .feedback__like
-          +like-button({name: "murat", span:"12", check: true})
-      .feedback__wrap-content
-        .feedback__user= data.user
-        .feedback__date= data.date
-        .feedback__text= data.text
+    .feedback__wrap-avatar
+      img.feedback__avatar(src=data.img alt="Отзыв")
+      .feedback__like
+        +like-button({name: "murat", span:"12", check: true})
+    .feedback__wrap-content
+      .feedback__user= data.user
+      .feedback__date= data.date
+      .feedback__text= data.text

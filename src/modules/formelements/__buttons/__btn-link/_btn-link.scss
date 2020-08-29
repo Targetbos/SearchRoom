@@ -1,18 +1,21 @@
-.buttons__icon-link{
-  min-width: 3.83rem;
+.buttons__icon-link {
+  display: flex;
   text-transform: uppercase;
   font-family: $fontM;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: bold;
-  background:#ffffff;
+  background: #ffffff;
   color: $purple;
   cursor: pointer;
   outline: none;
   border: none;
-  &:hover{
-    color: $dark-50;  }
-  &--hover{
-    color: $dark-50;  
+
+  &:hover {
+    color: $dark-50;
+  }
+
+  &--hover {
+    color: $dark-50;
   }
 }

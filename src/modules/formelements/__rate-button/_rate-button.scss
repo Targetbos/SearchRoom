@@ -1,77 +1,52 @@
-@import "~ConfigScss";
-.rate-button{
-  &__wrap-star{
-    width: 7.35rem;
-    display: flex;
-    justify-content: space-between;
-    direction:rtl;
-    height: 1.65rem;
-    
+.rate-button {
+  &__wrap-star {
+    overflow: hidden;
+    width: rem(120);
+    margin: 0 auto;
+    direction: rtl;
   }
-  &__input-star{
+
+  &__wrap-star:not(:checked)>input {
+    display: none;
     list-style: none;
     height: 0;
     cursor: pointer;
-    
+    margin: 0;
+    padding: 0;
   }
-  &__input-star:before{
-    content: "";
-    width:1.25rem;
-    height: 1.25rem;
-    display: flex;
-    background: url("./star.png") no-repeat 0 0;
-    background-size: 1.25rem auto;
 
+  &__wrap-star:not(:checked)>label {
+    display: inline-flex;
+    width: rem(24);
+    height: rem(24);
+    cursor: pointer;
+    background: url("images/star.png") no-repeat 0 0;
+    background-size: cover;
   }
-  &__input-star:hover:before,
-  &__input-star:hover ~ &__input-star:before {
-    content: "";
-    background: url("./star.png") no-repeat 0 -1.19rem;
-    background-size: 1.25rem auto;
-  }
-  &__input-star:checked:before,
-  &__input-star:checked ~ &__input-star:before{
-    content: "";
-    background: url("./star.png") no-repeat 0 -1.19rem;
-    background-size: 1.25rem auto;
-  }
-}
-@media (max-width: 968px){
-  .rate-button{
-    &__wrap-star{
-      width: 6rem;
-      height: 1rem;
-    }
-    
-    &__input-star{
-      list-style: none;
-      height: 0;
-      cursor: pointer;
-      margin: 0;
-      padding: 0;
-    }
-    &__input-star:before{
-      content: "";
-      display: flex;
-      width: 1rem;
-      height: 1rem;
-      background: url("./star.png") no-repeat 0 0;
-      background-size: 1rem auto;
 
-    }
-    &__input-star:hover:before,
-    &__input-star:hover ~ &__input-star:before {
-      content: "";
-      background: url("./star.png") no-repeat 0 -1rem;
-      background-size: 1rem auto;
-
-    }
-    &__input-star:checked:before,
-    &__input-star:checked ~ &__input-star:before{
-      content: "";
-      background: url("./star.png") no-repeat 0 -1rem;
-      background-size: 1rem auto;
-
-    }
+  &__wrap-star:not(:checked)>label:before {
+    content: '';
+    display: inline-flex;
+    width: rem(24);
+    height: rem(24);
   }
+
+  &__wrap-star>input:checked~label {
+    background: url("images/star.png") no-repeat 0 rem(-24);
+    background-size: cover;
+  }
+
+  &__wrap-star:not(:checked)>label:hover,
+  &__wrap-star:not(:checked)>label:hover~label {
+    background-position: 0 rem(-24);
+  }
+
+  &__wrap-star>input:checked+label:hover,
+  &__wrap-star>input:checked+label:hover~label,
+  &__wrap-star>input:checked~label:hover,
+  &__wrap-star>input:checked~label:hover~label,
+  &__wrap-star>label:hover~input:checked~label {
+    background-position: 0 rem(-24);
+  }
+
 }

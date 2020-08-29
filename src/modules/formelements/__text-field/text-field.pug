@@ -1,9 +1,5 @@
-//- Переменные:
-//- placeholder
-//- value
-//- hover - добавляет класс, имитируя элемент выделенным
-
 mixin text-field( data )
+  +title-element({title: data.title, subtitle: data.subtitle})
   .text-field
     if data.hover
       input.text-field__input.text-field__input--hover(type='text' placeholder=data.placeholder value=data.value name=data.name)

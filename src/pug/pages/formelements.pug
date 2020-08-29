@@ -25,277 +25,161 @@ doctype html
 html
   head
     title Hotel
+    link(rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css")
     script(src="https://code.jquery.com/jquery-3.4.1.min.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
     meta(name = "viewport" content = "width=device-width, initial-scale = 1")
-
   body
     .wrapper.wrapper--bgwhite
-      .wrap
-        +logo-no-text()
-        .wrapper__elements
-          .wrapper-left 
-            .wrapper-left__text-field
-              //- +title-element - Заголовок элементов
-              //- Имена передаваемого объекта:
-              //- title - заголовок, 
-              //- subtitle - подзаголовок, отображается справа, 
-              //- marginTop: true - увеличивает расстояние от верхней границы до subtitle 
-              +title-element({title: "text field", subtitle: " default"})
+      +logo-no-text()
+      .container
+        .column.column-left
+          .column-left__text-field
+            +text-field({placeholder: "Email",title: "text field", subtitle: "default"})
 
-              //- +text-field - текстовое поле
-              //- Имена передаваемого объекта:
-              //-  placeholder - placeholder, 
-              //-  hover:true - добавляет эффект, наведенной на поле курсора мышки
-              //-  value - value
-              //-  name - имя текстового поля
-              +text-field({placeholder: "Email"})
+          .column-left__text-field
+            +text-field({value: "This is pretty awesome", hover: true,title: "text field", subtitle: "hover /focus"})
 
-            .wrapper-left__text-field
-              +title-element({title: "text field", subtitle: "hover /focus", marginTop: true})
-              +text-field({value: "This is pretty awesome", hover: true})
+          .column-left__dropdown
+              +dropdown-guest({name: "guest-form", title: "dropdown", subtitle: "default"})
 
-            .wrapper-left__dropdown
-                //- +dropdown-guest
-                //- Имена передаваемого объекта:
-                //-  name - имя поля данных
-                //- Значения data-: (не пердаются в mixin)
-                //-  adults - количество взрослых
-                //-  children - количество детей
-                //-  babies - количество младенцев
-                +dropdown-guest({name: "guest-form", title: "dropdown", subtitle: "default"})
+          .column-left__masked-text-field
+            +masked-text-field({placeholder: "ДД.ММ.ГГГГ", title: "masked text field", subtitle: "default"})
 
-            .wrapper-left__masked-text-field
-              +title-element({title: "masked text field", subtitle: "default", marginTop: false})
-              //- Текстовое поле с маской
-              //- Имена передаваемого объекта:
-              //-  placeholder - placeholder, 
-              //-  value - value
-              //-  name - имя текстового поля
-              .wrapper-left__inner-masked
-                +masked-text-field({placeholder: "ДД.ММ.ГГГГ"})
-
-            .wrapper-left__date-dropdown
-              //- +date-dropdown
-              //- 2 поля ввода даты въезда и выезда
-              //- Имена передаваемого объекта:
-              //-  titleIn - заголовок поля въезда
-              //-  titleOut - заголовок поля выезда
-              //-  placeholderIn - placeholder поля въезда
-              //-  placeholderOut - placeholder поля выезда
-              //-  valueIn и valueOut - value полей ввода
-              //-  nameIn и nameOut - имя поля данных
-              +date-dropdown({titleIn: "date dropdown", titleOut: "date dropdown", placeholderIn: "ДД.ММ.ГГГГ", placeholderOut: "19.08.2019"})
-            
-            .wrapper-left__filter-date-dropdown
-              +title-element({title: "filter date dropdown"})
-              //- +filter-date-dropdown
-              //- Поле корректирования даты отдыха
-              //- Имена передаваемого объекта:
-              //-  name - имя поля ввода
-              +filter-date-dropdown({name: "date-in-out"})
-
-            .wrapper-left__subscription-text-field
-              +title-element({title: "subscription text field"})
-              //- +subscription-text-field
-              //- Поле с кнокой для подписки
-              //- Имена передаваемого объекта:
-              //-  placeholder - plcaeholder
-              //-  name - имя поля ввода
-              +subscription-text-field({placeholder: "Email", name: ""})
-
-          .wrapper-center 
-
-            .wrapper-center__checkbox-buttons
-              +title-element({title: "checkbox buttons"})
-              .wrapper-center__checkbox-buttons-wrap
-                //- +checkbox-item 
-                //- Флажок checkbox
-                //- Имена передаваемого объекта:
-                //-  name - имя флажка
-                //-  text - текст флажка
-                //-  checked:true - состояние поля "Выбран"
-                //-  value - передаваемое значение пункта
-                .wrapper-center__checkbox-buttons-inner
-                  +checkbox-item({name: "checkbox", checked:false, text: "Можно курить", value: "smoke"})
-                .wrapper-center__checkbox-buttons-inner
-                  +checkbox-item({name: "checkbox", checked:true, text: "Можно с питомцами", value: "animal"})
-                .wrapper-center__checkbox-buttons-inner
-                  +checkbox-item({name: "checkbox", checked:true, text: "Можно пригласить гостей (до 10 человек)", value: "guest"})
-            .wrapper-center__radio-buttons
-              +title-element({title: "radio buttons"})
-              .wrapper-center__radio-buttons-wrap
-                //- +radio-buttons
-                //- Переключатель
-                //- Имена передаваемого объекта:
-                //-  name - имя переключателя
-                //-  checked: true - состояние переключателя
-                //-  text - текст переключателя
-                //-  value - передаваемое значение переключателя
-                +radio-buttons({name: "female", text: "Мужчина", value: "men"})
-                +radio-buttons({name: "female", text: "Женщина", value: "women",  checked: true})
-
-            .wrapper-center__toggle
-              +title-element({title: "toggle"})
-              .wrapper-center__toggle-wrap
-                //- +toggle
-                //- Тумблер 
-                //- Имена передаваемого объекта:
-                //-  name - имя тумблера
-                //-  checked: true - состояние тумблера
-                //-  text - текст тумблера
-                +toggle({name: "toggle", checked: true, text: "Получать спецпредложения"})
-              .wrapper-center__toggle-wrap
-                +toggle({name: "toggle", checked: false, text: "Получать спецпредложения"})
-
-            .wrapper-center__like-button
-              +title-element({title: "like button"})
-              .wrapper-center__wrap-like-button
-                //- +like-button
-                //- Кнопка Like
-                //- Имена передаваемого объекта:
-                //-  span - число, выводимое на кнопке
-                //-  ckecked: true - состояние кнопки
-                //-  name - имя кнопки
-                //-  value - дополнительные передаваемые данные
-                +like-button({span:"2", name: "likeBtn"})  
-                +like-button({span:"12", name: "likeBtn", value: "", checked: true})
-
-            .wrapper-center__rate-button
-              +title-element({title: "rate button"})
-              .wrapper-center__rate-button-wrap
-                //- +rate-button
-                //- Рейтинг из 5 звезд
-                //- Имена передаваемого объекта:
-                //-  name - имя поля рейтинга
-                //-  user - переменная data-user, передаваемая данные о пользователе.
-                +rate-button({name: "rating"})
-                +rate-button({name: "rating 1"})
-
-          .wrapper-right
-
-            .wrapper-right__range-slider
-              //- +range-slider
-              //- бегунок диаппозона
-              //- Имена передаваемого объекта:
-              //-  name - имя слайдера
-              //-  valueMin - Минимальное значение
-              //-  valueMax - Максимальное значение
-              +range-slider({title: "range slider", name: "slider", valueMin: "", valueMax: ""})
-
-            .wrapper-right__buttons
-              +title-element({title: "buttons"})
-              .wrapper-right__wrap-btn
-                //- +button-blue - кнопка с синим фоном
-                //- +button-white - кнопка с белым фоном 
-                //- +button-link - кнопка ссылка, без границы
-                //- +button-with-icon - кнопка со стрелкой вправо
-                //- Имена передаваемого объекта:
-                //-  name - имя кнопки
-                //-  value - value
-                //-  text - Текст, отображаемый на кнопке
-                //-  hover:true - добавляет стиль, имитирующий выделение кнопки
-                .wrapper-right__inner-btn
-                  +btn-blue({name: "btn", value: "btn", text: "Click Me"})
-                .wrapper-right__inner-btn
-                  +btn-blue({name: "btn", value: "btn", text: "Click Me", hover:true})
-              .wrapper-right__wrap-btn-white
-                .wrapper-right__inner-btn
-                  +btn-white({name: "btn", value: "btn", text: "Click Me"})
-                .wrapper-right__inner-btn
-                  +btn-white({name: "btn", value: "btn", text: "Click Me", hover:true})
-              .wrapper-right__wrap-icon-link
-                +btn-link({name: "btn", value: "btn", text: "Click Me"})
-                +btn-link({name: "btn", value: "btn", text: "Click Me", hover:true})
-              .wrapper-right__wrap-btn-with-icon
-                +btn-with-icon({name:"btn", value: "btn", text: "Перейти к оплате"})
-
-            .wrapper-right__pagination
-              +title-element({title: "pagination"})
-              .wrapper-right__wrap-pagination
-                //- +pagination
-                //- Постраничная навигация (нумерация страниц)
-                //- Имена передаваемого объекта:
-                //-  name - имя кнопок
-                //-  value - передаваемые значения 
-                +pagination({name: "btn"})
-
-        .wrapper__elements
-          .wrapper-left
-
-            .wrapper-left__dropdown-room
-              //- +dropdown-room
-              //- форма выбора комнаты
-              //- Имена передаваемого объекта:
-              //-  name - имя поля данных
-              //-  open:true - разварачивает форму с кнопками
-              //- Значения data-: (не пердаются в mixin)
-              //-  bedroom - количество спален
-              //-  bed - количество кроватей
-              //-  bathroom - количество ванных комнат
-              .wrapper-left__dropdown-room-inner
-                +dropdown-room({name:"select-room", open: false, title: "dropdown", subtitle: "DEFAULT", marginTop:true})
-              .wrapper-left__dropdown-room-inner
-                +dropdown-room({name:"select-room", open: true, title: "dropdown", subtitle: "EXPANDED", marginTop:true})
-            .wrapper-left__expandable-checkbox-list
-              .wrapper-left__wrap-checkbox-list
-                //- +checkbox-list
-                //- Список с флажками
-                //- Имена передаваемого объекта:
-                //-  name - имя списка (пунктов списка)
-                //-  title - заголовок списка
-                +checkbox-list({name: "conditions", title: "expandable checkbox list"})
-              .wrapper-left__wrap-checkbox-list
-                +checkbox-list({name: "conditions", title: "expandable checkbox list"})
-
-          .wrapper-center 
-            .wrapper-center__dropdown-guest
-              +dropdown-guest({name: "dpguest", title: "dropdown"})
-
-            .wrapper-center__rich-checkbox-btn
-              +title-element({title: "rich checkbox buttons"})
-              .wrapper-center__wrap-checkbox
-                //- +rich-checkbox-buttons
-                //- Расширенный флажок
-                //- Имена передаваемого объекта:
-                //-  name - имя флажка
-                //-  value - value
-                //-  head - заголовок
-                //-  desc - описание
-                //-  checked:true - выделенный флажок
-                +rich-checkbox-buttons({name: "wide-corridor", head: "Широкий коридор", desc: "Ширина коридоров в номере не менее 91 см"})
-                +rich-checkbox-buttons({name: "assistent", head: "Помощник для инвалидов", desc: "На 1 этаже Вас встретит специалист и проводит до номера"})
+          .column-left__date-dropdown
+            +date-dropdown({titleIn: "date dropdown", titleOut: "date dropdown", placeholderIn: "ДД.ММ.ГГГГ", placeholderOut: "19.08.2019"})
           
-          .wrapper-right
+          .column-left__filter-date-dropdown.--big-padding-right
+            +filter-date-dropdown({name: "date-in-out", title: "filter date dropdown"})
 
-            .wrapper-right__dropdown-guest
-              +dropdown-guest({name: "dpguest", title: "dropdown"})
+          .column-left__subscription-text-field.--big-padding-right
+            +subscription-text-field({placeholder: "Email", name: "", title: "subscription text field"})
 
-            .wrapper-right__bullet-list
-              +title-element({title: "bullet list"})
-              .wrapper-right__wrap-bullet-list
-                //- +bullet-list
-                //- Маркированый список
-                //- Имена передаваемого объекта:
-                //-  text - текст пункта
-                +bullet-list({text:["Нельзя с питомцами","Без вечеринок и мероприятий", "Время прибытия — после 13:00, в выезд до 12:00"]})
+        .column.column-center
+          .column-center__checkbox-buttons
+            +title-element({title: "checkbox buttons"})
+            .column-center__checkbox-buttons-wrap
+              +checkbox-item({name: "checkbox", checked:false, text: "Можно курить", value: "smoke"})
+              +checkbox-item({name: "checkbox", checked:true, text: "Можно с питомцами", value: "animal"})
+              +checkbox-item({name: "checkbox", checked:true, text: "Можно пригласить гостей (до 10 человек)", value: "guest"})
+          .column-center__radio-buttons
+            +title-element({title: "radio buttons"})
+            .column-center__radio-buttons-wrap
+              +radio-buttons({name: "female", text: "Мужчина", value: "men"})
+              +radio-buttons({name: "female", text: "Женщина", value: "women",  checked: true})
 
-        .wrapper__elements
-          .wrapper-left
-            .wrapper-left__advantages
-              //- +advantages
-              //- Преимущества
+          .column-center__toggle
+            +title-element({title: "toggle"})
+            .column-center__toggle-wrap
+              +toggle({name: "toggle", checked: true, text: "Получать спецпредложения"})
+            .column-center__toggle-wrap
+              +toggle({name: "toggle", checked: false, text: "Получать спецпредложения"})
+
+          .column-center__like-button
+            +title-element({title: "like button"})
+            .column-center__wrap-like-button
+              +like-button({span:"2", name: "likeBtn"})  
+              +like-button({span:"12", name: "likeBtn", value: "", checked: true})
+
+          .column-center__rate-button
+            +title-element({title: "rate button"})
+            .column-center__rate-button-wrap
+              +rate-button({name: "rating", numroom: 800})
+              +rate-button({name: "rating1", numroom: 801})
+
+        .column.column-right
+          .column-right__range-slider
+            +range-slider({title: "range slider", name: "slider", valueMin: "", valueMax: ""})
+
+          .column-right__buttons
+            +title-element({title: "buttons"})
+            .column-right__wrap-btn
+              //- +button-blue - кнопка с синим фоном
+              //- +button-white - кнопка с белым фоном 
+              //- +button-link - кнопка ссылка, без границы
+              //- +button-with-icon - кнопка со стрелкой вправо
               //- Имена передаваемого объекта:
-              //-  img - ссылка на изображение
-              //-  head - заголовок
-              //-  desc - описание
-              +advantages({img: "/forms-elements/__advantages/img/emoticon.svg", head: "Комфорт", desc: "Шумопоглащающие стены"})
-              +advantages({img: "/forms-elements/__advantages/img/city.svg", head: "Удобство", desc: "Окно в каждой из спален"})
-          .wrapper__feedback
-            //- +feedback
-            //- Отзыв
+              //-  name - имя кнопки
+              //-  value - value
+              //-  text - Текст, отображаемый на кнопке
+              //-  hover:true - добавляет стиль, имитирующий выделение кнопки
+              .column-right__inner-btn
+                +btn-blue({name: "btn", value: "btn", text: "Click Me"})
+              .column-right__inner-btn
+                +btn-blue({name: "btn", value: "btn", text: "Click Me", hover:true})
+              .column-right__inner-btn
+                +btn-white({name: "btn", value: "btn", text: "Click Me"})
+              .column-right__inner-btn
+                +btn-white({name: "btn", value: "btn", text: "Click Me", hover:true})
+            .column-right__inner-btn-link
+              +btn-link({name: "btn", value: "btn", text: "Click Me"})
+              +btn-link({name: "btn", value: "btn", text: "Click Me", hover:true})
+            .column-right__wrap-btn-with-icon
+              +btn-with-icon({name:"btn", value: "btn", text: "Перейти к оплате"})
+
+          .column-right__pagination
+            +title-element({title: "pagination"})
+            .column-right__wrap-pagination
+              //- +pagination
+              //- Постраничная навигация (нумерация страниц)
+              //- Имена передаваемого объекта:
+              //-  name - имя кнопок
+              //-  value - передаваемые значения 
+              +pagination({name: "btn"})
+
+      .container
+        .column.column-left
+          .column-left__dropdown-room.--big-padding-right 
+            //- +dropdown-room
+            //- форма выбора комнаты
             //- Имена передаваемого объекта:
-            //-  img - фото пользователя
-            //-  user - имя пользователя
-            //-  date - сколько дней прошло с момента отзыва
-            //-  text - текст отзыва
-            +feedback({img: "./img/murad.jpg", user: "Мурад Сарафанов", date: "5 дней назад", text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"})
+            //-  name - имя поля данных
+            //-  open:true - разварачивает форму с кнопками
+            //- Значения data-: (не пердаются в mixin)
+            //-  bedroom - количество спален
+            //-  bed - количество кроватей
+            //-  bathroom - количество ванных комнат
+            .column-left__dropdown-room-inner
+              +dropdown-room({name:"select-room", open: false, title: "dropdown", subtitle: "DEFAULT", marginTop:true})
+            .column-left__dropdown-room-inner
+              +dropdown-room({name:"select-room", open: true, title: "dropdown", subtitle: "EXPANDED", marginTop:true})
+          .column-left__expandable-checkbox-list.--big-padding-right
+            .column-left__wrap-checkbox-list
+              +expandable-checkbox-list({name: "conditions", title: "expandable checkbox list"})
+            .column-left__wrap-checkbox-list
+              +expandable-checkbox-list({name: "conditions", title: "expandable checkbox list"})
+
+        .column.column-center 
+          .column-center__dropdown-guest
+            +dropdown-guest({name: "dpguest", title: "dropdown"})
+
+          .column-center__rich-checkbox-btn
+            +title-element({title: "rich checkbox buttons"})
+            .column-center__wrap-checkbox
+              +rich-checkbox-buttons({name: "wide-corridor", head: "Широкий коридор", desc: "Ширина коридоров в номере не менее 91 см"})
+              +rich-checkbox-buttons({name: "assistent", head: "Помощник для инвалидов", desc: "На 1 этаже Вас встретит специалист и проводит до номера"})
+        
+        .column.column-right
+
+          .column-right__dropdown-guest
+            +dropdown-guest({name: "dpguest", title: "dropdown"})
+
+          .column-right__bullet-list
+            +title-element({title: "bullet list"})
+            .column-right__wrap-bullet-list
+              +bullet-list({text:["Нельзя с питомцами","Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]})
+
+      .container.--margin-top
+        .column.column-left
+          .column-left__advantages
+            +advantages({img: "/assets/images/emoticon.svg", head: "Комфорт", desc: "Шумопоглащающие стены"})
+            +advantages({img: "/assets/images/city.svg", head: "Удобство", desc: "Окно в каждой из спален"})
+        .column__feedback
+          //- +feedback
+          //- Отзыв
+          //- Имена передаваемого объекта:
+          //-  img - фото пользователя
+          //-  user - имя пользователя
+          //-  date - сколько дней прошло с момента отзыва
+          //-  text - текст отзыва
+          +feedback({img: "/assets/images/murad.jpg", user: "Мурад Сарафанов", date: "5 дней назад", text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"})
