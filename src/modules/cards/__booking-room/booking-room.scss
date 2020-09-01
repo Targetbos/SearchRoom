@@ -1,152 +1,181 @@
-.booking-room{
-  &__wrap{
+.booking-room {
+  &__wrap {
     display: flex;
     flex-direction: column;
-    max-width: 23.48rem;
+    width: rem(380);
     border-radius: 4px;
     background: #ffffff;
-    padding: 2.36rem 1.76rem 1.81rem;
+    padding: 2.4rem rem(30) rem(30);
     box-sizing: border-box;
-    box-shadow: 0px 0px 1.56rem $dark-25;
+    box-shadow: 0 0 1.56rem $dark-25;
   }
-  &__wrap-number-price{
-    display:flex;
+
+  &__wrap-number-price {
+    display: flex;
     justify-content: space-between;
     align-items: flex-end;
   }
-  &__number-room{
+
+  &__number-room {
     font-family: $fontO;
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 0.3px;
-    &:before{
+
+    &:before {
       content: "№";
       margin-right: 0.3125rem;
       font-size: 0.8rem;
     }
-    &:after{
-      content:"люкс";
+
+    &:after {
+      content: "люкс";
       font-family: $fontM;
       font-size: 0.8rem;
-      margin-left: 0.3125rem;
+      margin-left: rem(5);
       letter-spacing: 1.2px;
       color: $purple;
     }
   }
-  &__div{
+
+  &__price {
     display: inline-flex;
     align-items: flex-end;
-    padding-bottom: 1px;
+    padding-bottom: rem(3);
   }
-  &__cost-per-day{
+
+  &__cost-per-day {
     color: $dark-50;
     font-weight: bold;
     font-size: 0.875rem;
-    &:after{
+
+    &:after {
       content: "c";
       font-family: "rouble";
       margin-left: -0.1875rem;
       margin-right: 0.25rem;
     }
   }
-  &__cost-day{
+
+  &__cost-day {
     color: $dark-50;
     font-size: 0.75rem;
-    margin-right: 0.125rem;
+    margin-right: 0.1rem;
   }
-  &__wrap-date-form{
-   margin: 1.39rem 0.06rem 0 0;
+
+  &__wrap-date-form {
+    margin-top: 1.16rem;
   }
-  &__wrap-guest-form{
-    margin: 1.06rem 0.06rem 0 0.05rem;
+
+  &__wrap-guest-form {
+    margin-top: 1rem;
   }
-  &__wrap-service-cost{
-    margin: 0 0 0 0.06rem;
+
+  &__wrap-service-cost {
+    margin-top: .96rem;
   }
-  &__inner-service{
-    display:block;
+
+  &__inner-service {
+    display: block;
     letter-spacing: 0px;
     padding-bottom: 0.815rem;
     line-height: 1.2rem;
-    &:after{
+
+    &:after {
       content: "";
       display: table;
       clear: both;
     }
+
+    span {
+      font-size: rem(14);
+    }
   }
-  &__box-service{
-    display:block;
-    max-width:68.5%;
+
+  &__box-service {
+    display: block;
+    max-width: 68.5%;
     box-sizing: border-box;
-    float:left;
-    
+    float: left;
+
+    span {
+      font-size: rem(14);
+    }
+
   }
-  &__service{
+
+  &__service {
     line-height: 1.12rem;
-    &-price{
-      &:after{
+
+    &-price {
+      &:after {
         content: "a";
         font-family: "rouble";
         margin-right: 0.25rem;
       }
     }
-    &-days{
-    }
+
+    &-days {}
   }
-  &__service-cost{
+
+  &__service-cost {
     float: right;
-    &:after{
+
+    &:after {
       content: "a";
       font-family: "rouble";
-      margin-right: 1px;
-      margin-left: -1px;
+      margin-right: rem(1);
+      margin-left: rem(-1);
     }
   }
-  &__icon-desc{
-    display:table;
-    float:left;
+
+  &__icon-desc {
+    display: table;
+    float: left;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     font-family: $fontM;
-    font-style:normal;
+    font-size: rem(14);
+    font-style: normal;
     line-height: 1rem;
     width: 1.18rem;
-    height: 1.18rem;
     border: 1px solid $dark-25;
-    text-align:center;
+    text-align: center;
     color: $dark-25;
-    cursor:pointer;
+    cursor: pointer;
+    margin-left: rem(1);
   }
-  &__wrap-total-cost{
-    display:flex;
+
+  &__wrap-total-cost {
+    display: flex;
     justify-content: space-between;
     align-items: flex-end;
     font-family: $fontO;
-    font-size: 1.1875rem;
+    font-size: rem(19);
     line-height: 1.5rem;
     font-weight: bold;
     margin-top: 0.87rem;
     letter-spacing: -0.1px;
-    margin-left:1px;
+    margin-left: 1px;
   }
-  &__total-text{
-    float:left;
-  }
-  &__line{
+
+  &__line {
     display: inline-block;
     min-width: 56%;
     border-bottom: 1px dotted $dark-50;
     margin-bottom: 0.3125rem;
   }
-  &__total-cost{
-    float: right;
-    &:after{
+
+  &__total-cost {
+
+    &:after {
       content: "a";
       font-family: "rouble";
     }
   }
-  &__wrap-btn-booking{
-    margin-top: 1.25rem;
+
+  &__wrap-btn-booking {
+    margin-top: 1.2rem;
   }
 }

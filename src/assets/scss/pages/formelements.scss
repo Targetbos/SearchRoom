@@ -33,7 +33,7 @@ html {
   width: 100%;
 
   @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   @media screen and (max-width: $tableWidth) {
@@ -72,6 +72,7 @@ body {
 
   @media screen and (max-width: $smDesktopWidth) {
     max-width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -82,9 +83,8 @@ body {
 
   @media screen and (max-width: $smDesktopWidth) {
     flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
-
-
   }
 }
 

@@ -1,0 +1,130 @@
+@import "../utils/vars.scss"; //scss шрифтов
+
+@import "../../../modules/cards/__booking-room/booking-room.scss";
+@import "../../../modules/cards/__desc-room/desc-room.scss";
+@import "../../../modules/cards/__login-form/login-form";
+@import "../../../modules/cards/__registration-form/registration-form.scss";
+@import "../../../modules/cards/__search-room/search-room";
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: $tableWidth) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: $tableWidth) {
+    font-size: 12px;
+  }
+
+}
+
+.wrapper {
+  display: block;
+  max-width: 1440px;
+  padding: rem(150) rem(140) rem(140);
+
+  @media screen and (max-width: 1390px) {
+    padding: rem(10);
+  }
+}
+
+.container {
+  display: flex;
+  width: 100%;
+
+  @media screen and (max-width: 1390px) {
+    max-width: rem(1160);
+  }
+}
+
+.column {
+  display: flex;
+  flex-flow: column nowrap;
+
+  @media screen and (max-width: 1390px) {
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+
+.left-column {
+  max-width: rem(420);
+
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: 23.7rem;
+  }
+
+  &__wrap-search-room {
+    width: 100%;
+  }
+
+  &__wrap-registration-form {
+    margin-top: 2.65rem;
+  }
+}
+
+.center-column {
+  max-width: rem(420);
+
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: 23.7rem;
+    margin-top: 2rem;
+  }
+
+  &__wrap-login-form {
+    margin-top: rem(40);
+  }
+}
+
+.right-column {
+  max-width: 15rem;
+
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: 23.7rem;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+  }
+
+  &__wrap-datepicker {
+    @media screen and (max-width: $smDesktopWidth) {
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__wrap-desc-room {
+    margin-top: 2.5rem;
+
+    @media screen and (max-width: $smDesktopWidth) {
+      margin: 0 auto;
+    }
+  }
+
+  &__wrap-desc-room2 {
+    @media screen and (max-width: $smDesktopWidth) {
+      margin: 0 auto;
+
+    }
+
+    margin-top: 2.1rem;
+  }
+}
+
+.datepicker-form {
+  &__wrap {
+    display: flex;
+    max-width: 100%;
+    border-radius: 4px;
+    background: #ffffff;
+  }
+}

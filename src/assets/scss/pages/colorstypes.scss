@@ -18,7 +18,7 @@ html {
     }
 
     @media screen and (max-width: $phoneWidth) {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -51,8 +51,9 @@ li {
 
 .wrapper {
     display: flex;
-    width: $colorsTypesWidth;
+    max-width: 1440px;
     min-width: $smPhoneWidth;
+    width: 100%;
     padding: 0;
     margin: 0;
     background: #ffffff;

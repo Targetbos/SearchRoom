@@ -1,0 +1,74 @@
+@import "../../formelements/__text-field/text-field";
+@import "../../formelements/__radio-buttons/radio-buttons";
+@import "../../formelements/__masked-text-field/masked-text-field";
+@import "../../formelements/__toggle/toggle";
+@import "../../formelements/__buttons/__btn--white/btn--white";
+
+.registration-form {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: rem(380);
+    min-width: 21rem;
+    width: 100%;
+    padding: 2.37rem rem(30) rem(30);
+    border-radius: 4px;
+    background: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 1.56rem $dark-25;
+
+    h1 {
+      letter-spacing: 0;
+    }
+
+    &-name {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 6.65rem;
+      margin-top: 0.95rem;
+    }
+
+    &-select-gender {
+      display: flex;
+      justify-content: space-between;
+      width: 13.7rem;
+      margin-top: 0.2rem;
+    }
+
+    &-birthday {
+      margin-top: 0.71rem;
+    }
+
+    &-authform {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 7.7rem;
+      margin-top: 0.94rem;
+    }
+
+    &-toggle {
+      margin-top: 0.25rem;
+    }
+
+    &-btn-pay {
+      margin-top: 1.4rem;
+    }
+
+    &-input-btn {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.85rem;
+      width: 100%;
+
+    }
+  }
+
+  &__text-input {
+    width: 51.5rem;
+    letter-spacing: 0;
+    margin-top: 0.58rem;
+    line-height: 1.7rem;
+  }
+}

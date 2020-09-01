@@ -1,13 +1,16 @@
-include ../../forms-elements/__rate-button/rate-button.pug
+include ../../formelements/__rate-button/rate-button.pug
 mixin desc-room( data )
   .desc-room  
     .desc-room__wrap
       .desc-room__slider
-        ul.desc-room__container
-          each imgSrc, index in data.imgLink
-            li.desc-room__item
-              img.desc-room__img(src=imgSrc alt=data.desc name=data.name data-id=index)
+        ul.desc-room__container.js__container
+          each imgSrc in data.imgLink
+            li.desc-room__item.js__item-desc-room
+              img(src=imgSrc alt=data.desc name=data.name )
         .desc-room__dots-wrap
+        .desc-room__wrap-slider-btn
+          span.desc-room__btn.--back.js__btn-slider-back
+          span.desc-room__btn.--next.js__btn-slider-next
       .desc-room__wrap-desc
         .desc-room__wrap-number-price
           .desc-room__wrap-number

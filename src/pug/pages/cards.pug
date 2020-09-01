@@ -1,0 +1,37 @@
+include ../../modules/cards/__search-room/search-room.pug
+include ../../modules/cards/__registration-form/registration-form.pug
+include ../../modules/cards/__booking-room/booking-room.pug
+include ../../modules/cards/__login-form/login-form.pug
+include ../../modules/cards/__desc-room/desc-room.pug
+
+doctype html
+html
+  head
+    title Hotel
+    script(src="https://code.jquery.com/jquery-3.4.1.min.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    meta(name = "viewport" content = "width=device-width, initial-scale = 1")
+
+  body
+    .wrapper
+      .container
+        .column.left-column
+          .left-column__wrap-search-room
+            +search-room({nameForm: "search-room"})
+          .left-column__wrap-registration-form
+            +registration-form({})
+        .column.center-column
+          .center-column__wrap-booking-room
+            +booking-room({})
+          .center-column__wrap-login-form
+            +login-form({})
+        .column.right-column
+          .right-column__wrap-datepicker
+            .datepicker-form
+              .datepicker-form__wrap
+                .datepicker-here.datepicker-form__calendar
+          .right-column__wrap-desc-room
+            +desc-room({number: "888", type: "люкс", price: "9 990", feedback: 145, imgLink: ["/assets/images/room1.png","/assets/images/room2.png","/assets/images/room3.png","/assets/images/room4.png"]})
+          .right-column__wrap-desc-room2
+            +desc-room({number: "840", price: "9 900", feedback: 65, imgLink: ["/assets/images/room5.png","/assets/images/room6.png","/assets/images/room7.png","/assets/images/room8.png"]})
+

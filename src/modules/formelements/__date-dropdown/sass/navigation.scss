@@ -56,6 +56,8 @@
 .datepicker--nav-title {
   border-radius: $datepickerBorderRadius;
   padding: 0 8px;
+  font-size: rem(19);
+  margin-top: 0.2rem;
 
 
   &:hover {
@@ -92,7 +94,8 @@
     color: map_get($datepickerTextColor, button);
     background: map_get($datepickerBG, hover);
   }
-  &--color{
+
+  &--color {
     color: rgba(31, 32, 65, 0.5);
   }
 }

@@ -1,0 +1,14 @@
+include ../../formelements/__date-dropdown/date-dropdown.pug
+include ../../formelements/__dropdown/__dropdown-guest/dropdown-guest.pug
+include ../../formelements/__buttons/__btn-with-icon/btn-with-icon.pug
+
+mixin search-room( data )
+  .search-room
+    .search-room__wrap
+      h1 Найдём номера под ваши пожелания
+      .search-room__wrap-date
+        +date-dropdown({name:"", titleIn: "прибытие", titleOut: "выезд"})
+      .search-room__wrap-guest
+        +dropdown-guest({title: "гости"})
+      .search-room__wrap-btn
+        +btn-with-icon({text:"подобрать номер"})

@@ -23,7 +23,8 @@ module.exports = {
   },
   entry: {
     colorstypes: [`${PATHS.src}/colorstypes.js`, `${PATHS.src}/assets/scss/pages/colorstypes.scss`],
-    formelements: [`${PATHS.src}/formelements.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`]
+    formelements: [`${PATHS.src}/formelements.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`],
+    cards: [`${PATHS.src}/cards.js`, `${PATHS.src}/assets/scss/pages/cards.scss`]
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
