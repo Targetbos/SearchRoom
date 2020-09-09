@@ -64,15 +64,15 @@ body {
   width: 100%;
   padding: 8.95rem 8.45rem 2.5rem 8.85rem;
   background: #ffffff;
+  margin: 0 auto;
+  position: relative;
 
   @media screen and (max-width: $desktopWidth) {
     padding: 2rem;
-    margin: 0 auto;
   }
 
   @media screen and (max-width: $smDesktopWidth) {
     max-width: 100%;
-    margin: 0 auto;
   }
 }
 
@@ -160,15 +160,15 @@ body {
       margin-top: 1.84rem;
 
       &-wrap {
-        margin-top: 0.875rem;
+        margin-top: 0.75rem;
         display: flex;
         justify-content: space-between;
-        width: 13.63rem;
+        width: 13.8rem;
       }
     }
 
     &__toggle {
-      margin-top: 1.85rem;
+      margin-top: 1.75rem;
 
       &-wrap {
         margin-top: 0.795rem;

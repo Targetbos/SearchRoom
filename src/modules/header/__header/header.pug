@@ -1,21 +1,24 @@
-include ../../forms-elements/__buttons/__btn--white/btn--white.pug
-include ../../forms-elements/__buttons/__btn--blue/btn--blue.pug
-include ../../forms-elements/__logo/logo.pug
+include ../../formelements/__buttons/__btn--white/btn--white.pug
+include ../../formelements/__buttons/__btn--blue/btn--blue.pug
+include ../../formelements/__logo/logo.pug
 include ../__menu/menu.pug
 
 mixin header (data)
   .header
-    .header__inner
+    .container
       .header__logo
         +logo({})
       .header__menu
         +menu({})
+      .header__user-box-mobile
+        i.fa.fa-user
       if (data.auth)
-        .header__login-box
+        .header__user-box
           .header__inner-login-btn
             +btn-white({name: "login-btn", value: "input", text: "ВОЙТИ"})
           .header__inner-register-btn
             +btn-blue({name: "register-btn", value: "register", text: "ЗАРЕГИСТРИРОВАТЬСЯ"})
       else
         .header__user-box
-          a.header__user-link Cosmin Negoita
+          a(href="user") 
+            span Юлий Цезарь

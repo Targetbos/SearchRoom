@@ -1,23 +1,31 @@
 .range-slider {
   margin-top: 1.4rem;
+
   &__wrap {
-    display:block;
+    display: block;
   }
 }
+
 .ui-slider.ui-slider-horizontal {
-  height:rem(6);
+  height: rem(6);
   border: 1px solid $dark-25;
   border-radius: rem(3);
 }
-.ui-slider .ui-slider-handle {
-width:rem(14);
-height: rem(14);
-background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-border: 2px solid #FFFFFF;
-border-radius: rem(10);
-  cursor:pointer;
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: -.48em !important;
 }
+
+.ui-slider .ui-slider-handle {
+  width: rem(14);
+  height: rem(14);
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: rem(10);
+  cursor: pointer;
+}
+
 .ui-slider .ui-slider-range {
-  height:rem(6);
+  height: rem(6);
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }

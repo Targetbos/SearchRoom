@@ -1,3 +1,4 @@
+import 'webpack-jquery-ui/slider'
 (function () {
   $(".js__range-slider").slider({
     animate: "slow",
@@ -5,7 +6,7 @@
     max: 15600,
     values: [5000, 10000],
     slide: function (event, ui) {
-      $(".js__range-value").text(triplets(ui.values[0]) + "P - " + triplets(ui.values[1]) + "P");
+      $(".js__range-value").html(triplets(ui.values[0]) + "<span class='ruble'></span> - " + triplets(ui.values[1]) + "<span class='ruble'></span>");
     }
   });
 

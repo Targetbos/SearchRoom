@@ -1,0 +1,131 @@
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+
+  &__wrap-mobile-icon {
+    display: none;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1.75rem;
+    max-width: 27.45rem;
+    width: 100%;
+    margin-left: 1rem;
+  }
+
+  &__item {
+    display: flex;
+
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: solid $dark-50;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-left: 0.58rem;
+    margin-bottom: 0.2rem;
+  }
+
+  &__link {
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    font-size: 0.875rem;
+    height: 1rem;
+    font-weight: 500;
+    color: $dark-50;
+    text-decoration: none;
+    position: relative;
+    white-space: nowrap;
+
+    &--active {
+      font-weight: bold;
+    }
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  &__mobile-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 830px) {
+  .menu {
+    float: right;
+
+    &__wrap {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 3.5rem;
+    }
+
+    &__mobile-icon {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+
+      &>span {
+        width: 2rem;
+        height: 0.41rem;
+        background: $btn-bg;
+        margin: 0.11rem;
+        border-radius: 0.1rem;
+
+      }
+
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      max-width: 11rem;
+      top: -30rem;
+      right: 0;
+      z-index: 100;
+      transition: top 0.5s ease;
+    }
+
+    &__item {
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid $dark-25;
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: content-box;
+      width: 100%;
+      padding: 0.5rem 0.3rem;
+      background: #fff;
+
+      &:hover {
+        font-weight: bold;
+      }
+
+      &:focus {
+        font-weight: bold;
+      }
+    }
+  }
+}

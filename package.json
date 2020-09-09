@@ -44,7 +44,9 @@
     "> 1%"
   ],
   "dependencies": {
+    "font-awesome5": "^1.0.5",
     "jquery": "^3.5.1",
-    "jquery-ui": "^1.12.1"
+    "jquery-ui": "^1.12.1",
+    "webpack-jquery-ui": "^2.0.1"
   }
 }

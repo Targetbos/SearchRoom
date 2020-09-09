@@ -1,5 +1,7 @@
 const path = require('path')
 const fs = require('fs')
+const webpack = require('webpack');
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -22,9 +24,10 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    colorstypes: [`${PATHS.src}/colorstypes.js`, `${PATHS.src}/assets/scss/pages/colorstypes.scss`],
-    formelements: [`${PATHS.src}/formelements.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`],
-    cards: [`${PATHS.src}/cards.js`, `${PATHS.src}/assets/scss/pages/cards.scss`]
+    colorstypes: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/colorstypes.scss`],
+    formelements: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`],
+    cards: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/cards.scss`],
+    hf: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/hf.scss`]
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -120,6 +123,14 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.ProvidePlugin({
+      "$": "jquery",
+      "window.$": "jquery",
+      "jQuery": "jquery",
+      "window.jQuery": "jquery",
+      "jquery": "jquery",
+      "window.jquery": "jquery"
+    }),
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].css`,
     }),

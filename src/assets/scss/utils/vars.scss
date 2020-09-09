@@ -37,6 +37,7 @@ $btn-bg: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); // цвет фона
 $height-header: 4.37rem; //высота шапки с меню
 // $width-content: ($fullHDWidth- 140px)/$fullHDWidth*100%; // ширина блока с контентом с учётом отступов по 140px по краям
 $br: 1px solid #666; // граница для тестов
+
 $fontM: Montserrat,
 'Open Sans',
 sans-serif;
@@ -46,6 +47,11 @@ sans-serif;
 $fontOr: 'Quicksand-Regular',
 'Open Sans',
 sans-serif;
+$ruble: 'rouble';
+
+body {
+  font-size: rem(14);
+}
 
 h1 {
   font-family: $fontO;
@@ -102,6 +108,16 @@ input {
   &:hover,
   &:focus {
     border-color: $dark-50;
+  }
+}
+
+.ruble {
+
+  &:after {
+    content: "v";
+    font-family: $ruble;
+    text-transform: none;
+    font-weight: normal;
   }
 }
 

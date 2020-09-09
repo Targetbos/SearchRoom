@@ -1,93 +1,112 @@
-@import "../../forms-elements/__social-btn/social-btn";
-@import "../../forms-elements/__subscription-text-field/subscription-text-field";
+@import "../../formelements/__social-btn/social-btn";
+@import "../../formelements/__subscription-text-field/subscription-text-field";
 
-.footer{
+.footer {
   box-shadow: 0 0.62rem 1.25rem $dark-5;
   background: #fff;
-  &__wrap{    
-    margin:0 auto;
-    width: 72.16rem; 
+
+  &__wrap {
+    margin: 0 auto;
+    width: 72.16rem;
     display: flex;
     justify-content: center;
     padding: 6.16rem 0 4.87rem;
     box-sizing: border-box;
   }
-  &__company{
-    width: 18.75rem / $width-content * 100%;
+
+  &__company {
+    width: 20.833rem;
   }
-  &__logo{
+
+  &__logo {
     margin-top: 0.12rem;
   }
-  &__desc{
+
+  &__desc {
     line-height: 1.5rem;
     font-size: 0.87rem;
     padding-right: 2.5rem;
     margin-top: 1.1rem;
     letter-spacing: -0.13px;
   }
-  &__navigation{
-    width: 12.65rem / $width-content * 100%;
+
+  &__navigation {
+    width: 14.057rem;
     min-width: 5.65rem;
   }
-  &__list{
+
+  &__list {
     margin-top: 0.31rem;
     padding-left: 0.5rem;
   }
-  &__item{
+
+  &__item {
     list-style: none;
     margin: 1.25rem 0;
     color: $dark-50;
-    & a{
-      text-decoration:none;
-      color:$dark-50;
-      &:hover{
-        color:$dark-25;
+
+    & a {
+      text-decoration: none;
+      color: $dark-50;
+
+      &:hover {
+        color: $dark-25;
       }
-      &:active{
-        color:$dark-25;
+
+      &:active {
+        color: $dark-25;
       }
     }
   }
-  &__title{
-    font-size:0.75rem;
+
+  &__title {
+    font-size: 0.75rem;
     font-weight: bolder;
-    color:$dark-100;
+    color: $dark-100;
     letter-spacing: -0.4px;
-    &>p{
+
+    &>p {
       color: $dark-75;
     }
   }
-  &__aboutAs{
-    width: 12.8rem / $width-content * 100%;
+
+  &__aboutAs {
+    width: 14.22%;
   }
-  &__support{
-    width: 12.87rem / $width-content * 100%;
+
+  &__support {
+    width: 14.3%;
   }
-  &__subscribe{
-    width: 16.87rem / $width-content * 100%;
+
+  &__subscribe {
+    width: 18.75%;
     box-sizing: border-box;
     padding-left: 0.25rem;
     padding-top: 0.31rem;
-    & p{
+
+    & p {
       margin-top: 1rem;
       line-height: 1.5rem;
       letter-spacing: -0.18px;
     }
   }
-  &__wrap-subscribe-form{
+
+  &__wrap-subscribe-form {
     position: relative;
     width: 16.18rem;
     margin-top: 1.25rem;
   }
-  &__wrap-copyright{
-    width: 100%; 
+
+  &__wrap-copyright {
+    width: 100%;
     display: flex;
     justify-content: center;
     border-top: 1px solid $dark-10;
     padding: 0.75rem 0 0;
   }
-  &__copyright{
-    width: 72.3rem; 
+
+  &__copyright {
+    width: 72.3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,20 +114,23 @@
     box-sizing: border-box;
   }
 }
-.footer-mobile{
-  &__wrap{
-    display:flex;
-    align-items:center;
+
+.footer-mobile {
+  &__wrap {
+    display: flex;
+    align-items: center;
     width: 100%;
     padding: 6.19rem 0 6.75rem;
     flex-direction: column;
     background: #ffffff;
     box-shadow: 0 0.62rem 1.62rem $dark-5;
-    &-social-btn{
-      margin-top:0.89rem;
+
+    &-social-btn {
+      margin-top: 0.89rem;
     }
   }
-  &__desc{
+
+  &__desc {
     max-width: 35rem;
     text-align: center;
     line-height: 1.5rem;
@@ -116,20 +138,23 @@
     margin-top: 1.1rem;
     letter-spacing: 0.15px;
     padding: 0 1rem;
-  }  
+  }
 }
+
 @media (max-width: 829px) {
-  .footer{
-    &__wrap{
-      display:none
+  .footer {
+    &__wrap {
+      display: none
     }
-    &__wrap-copyright{
-      display:none
+
+    &__wrap-copyright {
+      display: none
     }
   }
 }
+
 @media (min-width: 830px) {
-  .footer-mobile__wrap{
-    display:none
+  .footer-mobile__wrap {
+    display: none
   }
 }
