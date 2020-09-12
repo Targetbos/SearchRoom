@@ -1,5 +1,7 @@
 //слайдер в описании комнаты
 "use strict"
+import "../../formelements/__rate-button/_rate-button.scss";
+import "./desc-room.scss";
 
 class SliderRoom {
   constructor(container) {

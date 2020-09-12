@@ -9,7 +9,6 @@ Arial,
 sans-serif;
 
 // Size
-$mainFontColor : #101010;
 $mainFontSize : 16px;
 $mainFontWeight : 400;
 $mainLineHeight : 1.4;
@@ -49,8 +48,46 @@ $fontOr: 'Quicksand-Regular',
 sans-serif;
 $ruble: 'rouble';
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+html {
+  font-size: 16px;
+  /* Устанавливает желаемый относительный размер шрифта */
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: $tableWidth) {
+    font-size: 14px;
+  }
+
+}
+
+
 body {
   font-size: rem(14);
+  font-family: $fontM;
+  font-style: normal;
+  font-weight: $mainFontWeight;
+  background-color: #E5E5E5;
 }
 
 h1 {
@@ -111,6 +148,22 @@ input {
   }
 }
 
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .ruble {
 
   &:after {
@@ -132,6 +185,11 @@ input {
   transform: rotate(-45deg);
   cursor: pointer;
   pointer-events: none;
+
+  .--rotate {
+    transform: rotate(-225deg);
+    top: 0.4rem;
+  }
 }
 
 .icon-arrow-right {

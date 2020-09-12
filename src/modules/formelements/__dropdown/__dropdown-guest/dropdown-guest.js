@@ -1,6 +1,4 @@
-// 'use strict';
-(function () {
-
+  import "./_dropdown-guest.scss";
   class Guests {
     constructor(inputGuests) {
       this.inputGuests = inputGuests;
@@ -12,14 +10,90 @@
       this.children = 0;
       this.babies = 0;
     }
+    init() {
+      let _this = this;
+      this.showBtnBlock();
+      this.hideBtnClear();
+      this.overlay.onclick = () => {
+        this.hideBtnBlock();
+      }
+      this.expandForm.querySelectorAll("button").forEach((btn) => {
+        btn.onclick = (event) => {
+          let btn = event.target;
+          _this.processingClick(btn);
+        }
+      })
+    }
+
+    processingClick(btn) {
+      let btnName = btn.name;
+      let typeGuest = btn.dataset.guest;
+      let guestsObj = {
+        adults: this.adults,
+        children: this.children,
+        babies: this.babies
+      }
+
+      switch (btnName) {
+
+        case "minus":
+          if (guestsObj[typeGuest] == '0') {
+            break;
+          } else if (guestsObj[typeGuest] == '1') {
+            guestsObj[typeGuest]--;
+            this.numberOfGuests = guestsObj;
+            btn.nextElementSibling.innerText = guestsObj[typeGuest];
+            this.deactivateBtn(btn);
+          } else {
+            guestsObj[typeGuest]--;
+            this.numberOfGuests = guestsObj;
+            btn.nextElementSibling.innerText = guestsObj[typeGuest];
+          }
+          break;
+
+        case "plus":
+          if (guestsObj[typeGuest] == '0') {
+            this.activateBtn(btn);
+            guestsObj[typeGuest]++;
+            this.numberOfGuests = guestsObj;
+            btn.previousElementSibling.innerText = guestsObj[typeGuest];
+
+          } else {
+            this.activateBtn(btn);
+            guestsObj[typeGuest]++;
+            this.numberOfGuests = guestsObj;
+            btn.previousElementSibling.innerText = guestsObj[typeGuest];
+          }
+          break;
+
+        case "clear":
+          this.clearForm();
+          this.hideBtnClear();
+          break;
+
+        case "apply":
+          this.apply();
+          break;
+      }
+
+      this.showInFieldInput();
+
+      if (this.sumGuests() == '0') {
+        this.hideBtnClear()
+      } else {
+        this.showBtnClear()
+      }
+
+    }
 
     clearForm() {
+      let _this = this;
       this.adults = 0;
       this.children = 0;
       this.babies = 0;
       this.expandForm.querySelectorAll(".js__numGuests, button[name='minus']").forEach(function (el) {
         if (el.name == 'minus') {
-          deactivateBtn(el);
+          _this.deactivateBtn(el);
         } else {
           el.innerText = 0;
         }
@@ -27,21 +101,22 @@
       this.hideBtnClear();
     }
     hideBtnClear() {
-      this.btnClear.classList.add("dropdown-guest__btn-clear--hide");
+      this.btnClear.classList.add("--hide");
     }
     showBtnClear() {
-      this.btnClear.classList.remove("dropdown-guest__btn-clear--hide");
-    }
-    showBtnBlock() {
-      this.expandForm.classList.remove("dropdown-guest__form-expanded--hide");
-      this.overlay.classList.remove("dropdown-guest__overlay--hide");
-      this.inputGuests.classList.add("dropdown-guest__form--border-bottom-90deg");
+      this.btnClear.classList.remove("--hide");
     }
     hideBtnBlock() {
       this.overlay.classList.add("dropdown-guest__overlay--hide");
       this.expandForm.classList.add("dropdown-guest__form-expanded--hide");
       this.inputGuests.classList.remove("dropdown-guest__form--border-bottom-90deg");
     }
+    showBtnBlock() {
+      this.expandForm.classList.remove("dropdown-guest__form-expanded--hide");
+      this.overlay.classList.remove("dropdown-guest__overlay--hide");
+      this.inputGuests.classList.add("dropdown-guest__form--border-bottom-90deg");
+    }
+
     sumGuests() {
       return this.adults + this.children + this.babies;
     }
@@ -51,9 +126,9 @@
       this.inputGuests.dataset.babies = this.babies;
       this.hideBtnBlock();
     }
-    showInInput() {
-      let sum = this.sumGuests()
-      ''
+    showInFieldInput() {
+      let sum = this.sumGuests();
+      let str = "";
       if (sum == 0) {
         str = "Сколько гостей";
       } else {
@@ -61,6 +136,15 @@
       }
 
       this.inputGuests.value = str;
+    }
+
+    deactivateBtn(btn) {
+      btn.classList.add("dropdown-guest__btn--deactivate");
+    }
+
+    activateBtn(btn) {
+      let btnMinus = btn.parentElement.firstChild;
+      btnMinus.classList.remove("dropdown-guest__btn--deactivate");
     }
 
     get numberOfGuests() {
@@ -81,94 +165,8 @@
 
   document.querySelectorAll('.dropdown-guest__form').forEach(function (el) {
     var inputGuest = el.firstChild;
-    let form = new Guests(inputGuest);
+    let guestForm = new Guests(inputGuest);
     inputGuest.onclick = () => {
-      initGuestForm(form);
+      guestForm.init(inputGuest);
     }
   });
-
-  function initGuestForm(form) {
-    form.showBtnBlock();
-
-    form.overlay.onclick = () => {
-      form.hideBtnBlock();
-    }
-
-    form.expandForm.querySelectorAll("button").forEach((btn) => {
-      btn.onclick = (event) => {
-        let btn = event.target;
-        processingClick(btn, form);
-      }
-    })
-  }
-
-  function processingClick(btn, form) {
-    let btnName = btn.name;
-    let typeGuest = btn.dataset.guest;
-    let guestsObj = {
-      adults: form.adults,
-      children: form.children,
-      babies: form.babies
-    }
-
-    switch (btnName) {
-
-      case "minus":
-        if (guestsObj[typeGuest] == '0') {
-          break;
-        } else if (guestsObj[typeGuest] == '1') {
-          guestsObj[typeGuest]--;
-          form.numberOfGuests = guestsObj;
-          btn.nextElementSibling.innerText = guestsObj[typeGuest];
-          deactivateBtn(btn);
-        } else {
-          guestsObj[typeGuest]--;
-          form.numberOfGuests = guestsObj;
-          btn.nextElementSibling.innerText = guestsObj[typeGuest];
-        }
-        break;
-
-      case "plus":
-        if (guestsObj[typeGuest] == '0') {
-          activateBtn(btn);
-          guestsObj[typeGuest]++;
-          form.numberOfGuests = guestsObj;
-          btn.previousElementSibling.innerText = guestsObj[typeGuest];
-        } else {
-          activateBtn(btn);
-
-          guestsObj[typeGuest]++;
-          form.numberOfGuests = guestsObj;
-          btn.previousElementSibling.innerText = guestsObj[typeGuest];
-        }
-        break;
-
-      case "clear":
-        form.clearForm();
-        form.hideBtnClear();
-        break;
-
-      case "apply":
-        form.apply();
-        break;
-    }
-
-    form.showInInput();
-
-    if (form.sumGuests() == '0') {
-      form.hideBtnClear()
-    } else {
-      form.showBtnClear()
-    }
-
-  }
-
-  function deactivateBtn(btn) {
-    btn.classList.add("dropdown-guest__btn--deactivate");
-  }
-
-  function activateBtn(btn) {
-    let btnMinus = btn.parentElement.firstChild;
-    btnMinus.classList.remove("dropdown-guest__btn--deactivate");
-  }
-})();

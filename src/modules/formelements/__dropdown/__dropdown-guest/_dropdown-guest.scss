@@ -6,6 +6,7 @@
     cursor: pointer;
     outline: none;
     background: none;
+    letter-spacing: 0.005rem;
 
     &-icon {
       top: 1.2rem;
@@ -75,7 +76,7 @@
     padding: 0.0625rem 0.25rem 0 0.25rem;
 
     &:after {
-      content: '';
+      content: "";
       display: table;
       clear: both;
     }
@@ -132,32 +133,8 @@
   &__wrap-btn-link {
     display: flex;
     justify-content: space-between;
-    padding: 1.3rem 0 0.25rem 0.4375rem;
-  }
-
-  &__btn-clear,
-  &__btn-apply {
-    display: block;
-    font-family: $fontM;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color: $dark-50;
-
-    &:hover {
-      color: $purple;
-    }
-  }
-
-  &__btn-clear {
-    opacity: 1;
-    pointer-events: auto;
-
-    &--hide {
+    padding: 1.3rem 0.4375rem 0.25rem 0.8rem;
+    .--hide {
       opacity: 0;
       pointer-events: none;
     }

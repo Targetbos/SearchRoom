@@ -1,21 +1,23 @@
 .buttons__icon-link {
   display: flex;
-  text-transform: uppercase;
-  font-family: $fontM;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: bold;
   background: #ffffff;
-  color: $purple;
+  padding: 0;
+  opacity: 1;
   cursor: pointer;
   outline: none;
   border: none;
+  pointer-events: auto;
 
+  text-transform: uppercase;
+  font-family: $fontM;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: $dark-50;
   &:hover {
-    color: $dark-50;
+    color: $purple;
   }
 
   &--hover {
-    color: $dark-50;
+    color: $purple;
   }
 }

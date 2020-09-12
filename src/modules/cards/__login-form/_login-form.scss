@@ -11,15 +11,6 @@
     box-shadow: 0 0 1.56rem $dark-25;
   }
 
-  &__title {
-    margin: 0px;
-    font-family: $fontO;
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.875rem;
-    letter-spacing: 0;
-  }
-
   &__email-field {
     margin-top: 0.95rem;
   }
@@ -36,12 +27,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1.85rem;
+    margin-top: 1.9rem;
   }
 
   &__text-input {
     display: flex;
-    width: 51.7rem;
+    min-width: 13.85rem;
     letter-spacing: 0;
   }
 }

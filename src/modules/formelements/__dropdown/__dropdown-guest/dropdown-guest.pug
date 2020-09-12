@@ -1,5 +1,6 @@
 <!-- Input выбора колличества гостей -->
 include ../../__title-element/title-element.pug
+include ../../__buttons/__btn-link/btn-link.pug
 mixin dropdown-guest( data )
   .dropdown-guest
     +title-element({title: data.title, subtitle: data.subtitle, marginTop: data.marginTop})
@@ -27,5 +28,5 @@ mixin dropdown-guest( data )
           .dropdown-guest__number.js__numGuests 0
           button.dropdown-guest__btn(name='plus' data-guest='babies') +
       .dropdown-guest__wrap-btn-link
-        button.dropdown-guest__btn-clear.dropdown-guest__btn-clear--hide(name="clear") очистить
-        button.dropdown-guest__btn-apply(name='apply') применить
+        +btn-link({name: "clear", text: "очистить"})
+        +btn-link({name: "apply", text: "применить"})

@@ -13,7 +13,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       warnings: true,
       errors: true
     },
-    openPage: `formelements.html`,
+    openPage: `lp.html`,
     open: true
 
   },

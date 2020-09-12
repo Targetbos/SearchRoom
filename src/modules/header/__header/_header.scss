@@ -12,6 +12,11 @@
     box-shadow: 0 rem(10) rem(20) $dark-5;
     box-sizing: border-box;
 
+    @media screen and (max-width: 830px) {
+        min-width: 20rem;
+        padding: 0 1rem;
+    }
+
     .container {
         display: flex;
         flex-direction: row;
@@ -19,6 +24,7 @@
         margin-bottom: 0;
         max-width: 72.5rem;
         margin: 0 1rem;
+        width: 100%;
 
     }
 
@@ -30,6 +36,10 @@
 
     &__menu {
         flex-grow: 1;
+
+        @media screen and (max-width: 830px) {
+            order: 1;
+        }
 
         @media screen and (max-width: 560px) {
             max-width: 3rem;
@@ -45,6 +55,10 @@
         a {
             border-left: 1px solid $dark-10;
             padding: rem(6) rem(0) rem(6) rem(20);
+
+            @media screen and (max-width: 830px) {
+                border-left: none;
+            }
         }
 
         span {
@@ -77,12 +91,15 @@
             margin-left: 1rem;
         }
 
-        i {
-            display: block;
-            width: 2rem;
-            height: 2rem;
-            font-size: 2rem;
-            color: #8BA4F9;
+        .icon-user {
+            cursor: pointer;
+
+            &:before {
+                content: "\e900";
+                font-size: 2.2rem;
+                color: #8BA4F9;
+
+            }
         }
 
     }
@@ -94,31 +111,6 @@
             padding: .5625rem 1.24rem .625rem;
             height: 2.1rem;
 
-        }
-    }
-
-
-
-}
-
-@media (max-width: 829px) {
-    .header {
-        min-width: 22rem;
-        padding: 0 1rem;
-
-        &__inner {
-            width: 100%;
-            padding: 0 1rem;
-        }
-
-        &__menu {
-            order: 1;
-        }
-
-        &__login-box {
-            width: 100%;
-            justify-content: center;
-            margin-left: 1rem;
         }
     }
 }

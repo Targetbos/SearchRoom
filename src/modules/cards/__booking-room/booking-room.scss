@@ -5,7 +5,7 @@
     width: rem(380);
     border-radius: 4px;
     background: #ffffff;
-    padding: 2.4rem rem(30) rem(30);
+    padding: 2.5rem rem(30) rem(30);
     box-sizing: border-box;
     box-shadow: 0 0 1.56rem $dark-25;
   }
@@ -53,7 +53,7 @@
       content: "c";
       font-family: "rouble";
       margin-left: -0.1875rem;
-      margin-right: 0.25rem;
+      margin-right: 0.11rem;
     }
   }
 
@@ -64,11 +64,11 @@
   }
 
   &__wrap-date-form {
-    margin-top: 1.16rem;
+    margin-top: 1.3rem;
   }
 
   &__wrap-guest-form {
-    margin-top: 1rem;
+    margin-top: 1.12rem;
   }
 
   &__wrap-service-cost {

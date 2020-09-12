@@ -17,33 +17,27 @@ const PATHS = {
 const PAGES_DIR = `${PATHS.src}/pug/pages/`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
-
-
 module.exports = {
   externals: {
     paths: PATHS
   },
   entry: {
-    colorstypes: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/colorstypes.scss`],
-    formelements: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`],
-    cards: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/cards.scss`],
-    hf: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/hf.scss`]
+    common: [`${PATHS.src}/assets/js/common.js`,`${PATHS.src}/assets/scss/utils/vars.scss`],
+    colorstypes: `${PATHS.src}/assets/scss/pages/colorstypes.scss`,
+    formelements: [`${PATHS.src}/formelements.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`],
+    cards: [`${PATHS.src}/cards.js`, `${PATHS.src}/assets/scss/pages/cards.scss`],
+    hf: [`${PATHS.src}/hf.js`, `${PATHS.src}/assets/scss/pages/hf.scss`],
+    lp: [`${PATHS.src}/lp.js`, `${PATHS.src}/assets/scss/pages/lp.scss`]
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.build,
   },
-  resolve: {
-    alias: {
-      images: path.resolve(__dirname, '../src/assets/images/'),
-    },
-  },
+
   module: {
     rules: [{
         test: /\.pug$/,
-        loader: ['pug-loader',
-          'pug-html-loader'
-        ]
+        use: ['pug-loader']
       }, {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -51,6 +45,7 @@ module.exports = {
       }, {
         test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
+        exclude: /\\(img|images)\\/i,
         options: {
           name: '[name].[ext]',
           outputPath: `${PATHS.assets}fonts/`,
@@ -59,12 +54,18 @@ module.exports = {
       }, {
         test: /\.(png|jpg|gif|svg)$/,
         loader: "file-loader",
-        exclude: `/assets/fonts/`,
+        exclude: /\\(fonts)\\/i,
         options: {
           name: `[name].[ext]`,
           outputPath: `${PATHS.assets}images/`,
-          publicPath: `../images/`
-
+          publicPath: (name, pathFile) => {
+            let regExpFonts = /\\(img)\\/i;
+            if (regExpFonts.test(pathFile) == true) {
+              return `assets/images/${name}`;
+            } else {
+              return `../images/${name}`;
+            }
+          }
         },
       }, {
         test: /\.scss$/,
@@ -94,6 +95,11 @@ module.exports = {
             options: {
               sourceMap: true
             }
+          },{
+            loader: 'sass-resources-loader',
+          options: {
+            resources: `${PATHS.src}/assets/scss/utils/vars.scss`
+          },
           }
         ]
       },
@@ -152,7 +158,8 @@ module.exports = {
     }),
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
+      filename: `./${page.replace(/\.pug/,'.html')}`,
+      chunks: [`${page.replace(/\.pug/,'')}`,'common']
     }))
   ]
 }

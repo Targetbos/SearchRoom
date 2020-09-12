@@ -1,5 +1,5 @@
-import '../../forms-elements/__date-dropdown/date-dropdown';
-import '../../forms-elements/__dropdown/__dropdown-guest/dropdown-guest';
+import '../../formelements/__date-dropdown/date-dropdown';
+import '../../formelements/__dropdown/__dropdown-guest/dropdown-guest';
 $(".date-dropdown__date-input").click(function(){
   $(".datepicker-here").datepicker({
     onHide: function(dp,animationCompleted){
