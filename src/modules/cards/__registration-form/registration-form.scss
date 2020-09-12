@@ -1,6 +1,9 @@
+@import "../../formelements/__masked-text-field/masked-text-field";
+@import "../../formelements/__toggle/toggle";
+@import "../../formelements/__buttons/buttons";
+
 .registration-form {
   &__wrap {
-    display: flex;
     flex-direction: column;
     max-width: rem(380);
     min-width: 21rem;
@@ -55,7 +58,6 @@
       justify-content: space-between;
       margin-top: 1.85rem;
       width: 100%;
-
     }
   }
 

@@ -4,7 +4,7 @@
   "description": "InitProject webpack",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --watch --config ./webpack-config/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --config ./webpack-config/webpack.dev.conf.js",
     "build": "webpack --config ./webpack-config/webpack.build.conf.js"
   },
   "author": "targetbos@yandex.ru",
@@ -46,7 +46,6 @@
     "> 1%"
   ],
   "dependencies": {
-    "font-awesome5": "^1.0.5",
     "jquery": "^3.5.1",
     "jquery-ui": "^1.12.1",
     "webpack-jquery-ui": "^2.0.1"

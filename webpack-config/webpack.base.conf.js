@@ -22,7 +22,7 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    common: [`${PATHS.src}/assets/js/common.js`,`${PATHS.src}/assets/scss/utils/vars.scss`],
+    common: [`${PATHS.src}/assets/js/common.js`, `${PATHS.src}/assets/scss/utils/vars.scss`],
     colorstypes: `${PATHS.src}/assets/scss/pages/colorstypes.scss`,
     formelements: [`${PATHS.src}/formelements.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`],
     cards: [`${PATHS.src}/cards.js`, `${PATHS.src}/assets/scss/pages/cards.scss`],
@@ -95,11 +95,11 @@ module.exports = {
             options: {
               sourceMap: true
             }
-          },{
+          }, {
             loader: 'sass-resources-loader',
-          options: {
-            resources: `${PATHS.src}/assets/scss/utils/vars.scss`
-          },
+            options: {
+              resources: `${PATHS.src}/assets/scss/utils/vars.scss`
+            },
           }
         ]
       },
@@ -159,7 +159,7 @@ module.exports = {
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
       filename: `./${page.replace(/\.pug/,'.html')}`,
-      chunks: [`${page.replace(/\.pug/,'')}`,'common']
+      chunks: [`${page.replace(/\.pug/,'')}`, 'common']
     }))
   ]
 }

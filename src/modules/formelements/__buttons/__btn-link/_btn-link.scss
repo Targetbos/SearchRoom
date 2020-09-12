@@ -1,8 +1,13 @@
 .buttons__icon-link {
   display: flex;
+  text-transform: uppercase;
+  font-family: $fontM;
+  font-size: 0.75rem;
+  font-weight: bold;
   background: #ffffff;
   padding: 0;
-  opacity: 1;
+
+  color: $purple;
   cursor: pointer;
   outline: none;
   border: none;
