@@ -4,4 +4,9 @@
   top: rem(30);
   left: rem(30);
   z-index: 5;
+
+  @media screen and (max-width: $desktopWidth) {
+    display: none;
+  }
+
 }

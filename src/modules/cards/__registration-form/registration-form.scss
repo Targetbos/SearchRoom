@@ -2,7 +2,7 @@
 @import "../../formelements/__radio-buttons/radio-buttons";
 @import "../../formelements/__masked-text-field/masked-text-field";
 @import "../../formelements/__toggle/toggle";
-@import "../../formelements/__buttons/__btn--white/btn--white";
+@import "../../formelements/__buttons/buttons";
 
 .registration-form {
   &__wrap {
@@ -33,11 +33,11 @@
       display: flex;
       justify-content: space-between;
       width: 13.7rem;
-      margin-top: 0.2rem;
+      margin-top: 0.32rem;
     }
 
     &-birthday {
-      margin-top: 0.71rem;
+      margin-top: 0.84rem;
     }
 
     &-authform {
@@ -45,7 +45,7 @@
       flex-direction: column;
       justify-content: space-between;
       min-height: 7.7rem;
-      margin-top: 0.94rem;
+      margin-top: 0.98rem;
     }
 
     &-toggle {
@@ -53,7 +53,7 @@
     }
 
     &-btn-pay {
-      margin-top: 1.4rem;
+      margin-top: 1.35rem;
     }
 
     &-input-btn {
@@ -66,9 +66,9 @@
   }
 
   &__text-input {
-    width: 51.5rem;
+    min-width: 13.85rem;
     letter-spacing: 0;
-    margin-top: 0.58rem;
+    margin-top: 0.57rem;
     line-height: 1.7rem;
   }
 }

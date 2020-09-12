@@ -14,19 +14,13 @@
   &__desc-box {
     display: flex;
     flex-direction: column;
-    margin-left: 2.47rem;
-  }
-
-  &__title {
-    font-family: $fontO;
-    font-size: rem(19);
-    font-weight: bold;
-    margin: rem(8) 0 rem(2);
-    letter-spacing: 0.012rem;
+    margin-left: 2.54rem;
+    padding-top: 0.56rem;
   }
 
   &__desc {
     font-family: $fontOr;
     font-size: rem(19);
+    margin-top: 0.32rem;
   }
 }

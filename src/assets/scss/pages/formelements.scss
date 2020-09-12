@@ -24,45 +24,12 @@
 @import "../../../modules/formelements/__feedback/_feedback.scss";
 
 
-$width-column : (1440 - 140*2)/1440*100%; // ширина колонок
-
-html {
-  font-size: 16px;
-  /* Устанавливает желаемый относительный размер шрифта */
-  -webkit-text-size-adjust: 100%;
-  width: 100%;
-
-  @media screen and (max-width: $desktopWidth) {
-    font-size: 15px;
-  }
-
-  @media screen and (max-width: $tableWidth) {
-    font-size: 14px;
-  }
-
-  @media screen and (max-width: $phoneWidth) {
-    font-size: 14px;
-  }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: $fontM;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.875rem;
-  background-color: #E5E5E5;
-  letter-spacing: -0.2px;
-}
-
-
 .wrapper {
   display: block;
   box-sizing: border-box;
   max-width: rem(1440);
   width: 100%;
-  padding: 8.95rem 8.45rem 2.5rem 8.85rem;
+  padding: 8.97rem 8.39rem 2.5rem 8.88rem;
   background: #ffffff;
   margin: 0 auto;
   position: relative;
@@ -79,7 +46,7 @@ body {
 .container {
   display: flex;
   width: 100%;
-  margin-bottom: 6rem;
+  margin-bottom: 6.15rem;
 
   @media screen and (max-width: $smDesktopWidth) {
     flex-direction: column;
@@ -103,21 +70,19 @@ body {
     padding-right: 4.15rem;
 
     &__text-field {
-      margin-bottom: 1rem;
+      margin-bottom: 1.06rem;
     }
 
     &__dropdown {
-      margin-bottom: 1.1rem;
+      margin-bottom: 1.21rem;
     }
 
-    &__masked-text-field {}
-
     &__date-dropdown {
-      margin-top: 2.36rem;
+      margin-top: 2.37rem;
     }
 
     &__filter-date-dropdown {
-      margin-top: 2.35rem;
+      margin-top: 2.43rem;
     }
 
     &__subscription-text-field {
@@ -136,7 +101,7 @@ body {
     }
 
     &__expandable-checkbox-list {
-      margin-top: 9.4rem;
+      margin-top: 9.47rem;
     }
 
     &__wrap-checkbox-list {
@@ -160,7 +125,7 @@ body {
       margin-top: 1.84rem;
 
       &-wrap {
-        margin-top: 0.75rem;
+        margin-top: 0.85rem;
         display: flex;
         justify-content: space-between;
         width: 13.8rem;
@@ -168,7 +133,7 @@ body {
     }
 
     &__toggle {
-      margin-top: 1.75rem;
+      margin-top: 1.95rem;
 
       &-wrap {
         margin-top: 0.795rem;
@@ -180,7 +145,7 @@ body {
     }
 
     &__like-button {
-      margin-top: 2.62rem;
+      margin-top: 2.67rem;
     }
 
     &__wrap-like-button {
@@ -191,7 +156,7 @@ body {
     }
 
     &__rate-button {
-      margin-top: 2.4rem;
+      margin-top: 2.45rem;
 
       &-wrap {
         display: flex;
@@ -244,17 +209,20 @@ body {
       margin-top: 1rem;
 
       &:nth-child(n+3) {
-        margin-top: 1.86rem;
+        margin-top: 1.9rem;
       }
 
       &-link {
         display: flex;
-        margin-top: 1.86rem;
+        margin-top: 1.95rem;
+        max-width: 9rem;
+        width: 100%;
+        justify-content: space-between;
       }
     }
 
     &__wrap-btn-with-icon {
-      margin-top: 1.86rem;
+      margin-top: 1.9rem;
       width: 100%;
     }
 
@@ -263,7 +231,7 @@ body {
     }
 
     &__wrap-pagination {
-      margin-top: 0.96rem;
+      margin-top: 1rem;
     }
 
     &__dropdown-guest {}

@@ -25,13 +25,9 @@ doctype html
 html
   head
     title Hotel
-    //- link(rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css")
-    //- script(src="https://code.jquery.com/jquery-3.4.1.min.js")
-    //- script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
-    link(rel="stylesheet", href="assets/index.css")
     meta(name = "viewport" content = "width=device-width, initial-scale = 1")
   body
-    .wrapper.wrapper--bgwhite
+    .wrapper
       +logo-no-text()
       .container
         .column.column-left
@@ -54,7 +50,8 @@ html
             +filter-date-dropdown({name: "date-in-out", title: "filter date dropdown"})
 
           .column-left__subscription-text-field.--big-padding-right
-            +subscription-text-field({placeholder: "Email", name: "", title: "subscription text field"})
+            +title-element({title: "subscription text field"})
+            +subscription-text-field({placeholder: "Email", name: ""})
 
         .column.column-center
           .column-center__checkbox-buttons

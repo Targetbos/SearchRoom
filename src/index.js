@@ -1,5 +1,3 @@
-import "./assets/scss/utils/vars.scss";
-
 //import js module
 import "./modules/formelements/__dropdown/__dropdown-guest/dropdown-guest";
 import "./modules/formelements/__dropdown/__dropdown-room/dropdown-room";

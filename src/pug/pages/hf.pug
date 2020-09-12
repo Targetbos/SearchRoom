@@ -1,24 +1,22 @@
 
 include ../../modules/header/__header/header.pug
 include ../../modules/footer/__footer/footer.pug
-include ../../modules/footer/__footer-mobile/footer-mobile.pug
 include ../../modules/formelements/__logo-no-text/logo-no-text.pug
 
 doctype html
 html
   head
     title Header and Footer
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
     meta(name = "viewport" content = "width=device-width, initial-scale = 1")
   body
-    .wrapper.wraphf
-      .overlay.js__overlay
+    .wrap-hf
       +logo-no-text()
-      .wrapper__header
+      .overlay.js__overlay
+      .wrap-hf__header
         +header({auth: true})
-      .wrapper__header-user-block
+      .wrap-hf__header-user-block
         +header({auth: false})
-      .wrapper__footer
-        //- +footer({})
-      .wrapper__footer-mobile 
-        //- +footer-mobile({})
+      .wrap-hf__footer
+        +footer({})
+      .wrap-hf__footer.--mobile
+        +footer({})

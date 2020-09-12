@@ -1,6 +1,7 @@
-// @import "../../forms-elements/__dropdown/__dropdown-guest/dropdown-guest";
-// @import "../../forms-elements/__date-dropdown/date-dropdown";
-// @import "../../forms-elements/__buttons/buttons";
+@import "../../formelements/__date-dropdown/date-dropdown";
+@import "../../formelements/__dropdown/__dropdown-guest/dropdown-guest";
+@import "../../formelements/__buttons/__btn-with-icon/btn-with-icon";
+
 
 .search-room {
     &__wrap {
@@ -23,14 +24,14 @@
     }
 
     &__wrap-date {
-        margin-top: 1.31rem;
+        margin-top: 1.36rem;
     }
 
     &__wrap-guest {
-        margin-top: 1.05rem;
+        margin-top: 1.11rem;
     }
 
     &__wrap-btn {
-        margin-top: 1.65rem;
+        margin-top: 1.7rem;
     }
 }

@@ -6,28 +6,34 @@
       this.overlay = this.list.previousElementSibling;
       this.icon = this.overlay.previousElementSibling;
     }
+    init() {
+      this.checkListBox.onclick = () => {
+        console.log(this)
+        this.showList();
+      }
+      this.overlay.onclick = () => {
+        event.stopPropagation();
+        this.hideList();
+      }
+
+    }
     showList() {
-      this.icon.classList.add("checkbox-list__icon--rotate");
+      this.icon.style.transform = "rotate(-225deg)";
+      this.icon.style.top = "0.4rem";
       this.overlay.classList.add("checkbox-list__overlay--show");
       this.list.classList.add("checkbox-list__list--show");
     }
     hideList() {
-      this.icon.classList.remove("checkbox-list__icon--rotate");
+      this.icon.style.transform = "";
+      this.icon.style.top = "";
       this.overlay.classList.remove("checkbox-list__overlay--show");
       this.list.classList.remove("checkbox-list__list--show");
     }
 
   }
   document.querySelectorAll('.checkbox-list').forEach((list) => {
-    checkboxListInit(list);
+    let newList = new CheckboxList(list);
+    newList.init();
   });
 
-  function checkboxListInit(box) {
-    var list = new CheckboxList(box);
-    list.checkListBox.onclick = () => list.showList();
-    list.overlay.onclick = () => {
-      event.stopPropagation();
-      list.hideList();
-    }
-  }
 })();

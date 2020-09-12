@@ -7,39 +7,32 @@ mixin footer( data )
       .footer__company
         .footer__logo 
           +logo({})
-        .footer__desc Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-      .footer__navigation
-        ul.footer__list
-          span.footer__title НАВИГАЦИЯ
+        .footer__desc 
+          p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+      .footer__list.footer__navigation
+        ul
+          h3 НАВИГАЦИЯ
           each name in (['О нас', 'Новости', 'Служба поддержки', 'Услуги'])
-            li.footer__item
+            li
               a(href=name)=name
-      .footer__aboutAs
-        ul.footer__list 
-          span.footer__title О НАС
+      .footer__list.footer__aboutAs
+        ul
+          h3 О НАС
           each name in (['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы'])
-            li.footer__item
+            li
               a(href=name)=name  
-      .footer__support
-        ul.footer__list
-          span.footer__title СЛУЖБА ПОДДЕРЖКИ
+      .footer__list.footer__support
+        ul
+          h3 СЛУЖБА ПОДДЕРЖКИ
           each name in (['Соглашения', 'Сообщества', 'Связь с нами'])
-            li.footer__item
+            li
               a(href=name)=name  
-      .footer__subscribe
-        span.footer__title ПОДПИСКА
+      .footer__list.footer__subscribe
+        h3 ПОДПИСКА
         p Получайте специальные предложения и новости сервиса
         .footer__wrap-subscribe-form
-          +subscription-text-field({placeholder: "Your email address", name: "subscription"})
+          +subscription-text-field({placeholder: "Email", name: "subscription"})
     .footer__wrap-copyright
       .footer__copyright
-        .footer__copyrightText
-          p Copyright © 2018 Toxin отель. Все права защищены.
-        .footer__social-btn
-          +social-btn({})
-    .footer-mobile__wrap
-      .footer-mobile__wrap-logo
-        +logo({})
-      p.footer-mobile__desc Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-      .footer-mobile__wrap-social-btn  
+        p Copyright © 2018 Toxin отель. Все права защищены.
         +social-btn({})

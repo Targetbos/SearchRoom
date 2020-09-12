@@ -140,3 +140,15 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../../fonts/icomoon.eot?ycday');
+  src: url('../../fonts/icomoon.eot?ycday#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?ycday') format('truetype'),
+    url('../../fonts/icomoon.woff?ycday') format('woff'),
+    url('../../fonts/icomoon.svg?ycday#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

@@ -3,17 +3,17 @@ include ../../modules/cards/__registration-form/registration-form.pug
 include ../../modules/cards/__booking-room/booking-room.pug
 include ../../modules/cards/__login-form/login-form.pug
 include ../../modules/cards/__desc-room/desc-room.pug
+include ../../modules/formelements/__logo-no-text/logo-no-text.pug
 
 doctype html
 html
   head
     title Hotel
-    script(src="https://code.jquery.com/jquery-3.4.1.min.js")
-    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
     meta(name = "viewport" content = "width=device-width, initial-scale = 1")
 
   body
     .wrap
+      +logo-no-text({})
       .container
         .column.left-column
           .left-column__wrap-search-room

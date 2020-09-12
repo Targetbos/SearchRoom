@@ -17,16 +17,14 @@ const PATHS = {
 const PAGES_DIR = `${PATHS.src}/pug/pages/`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
-
-
 module.exports = {
   externals: {
     paths: PATHS
   },
   entry: {
-    colorstypes: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/colorstypes.scss`],
-    formelements: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`],
-    cards: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/cards.scss`],
+    // colorstypes: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/colorstypes.scss`],
+    // formelements: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`],
+    // cards: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/cards.scss`],
     hf: [`${PATHS.src}/index.js`, `${PATHS.src}/assets/scss/pages/hf.scss`]
   },
   output: {
@@ -41,9 +39,7 @@ module.exports = {
   module: {
     rules: [{
         test: /\.pug$/,
-        loader: ['pug-loader',
-          'pug-html-loader'
-        ]
+        use: ['pug-loader']
       }, {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -51,6 +47,7 @@ module.exports = {
       }, {
         test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
+        exclude: /\\(img|images)\\/i,
         options: {
           name: '[name].[ext]',
           outputPath: `${PATHS.assets}fonts/`,
@@ -59,12 +56,18 @@ module.exports = {
       }, {
         test: /\.(png|jpg|gif|svg)$/,
         loader: "file-loader",
-        exclude: `/assets/fonts/`,
+        exclude: /\\(fonts)\\/i,
         options: {
           name: `[name].[ext]`,
           outputPath: `${PATHS.assets}images/`,
-          publicPath: `../images/`
-
+          publicPath: (name, pathFile) => {
+            let regExpFonts = /\\(img)\\/i;
+            if (regExpFonts.test(pathFile) == true) {
+              return `assets/images/${name}`;
+            } else {
+              return `../images/${name}`;
+            }
+          }
         },
       }, {
         test: /\.scss$/,
