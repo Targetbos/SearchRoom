@@ -3,6 +3,7 @@
     display: flex;
     padding-top: 0.0625rem;
     width: 100%;
+    margin-bottom: 0.1rem;
 
     input {
       display: none;
@@ -20,11 +21,11 @@
     margin-right: 0.625rem;
   }
 
-  &__label>input:checked+&__icon {
+  &__label > input:checked + &__icon {
     border: 1px solid $purple;
   }
 
-  &__label>input:checked+&__icon:before {
+  &__label > input:checked + &__icon:before {
     content: " ";
     width: rem(6);
     height: rem(8);

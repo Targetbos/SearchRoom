@@ -8,8 +8,8 @@
     display: inline-flex;
     align-items: center;
     cursor: pointer;
-    width: 2.5rem;
-    height: 1.25rem;
+    width: rem(40);
+    height: rem(20);
 
     input {
       display: none;
@@ -36,18 +36,18 @@
 
   &__icon:before {
     content: " ";
-    background: url('images/like-icon.png') -2.25rem -0.5rem;
+    background: url("images/like-icon.png") -2.25rem -0.5rem;
     width: 0.812rem;
     height: 0.812rem;
     float: left;
     cursor: pointer;
   }
 
-  &__label>input:checked+&__wrap-btn>&__icon:before {
-    background: url('images/like-icon.png') -0.375rem -0.5rem;
+  &__label > input:checked + &__wrap-btn > &__icon:before {
+    background: url("images/like-icon.png") -0.375rem -0.5rem;
   }
 
-  &__label>input:checked+&__wrap-btn {
+  &__label > input:checked + &__wrap-btn {
     border: 1px solid $purple;
   }
 }

@@ -1,5 +1,5 @@
 .range-slider {
-  margin-top: 1.4rem;
+  margin-top: 1.45rem;
 
   &__wrap {
     display: block;
@@ -15,13 +15,13 @@
 .ui-slider .ui-slider-handle {
   width: rem(14);
   height: rem(14);
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-  border: 2px solid #FFFFFF;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border: 2px solid #ffffff;
   border-radius: rem(10);
   cursor: pointer;
 }
 
 .ui-slider .ui-slider-range {
   height: rem(6);
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 }

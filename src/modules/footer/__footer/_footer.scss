@@ -14,16 +14,12 @@
     width: 100%;
     box-sizing: border-box;
 
-
     @media screen and (max-width: $desktopWidth) {
       max-width: 100%;
       justify-content: center;
       padding: 7.4rem 1rem 0;
       margin: 0 auto;
     }
-
-
-
   }
 
   &__company {
@@ -138,14 +134,14 @@
     justify-content: center;
     max-width: rem(1160);
     width: 100%;
-    padding: 1.5rem 1rem;
     box-sizing: border-box;
     border-top: 1px solid $dark-10;
+    padding: 1.5rem 0;
     margin: 0 auto;
 
     @media screen and (max-width: $desktopWidth) {
+      padding: 1.5rem 1rem;
       max-width: 100%;
-
     }
 
     @media screen and (max-width: 768px) {
@@ -160,7 +156,7 @@
     align-items: center;
     max-width: rem(1160);
     width: 100%;
-
+    color: $dark-75;
 
     @media screen and (max-width: 768px) {
       flex-direction: column;

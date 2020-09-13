@@ -17,10 +17,8 @@
   }
 
   &__icon {
-    position: absolute;
-    top: 1.25rem;
+    top: 1.315rem;
     right: 1.15rem;
-    z-index: 115;
   }
 
   &__overlay {
@@ -43,7 +41,7 @@
     height: rem(119);
     box-sizing: border-box;
     position: absolute;
-    top: 2.9rem;
+    top: 3rem;
     z-index: 116;
     overflow: hidden;
     opacity: 1;
@@ -67,7 +65,7 @@
     box-sizing: border-box;
 
     &:after {
-      content: '';
+      content: "";
       display: table;
       clear: both;
     }
@@ -89,7 +87,7 @@
     align-items: flex-start;
     float: right;
     padding-top: 0.125rem;
-    margin-right: 0.0625rem;
+    margin-right: 0.15rem;
   }
 
   &__btn {

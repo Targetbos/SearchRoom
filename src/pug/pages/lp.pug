@@ -1,0 +1,18 @@
+include ../../modules/header/__header/header.pug
+include ../../modules/footer/__footer/footer.pug
+include ../../modules/cards/__search-room/search-room.pug
+doctype html
+html
+  head
+    title First Page
+    meta(name = "viewport" content = "width=device-width, initial-scale = 1")
+  body
+    .wrapper
+      header
+        .header__wrap
+          +header({auth: true})
+      content.content__wrap
+        +search-room({})
+        .content__wrap-text
+          p Лучшие номера для вашей работы, отдыха и просто вдохновения
+      +footer({})

@@ -3,50 +3,40 @@
 @import "./fonts";
 @import "./reset";
 // Font
-$mainFont : 'Montserrat',
-Helvetica,
-Arial,
-sans-serif;
+$mainFont: "Montserrat", Helvetica, Arial, sans-serif;
 
 // Size
-$mainFontSize : 16px;
-$mainFontWeight : 400;
-$mainLineHeight : 1.4;
+$mainFontSize: 16px;
+$mainFontWeight: 400;
+$mainLineHeight: 1.4;
 
-$fullHDWidth : 1920px;
-$desktopWidth : 1280px;
-$smDesktopWidth : 980px;
-$tableWidth : 768px;
-$phoneWidth : 480px;
-$smPhoneWidth : 320px;
+$fullHDWidth: 1920px;
+$desktopWidth: 1280px;
+$smDesktopWidth: 980px;
+$tableWidth: 768px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
 
 //color
-$color: #1F2041;
-$purple: #BC9CFF;
+$color: #1f2041;
+$purple: #bc9cff;
 $green: #6fcf97;
 $dark-100: $color;
 $dark-75: rgba(31, 32, 65, 0.75);
-$dark-50: rgba(31, 32, 65, 0.50);
+$dark-50: rgba(31, 32, 65, 0.5);
 $dark-25: rgba(31, 32, 65, 0.25);
-$dark-10: rgba(31, 32, 65, 0.10);
+$dark-10: rgba(31, 32, 65, 0.1);
 $dark-5: rgba(31, 32, 65, 0.05);
-$btn-bg: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); // цвет фона кнопок
-
+$btn-bg: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%); // цвет фона кнопок
 
 $height-header: 4.37rem; //высота шапки с меню
 // $width-content: ($fullHDWidth- 140px)/$fullHDWidth*100%; // ширина блока с контентом с учётом отступов по 140px по краям
 $br: 1px solid #666; // граница для тестов
 
-$fontM: Montserrat,
-'Open Sans',
-sans-serif;
-$fontO: Quicksand,
-'Open Sans',
-sans-serif;
-$fontOr: 'Quicksand-Regular',
-'Open Sans',
-sans-serif;
-$ruble: 'rouble';
+$fontM: Montserrat, "Open Sans", sans-serif;
+$fontO: Quicksand, "Open Sans", sans-serif;
+$fontOr: "Quicksand-Regular", "Open Sans", sans-serif;
+$ruble: "rouble";
 
 *,
 *:before,
@@ -78,16 +68,14 @@ html {
   @media screen and (max-width: $tableWidth) {
     font-size: 14px;
   }
-
 }
-
 
 body {
   font-size: rem(14);
   font-family: $fontM;
   font-style: normal;
   font-weight: $mainFontWeight;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 h1 {
@@ -113,6 +101,7 @@ h3 {
   font-family: $fontM;
   font-size: 0.75rem;
   font-weight: bold;
+  line-height: rem(15);
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -131,19 +120,24 @@ input {
   min-width: 12rem;
   width: 100%;
   font-family: $fontM;
-  font-size: 0.875rem;
-  line-height: 1.8;
-  padding: 0.5rem 0.875rem;
+  font-size: rem(14);
+  line-height: rem(24);
+  padding: 0.59rem rem(15);
   border-radius: 4px;
   border: 1px solid $dark-25;
-  margin: 0.25rem 0;
-  letter-spacing: rem(-0.2);
+  margin: rem(5) 0;
+  letter-spacing: -0.009rem;
   color: $dark-75;
   transition: border 0.4s ease;
 
+  &::-webkit-input-placeholder {
+    color: $dark-25;
+  }
 
   &:hover,
   &:focus {
+    color: $dark-75;
+    outline: none;
     border-color: $dark-50;
   }
 }
@@ -151,7 +145,7 @@ input {
 [class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -165,7 +159,6 @@ input {
 }
 
 .ruble {
-
   &:after {
     content: "v";
     font-family: $ruble;
@@ -196,7 +189,8 @@ input {
   display: block;
   width: 1.125rem;
   height: 1.125rem;
-  background: url("data:image/svg+xml,%0A%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='9' y1='-13' x2='9' y2='31' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat;
+  background: url("data:image/svg+xml,%0A%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='9' y1='-13' x2='9' y2='31' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+    no-repeat;
   background-size: contain;
   position: absolute;
   cursor: pointer;

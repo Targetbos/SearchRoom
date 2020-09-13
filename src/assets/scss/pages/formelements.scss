@@ -23,7 +23,6 @@
 @import "../../../modules/formelements/__bullet-list/_bullet-list.scss";
 @import "../../../modules/formelements/__feedback/_feedback.scss";
 
-
 .wrapper {
   display: block;
   box-sizing: border-box;
@@ -46,7 +45,7 @@
 .container {
   display: flex;
   width: 100%;
-  margin-bottom: 6.15rem;
+  margin-bottom: 5.939rem;
 
   @media screen and (max-width: $smDesktopWidth) {
     flex-direction: column;
@@ -63,36 +62,34 @@
 
   @media screen and (max-width: $smDesktopWidth) {
     max-width: 100%;
-
   }
 
   &-left {
     padding-right: 4.15rem;
 
     &__text-field {
-      margin-bottom: 1.06rem;
+      margin-bottom: 0.945rem;
     }
 
     &__dropdown {
-      margin-bottom: 1.21rem;
+      margin-bottom: 1.01rem;
     }
 
     &__date-dropdown {
-      margin-top: 2.37rem;
+      margin-top: 2.22rem;
     }
 
     &__filter-date-dropdown {
-      margin-top: 2.43rem;
+      margin-top: 2.175rem;
     }
 
     &__subscription-text-field {
-      margin-top: 2.34rem;
+      margin-top: 2.26rem;
     }
 
     &__dropdown-room {
-
       &-inner {
-        margin-bottom: 1.1rem;
+        margin-bottom: 0.89rem;
       }
     }
 
@@ -101,14 +98,15 @@
     }
 
     &__expandable-checkbox-list {
-      margin-top: 9.47rem;
+      margin-top: 9.58rem;
     }
 
     &__wrap-checkbox-list {
-      margin-bottom: 2.99rem;
+      margin-bottom: 3.11rem;
     }
 
-    &__advantages {}
+    &__advantages {
+    }
   }
 
   &-center {
@@ -117,7 +115,7 @@
 
     &__checkbox-buttons {
       &-wrap {
-        margin-top: 15px;
+        margin-top: rem(16.56);
       }
     }
 
@@ -125,7 +123,7 @@
       margin-top: 1.84rem;
 
       &-wrap {
-        margin-top: 0.85rem;
+        margin-top: 0.95rem;
         display: flex;
         justify-content: space-between;
         width: 13.8rem;
@@ -133,10 +131,10 @@
     }
 
     &__toggle {
-      margin-top: 1.95rem;
+      margin-top: 1.9rem;
 
       &-wrap {
-        margin-top: 0.795rem;
+        margin-top: 0.84rem;
 
         &:last-child {
           margin-top: 0.65rem;
@@ -145,14 +143,15 @@
     }
 
     &__like-button {
-      margin-top: 2.67rem;
+      margin-top: 2.69rem;
     }
 
     &__wrap-like-button {
+      display: block;
       width: 5.62rem;
       display: flex;
       justify-content: space-between;
-      margin-top: 0.94rem;
+      margin-top: rem(16);
     }
 
     &__rate-button {
@@ -176,11 +175,11 @@
 
     &__rich-checkbox-btn {
       max-width: 17.5rem;
-      margin-top: 15.9rem;
+      margin-top: 15.75rem;
     }
 
     &__wrap-checkbox {
-      margin-top: 0.875rem;
+      margin-top: 0.89rem;
     }
   }
 
@@ -193,7 +192,7 @@
     }
 
     &__buttons {
-      margin-top: 2.7rem;
+      margin-top: 2.79rem;
     }
 
     &__wrap-btn {
@@ -208,7 +207,7 @@
       margin-right: rem(19);
       margin-top: 1rem;
 
-      &:nth-child(n+3) {
+      &:nth-child(n + 3) {
         margin-top: 1.9rem;
       }
 
@@ -227,17 +226,21 @@
     }
 
     &__pagination {
-      margin-top: 2.5rem;
+      margin-top: 2.57rem;
     }
 
     &__wrap-pagination {
+      display: block;
+      padding-right: 4.9rem;
       margin-top: 1rem;
+      box-sizing: border-box;
     }
 
-    &__dropdown-guest {}
+    &__dropdown-guest {
+    }
 
     &__bullet-list {
-      margin-top: 15.9rem;
+      margin-top: 15.75rem;
       width: 16.25rem;
     }
 
@@ -258,5 +261,5 @@
 }
 
 .--margin-top {
-  margin-top: 12.06rem;
+  margin-top: 12.03rem;
 }
