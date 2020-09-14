@@ -4,10 +4,10 @@ mixin date-dropdown( data )
     .date-dropdown__wrap-date-picker
       .date-dropdown__inner
         h3= data.titleIn 
-        input.datepicker-here(type="text" value="" name=data.nameIn placeholder= data.placeholderIn  data-position="bottom left")
+        input.date-dropdown__in-day.js__datePicker(type="text" value="" name=data.nameIn placeholder= data.placeholderIn  data-position="bottom left")
         i.date-dropdown__date-icon.icon-arrow
       .date-dropdown__inner
         h3= data.titleOut
-        input.datepicker-here(type="text" value="" name=data.nameOut placeholder= data.placeholderOut data-position="bottom right")
+        input.date-dropdown__out-day.js__datePicker(type="text" value="" name=data.nameOut placeholder= data.placeholderOut data-position="bottom right")
         i.date-dropdown__date-icon.icon-arrow
 <!-- Конец 2 текстовых поля выбора даты заезда и выезда -->
