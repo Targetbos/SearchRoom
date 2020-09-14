@@ -1,7 +1,6 @@
 @import "../../formelements/__text-field/text-field";
 @import "../../formelements/__buttons/buttons";
 
-
 .login-form {
   &__wrap {
     display: flex;
@@ -16,15 +15,11 @@
   }
 
   &__email-field {
-    margin-top: 0.95rem;
-  }
-
-  &__password-field {
-    margin-top: 0.13rem;
+    margin-top: 0.94rem;
   }
 
   &__wrap-btn-input {
-    margin-top: 1rem;
+    margin-top: 0.85rem;
   }
 
   &__wrap-registration-btn {

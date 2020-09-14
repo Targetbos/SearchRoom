@@ -8,7 +8,6 @@
 @import "../../../modules/cards/__registration-form/registration-form.scss";
 @import "../../../modules/cards/__search-room/search-room";
 
-
 .wrap {
   display: block;
   position: relative;
@@ -42,7 +41,6 @@
   }
 }
 
-
 .left-column {
   max-width: rem(420);
 
@@ -55,7 +53,7 @@
   }
 
   &__wrap-registration-form {
-    margin-top: 2.65rem;
+    margin-top: 2.56rem;
   }
 }
 
@@ -80,7 +78,6 @@
     justify-content: center;
     margin: 0 auto;
     margin-top: 2rem;
-
   }
 
   &__wrap-datepicker {
@@ -91,7 +88,7 @@
   }
 
   &__wrap-desc-room {
-    margin-top: 2.5rem;
+    margin-top: 2.43rem;
 
     @media screen and (max-width: $smDesktopWidth) {
       margin: 0 auto;
@@ -101,10 +98,9 @@
   &__wrap-desc-room2 {
     @media screen and (max-width: $smDesktopWidth) {
       margin: 0 auto;
-
     }
 
-    margin-top: 2.1rem;
+    margin-top: 2.4rem;
   }
 }
 

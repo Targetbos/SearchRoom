@@ -2,7 +2,6 @@
 @import "../../formelements/__dropdown/__dropdown-guest/dropdown-guest";
 @import "../../formelements/__buttons/__btn-with-icon/btn-with-icon";
 
-
 .search-room {
     &__wrap {
         display: flex;
@@ -28,10 +27,10 @@
     }
 
     &__wrap-guest {
-        margin-top: 1.11rem;
+        margin-top: 0.83rem;
     }
 
     &__wrap-btn {
-        margin-top: 1.7rem;
+        margin-top: 1.63rem;
     }
 }

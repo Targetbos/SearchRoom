@@ -72,17 +72,17 @@
   }
 
   &__wrap-guest-form {
-    margin-top: 1.12rem;
+    margin-top: 0.87rem;
   }
 
   &__wrap-service-cost {
-    margin-top: .96rem;
+    margin-top: 0.78rem;
   }
 
   &__inner-service {
     display: block;
     letter-spacing: 0px;
-    padding-bottom: 0.815rem;
+    padding-bottom: 0.85rem;
     line-height: 1.2rem;
 
     &:after {
@@ -105,7 +105,6 @@
     span {
       font-size: rem(14);
     }
-
   }
 
   &__service {
@@ -119,7 +118,8 @@
       }
     }
 
-    &-days {}
+    &-days {
+    }
   }
 
   &__service-cost {
@@ -148,7 +148,7 @@
     text-align: center;
     color: $dark-25;
     cursor: pointer;
-    margin-left: rem(1);
+    margin-left: 0.17rem;
   }
 
   &__wrap-total-cost {
@@ -159,7 +159,7 @@
     font-size: rem(19);
     line-height: 1.5rem;
     font-weight: bold;
-    margin-top: 0.87rem;
+    margin-top: 0.77rem;
     letter-spacing: -0.1px;
     margin-left: 1px;
   }
@@ -172,7 +172,6 @@
   }
 
   &__total-cost {
-
     &:after {
       content: "a";
       font-family: "rouble";

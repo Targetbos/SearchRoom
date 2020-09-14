@@ -46,7 +46,7 @@
   &__dots-wrap {
     display: flex;
     position: absolute;
-    bottom: 0.875rem;
+    bottom: 0.88rem;
     right: 0.875rem;
   }
 
@@ -113,7 +113,7 @@
 
   &__wrap-desc {
     min-width: 100%;
-    padding: 1.22rem 1rem rem(19) rem(20);
+    padding: 1.25rem 1rem 0.95rem rem(20);
     display: flex;
     align-items: flex-end;
     flex-direction: column;
@@ -163,7 +163,7 @@
     &:after {
       content: "c";
       font-family: "rouble";
-      margin-right: 0.35rem;
+      margin-right: 0.2rem;
     }
   }
 
@@ -179,8 +179,8 @@
     box-sizing: border-box;
     width: 100%;
     border-top: 1px solid $dark-25;
-    margin-top: 0.45rem;
-    padding: 0.5rem 0.3rem 0 0.1rem;
+    margin-top: 0.65rem;
+    padding: 0.5rem 0.16rem 0 0.1rem;
   }
 
   &__wrap-feedback {
