@@ -1,4 +1,12 @@
-//- - var addedComfortArr = [ {value: "value", text: "text", checked: true}, {value: "value", text: "text", checked: true},{value: "value", text: "text", checked: true},{value: "value", text: "text", checked: true}]
+-
+  var addedComfortArr = [
+    {value: "breakfast", text: "Завтрак", checked: false},
+    {value: "desk", text: "Письменный стол", checked: true},
+    {value: "feedingСhair", text: "Стул для кормления", checked: true},
+    {value: "cot", text: "Кроватка", checked: true},
+    {value: "tv", text: "Телевизор", checked: false},
+    {value: "shampoo", text: "Шампунь", checked: false},
+    ]
 
 include ../../modules/header/__header/header.pug
 include ../../modules/footer/__footer/footer.pug
@@ -47,7 +55,7 @@ html
             .left-aside__wrap-comfort-room
               +dropdown-room({title: "Удобства номера"})
             .left-aside__wrap-dop-comfort-room
-              +expandable-checkbox-list({titleList: "Дополнительные удобства", nameList: "addedComfort", items: [{value: "value", text: "text", checked: true}, {value: "value", text: "text", checked: true}, {value: "value", text: "text", checked: true}, {value: "value", text: "text", checked: true}]})
+              +expandable-checkbox-list({titleList: "Дополнительные удобства", nameList: "addedComfort", items: addedComfortArr})
           content.content__inner
             h1 Номера, которые мы для вас подобрали 
             .content__wrap-desc-room

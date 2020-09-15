@@ -1,3 +1,13 @@
+-
+  var checkboxListArr = [
+    {value: "breakfast", text: "Завтрак", checked: false},
+    {value: "desk", text: "Письменный стол", checked: true},
+    {value: "feedingСhair", text: "Стул для кормления", checked: true},
+    {value: "cot", text: "Кроватка", checked: true},
+    {value: "tv", text: "Телевизор", checked: false},
+    {value: "shampoo", text: "Шампунь", checked: false},
+    ]
+
 include ../../modules/formelements/__logo-no-text/logo-no-text.pug
 include ../../modules/formelements/__title-element\title-element.pug
 include ../../modules/formelements/__like-button\like-button.pug
@@ -143,9 +153,9 @@ html
               +dropdown-room({name:"select-room", open: true, title: "dropdown", subtitle: "EXPANDED", marginTop:true})
           .column-left__expandable-checkbox-list.--big-padding-right
             .column-left__wrap-checkbox-list
-              +expandable-checkbox-list({name: "conditions", title: "expandable checkbox list"})
+              +expandable-checkbox-list({titleList: "expandable checkbox list", nameList: "conditions", items: checkboxListArr})
             .column-left__wrap-checkbox-list
-              +expandable-checkbox-list({name: "conditions", title: "expandable checkbox list"})
+              +expandable-checkbox-list({titleList: "expandable checkbox list", nameList: "conditions", items: checkboxListArr})
 
         .column.column-center 
           .column-center__dropdown-guest

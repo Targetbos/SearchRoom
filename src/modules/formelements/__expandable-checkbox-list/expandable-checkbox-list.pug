@@ -5,7 +5,4 @@ mixin expandable-checkbox-list( data )
     .checkbox-list__overlay
     .checkbox-list__list
       each item in data.items
-        span= item.value
-        span= item.text
-        span= item.checked
-        //- +checkbox-item({name: `${data.nameList}`, value: `${item.value}`, text: `${item.text}`, checked: item.checked})
+        +checkbox-item({name: `${data.nameList}`, value: `${item.value}`, text: `${item.text}`, checked: item.checked})
