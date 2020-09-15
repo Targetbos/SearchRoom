@@ -1,0 +1,108 @@
+.wrapper {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  .footer {
+    border-top: 1px solid $dark-10;
+    &__wrap-copyright {
+      border-top: 1px solid $dark-10;
+      max-width: 100%;
+      width: 100%;
+    }
+    &__copyright {
+      max-width: 72.5rem;
+    }
+  }
+}
+.main__wrap {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: rem(30) 0 3.95rem;
+  .container {
+    display: flex;
+    max-width: rem(1160);
+    margin: 0 auto;
+  }
+}
+.left-aside {
+  display: flex;
+  flex-direction: column;
+  max-width: rem(266);
+  width: 100%;
+  margin-right: rem(60);
+  &__wrap-guest {
+    margin-top: 0.92rem;
+  }
+  &__wrap-range-slider {
+    margin-top: 1.51rem;
+    p {
+      font-size: rem(12);
+      margin-top: 0.6rem;
+    }
+  }
+  &__wrap-checkbox {
+    margin-top: 1.5rem;
+    &-item {
+      margin-top: 1rem;
+    }
+  }
+  &__wrap-rich-checkbox {
+    margin-top: 1.18rem;
+    &-item {
+      margin-top: 0.85rem;
+    }
+    .rich-checkbox-btn__desc {
+      padding-right: 0.5rem;
+    }
+  }
+  &__wrap-comfort-room {
+    margin-top: 1.305rem;
+  }
+  &__wrap-dop-comfort-room {
+    margin-top: 1.48rem;
+  }
+}
+.content {
+  &__inner {
+    display: block;
+    width: 100%;
+    h1 {
+      letter-spacing: 0;
+    }
+    &-desc-room {
+      display: flex;
+      margin-bottom: 2.05rem;
+      box-shadow: 0 rem(10) rem(20) $dark-5;
+    }
+    .desc-room__wrap-desc {
+      padding: 1.25rem 1rem 0.075rem 1.25rem;
+    }
+  }
+  &__wrap-desc-room {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+  }
+  &__wrap-pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1.38rem auto 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    .pagination {
+      display: block;
+      width: 15.78rem;
+      &__wrap-block {
+        max-width: 100%;
+        min-width: 15rem;
+        width: 15rem;
+      }
+    }
+  }
+}

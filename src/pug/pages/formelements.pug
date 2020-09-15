@@ -24,7 +24,7 @@ include ../../modules/formelements/__feedback/feedback.pug
 doctype html
 html
   head
-    title Hotel
+    title FormElements
     meta(name = "viewport" content = "width=device-width, initial-scale = 1")
   body
     .wrapper
@@ -82,8 +82,8 @@ html
           .column-center__rate-button
             +title-element({title: "rate button"})
             .column-center__rate-button-wrap
-              +rate-button({name: "rating", numroom: 800})
-              +rate-button({name: "rating1", numroom: 801})
+              +rate-button({name: "rating", numroom: 800, rate: 4})
+              +rate-button({name: "rating1", numroom: 801,rate: 5})
 
         .column.column-right
           .column-right__range-slider

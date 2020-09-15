@@ -118,7 +118,7 @@
     }
 
     sumGuests() {
-      return this.adults + this.children + this.babies;
+      return this.adults + this.children;
     }
     apply() {
       this.inputGuests.dataset.adults = this.adults;
@@ -132,7 +132,10 @@
       if (sum == 0) {
         str = "Сколько гостей";
       } else {
-        str = sum == 1 ? sum + " гость" : sum > 1 && sum < 5 ? sum + " гостя" : sum > 4 ? sum + " гостей" : "Сколько гостей?";
+        let guests = sum == 1 ? sum + " гость" : sum > 1 && sum < 5 ? sum + " гостя" : sum > 4 ? sum + " гостей" : "Сколько гостей?"; 
+        let babies = this.babies; 
+        let babiesStr = this.babies == 1 ? ", " + babies + " младенец" : babies > 1 && babies < 5 ? ", " + babies + " младенца" : babies > 4 ? ", " + babies + " младенецев" : "";  
+        str = guests + babiesStr; 
       }
 
       this.inputGuests.value = str;

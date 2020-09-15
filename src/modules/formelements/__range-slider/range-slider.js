@@ -1,4 +1,5 @@
 import 'webpack-jquery-ui/slider'
+import './_range-slider.scss'
 (function () {
   $(".js__range-slider").slider({
     animate: "slow",

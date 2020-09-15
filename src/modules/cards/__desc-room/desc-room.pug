@@ -17,7 +17,7 @@ mixin desc-room( data )
             span.desc-room__number-room=data.number
             span.desc-room__type=data.type
           .desc-room__wrap-price
-            span.desc-room__cost-per-day=data.price 
+            span.desc-room__cost-per-day=data.price
             span.desc-room__cost-day в сутки
         .desc-room__rating-wrap
           +rate-button({name: "rating-room-"+data.number, numroom: data.number})

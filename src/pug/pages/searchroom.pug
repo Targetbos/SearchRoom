@@ -1,0 +1,56 @@
+//- - var addedComfortArr = [ {value: "value", text: "text", checked: true}, {value: "value", text: "text", checked: true},{value: "value", text: "text", checked: true},{value: "value", text: "text", checked: true}]
+
+include ../../modules/header/__header/header.pug
+include ../../modules/footer/__footer/footer.pug
+include ../../modules/formelements/__title-element/title-element.pug
+include ../../modules/formelements/__filter-date-dropdown/filter-date-dropdown.pug
+include ../../modules/formelements/__range-slider/range-slider.pug
+include ../../modules/formelements/__checkbox-buttons/checkbox-buttons.pug
+include ../../modules/formelements/__rich-checkbox-btn/rich-checkbox-btn.pug
+include ../../modules/formelements/__pagination/pagination.pug
+include ../../modules/formelements/__expandable-checkbox-list/expandable-checkbox-list.pug
+include ../../modules/formelements/__dropdown/__dropdown-guest/dropdown-guest.pug
+include ../../modules/formelements/__dropdown/__dropdown-room/dropdown-room.pug
+
+doctype html
+html
+  head
+    title Search Room
+    meta(name = "viewport" content = "width=device-width, initial-scale = 1")
+  body
+    .wrapper
+      .overlay.js__overlay
+      header
+        +header({auth: true})
+      main.main__wrap
+        .container
+          aside.left-aside
+            .left-aside__wrap-date-dropdown
+              +title-element({ title: "Даты пребывания в отеле"})
+              +filter-date-dropdown({name: "dateFilter"})
+            .left-aside__wrap-guest
+              +dropdown-guest({name: "guest", title: "Гости"})
+            .left-aside__wrap-range-slider
+              +range-slider({title: "Диапазон цены", name: "priceRange"})
+              p Cтоимость за сутки пребывания в номере
+            .left-aside__wrap-checkbox
+              +title-element({title: "checkbox buttons"})
+              .left-aside__wrap-checkbox-item
+                +checkbox-item({name: "checkbox", checked:false, text: "Можно курить", value: "smoke"})
+                +checkbox-item({name: "checkbox", checked:true, text: "Можно с питомцами", value: "animal"})
+                +checkbox-item({name: "checkbox", checked:true, text: "Можно пригласить гостей (до 10 человек)", value: "guest"})
+            .left-aside__wrap-rich-checkbox
+              +title-element({title: "Доступность"})
+              .left-aside__wrap-rich-checkbox-item
+                +rich-checkbox-buttons({name: "wide-corridor", head: "Широкий коридор", desc: "Ширина коридоров в номере не менее 91 см"})
+                +rich-checkbox-buttons({name: "assistent", head: "Помощник для инвалидов", desc: "На 1 этаже вас встретит специалист и проводит до номера"})
+            .left-aside__wrap-comfort-room
+              +dropdown-room({title: "Удобства номера"})
+            .left-aside__wrap-dop-comfort-room
+              +expandable-checkbox-list({titleList: "Дополнительные удобства", nameList: "addedComfort", items: [{value: "value", text: "text", checked: true}, {value: "value", text: "text", checked: true}, {value: "value", text: "text", checked: true}, {value: "value", text: "text", checked: true}]})
+          content.content__inner
+            h1 Номера, которые мы для вас подобрали 
+            .content__wrap-desc-room
+            .content__wrap-pagination 
+              +pagination({})
+      +footer({})

@@ -1,5 +1,3 @@
-@import "../utils/vars.scss"; //scss шрифтов
-
 @import "../../../modules/formelements/__logo-no-text/logo-no-text";
 @import "../../../modules/formelements/__text-field/_text-field.scss";
 @import "../../../modules/formelements/__title-element/_title-element.scss";
@@ -158,7 +156,7 @@
         display: flex;
         justify-content: space-between;
         width: 16.35rem;
-        margin-top: 1rem;
+        margin-top: 1.1rem;
       }
     }
 

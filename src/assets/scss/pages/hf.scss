@@ -1,7 +1,6 @@
-@import "../utils/vars.scss";
-@import '../../../modules/header/__header/header';
-@import '../../../modules/footer/__footer/_footer.scss';
-@import '../../../modules/formelements/__logo-no-text/logo-no-text';
+@import "../../../modules/header/__header/header";
+@import "../../../modules/footer/__footer/_footer.scss";
+@import "../../../modules/formelements/__logo-no-text/logo-no-text";
 
 .wrap-hf {
   display: block;
@@ -46,7 +45,6 @@
 
   &__footer {
     margin-top: rem(40);
-
   }
 }
 

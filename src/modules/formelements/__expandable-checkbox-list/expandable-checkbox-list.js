@@ -1,3 +1,4 @@
+import './_expandable-checkbox-list.scss';
 (function () {
   class CheckboxList {
     constructor(box) {

@@ -13,7 +13,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       warnings: true,
       errors: true
     },
-    openPage: `lp.html`,
+    openPage: `searchroom.html`,
     open: true
 
   },

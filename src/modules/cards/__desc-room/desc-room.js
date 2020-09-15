@@ -15,7 +15,7 @@ class SliderRoom {
 
   init() {
     this.createDot();
-    this.addClickSliderBtn()
+    this.addClickSliderBtn();
   }
   createDot() {
     for (let [id, img] of this.arrImages().entries()) {
@@ -41,13 +41,15 @@ class SliderRoom {
   }
   addClickSliderBtn() {
     let wrapBtn = this.dotsWrap.nextElementSibling;
-    let btnBack = wrapBtn.firstChild;
-    let btnNext = wrapBtn.lastChild;
+    let btnBack = wrapBtn.firstElementChild;
+    let btnNext = wrapBtn.lastElementChild;
+    console.log(wrapBtn)
     btnBack.onclick = () => {
       this.backImageView()
     }
     btnNext.onclick = () => {
       this.nextImageView()
+
     }
 
   }
@@ -81,12 +83,13 @@ class SliderRoom {
 
 
 }
-
-document.querySelectorAll(".js__container").forEach((el) => {
-  var sliderRoom = new SliderRoom(el);
-  sliderRoom.init();
-})
-
+export function addSliderDescRoom(){
+  document.querySelectorAll(".js__container").forEach((el) => {
+    var sliderRoom = new SliderRoom(el);
+    sliderRoom.init();
+  })
+}
+addSliderDescRoom();
 
 export function descRoomView(arrayRoom) { //возвращает структуру представления комнаты 
   let imgLink = arrayRoom.imgLink;
@@ -96,16 +99,15 @@ export function descRoomView(arrayRoom) { //возвращает структу�
                   <ul class="desc-room__container js__container">
                     ${imgLink.map((link,id)=>
                       `<li class="desc-room__item js__item-desc-room">
-                        <img class="desc-room__img" src= "${link}">
+                        <img src= "${link}" alt="Интерьер номера №${arrayRoom.number}" class="desc-room__img" >
                       </li>`).join("")
                     }
                   </ul>
                   <div class="desc-room__dots-wrap"></div>
                   <div class="desc-room__wrap-slider-btn">
-                    <span class="desc-room__btn --back"></span>
-                    <span class="desc-room__btn --next"></span>
+                    <span class="desc-room__btn --back js__btn-slider-back"></span>
+                    <span class="desc-room__btn --next js__btn-slider-next"></span>
                   </div>
-
                 </div>
 
                 <div class="desc-room__wrap-desc">
@@ -122,11 +124,20 @@ export function descRoomView(arrayRoom) { //возвращает структу�
                   <div class="desc-room__rating-wrap">
                     <div class="rate-button">
                       <div class="rate-button__wrap-star">
-                        ${ratingView(arrayRoom.number,arrayRoom.rating)}
+                        <input type="radio" id="star-5-${arrayRoom.number}" name=${"rating-room-" + arrayRoom.number} value="5" data-numroom=${arrayRoom.number} ${arrayRoom.rating==5? "checked" :""}>
+                        <label for="star-5-${arrayRoom.number}"></label>
+                        <input type="radio" id="star-4-${arrayRoom.number}" name=${"rating-room-" + arrayRoom.number} value="4" data-numroom=${arrayRoom.number} ${arrayRoom.rating==4? "checked" :""}>
+                        <label for="star-4-${arrayRoom.number}"></label>
+                        <input type="radio" id="star-3-${arrayRoom.number}" name=${"rating-room-" + arrayRoom.number} value="3" data-numroom=${arrayRoom.number} ${arrayRoom.rating==3? "checked" :""}>
+                        <label for="star-3-${arrayRoom.number}"></label>
+                        <input type="radio" id="star-2-${arrayRoom.number}" name=${"rating-room-" + arrayRoom.number} value="2" data-numroom=${arrayRoom.number} ${arrayRoom.rating==2? "checked" :""}>
+                        <label for="star-2-${arrayRoom.number}"></label>
+                        <input type="radio" id="star-1-${arrayRoom.number}" name=${"rating-room-" + arrayRoom.number} value="1" data-numroom=${arrayRoom.number} ${arrayRoom.rating==1? "checked" :""}>
+                        <label for="star-1-${arrayRoom.number}"></label>
                       </div>
                     </div>
                     <div class="desc-room__wrap-feedback">
-                      <span class="desc-room__feedback">${arrayRoom.numOfFeedback}</span>
+                      <span class="desc-room__feedback">${arrayRoom.feedback}</span>
                       <span class="desc-room__feedback-text">Отзывов</span>
                     </div>
                   </div>
@@ -136,20 +147,6 @@ export function descRoomView(arrayRoom) { //возвращает структу�
   return viewDescRoom;
 }
 
-function numberBits() {
+function numberBits(num) {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-}
-
-function ratingView(numberRoom, rating) {
-  let inputStar = "";
-  for (let i = 5; i > 0; i--) {
-    if (i == rating) {
-      inputStar += `<input type="radio" id=${numberRoom+"-star-"+ i} name=${"rating-room-" + numberRoom} value=${i} data-numroom=${numberRoom} checked/>
-                    <label for=${numberRoom+"-star-"+ i} title="${i}"/>`
-    } else {
-      inputStar += `<input type="radio" id=${numberRoom+"-star-"+ i} name=${"rating-room-" + numberRoom} value=${i} data-numroom=${numberRoom}/>
-                    <label for=${numberRoom+"-star-"+ i} title="${i}"/>`
-    }
-  }
-  return inputStar;
 }

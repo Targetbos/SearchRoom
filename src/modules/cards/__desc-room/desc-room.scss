@@ -99,7 +99,7 @@
     }
 
     &:hover {
-      background: $dark-25;
+      background: $dark-50;
     }
   }
 
@@ -118,6 +118,10 @@
     align-items: flex-end;
     flex-direction: column;
     box-sizing: border-box;
+    letter-spacing:-0.19rem;
+    span{
+      letter-spacing: 0;
+    }
   }
 
   &__wrap-number-price {
@@ -176,11 +180,10 @@
   &__rating-wrap {
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
     width: 100%;
     border-top: 1px solid $dark-25;
     margin-top: 0.65rem;
-    padding: 0.5rem 0.16rem 0 0.1rem;
+    padding: 0.56rem 0.16rem 0.35rem 0.1rem;
   }
 
   &__wrap-feedback {
@@ -188,7 +191,6 @@
     align-items: center;
     font-size: rem(14);
     color: $dark-50;
-    padding-bottom: 0.2rem;
     cursor: pointer;
 
     &:hover {

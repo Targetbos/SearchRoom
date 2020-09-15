@@ -27,7 +27,8 @@ module.exports = {
     formelements: [`${PATHS.src}/formelements.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`],
     cards: [`${PATHS.src}/cards.js`, `${PATHS.src}/assets/scss/pages/cards.scss`],
     hf: [`${PATHS.src}/hf.js`, `${PATHS.src}/assets/scss/pages/hf.scss`],
-    lp: [`${PATHS.src}/lp.js`, `${PATHS.src}/assets/scss/pages/lp.scss`]
+    lp: [`${PATHS.src}/lp.js`, `${PATHS.src}/assets/scss/pages/lp.scss`],
+    searchroom: [`${PATHS.src}/searchroom.js`, `${PATHS.src}/assets/scss/pages/searchroom.scss`],
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,

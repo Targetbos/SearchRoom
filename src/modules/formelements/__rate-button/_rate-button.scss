@@ -1,7 +1,10 @@
 .rate-button {
   &__wrap-star {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     overflow: hidden;
-    width: rem(120);
+    width: 7.4rem;
     margin: 0 auto;
     direction: rtl;
   }
@@ -17,8 +20,8 @@
 
   &__wrap-star:not(:checked)>label {
     display: inline-flex;
-    width: rem(24);
-    height: rem(24);
+    width: 1.35rem;
+    height: 1.35rem;
     cursor: pointer;
     background: url("images/star.png") no-repeat 0 0;
     background-size: cover;
@@ -27,18 +30,18 @@
   &__wrap-star:not(:checked)>label:before {
     content: '';
     display: inline-flex;
-    width: rem(24);
-    height: rem(24);
+    width: 1.35rem;
+    height: 1.35rem;
   }
 
   &__wrap-star>input:checked~label {
-    background: url("images/star.png") no-repeat 0 rem(-24);
+    background: url("images/star.png") no-repeat 0 -1.3rem;
     background-size: cover;
   }
 
   &__wrap-star:not(:checked)>label:hover,
   &__wrap-star:not(:checked)>label:hover~label {
-    background-position: 0 rem(-24);
+    background-position: 0 -1.3rem;
   }
 
   &__wrap-star>input:checked+label:hover,
@@ -46,7 +49,7 @@
   &__wrap-star>input:checked~label:hover,
   &__wrap-star>input:checked~label:hover~label,
   &__wrap-star>label:hover~input:checked~label {
-    background-position: 0 rem(-24);
+    background-position: 0 -1.3rem;
   }
 
 }

@@ -1,14 +1,11 @@
 mixin expandable-checkbox-list( data )
   .checkbox-list
-    +title-element({title: data.title})
+    +title-element({title: data.titleList})
     i.checkbox-list__icon.icon-arrow
     .checkbox-list__overlay
     .checkbox-list__list
-      +checkbox-item({name: `${data.name}`, value: "breakfast", text: "Завтрак", checked: false, list:true})
-      +checkbox-item({name: `${data.name}`, value: "desk", text: "Письменный стол", checked: true, list:true})
-      +checkbox-item({name: `${data.name}`, value: "chair", text: "Стул для кормления", checked: true, list:true})
-      +checkbox-item({name: `${data.name}`, value: "cot", text: "Кроватка", checked: true, list:true})
-      +checkbox-item({name: `${data.name}`, value: "tv", text: "Телевизор", checked: false, list:true})
-      +checkbox-item({name: `${data.name}`, value: "shampoo", text: "Шампунь", checked: false, list:true})
-      +checkbox-item({name: `${data.name}`, value: "tv2", text: "Телевизор", checked: false, list:true})
-      +checkbox-item({name: `${data.name}`, value: "shampoo2", text: "Шампунь", checked: false, list:true})
+      each item in data.items
+        span= item.value
+        span= item.text
+        span= item.checked
+        //- +checkbox-item({name: `${data.nameList}`, value: `${item.value}`, text: `${item.text}`, checked: item.checked})
