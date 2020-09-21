@@ -43,13 +43,17 @@ class SliderRoom {
     let wrapBtn = this.dotsWrap.nextElementSibling;
     let btnBack = wrapBtn.firstElementChild;
     let btnNext = wrapBtn.lastElementChild;
-    console.log(wrapBtn)
-    btnBack.onclick = () => {
+    btnBack.onclick = (event) => {
+      event.stopPropagation();
       this.backImageView()
     }
-    btnNext.onclick = () => {
+    btnNext.onclick = (event) => {
+      event.stopPropagation();
       this.nextImageView()
+    }
 
+    wrapBtn.onclick = (event) => {
+      this.nextImageView()
     }
 
   }
@@ -83,7 +87,7 @@ class SliderRoom {
 
 
 }
-export function addSliderDescRoom(){
+export function addSliderDescRoom() {
   document.querySelectorAll(".js__container").forEach((el) => {
     var sliderRoom = new SliderRoom(el);
     sliderRoom.init();

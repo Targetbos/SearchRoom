@@ -22,13 +22,14 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    common: [`${PATHS.src}/assets/js/common.js`, `${PATHS.src}/assets/scss/utils/vars.scss`],
+    // common: [`${PATHS.src}/assets/js/common.js`, `${PATHS.src}/assets/scss/utils/vars.scss`],
     colorstypes: `${PATHS.src}/assets/scss/pages/colorstypes.scss`,
     formelements: [`${PATHS.src}/formelements.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`],
     cards: [`${PATHS.src}/cards.js`, `${PATHS.src}/assets/scss/pages/cards.scss`],
     hf: [`${PATHS.src}/hf.js`, `${PATHS.src}/assets/scss/pages/hf.scss`],
     lp: [`${PATHS.src}/lp.js`, `${PATHS.src}/assets/scss/pages/lp.scss`],
     searchroom: [`${PATHS.src}/searchroom.js`, `${PATHS.src}/assets/scss/pages/searchroom.scss`],
+    roomdetails: [`${PATHS.src}/roomdetails.js`, `${PATHS.src}/assets/scss/pages/roomdetails.scss`],
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -160,7 +161,7 @@ module.exports = {
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
       filename: `./${page.replace(/\.pug/,'.html')}`,
-      chunks: [`${page.replace(/\.pug/,'')}`, 'common']
+      chunks: [`${page.replace(/\.pug/,'')}`]
     }))
   ]
 }

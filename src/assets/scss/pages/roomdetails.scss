@@ -1,0 +1,81 @@
+.wrapper {
+  display: "block";
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+  background: #ffffff;
+}
+
+.slider {
+  display: flex;
+  max-width: $maxWidthPage;
+  width: 100%;
+  margin: 0 auto;
+  &__wrap {
+    display: flex;
+    max-width: $maxWidthPage;
+    max-height: 34.65em;
+  }
+  &__first-img {
+    display: flex;
+    max-width: rem(981);
+    margin: 0;
+    padding: 0;
+  }
+  &__last-img {
+    display: flex;
+    flex-direction: column;
+    max-width: rem(459);
+    img {
+      max-height: 17.325em;
+    }
+  }
+}
+
+.main {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  .container {
+    display: flex;
+    max-width: rem(1160);
+    padding: rem(70) 0;
+    margin: 0 auto;
+    &__desc {
+      display: flex;
+      max-width: rem(710);
+      margin-right: rem(70);
+      width: 100%;
+    }
+    &__booking {
+      max-width: rem(450);
+    }
+  }
+}
+
+.inner-number-info {
+  display: flex;
+  width: 100%;
+  h2 {
+    font-weight: bold;
+    letter-spacing: 0.006rem;
+  }
+}
+.number-info {
+  max-width: rem(280);
+  margin-right: rem(81);
+  width: 100%;
+  .advantages__wrap {
+    border-bottom: 1px solid $dark-10;
+  }
+}
+
+.opinion {
+  &-number {
+  }
+  &-inner__diagramm {
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 1.3rem;
+  }
+}

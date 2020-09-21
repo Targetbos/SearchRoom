@@ -13,7 +13,9 @@
     init() {
       let _this = this;
       this.showBtnBlock();
-      this.hideBtnClear();
+      if (this.sumGuests() == 0) {
+        this.hideBtnClear();
+      }
       this.overlay.onclick = () => {
         this.hideBtnBlock();
       }
@@ -132,10 +134,10 @@
       if (sum == 0) {
         str = "Сколько гостей";
       } else {
-        let guests = sum == 1 ? sum + " гость" : sum > 1 && sum < 5 ? sum + " гостя" : sum > 4 ? sum + " гостей" : "Сколько гостей?"; 
-        let babies = this.babies; 
-        let babiesStr = this.babies == 1 ? ", " + babies + " младенец" : babies > 1 && babies < 5 ? ", " + babies + " младенца" : babies > 4 ? ", " + babies + " младенецев" : "";  
-        str = guests + babiesStr; 
+        let guests = sum == 1 ? sum + " гость" : sum > 1 && sum < 5 ? sum + " гостя" : sum > 4 ? sum + " гостей" : "Сколько гостей?";
+        let babies = this.babies;
+        let babiesStr = this.babies == 1 ? ", " + babies + " младенец" : babies > 1 && babies < 5 ? ", " + babies + " младенца" : babies > 4 ? ", " + babies + " младенецев" : "";
+        str = guests + babiesStr;
       }
 
       this.inputGuests.value = str;

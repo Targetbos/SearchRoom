@@ -76,6 +76,7 @@
     width: 100%;
     padding: 0 0.8rem;
     z-index: 185;
+    cursor: pointer;
   }
 
   .desc-room__btn {
@@ -87,7 +88,8 @@
     background: transparent;
     border-radius: 50%;
     cursor: pointer;
-    transition: background 0.3s ease;
+    position: relative;
+    z-index: 186;
 
     &:before {
       content: "";
@@ -118,8 +120,8 @@
     align-items: flex-end;
     flex-direction: column;
     box-sizing: border-box;
-    letter-spacing:-0.19rem;
-    span{
+    letter-spacing: -0.19rem;
+    span {
       letter-spacing: 0;
     }
   }

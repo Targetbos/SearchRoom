@@ -1,0 +1,44 @@
+-
+ var advantagesArr = [
+   {img: "assets/images/comfort.svg", title: "Комфорт", desc: "Шумопоглащающие стены"},
+   {img: "assets/images/convenience.svg", title: "Удобство", desc: "Окно в каждой из спален"},
+   {img: "assets/images/comfortably.svg", title: "Уют", desc: "Номер оснащен камином"}
+ ];
+
+include ../../modules/header/__header/header.pug
+include ../../modules/footer/__footer/footer.pug
+include ../../modules/cards/__booking-room/booking-room.pug
+include ../../modules/formelements/__advantages/advantages.pug
+include ../../modules/formelements/__circle-diagramm/circle-diagramm.pug
+doctype html
+html
+  head
+    title Room details
+    meta(name = "viewport" content = "width=device-width, initial-scale = 1")
+  body
+    .wrapper
+      .overlay.js__overlay
+      +header({auth: true})
+      section.slider
+        .slider__wrap.js__sliderRoomDetails
+          .slider__first-img
+            img(src="assets/images/imgRoom1.png" alt="")
+          .slider__last-img
+            img(src="assets/images/imgRoom2.png" alt="")
+            img(src="assets/images/imgRoom3.png" alt="")
+      main.main
+        .container
+          .container__desc
+            .inner-number-info
+              .number-info
+                h2 Сведения о номере 
+                each item in advantagesArr
+                  +advantages({img: item.img, head: item.title, desc: item.desc})
+              .opinion-number
+                h2 Впечатления от номера
+                .opinion-inner__diagramm
+                  +circle-diagramm("130","65","65","0")
+          .container__booking
+            +booking-room({})
+
+      +footer()

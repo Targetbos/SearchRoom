@@ -3,7 +3,7 @@ include ../../__title-element/title-element.pug
 include ../../__buttons/__btn-link/btn-link.pug
 mixin dropdown-guest( data )
   .dropdown-guest
-    +title-element({title: data.title, subtitle: data.subtitle, marginTop: data.marginTop})
+    +title-element({title: data.title, subtitle: data.subtitle})
     .dropdown-guest__form
       input.dropdown-guest__input(type='text' name= data.name value='Сколько гостей' data-adults='' data-children='' data-babies='')
       i.dropdown-guest__input-icon.icon-arrow
