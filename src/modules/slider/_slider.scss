@@ -1,0 +1,124 @@
+%transition_all_03s {
+  transition: all 0.3s ease;
+}
+%backface_visibility_hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@import "/node_modules/swiper/swiper.scss";
+
+.swiper {
+  display: flex;
+  max-width: $maxWidthPage;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  @media screen and (max-width: $phoneWidth) {
+    flex-direction: column;
+  }
+}
+.swiper-container {
+  display: flex;
+  width: 100%;
+  height: 30.34rem;
+  transition: opacity 0.6s ease, transform 0.3s ease;
+  @media screen and (max-width: $desktopWidth) {
+    height: 28rem;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    height: 18rem;
+  }
+  &.main-slider {
+    max-width: 68.1%;
+    @media screen and (max-width: $phoneWidth) {
+      max-width: 100%;
+    }
+  }
+  &.nav-slider {
+    max-width: 31.9%;
+    @media screen and (max-width: $phoneWidth) {
+      display: none;
+    }
+    .swiper-slide {
+      cursor: pointer;
+      opacity: 0.4;
+      transition: opacity 0.3s ease;
+      &.swiper-slide-active {
+        opacity: 1;
+      }
+      .content {
+        width: 100%;
+        .title {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  &:hover {
+    .swiper-button-prev,
+    .swiper-button-next {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &.loading {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.swiper-slide {
+  overflow: hidden;
+  @extend %backface_visibility_hidden;
+  .slide-bgimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  .entity-img {
+    display: none;
+  }
+  .content {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 50%;
+    padding-left: 5%;
+    color: #fff;
+    .title {
+      font-size: 2.6em;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .caption {
+      display: block;
+      font-size: 13px;
+      line-height: 1.4;
+      transform: translateX(50px);
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.7s ease;
+      &.show {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+[class^="swiper-button-"] {
+  width: rem(44);
+  opacity: 0;
+  visibility: hidden;
+  @extend %transition_all_03s;
+}
+.swiper-button-prev {
+  transform: translateX(rem(50));
+}
+.swiper-button-next {
+  transform: translateX(rem(-50));
+}

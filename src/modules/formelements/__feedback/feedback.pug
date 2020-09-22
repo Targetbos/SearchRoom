@@ -1,10 +1,12 @@
-mixin feedback( data )
-  .feedback
-    .feedback__wrap-avatar
-      img.feedback__avatar(src=data.img alt="Отзыв")
-      .feedback__like
-        +like-button({name: "murat", span:"12", check: true})
-    .feedback__wrap-content
-      .feedback__user= data.user
-      .feedback__date= data.date
-      .feedback__text= data.text
+include ../__like-button/like-button.pug
+mixin feedback( feedbacks )
+  each item in feedbacks
+    .feedback
+      .feedback__wrap-avatar
+        img.feedback__avatar(src=item.img alt="Отзыв")
+        .feedback__like
+          +like-button({userName: "murat", num:`${item.numLike}`, checked: item.checked})
+      .feedback__wrap-content
+        .feedback__user= item.user
+        .feedback__date= item.date
+        .feedback__text= item.text

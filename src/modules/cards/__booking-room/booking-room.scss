@@ -6,12 +6,15 @@
   &__wrap {
     display: flex;
     flex-direction: column;
-    width: rem(380);
+    max-width: rem(380);
     border-radius: 4px;
     background: #ffffff;
     padding: 2.5rem rem(30) rem(30);
     box-sizing: border-box;
     box-shadow: 0 0 1.56rem $dark-25;
+    @media screen and (max-width: 360px) {
+      padding: rem(15);
+    }
   }
 
   &__wrap-number-price {
@@ -104,6 +107,9 @@
 
     span {
       font-size: rem(14);
+      @media screen and (max-width: 360px) {
+        display: block;
+      }
     }
   }
 

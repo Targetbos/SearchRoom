@@ -1,51 +1,46 @@
 .wrapper {
-  display: "block";
+  display: block;
   width: 100%;
   margin: 0 auto;
   padding: 0 auto;
   background: #ffffff;
 }
 
-.slider {
-  display: flex;
-  max-width: $maxWidthPage;
-  width: 100%;
-  margin: 0 auto;
-  &__wrap {
-    display: flex;
-    max-width: $maxWidthPage;
-    max-height: 34.65em;
-  }
-  &__first-img {
-    display: flex;
-    max-width: rem(981);
-    margin: 0;
-    padding: 0;
-  }
-  &__last-img {
-    display: flex;
-    flex-direction: column;
-    max-width: rem(459);
-    img {
-      max-height: 17.325em;
-    }
-  }
-}
-
 .main {
   display: block;
   margin: 0 auto;
   width: 100%;
+  border-bottom: 1px solid $dark-25;
   .container {
     display: flex;
     max-width: rem(1160);
-    padding: rem(70) 0;
+    padding: rem(70) 0 3.9rem;
     margin: 0 auto;
+    @media screen and (max-width: $desktopWidth) {
+      padding: rem(70) rem(30) rem(60);
+    }
+    @media screen and (max-width: $smDesktopWidth) {
+      flex-flow: column wrap;
+      align-items: center;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      padding: rem(15);
+    }
     &__desc {
       display: flex;
+      flex-flow: column wrap;
       max-width: rem(710);
       margin-right: rem(70);
       width: 100%;
+      @media screen and (max-width: $desktopWidth) {
+        margin-right: rem(30);
+      }
+      @media screen and (max-width: $smDesktopWidth) {
+        margin-bottom: rem(30);
+        margin-right: 0;
+      }
+      @media screen and (max-width: $phoneWidth) {
+      }
     }
     &__booking {
       max-width: rem(450);
@@ -59,23 +54,114 @@
   h2 {
     font-weight: bold;
     letter-spacing: 0.006rem;
+    @media screen and (max-width: $phoneWidth) {
+      text-align: center;
+    }
+  }
+  &:last-child {
+    justify-content: space-between;
+    margin-top: 0.65rem;
+    @media screen and (max-width: $phoneWidth) {
+      flex-flow: column wrap;
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    justify-content: space-between;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    flex-flow: column wrap;
+    align-items: center;
   }
 }
 .number-info {
   max-width: rem(280);
   margin-right: rem(81);
   width: 100%;
+  @media screen and (max-width: $desktopWidth) {
+    margin-right: rem(40);
+  }
+  @media screen and (max-width: $phoneWidth) {
+    margin-bottom: rem(30);
+    margin-right: 0;
+  }
+
   .advantages__wrap {
-    border-bottom: 1px solid $dark-10;
+    padding: 1.25rem 0 1.05rem;
+    margin-left: 0.04rem;
+    &:last-child {
+      border-bottom: none;
+      .advantages__icon {
+        margin-top: 0.1rem;
+      }
+    }
   }
 }
 
 .opinion {
-  &-number {
-  }
-  &-inner__diagramm {
+  &__diagramm {
     display: flex;
     box-sizing: border-box;
     padding-top: 1.3rem;
+  }
+}
+
+.feedback {
+  &__wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 1rem;
+  }
+  &__inner-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @media screen and (max-width: $phoneWidth) {
+      justify-content: center;
+    }
+    h2 {
+      font-weight: bold;
+      letter-spacing: 0.005rem;
+    }
+
+    span {
+      color: $dark-50;
+      @media screen and (max-width: $phoneWidth) {
+        display: none;
+      }
+    }
+  }
+  &__container {
+    margin-top: 1.25rem;
+    margin-left: -0.3rem;
+    .feedback {
+      margin-bottom: 1.45rem;
+    }
+    .feedback__text {
+      letter-spacing: 0.02px;
+    }
+  }
+}
+.rules__wrap {
+  display: block;
+  max-width: 16rem;
+  @media screen and (max-width: $phoneWidth) {
+    min-width: 100%;
+  }
+  h2 {
+    margin-left: 1.25rem;
+    @media screen and (max-width: $phoneWidth) {
+      margin-left: 0;
+    }
+  }
+}
+.cancel__wrap {
+  display: block;
+  max-width: 21.8rem;
+  padding-right: 0.5rem;
+  p {
+    color: $dark-75;
   }
 }

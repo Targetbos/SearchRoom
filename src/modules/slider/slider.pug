@@ -1,0 +1,23 @@
+mixin slider( images )
+  .swiper
+    .swiper-container.main-slider.loading
+      .swiper-wrapper
+        each img in images
+          .swiper-slide
+            figure.slide-bgimg(style=`background-image:url(${img.url})`)
+              img.entity-img(src=`${img.url}`)
+            if (img.content)
+              .content
+                p.title= img.title
+                span.caption= img.desc
+      .swiper-button-prev.swiper-button-white
+      .swiper-button-next.swiper-button-white
+    .swiper-container.nav-slider.loading
+      .swiper-wrapper(role='navigation')
+        each img in images
+          .swiper-slide
+            figure.slide-bgimg(style=`background-image:url(${img.url})`)
+              img.entity-img(src=`${img.url}`)
+            if (img.content)
+            .content
+              p.title= img.title

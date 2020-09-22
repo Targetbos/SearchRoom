@@ -4,12 +4,20 @@
    {img: "assets/images/convenience.svg", title: "Удобство", desc: "Окно в каждой из спален"},
    {img: "assets/images/comfortably.svg", title: "Уют", desc: "Номер оснащен камином"}
  ];
-
+-
+  imagesSlider = [
+    {url: "assets/images/imgRoom1.png"},
+    {url: "assets/images/imgRoom2.png"},
+    {url: "assets/images/imgRoom3.png"}
+  ];
 include ../../modules/header/__header/header.pug
 include ../../modules/footer/__footer/footer.pug
 include ../../modules/cards/__booking-room/booking-room.pug
+include ../../modules/formelements/__feedback/feedback.pug
 include ../../modules/formelements/__advantages/advantages.pug
 include ../../modules/formelements/__circle-diagramm/circle-diagramm.pug
+include ../../modules/formelements/__bullet-list/bullet-list.pug
+include ../../modules/slider/slider.pug
 doctype html
 html
   head
@@ -19,13 +27,7 @@ html
     .wrapper
       .overlay.js__overlay
       +header({auth: true})
-      section.slider
-        .slider__wrap.js__sliderRoomDetails
-          .slider__first-img
-            img(src="assets/images/imgRoom1.png" alt="")
-          .slider__last-img
-            img(src="assets/images/imgRoom2.png" alt="")
-            img(src="assets/images/imgRoom3.png" alt="")
+      +slider(imagesSlider)
       main.main
         .container
           .container__desc
@@ -34,10 +36,27 @@ html
                 h2 Сведения о номере 
                 each item in advantagesArr
                   +advantages({img: item.img, head: item.title, desc: item.desc})
-              .opinion-number
+              .opinion
                 h2 Впечатления от номера
-                .opinion-inner__diagramm
+                .opinion__diagramm
                   +circle-diagramm("130","65","65","0")
+            .inner-feedback
+              .feedback__wrapper
+                .feedback__inner-title
+                  h2 Отзывы посетителей номера
+                  span.num-feedback 2 отзыва
+                .feedback__container
+                  +feedback([
+                    {userName: "murad", img: "assets/images/murad.jpg", numLike:12 ,checked: true, user: "Мурад Сарафанов", date: "5 дней назад", text:"Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."},
+                    {userName: "patrisija", img: "assets/images/patrisija.jpg", numLike:2 , user: "Патрисия Стёклышкова", date: "Неделю назад", text:"Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"}
+                    ])
+            .inner-number-info
+              .rules__wrap
+                h2 Правила
+                +bullet-list({text: ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]})
+              .cancel__wrap
+                h2 Отмена
+                p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
           .container__booking
             +booking-room({})
 
