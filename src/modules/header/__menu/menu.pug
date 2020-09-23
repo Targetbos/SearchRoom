@@ -1,16 +1,25 @@
-mixin menu(data)
-  nav.menu
+mixin menu(link)
+  - 
+    var links = [
+      {url: "link", value: "О нас",active: true},
+      {url: "link", value: "Услуги",submenu: [{url: "link", value: "Ссылка 1"},{url: "link", value: "Ссылка 2"},{url: "link", value: "Ссылка 3"},{url: "link", value: "Ссылка 4"}]},
+      {url: "link", value: "Вакансии"},
+      {url: "link", value: "Новости"},
+      {url: "link", value: "Соглашения",submenu: [{url: "link", value: "Ссылка 1"},{url: "link", value: "Ссылка 2"},{url: "link", value: "Ссылка 3"},{url: "link", value: "Ссылка 4"}]}
+    ]
+  nav.menu.js__menu(role="navigation")
     ul.menu__list
-      each name, val in (['О нас', 'Услуги', 'Вакансии','Новости','Соглашения'])
+      each link, idx in links
         li.menu__item
-          if val == 0 
-            a.menu__link.menu__link--active(href=name)=name
-          else 
-            if val == 1 || val == 4 
-              a.menu__link(href=name)=name
-                span.menu__icon
-            else 
-              a.menu__link(href=name)=name
+          if link.submenu
+            a.menu__link.menu__icon(class=link.active ? 'menu__link--active':"")= link.value
+            ul.menu__list.menu__submenu
+              each item in link.submenu
+                li.menu__item.menu__submenu-item
+                  a.menu__link(href=`${item.url}`)=item.value
+          else
+            a.menu__link(href=`${link.url}` class=link.active ? 'menu__link--active':"")= link.value
+              
     label.menu__mobile-icon(for="menu__checkbox")
       span
       span

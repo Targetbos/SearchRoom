@@ -35,7 +35,7 @@ class Menu {
         }
     }
 }
-document.querySelectorAll(".menu").forEach((el) => {
+document.querySelectorAll(".js__menu").forEach((el) => {
     let menu = new Menu(el);
     menu.init();
 })

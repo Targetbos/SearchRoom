@@ -172,12 +172,13 @@
 
   &__line {
     display: inline-block;
-    min-width: 56%;
     border-bottom: 1px dotted $dark-50;
     margin-bottom: 0.3125rem;
+    width: 100%;
   }
 
   &__total-cost {
+    white-space: nowrap;
     &:after {
       content: "a";
       font-family: "rouble";

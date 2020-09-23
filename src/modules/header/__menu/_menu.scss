@@ -24,53 +24,88 @@
 
   &__item {
     display: flex;
-
+    position: relative;
+    cursor: pointer;
     @media screen and (max-width: 830px) {
       width: 100%;
-      border-bottom: 1px solid $dark-25;
+      border-bottom: 1px solid $dark-10;
+    }
+    &:hover > a {
+      font-weight: bold;
+    }
+
+    &:focus > a {
+      font-weight: bold;
+    }
+    &:hover ul {
+      visibility: visible;
+      opacity: 1;
     }
   }
 
   &__icon {
-    display: inline-block;
-    width: 0.5rem;
-    height: 0.5rem;
-    border: solid $dark-50;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    margin-left: 0.58rem;
-    margin-bottom: 0.2rem;
-
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      border: solid $dark-50;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      margin-left: 0.58rem;
+      margin-bottom: 0.1rem;
+      background: transparent;
+    }
   }
+  ul li ul {
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    position: absolute;
+    top: 1rem;
+    left: -1rem;
+    width: 11rem;
+    z-index: 100;
+    background: hsla(0, 0%, 100%, 0.7);
+    opacity: 0;
+    transition: all 0.3s;
+    @media screen and (max-width: 830px) {
+      left: -12rem;
+      top: 0;
+    }
+    & li {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      transition: background 0.3s;
+      cursor: pointer;
 
+      &:hover {
+        background: hsla(0, 0%, 100%, 0.8);
+      }
+      & a {
+        display: flex;
+        padding: 0.5rem 0.3rem;
+        box-sizing: content-box;
+        text-align: center;
+      }
+    }
+  }
   &__link {
     display: block;
-    list-style: none;
     text-decoration: none;
     font-size: 0.875rem;
-    height: 1rem;
     font-weight: 500;
     color: $dark-50;
-    text-decoration: none;
-    position: relative;
-    white-space: nowrap;
+    text-align: center;
 
     &--active {
-      font-weight: bold;
-    }
-
-    &:hover {
-      font-weight: bold;
-    }
-
-    &:focus {
       font-weight: bold;
     }
 
     @media screen and (max-width: 830px) {
       display: flex;
       justify-content: center;
-      align-items: center;
       box-sizing: content-box;
       width: 100%;
       padding: 0.5rem 0.3rem;
@@ -83,13 +118,12 @@
     flex-direction: column;
     cursor: pointer;
 
-    &>span {
+    & > span {
       width: 2rem;
       height: 0.41rem;
       background: $btn-bg;
       margin: 0.11rem;
       border-radius: 0.1rem;
-
     }
 
     @media screen and (max-width: 830px) {
