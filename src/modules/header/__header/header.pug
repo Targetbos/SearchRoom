@@ -2,6 +2,8 @@ include ../../formelements/__buttons/__btn--white/btn--white.pug
 include ../../formelements/__buttons/__btn--blue/btn--blue.pug
 include ../../formelements/__logo/logo.pug
 include ../__menu/menu.pug
+include ../../cards/__login-form/login-form.pug
+include ../../cards/__registration-form/registration-form.pug
 
 mixin header (data)
   .header
@@ -22,3 +24,7 @@ mixin header (data)
         .header__user-box
           a(href="user") 
             span Юлий Цезарь
+    .wrap__login-form 
+      +login-form()
+    .wrap__register-form  
+      +registration-form()
