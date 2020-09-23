@@ -5,7 +5,7 @@ mixin feedback( feedbacks )
       .feedback__wrap-avatar
         img.feedback__avatar(src=item.img alt="Отзыв")
         .feedback__like
-          +like-button({userName: "murat", num:`${item.numLike}`, checked: item.checked})
+          +like-button({userName: `${item.userName}`, num:`${item.numLike}`, checked: item.checked})
       .feedback__wrap-content
         .feedback__user= item.user
         .feedback__date= item.date

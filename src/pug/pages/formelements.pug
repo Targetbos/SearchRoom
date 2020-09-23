@@ -6,6 +6,8 @@
     {value: "cot", text: "Кроватка", checked: true},
     {value: "tv", text: "Телевизор", checked: false},
     {value: "shampoo", text: "Шампунь", checked: false},
+    {value: "tv", text: "Телевизор", checked: false},
+    {value: "shampoo", text: "Шампунь", checked: false}
     ]
 
 include ../../modules/formelements/__logo-no-text/logo-no-text.pug
@@ -180,14 +182,8 @@ html
       .container.--margin-top
         .column.column-left
           .column-left__advantages
-            +advantages({img: "/assets/images/emoticon.svg", head: "Комфорт", desc: "Шумопоглащающие стены"})
-            +advantages({img: "/assets/images/city.svg", head: "Удобство", desc: "Окно в каждой из спален"})
+            +advantages({img: "assets/images/comfort.svg", head: "Комфорт", desc: "Шумопоглащающие стены"})
+            +advantages({img: "assets/images/convenience.svg", head: "Удобство", desc: "Окно в каждой из спален"})
         .column__feedback
-          //- +feedback
-          //- Отзыв
-          //- Имена передаваемого объекта:
-          //-  img - фото пользователя
-          //-  user - имя пользователя
-          //-  date - сколько дней прошло с момента отзыва
-          //-  text - текст отзыва
-          +feedback({img: "/assets/images/murad.jpg", user: "Мурад Сарафанов", date: "5 дней назад", text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"})
+
+          +feedback([{img: "/assets/images/murad.jpg", userName: "murat", numLike: "12", user: "Мурад Сарафанов", date: "5 дней назад", text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей"}])
