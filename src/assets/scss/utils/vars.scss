@@ -206,7 +206,7 @@ input {
   left: 0;
   background: $dark-50;
   z-index: -1;
-  transition: z-index 3s, opacity 0.5s;
+  transition: z-index 0.3s, opacity 0.5s;
   &--show {
     z-index: 99;
     opacity: 1;

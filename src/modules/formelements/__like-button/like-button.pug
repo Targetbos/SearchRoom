@@ -5,6 +5,6 @@ mixin like-button( data )
         input(type="checkbox" name=`${data.userName}-likebtn` checked=true value = `${data.num}`)
       else
         input(type="checkbox" name=`${data.userName}-likebtn` checked=false  value = `${data.num}`)
-      .like-button__wrap-btn
+      .like-button__wrap-btn.js__like-button
         span.like-button__icon 
         .like-button__num= data.num

@@ -124,7 +124,9 @@
       }
     }
 
-    &-days {
+    &-days:before {
+      content: "x";
+      margin-right: 0.3rem;
     }
   }
 
@@ -140,7 +142,8 @@
   }
 
   &__icon-desc {
-    display: table;
+    display: block;
+    position: relative;
     float: left;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -155,6 +158,39 @@
     color: $dark-25;
     cursor: pointer;
     margin-left: 0.17rem;
+    & > span {
+      display: block;
+      visibility: hidden;
+      width: 10rem;
+      height: 5rem;
+      position: absolute;
+      bottom: 1.5rem;
+      left: -0.35rem;
+      padding: 0.3rem;
+      border: 1px solid $dark-25;
+      border-radius: 0.3rem;
+      background: #fff;
+      color: $dark-75;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -0.38rem;
+        left: 0.5rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border: solid rgba(31, 32, 65, 0.25);
+        transform: rotate(-45deg);
+        z-index: 45;
+        border-width: 0 0 1px 1px;
+        background: #fff;
+      }
+    }
+    &:hover > span {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
   &__wrap-total-cost {

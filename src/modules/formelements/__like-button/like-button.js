@@ -8,9 +8,9 @@ class LikeBtn {
   init() {
     this.checkboxLike.onchange = () => {
       if (this.checkboxLike.checked) {
-        this.increment(event);
+        this.increment();
       } else {
-        this.decrement(event);
+        this.decrement();
       }
     }
   }
