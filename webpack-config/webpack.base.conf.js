@@ -23,6 +23,7 @@ module.exports = {
   },
   entry: {
     // common: [`${PATHS.src}/assets/js/common.js`, `${PATHS.src}/assets/scss/utils/vars.scss`],
+    index: `${PATHS.src}/assets/scss/pages/index.scss`,
     colorstypes: `${PATHS.src}/assets/scss/pages/colorstypes.scss`,
     formelements: [`${PATHS.src}/formelements.js`, `${PATHS.src}/assets/scss/pages/formelements.scss`],
     cards: [`${PATHS.src}/cards.js`, `${PATHS.src}/assets/scss/pages/cards.scss`],

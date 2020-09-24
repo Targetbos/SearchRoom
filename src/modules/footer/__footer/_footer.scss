@@ -4,7 +4,7 @@
 .footer {
   box-shadow: 0 0.62rem 1.25rem $dark-5;
   background: #fff;
-
+  border-top: 1px solid $dark-25;
   &__wrap {
     display: flex;
     margin: 0 auto;
@@ -29,7 +29,7 @@
     margin-right: 0.75rem;
     width: 100%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tableWidth) {
       max-width: 100%;
       margin: 0 auto;
     }
@@ -38,7 +38,7 @@
   &__logo {
     margin-top: 0.12rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tableWidth) {
       margin: 0 auto;
     }
   }
@@ -47,7 +47,7 @@
     max-width: rem(260);
     margin-top: 1rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tableWidth) {
       display: none;
     }
 
@@ -62,7 +62,7 @@
     display: block;
     width: 100%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tableWidth) {
       display: none;
     }
 
@@ -112,7 +112,7 @@
     max-width: rem(260);
     margin-top: 0.31rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tableWidth) {
       display: none;
     }
 
@@ -144,7 +144,7 @@
       max-width: 100%;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tableWidth) {
       padding: 1.1rem 4.5rem 7.6rem;
       border: none;
     }
@@ -158,7 +158,7 @@
     width: 100%;
     color: $dark-75;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $tableWidth) {
       flex-direction: column;
 
       p {

@@ -13,7 +13,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       warnings: true,
       errors: true
     },
-    openPage: `roomdetails.html`,
+    openPage: `index.html`,
     open: true
 
   },

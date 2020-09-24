@@ -10,6 +10,9 @@
     width: rem(270);
     border-radius: 0.25rem;
     background: #ffffff;
+    @media screen and (max-width: $tableWidth) {
+      width: rem(250);
+    }
   }
 
   &__slider {
@@ -121,6 +124,9 @@
     flex-direction: column;
     box-sizing: border-box;
     letter-spacing: -0.19rem;
+    @media screen and (max-width: $tableWidth) {
+      padding: rem(7);
+    }
     span {
       letter-spacing: 0;
     }
