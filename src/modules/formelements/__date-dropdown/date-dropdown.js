@@ -16,4 +16,6 @@ var dateDropdown = $(".js__datePicker").datepicker({
     $(".date-dropdown__in-day").val(fd.split(',')[0])
     $(".date-dropdown__out-day").val(fd.split(',')[1])
   }
+
+
 });
